@@ -1,0 +1,1 @@
+--8<-- "RFC/rfc-0001-foundations.md"

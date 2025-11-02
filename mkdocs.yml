@@ -1,0 +1,88 @@
+site_name: solid.ai
+site_description: "The organizational nervous system for AI-Native companies."
+site_url: https://gusafr.github.io/solid.ai/
+repo_name: gusafr/solid.ai
+repo_url: https://github.com/gusafr/solid.ai
+edit_uri: edit/main/
+docs_dir: docs_site
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Principles: principles.md
+  - Architecture: architecture.md
+  - Organizational Model: organizational-model.md
+  - Automation SIPOC: automation-sipoc.md
+  - AI Agents: ai-agents.md
+  - Governance & Ethics: governance-ethics.md
+  - Observability: observability.md
+  - Glossary: glossary.md
+  - Manifesto:
+    - solid.ai Manifesto v1.0: manifesto/solid-ai-manifesto-v1.md
+  - Reference:
+    - RFCs:
+      - RFC 0001 – Foundations: rfc/rfc-0001-foundations.md
+      - RFC 0002 – Data Spine: rfc/rfc-0002-data-layer.md
+    - ADRs:
+      - ADR 0001 – Mermaid Choice: adr/adr-0001-mermaid-choice.md
+    - Playbooks:
+      - Squads: playbooks/playbook-squads.md
+      - Pools: playbooks/playbook-pools.md
+      - Operations: playbooks/playbook-operations.md
+      - AI Integration: playbooks/playbook-ai-integration.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tracking
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: teal
+    - scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: Fira Code
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
+  - pymdownx.snippets:
+      check_paths: true
+      base_path:
+        - docs_site
+        - docs_site/..
+
+plugins:
+  - search
+  - mermaid2
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gusafr
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gusafr

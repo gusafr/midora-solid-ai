@@ -1,0 +1,38 @@
+```mermaid
+flowchart LR
+    subgraph Squads
+        S1[Discovery Squad]
+        S2[Delivery Squad]
+    end
+
+    subgraph Pools
+        P1[Data Pool]
+        P2[AI Ops Pool]
+        P3[Design Pool]
+    end
+
+    subgraph Governance
+        G1[Governance Circle]
+        G2[Ethics Review]
+    end
+
+    subgraph Cognitive
+        A1[Cognitive Orchestrator]
+        A2[Insight Agent]
+    end
+
+    S1 -->|RFC Draft| G1
+    S2 -->|Observability Signals| G2
+    G1 -->|Policy Update| P1
+    G1 -->|Policy Update| P2
+    G2 -->|Ethical Guidance| S1
+    G2 -->|Ethical Guidance| S2
+
+    P1 -->|Data Products| A2
+    P2 -->|Ops Guardrails| A1
+    P3 -->|Experience Patterns| S1
+
+    A2 -->|Intelligence Brief| S1
+    A1 -->|Automated Workflow| S2
+    A1 -->|Telemetry| G1
+```

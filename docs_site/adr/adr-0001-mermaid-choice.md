@@ -1,0 +1,1 @@
+--8<-- "ADR/adr-0001-mermaid-choice.md"

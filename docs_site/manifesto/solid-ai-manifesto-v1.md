@@ -1,0 +1,1 @@
+--8<-- "MANIFESTO/solid-ai-manifesto-v1.md"

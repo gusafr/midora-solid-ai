@@ -1,0 +1,45 @@
+# Organizational Model
+
+solid.ai organizes humans and AI agents into adaptive structures optimized for co-creation, learning, and resilience.
+
+## Structural Elements
+
+- **Squads:** Cross-functional units focused on delivering customer or stakeholder outcomes.
+- **Pools:** Shared capability hubs (e.g., Data, AI Ops, Design) that provide expertise on demand.
+- **Cognitive Agents:** AI teammates embedded in squads or pools with defined responsibilities.
+- **Governance Circles:** Multi-disciplinary groups that review ethics, observability, and compliance.
+
+## Operating Rhythm
+
+| Cadence | Activity | Participants |
+| --- | --- | --- |
+| Weekly | Outcome review & adaptive planning | Squad leads, embedded agents |
+| Biweekly | Governance sync | Governance circles, compliance officers |
+| Monthly | Portfolio alignment | Executive sponsors, pool leads |
+| Quarterly | Strategy iteration & manifesto review | Leadership council |
+
+## Decision Flows
+
+1. Squads identify opportunities and produce RFC drafts.
+2. Pools validate feasibility, data readiness, and AI agent design.
+3. Governance circles assess ethical impact and observability requirements.
+4. Approved RFCs trigger updates to playbooks, automation flows, and documentation.
+
+## Roles & Responsibilities
+
+- **Human Lead:** Maintains purpose alignment and stakeholder engagement.
+- **AI Orchestrator:** Automates data gathering, summarization, and decision support.
+- **Ops Steward:** Ensures compliance, telemetry, and incident response readiness.
+- **Learning Curator:** Synthesizes feedback, publishes retrospectives, updates knowledge bases.
+
+## Talent Development
+
+- Promote rotational programs between squads and pools to diffuse expertise.
+- Provide AI literacy training and ethical decision-making workshops.
+- Encourage shared ownership of AI-assisted deliverables.
+
+## Change Management
+
+- Major structural shifts require RFC approval.
+- ADRs document tooling and platform choices that impact organizational behavior.
+- Retired structures should leave a knowledge trail in playbooks and docs.

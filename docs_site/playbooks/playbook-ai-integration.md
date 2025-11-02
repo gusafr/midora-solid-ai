@@ -1,0 +1,1 @@
+--8<-- "PLAYBOOKS/playbook-ai-integration.md"
