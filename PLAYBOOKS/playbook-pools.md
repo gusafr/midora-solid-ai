@@ -34,4 +34,4 @@ Pools provide reusable capabilities, governance support, and specialized experti
 
 - Maintain pool-specific playbooks and templates.
 - Host quarterly capability reviews to assess tooling, skills, and capacity.
-- Partner with Governance Circle to anticipate policy changes.
+- Partner with the Governance Circle to anticipate policy changes.

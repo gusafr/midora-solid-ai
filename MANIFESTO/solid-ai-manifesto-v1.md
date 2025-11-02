@@ -19,7 +19,7 @@ description: "The foundational manifesto defining solid.ai — the organizationa
 
 > **To transform how organizations think, learn, and operate — unifying people, data, intelligence, and automation into one living, ethical, and adaptive ecosystem.**
 
-**solid.ai** exists as the *foundational framework* for AI-Native organizations —  
+**solid.ai** exists as the *foundational framework* for AI-native organizations —  
 a model that bridges strategy, culture, technology, and execution through intelligence and automation.
 
 It does not aim to centralize power or decision-making,  
@@ -88,12 +88,12 @@ It is:
 
 ---
 
-## 5. Application within AI-Native Organizations
+## 5. Application within AI-native Organizations
 
 Within organizations like **Midora**, solid.ai defines:
 - **How teams organize** — via hybrid squads and cognitive pools.  
 - **How intelligence operates** — with AI agents as members of every process.  
-- **How data flows** — through a unified, observable data spine.  
+- **How data flows** — through a unified, observable Data Spine.  
 - **How the organization learns** — via feedback loops between humans, AI, and automation.  
 - **How ethics is maintained** — through transparency, observability, and human curation.
 
@@ -114,12 +114,12 @@ Within organizations like **Midora**, solid.ai defines:
 
 ## 7. Visual Identity & Metaphor
 
-**solid.ai** = *Stable Organizational Layer for Intelligence and Data.*
+The name **solid.ai** reflects the framework's commitment to building stable, coherent organizational foundations for artificial intelligence.
 
 Imagine a **digital DNA spiral** —  
 each strand representing data and decision,  
 each connection symbolizing automation and intelligence,  
-together forming the living organism of an AI-Native company.
+together forming the living organism of an AI-native company.
 
 ---
 

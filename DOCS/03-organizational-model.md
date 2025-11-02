@@ -7,14 +7,14 @@ solid.ai organizes humans and AI agents into adaptive structures optimized for c
 - **Squads:** Cross-functional units focused on delivering customer or stakeholder outcomes.
 - **Pools:** Shared capability hubs (e.g., Data, AI Ops, Design) that provide expertise on demand.
 - **Cognitive Agents:** AI teammates embedded in squads or pools with defined responsibilities.
-- **Governance Circles:** Multi-disciplinary groups that review ethics, observability, and compliance.
+- **Governance Circle:** Multi-disciplinary group that reviews ethics, observability, and compliance.
 
 ## Operating Rhythm
 
 | Cadence | Activity | Participants |
 | --- | --- | --- |
 | Weekly | Outcome review & adaptive planning | Squad leads, embedded agents |
-| Biweekly | Governance sync | Governance circles, compliance officers |
+| Biweekly | Governance sync | Governance Circle members, compliance officers |
 | Monthly | Portfolio alignment | Executive sponsors, pool leads |
 | Quarterly | Strategy iteration & manifesto review | Leadership council |
 
@@ -22,7 +22,7 @@ solid.ai organizes humans and AI agents into adaptive structures optimized for c
 
 1. Squads identify opportunities and produce RFC drafts.
 2. Pools validate feasibility, data readiness, and AI agent design.
-3. Governance circles assess ethical impact and observability requirements.
+3. Governance Circle assesses ethical impact and observability requirements.
 4. Approved RFCs trigger updates to playbooks, automation flows, and documentation.
 
 ## Roles & Responsibilities

@@ -25,7 +25,7 @@ This playbook orchestrates day-to-day operations across automation, observabilit
 ## Incident Response
 
 - Declare incidents with clear severity levels and communication channels.
-- Engage Governance Circle for high-risk or ethical escalations.
+- Engage the Governance Circle for high-risk or ethical escalations.
 - Capture root causes, mitigation steps, and follow-up tasks.
 - Publish post-incident ADR or RFC updates when architecture changes result.
 

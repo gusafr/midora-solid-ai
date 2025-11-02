@@ -21,7 +21,7 @@ Use this playbook to introduce new AI capabilities responsibly across the solid.
 
 - [ ] Purpose statement linked to Manifesto principles.
 - [ ] Data Spine contracts and lineage documented.
-- [ ] Ethical risk assessment completed with Governance Circle.
+- [ ] Ethical risk assessment completed with the Governance Circle.
 - [ ] Observability instrumentation planned and tested.
 - [ ] Human overseers trained and assigned.
 - [ ] Rollback plan defined and rehearsed.
