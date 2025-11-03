@@ -1,14 +1,20 @@
 # GitHub Pages Setup Guide
 
-This guide explains how to enable and configure GitHub Pages for the solid.ai documentation site.
+**Status:** ⚠️ Not configured (MVP stage - manual deployment only)
+
+This guide explains how to enable and configure GitHub Pages for the solid.ai documentation site when you're ready to deploy publicly.
 
 ## Current Status
 
-⚠️ **GitHub Pages is currently disabled**
+The solid.ai documentation is currently in **MVP stage** and not automatically deployed to GitHub Pages.
 
-The Pages deployment workflow (`.github/workflows/pages.yml`) is configured but won't run automatically until you enable GitHub Pages in your repository settings.
+**Current deployment options:**
+- ✅ Local development: `mkdocs serve` or `docker-compose --profile dev up`
+- ✅ Manual build: `mkdocs build` (outputs to `site/` directory)
+- ✅ Docker production: `docker-compose --profile prod up`
+- ❌ GitHub Pages: Not configured (can be enabled when ready)
 
-## Quick Setup
+## When You're Ready to Deploy
 
 ### Step 1: Enable GitHub Pages
 
@@ -20,21 +26,66 @@ The Pages deployment workflow (`.github/workflows/pages.yml`) is configured but 
    - (Don't select "Deploy from a branch")
 5. Click **Save** (if button appears)
 
-### Step 2: Enable the Workflow
+### Step 2: Create Deployment Workflow
 
-Once Pages is enabled, uncomment the workflow trigger:
-
-Edit `.github/workflows/pages.yml`:
+Create `.github/workflows/pages.yml`:
 
 ```yaml
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-```
 
-Remove the comment marks (`#`) from the `push:` section.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build documentation
+        run: |
+          mkdocs build --strict
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+          retention-days: 7
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
 
 ### Step 3: Trigger First Deployment
 
