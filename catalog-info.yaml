@@ -109,27 +109,27 @@ spec:
   system: solid-ai-framework
   definition: |
     # solid.ai Framework Layers
-    
+
     ## Purpose Layer
     - Strategic intent, ethics, human oversight
     - Coherent direction and alignment
-    
+
     ## Data Spine
     - Shared data contracts, interoperability, observability
     - Trusted information flow
-    
+
     ## Cognitive Layer
     - AI agents, orchestration (MAGI), learning loops
     - Responsible intelligence
-    
+
     ## Automation Mesh
     - Event-driven execution, SIPOC automation patterns
     - Reliable, adaptive operations
-    
+
     ## Organizational Layer
     - Squads, pools, adaptive topology
     - Symbiotic human-AI collaboration
-    
+
     ## Governance & Ethics Layer
     - Accountability, transparency, auditability
     - Trustworthy scale
@@ -256,19 +256,19 @@ spec:
       - title: Squad Created
         content: |
           # Squad: ${{ parameters.squad_name }}
-          
+
           ## Strategic Outcome
           ${{ parameters.outcome }}
-          
+
           ## Product Triad
           - **Product Owner:** ${{ parameters.product_owner }}
           - **System Architect:** ${{ parameters.system_architect }}
           - **Project Manager:** ${{ parameters.project_manager }}
-          
+
           ## Next Steps
           1. Draft RFC if initiative impacts platform/governance
           2. Request pool resources via PMO
           3. Set up observability dashboards
           4. Schedule first sprint planning
-          
+
           See: https://gusafr.github.io/midora-solid-ai/playbooks/playbook-squads/
