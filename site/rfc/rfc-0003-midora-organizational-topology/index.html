@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="The organizational nervous system for AI-Native companies." name="description"/>
-<link href="https://gusafr.github.io/solid.ai/rfc/rfc-0002-data-layer/" rel="canonical"/>
-<link href="../rfc-0001-foundations/" rel="prev"/>
-<link href="../rfc-0003-midora-organizational-topology/" rel="next"/>
+<link href="https://gusafr.github.io/solid.ai/rfc/rfc-0003-midora-organizational-topology/" rel="canonical"/>
+<link href="../rfc-0002-data-layer/" rel="prev"/>
+<link href="../../adr/adr-0001-mermaid-choice/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>RFC 0002 – Data Spine - solid.ai</title>
+<title>RFC 0003 – Midora Topology - solid.ai</title>
 <link href="../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rfc-0002-data-spine-foundations">
+<a class="md-skip" href="#rfc-0003-midora-organizational-topology">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RFC 0002 – Data Spine
+              RFC 0003 – Midora Topology
             
           </span>
 </div>
@@ -272,18 +272,26 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    RFC 0002 – Data Spine
+    RFC 0003 – Midora Topology
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    RFC 0002 – Data Spine
+    RFC 0003 – Midora Topology
     
   </span>
 </a>
@@ -313,20 +321,77 @@
       Proposal
     </span>
 </a>
-</li>
+<nav aria-label="Proposal" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-highlights">
+<a class="md-nav__link" href="#1-squad-structure-product-triad">
 <span class="md-ellipsis">
-      Architecture Highlights
+      1. Squad Structure: Product Triad
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#implementation-considerations">
+<a class="md-nav__link" href="#2-pool-structure-six-capability-hubs">
 <span class="md-ellipsis">
-      Implementation Considerations
+      2. Pool Structure: Six Capability Hubs
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operational-automation-via-sipoc">
+<span class="md-ellipsis">
+      3. Operational Automation via SIPOC
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-details">
+<span class="md-ellipsis">
+      Implementation Details
+    </span>
+</a>
+<nav aria-label="Implementation Details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#midoras-technology-landscape">
+<span class="md-ellipsis">
+      Midora's Technology Landscape
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-pool-collaboration-model">
+<span class="md-ellipsis">
+      Squad-Pool Collaboration Model
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#human-vs-ai-agent-allocation">
+<span class="md-ellipsis">
+      Human vs AI Agent Allocation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#metrics-and-observability">
+<span class="md-ellipsis">
+      Metrics and Observability
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-ai-assessment-squad-implementation">
+<span class="md-ellipsis">
+      Example: AI Assessment Squad Implementation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#risks-mitigations">
@@ -334,6 +399,52 @@
       Risks &amp; Mitigations
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success-criteria">
+<span class="md-ellipsis">
+      Success Criteria
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternatives-considered">
+<span class="md-ellipsis">
+      Alternatives Considered
+    </span>
+</a>
+<nav aria-label="Alternatives Considered" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#traditional-functional-teams">
+<span class="md-ellipsis">
+      Traditional Functional Teams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fully-autonomous-squads-no-pools">
+<span class="md-ellipsis">
+      Fully Autonomous Squads (No Pools)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrix-organizations">
+<span class="md-ellipsis">
+      Matrix Organizations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-operations">
+<span class="md-ellipsis">
+      Manual Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#open-questions">
@@ -349,16 +460,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../rfc-0003-midora-organizational-topology/">
-<span class="md-ellipsis">
-    RFC 0003 – Midora Topology
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -484,20 +594,77 @@
       Proposal
     </span>
 </a>
-</li>
+<nav aria-label="Proposal" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-highlights">
+<a class="md-nav__link" href="#1-squad-structure-product-triad">
 <span class="md-ellipsis">
-      Architecture Highlights
+      1. Squad Structure: Product Triad
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#implementation-considerations">
+<a class="md-nav__link" href="#2-pool-structure-six-capability-hubs">
 <span class="md-ellipsis">
-      Implementation Considerations
+      2. Pool Structure: Six Capability Hubs
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operational-automation-via-sipoc">
+<span class="md-ellipsis">
+      3. Operational Automation via SIPOC
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-details">
+<span class="md-ellipsis">
+      Implementation Details
+    </span>
+</a>
+<nav aria-label="Implementation Details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#midoras-technology-landscape">
+<span class="md-ellipsis">
+      Midora's Technology Landscape
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-pool-collaboration-model">
+<span class="md-ellipsis">
+      Squad-Pool Collaboration Model
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#human-vs-ai-agent-allocation">
+<span class="md-ellipsis">
+      Human vs AI Agent Allocation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#metrics-and-observability">
+<span class="md-ellipsis">
+      Metrics and Observability
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-ai-assessment-squad-implementation">
+<span class="md-ellipsis">
+      Example: AI Assessment Squad Implementation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#risks-mitigations">
@@ -505,6 +672,52 @@
       Risks &amp; Mitigations
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success-criteria">
+<span class="md-ellipsis">
+      Success Criteria
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternatives-considered">
+<span class="md-ellipsis">
+      Alternatives Considered
+    </span>
+</a>
+<nav aria-label="Alternatives Considered" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#traditional-functional-teams">
+<span class="md-ellipsis">
+      Traditional Functional Teams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fully-autonomous-squads-no-pools">
+<span class="md-ellipsis">
+      Fully Autonomous Squads (No Pools)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrix-organizations">
+<span class="md-ellipsis">
+      Matrix Organizations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-operations">
+<span class="md-ellipsis">
+      Manual Operations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#open-questions">
@@ -520,6 +733,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -527,69 +747,370 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="rfc-0002-data-spine-foundations">RFC-0002: Data Spine Foundations<a class="headerlink" href="#rfc-0002-data-spine-foundations" title="Permanent link">¶</a></h1>
+<h1 id="rfc-0003-midora-organizational-topology">RFC-0003: Midora Organizational Topology<a class="headerlink" href="#rfc-0003-midora-organizational-topology" title="Permanent link">¶</a></h1>
 <ul>
 <li><strong>Status:</strong> Draft</li>
-<li><strong>Authors:</strong> Midora Education Labs</li>
+<li><strong>Authors:</strong> Gustavo Freitas, Midora Education Labs</li>
 <li><strong>Created:</strong> 2025-11-02</li>
-<li><strong>Issue:</strong> #2 (placeholder)</li>
+<li><strong>Issue:</strong> #3 (placeholder)</li>
 <li><strong>Supersedes:</strong> None</li>
-<li><strong>Related ADRs:</strong> ADR-0001</li>
+<li><strong>Related RFCs:</strong> RFC-0001</li>
+<li><strong>Related ADRs:</strong> None</li>
 </ul>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Define the solid.ai Data Spine architecture, encompassing data contracts, observability, interoperability, and compliance features required to support AI-native operations.</p>
+<p>Define Midora's specific organizational topology implementing the solid.ai framework through lean Product Triad squads, six specialized capability pools, and fully automated operational areas governed by SIPOC matrices.</p>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">¶</a></h2>
-<p>AI-native organizations require trustworthy data with traceable lineage, consent, and quality guarantees. A cohesive Data Spine enables cross-layer intelligence while preserving governance and ethics.</p>
+<p>While solid.ai provides the foundational framework for AI-native organizations, Midora requires a concrete implementation that balances:
+- <strong>Lean squad structures</strong> for agility and outcome focus
+- <strong>Specialized pools</strong> for deep expertise and reusable capabilities
+- <strong>100% operational automation</strong> to scale without manual overhead
+- <strong>Hybrid human-AI collaboration</strong> across all organizational layers</p>
+<p>This RFC codifies Midora's specific topology as a reference implementation of the solid.ai framework.</p>
 <h2 id="proposal">Proposal<a class="headerlink" href="#proposal" title="Permanent link">¶</a></h2>
+<h3 id="1-squad-structure-product-triad">1. Squad Structure: Product Triad<a class="headerlink" href="#1-squad-structure-product-triad" title="Permanent link">¶</a></h3>
+<p>Each squad consists of a <strong>three-person core</strong> forming a Product Triad:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibilities</th>
+<th>Framework Layer Alignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product Owner</strong></td>
+<td>Purpose alignment, stakeholder management, value prioritization</td>
+<td>Purpose Layer</td>
+</tr>
+<tr>
+<td><strong>System Architect</strong></td>
+<td>Technical design, data contracts, AI agent orchestration</td>
+<td>Data Spine + Cognitive Layer</td>
+</tr>
+<tr>
+<td><strong>Project Manager</strong></td>
+<td>Execution coordination, dependencies, observability tracking</td>
+<td>Automation Mesh + Organizational Layer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Characteristics:</strong>
+- Squads are <strong>outcome-oriented</strong>, not project-bound
+- Each triad role can be filled by a <strong>human or AI agent</strong>
+- Squads draw on pools for specialized skills (development, QA, design, etc.)
+- Squads maintain accountability for end-to-end delivery</p>
+<h3 id="2-pool-structure-six-capability-hubs">2. Pool Structure: Six Capability Hubs<a class="headerlink" href="#2-pool-structure-six-capability-hubs" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pool</th>
+<th>Core Responsibilities</th>
+<th>Framework Layer</th>
+<th>Engagement Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multidisciplinary Developers</strong></td>
+<td>Backend, frontend, AI/ML, data engineering, mobile development</td>
+<td>Cognitive + Automation Mesh</td>
+<td>Embedded in squads or on-demand pairing</td>
+</tr>
+<tr>
+<td><strong>PMO Pool</strong></td>
+<td>Portfolio governance, budget tracking, financial planning, capacity management</td>
+<td>Organizational Layer</td>
+<td>Oversight and reporting dashboards</td>
+</tr>
+<tr>
+<td><strong>Agile Coaching Pool</strong></td>
+<td>Process optimization, retrospective facilitation, continuous improvement</td>
+<td>Organizational Layer</td>
+<td>Embedded coaches, workshops, metrics analysis</td>
+</tr>
+<tr>
+<td><strong>Quality Pool</strong></td>
+<td>System QA, process QA, compliance testing, observability validation</td>
+<td>Governance &amp; Ethics Layer</td>
+<td>Embedded testers, automated quality gates</td>
+</tr>
+<tr>
+<td><strong>Portfolio Pool</strong></td>
+<td>Market strategy, product engineering, go-to-market, customer research</td>
+<td>Purpose Layer</td>
+<td>Strategic roadmap input, user insights</td>
+</tr>
+<tr>
+<td><strong>Solutions Architecture Pool</strong></td>
+<td>Cross-functional technical leadership, platform decisions, architecture governance</td>
+<td>Data Spine + Cognitive Layer</td>
+<td>Technical reviews, ADR approval, platform evolution</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-operational-automation-via-sipoc">3. Operational Automation via SIPOC<a class="headerlink" href="#3-operational-automation-via-sipoc" title="Permanent link">¶</a></h3>
+<p>All operational areas (finance, HR, infrastructure, compliance) operate under <strong>100% automation principles</strong>:</p>
 <ol>
-<li>Adopt a federated lakehouse model with domain-oriented data products.</li>
-<li>Standardize metadata and lineage tracking using open formats (OpenLineage, Data Catalog APIs).</li>
-<li>Implement observability metrics covering freshness, schema drift, quality scores, and access patterns.</li>
-<li>Provide policy enforcement hooks for privacy, retention, and entitlements.</li>
+<li><strong>SIPOC Mapping:</strong> Every operational process documented as a SIPOC matrix</li>
+<li><strong>Automation-First:</strong> No manual execution; all processes orchestrated by the Automation Mesh</li>
+<li><strong>Human Oversight:</strong> Humans curate policies, review exceptions, and improve automations</li>
+<li><strong>Continuous Learning:</strong> Feedback loops feed observability data back to process refinement</li>
 </ol>
-<h2 id="architecture-highlights">Architecture Highlights<a class="headerlink" href="#architecture-highlights" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Data Products:</strong> Versioned, discoverable assets exposed via APIs and streaming interfaces.</li>
-<li><strong>Contracts:</strong> JSON Schema and SQL-based contracts stored alongside products.</li>
-<li><strong>Policy Engine:</strong> Integrates with governance layer to apply access rules and retention policies.</li>
-<li><strong>Telemetry:</strong> Emits metrics to observability stack; integrates with MkDocs reports.</li>
-</ul>
-<h2 id="implementation-considerations">Implementation Considerations<a class="headerlink" href="#implementation-considerations" title="Permanent link">¶</a></h2>
-<ul>
-<li>Choose tooling (e.g., Delta Lake, Iceberg, BigQuery) per deployment, but enforce contract consistency.</li>
-<li>Provide SDK templates for squads and pools to publish data products.</li>
-<li>Define SLAs for data freshness and escalation paths for violations.</li>
-</ul>
+<p><strong>Example SIPOC Matrix (Finance Operations):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Description</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suppliers</strong></td>
+<td>Accounting system, bank APIs, employee expense platform</td>
+<td>Integrated data sources</td>
+</tr>
+<tr>
+<td><strong>Inputs</strong></td>
+<td>Invoices, receipts, payroll data, budget allocations</td>
+<td>Automated ingestion via APIs</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>Validation → Approval routing → Payment execution → Reconciliation</td>
+<td>Event-driven workflow orchestration</td>
+</tr>
+<tr>
+<td><strong>Outputs</strong></td>
+<td>Financial reports, compliance logs, payment confirmations</td>
+<td>Auto-generated dashboards</td>
+</tr>
+<tr>
+<td><strong>Customers</strong></td>
+<td>CFO, auditors, leadership council, pool leads</td>
+<td>Real-time access to financial health</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation-details">Implementation Details<a class="headerlink" href="#implementation-details" title="Permanent link">¶</a></h2>
+<h3 id="midoras-technology-landscape">Midora's Technology Landscape<a class="headerlink" href="#midoras-technology-landscape" title="Permanent link">¶</a></h3>
+<p>Midora's technical architecture is organized into four primary systems:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Domain</th>
+<th>Components</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>midora-core</strong></td>
+<td>Platform</td>
+<td>Backend services, API gateway, IDP backstage</td>
+<td>Core infrastructure and service mesh</td>
+</tr>
+<tr>
+<td><strong>midora-intelligence</strong></td>
+<td>Intelligence</td>
+<td>ML service, MAGI orchestration</td>
+<td>AI/ML capabilities and agent orchestration</td>
+</tr>
+<tr>
+<td><strong>learning-apps</strong></td>
+<td>Learning Experience</td>
+<td>Frontend apps (Flutter, TypeScript), course generator, legacy portal</td>
+<td>Student-facing applications and content delivery</td>
+</tr>
+<tr>
+<td><strong>content-pipeline</strong></td>
+<td>Content</td>
+<td>Course generator service workers</td>
+<td>Automated content generation and curation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Repositories:</strong>
+- <code>midora-back-end-py</code> — Core backend services (Python)
+- <code>midora-api-openapi</code> — API specifications and contracts
+- <code>midora-ml-service</code> — ML model serving and inference
+- <code>midora-magi-py</code> — Multi-agent orchestration (MAGI pattern)
+- <code>midora-course-generator-py</code> — Automated course content generation
+- <code>midora-front-end-fl-v2</code> — Modern Flutter-based learning app
+- <code>midora-front-end-ts</code> — TypeScript web application
+- <code>midora-portal-ph</code> — Legacy PHP portal (maintenance mode)
+- <code>midora-idp-backstage</code> — Internal Developer Platform (Backstage)</p>
+<h3 id="squad-pool-collaboration-model">Squad-Pool Collaboration Model<a class="headerlink" href="#squad-pool-collaboration-model" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Squad Formation:</strong> Product Triad assembles based on outcome (e.g., "Launch AI-powered assessment engine")</li>
+<li><strong>Pool Engagement:</strong> Squad requests capabilities from pools via intake boards</li>
+<li><strong>Repository Alignment:</strong> Squads typically own 1-3 related repositories within a system domain</li>
+<li><strong>Embedded vs On-Demand:</strong> </li>
+<li>Developers: Embedded full-time in squads, working across system boundaries</li>
+<li>QA: Embedded during sprint cycles, validating across repositories</li>
+<li>Agile Coaches: On-demand for retrospectives and process audits</li>
+<li>PMO: Oversight through automated dashboards tracking multi-repo metrics</li>
+<li>Portfolio: Strategic input at quarterly planning</li>
+<li>Solutions Architecture: Technical reviews ensuring cross-system coherence</li>
+</ol>
+<h3 id="human-vs-ai-agent-allocation">Human vs AI Agent Allocation<a class="headerlink" href="#human-vs-ai-agent-allocation" title="Permanent link">¶</a></h3>
+<p><strong>Phase 1 (Current State):</strong>
+- Product Owners: 100% human
+- System Architects: 100% human
+- Project Managers: 70% human, 30% AI-assisted (scheduling, reporting)
+- Developers: 100% human with AI co-pilots
+- QA: 50% human exploratory testing, 50% automated AI agents
+- Coaches: 100% human
+- PMO: 80% automated dashboards, 20% human strategic oversight</p>
+<p><strong>Phase 2 (6-12 months):</strong>
+- Project Managers: 40% human, 60% AI agents with human oversight
+- Developers: Hybrid pairing (human creativity + AI code generation)
+- QA: 30% human, 70% AI agents
+- PMO: 90% automated with AI-generated insights</p>
+<p><strong>Phase 3 (12-24 months):</strong>
+- Fully adaptive: AI agents autonomously handle routine decisions
+- Humans focus on purpose alignment, ethics, and creative innovation
+- All roles support both human and AI agent occupants</p>
+<h3 id="metrics-and-observability">Metrics and Observability<a class="headerlink" href="#metrics-and-observability" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric Category</th>
+<th>Key Indicators</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Squad Health</strong></td>
+<td>Cycle time, delivery rate, stakeholder satisfaction</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td><strong>Pool Utilization</strong></td>
+<td>Capacity vs demand, reuse rate, expertise coverage</td>
+<td>Biweekly</td>
+</tr>
+<tr>
+<td><strong>Automation Coverage</strong></td>
+<td>% of operational processes automated, manual intervention rate</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>AI Agent Performance</strong></td>
+<td>Decision accuracy, escalation rate, learning velocity</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td><strong>Organizational Coherence</strong></td>
+<td>Cross-squad alignment, RFC approval time, knowledge sharing</td>
+<td>Monthly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-ai-assessment-squad-implementation">Example: AI Assessment Squad Implementation<a class="headerlink" href="#example-ai-assessment-squad-implementation" title="Permanent link">¶</a></h3>
+<p><strong>Outcome:</strong> "Launch AI-powered personalized assessment engine"</p>
+<p><strong>Product Triad:</strong>
+- <strong>Product Owner:</strong> Head of Learning Experience (Human)
+- <strong>System Architect:</strong> AI Engineering Lead (Human)
+- <strong>Project Manager:</strong> AI Agent ("AssessmentPM-01") with human oversight</p>
+<p><strong>Repository Scope:</strong>
+- Primary: <code>midora-ml-service</code> (new assessment model endpoints)
+- Secondary: <code>midora-magi-py</code> (assessment orchestration logic)
+- Tertiary: <code>midora-front-end-fl-v2</code> (student assessment UI)
+- Supporting: <code>midora-api-openapi</code> (assessment API contracts)</p>
+<p><strong>Pool Engagements:</strong>
+- <strong>Multidisciplinary Developers:</strong> 2 ML engineers (embedded), 1 Flutter developer (embedded)
+- <strong>Quality Pool:</strong> 1 QA engineer (embedded for 4 weeks)
+- <strong>Solutions Architecture:</strong> Code reviews on MAGI integration patterns
+- <strong>Data Pool:</strong> On-demand support for assessment data modeling
+- <strong>PMO Pool:</strong> Automated dashboard tracking progress across 4 repos</p>
+<p><strong>Automation Mesh Integration:</strong>
+- SIPOC for automated model retraining pipeline
+- Event-driven triggers for assessment result notifications
+- Automated quality gates in CI/CD across all 4 repositories</p>
 <h2 id="risks-mitigations">Risks &amp; Mitigations<a class="headerlink" href="#risks-mitigations" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
 <th>Risk</th>
+<th>Impact</th>
 <th>Mitigation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vendor lock-in</td>
-<td>Abstract adapters; prefer open-source or open-standard layers</td>
+<td><strong>Triad bottlenecks</strong></td>
+<td>Squad blocked by single role unavailability</td>
+<td>Cross-train backup roles; AI agents as fallback</td>
 </tr>
 <tr>
-<td>Data privacy incidents</td>
-<td>Embed privacy checks into pipelines and automated approvals</td>
+<td><strong>Pool fragmentation</strong></td>
+<td>Competing priorities across squads</td>
+<td>PMO pool coordinates capacity allocation</td>
 </tr>
 <tr>
-<td>Schema drift</td>
-<td>Require contract versioning and automated compatibility tests</td>
+<td><strong>Over-automation</strong></td>
+<td>Loss of human judgment in edge cases</td>
+<td>Mandatory human checkpoints for high-risk decisions</td>
+</tr>
+<tr>
+<td><strong>AI agent drift</strong></td>
+<td>Agents deviate from purpose or ethics</td>
+<td>Continuous observability + Governance Circle reviews</td>
+</tr>
+<tr>
+<td><strong>Knowledge silos</strong></td>
+<td>Pool expertise not accessible to squads</td>
+<td>Playbooks, RFC documentation, learning sessions</td>
 </tr>
 </tbody>
 </table>
-<h2 id="open-questions">Open Questions<a class="headerlink" href="#open-questions" title="Permanent link">¶</a></h2>
+<h2 id="success-criteria">Success Criteria<a class="headerlink" href="#success-criteria" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Squad Velocity:</strong> 90% of squads meet quarterly outcome commitments</li>
+<li><strong>Pool Response Time:</strong> &lt;2 days from request to engagement</li>
+<li><strong>Operational Automation:</strong> 95% of operational processes execute without manual intervention</li>
+<li><strong>AI Agent Integration:</strong> At least 30% of Project Manager and QA roles filled by AI agents within 12 months</li>
+<li><strong>Coherence:</strong> &lt;5% of RFCs rejected due to misalignment with framework principles</li>
+</ol>
+<h2 id="alternatives-considered">Alternatives Considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">¶</a></h2>
+<h3 id="traditional-functional-teams">Traditional Functional Teams<a class="headerlink" href="#traditional-functional-teams" title="Permanent link">¶</a></h3>
 <ul>
-<li>Which reference stack should be showcased in v1.1 toolkit?</li>
-<li>How to integrate real-time data governance for streaming pipelines?</li>
+<li><strong>Rejected:</strong> Too slow for AI-native pace; creates handoff inefficiencies</li>
 </ul>
+<h3 id="fully-autonomous-squads-no-pools">Fully Autonomous Squads (No Pools)<a class="headerlink" href="#fully-autonomous-squads-no-pools" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Rejected:</strong> Leads to duplicated effort and expertise gaps</li>
+</ul>
+<h3 id="matrix-organizations">Matrix Organizations<a class="headerlink" href="#matrix-organizations" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Rejected:</strong> Ambiguous accountability; conflicts with purpose-driven clarity</li>
+</ul>
+<h3 id="manual-operations">Manual Operations<a class="headerlink" href="#manual-operations" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Rejected:</strong> Doesn't scale; contradicts AI-native principles</li>
+</ul>
+<h2 id="open-questions">Open Questions<a class="headerlink" href="#open-questions" title="Permanent link">¶</a></h2>
+<ol>
+<li>How do we handle squad transitions when outcomes are achieved? (Dissolve or pivot?)</li>
+<li>What's the right ratio of embedded vs on-demand pool engagement?</li>
+<li>Should Solutions Architecture pool have veto power over technical decisions?</li>
+<li>How do we ensure fair AI agent "hiring" across squads?</li>
+</ol>
 <h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">¶</a></h2>
-<p>Pending community feedback.</p>
+<p>Pending review by Governance Circle and operational leadership.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<ul>
+<li>RFC-0001: solid.ai Foundations</li>
+<li>DOCS/03-organizational-model.md</li>
+<li>PLAYBOOKS/playbook-squads.md</li>
+<li>PLAYBOOKS/playbook-pools.md</li>
+<li>DOCS/04-automation-sipoc.md</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

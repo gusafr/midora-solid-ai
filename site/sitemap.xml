@@ -53,6 +53,10 @@
          <lastmod>2025-11-02</lastmod>
     </url>
     <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-midora-implementation/</loc>
+         <lastmod>2025-11-02</lastmod>
+    </url>
+    <url>
          <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-operations/</loc>
          <lastmod>2025-11-02</lastmod>
     </url>
@@ -70,6 +74,10 @@
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/rfc/rfc-0002-data-layer/</loc>
+         <lastmod>2025-11-02</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/rfc/rfc-0003-midora-organizational-topology/</loc>
          <lastmod>2025-11-02</lastmod>
     </url>
 </urlset>

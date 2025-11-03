@@ -1,0 +1,1 @@
+--8<-- "DOCS/06-governance-ethics.md"

@@ -22,6 +22,7 @@ nav:
     - RFCs:
       - RFC 0001 – Foundations: rfc/rfc-0001-foundations.md
       - RFC 0002 – Data Spine: rfc/rfc-0002-data-layer.md
+      - RFC 0003 – Midora Topology: rfc/rfc-0003-midora-organizational-topology.md
     - ADRs:
       - ADR 0001 – Mermaid Choice: adr/adr-0001-mermaid-choice.md
     - Playbooks:
@@ -29,6 +30,7 @@ nav:
       - Pools: playbooks/playbook-pools.md
       - Operations: playbooks/playbook-operations.md
       - AI Integration: playbooks/playbook-ai-integration.md
+      - Midora Implementation: playbooks/playbook-midora-implementation.md
 
 theme:
   name: material

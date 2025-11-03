@@ -11,10 +11,49 @@ Pools provide reusable capabilities, governance support, and specialized experti
 
 ## Pool Types
 
-- **Data Pool:** Stewardship, modeling, quality assurance, catalog management.
-- **AI Ops Pool:** Agent lifecycle management, orchestration patterns, safety tooling.
-- **Design Pool:** Experience frameworks, ethical UX patterns, human-in-the-loop flows.
-- **Automation Pool:** Workflow engineering, SIPOC facilitation, operational readiness.
+Pools organize around specialized capabilities that serve multiple squads:
+
+### Technical Capability Pools
+
+- **Multidisciplinary Developers Pool:** Backend, frontend, AI/ML, data engineering, mobile development
+  - **Engagement:** Embedded in squads for sprint cycles
+  - **Assets:** Code libraries, AI model templates, API contracts
+  
+- **Solutions Architecture Pool:** Cross-functional tech leads, platform decisions, architecture governance
+  - **Engagement:** Technical reviews, ADR approval, design consultations
+  - **Assets:** Architecture blueprints, technology radar, integration patterns
+
+- **Quality Pool:** System QA, process QA, compliance testing, observability validation
+  - **Engagement:** Embedded testers during development + automated quality gates
+  - **Assets:** Test frameworks, quality dashboards, compliance checklists
+
+### Operational Capability Pools
+
+- **Data Pool:** Stewardship, modeling, quality assurance, catalog management
+  - **Engagement:** Data product development, governance reviews
+  - **Assets:** Data products, semantic models, lineage documentation
+
+- **PMO Pool:** Portfolio governance, budget tracking, financial planning, capacity management
+  - **Engagement:** Oversight dashboards, quarterly planning, resource allocation
+  - **Assets:** Financial reports, capacity models, portfolio health metrics
+
+- **Agile Coaching Pool:** Process optimization, retrospective facilitation, continuous improvement
+  - **Engagement:** Embedded coaches, workshops, metrics analysis
+  - **Assets:** Playbook templates, retrospective formats, team health assessments
+
+### Strategic Capability Pools
+
+- **Portfolio Pool:** Market strategy, product engineering, go-to-market, customer research
+  - **Engagement:** Strategic roadmap input, user insights, competitive analysis
+  - **Assets:** Market research, customer journey maps, product vision documents
+
+- **Design Pool:** Experience frameworks, ethical UX patterns, human-in-the-loop flows
+  - **Engagement:** Embedded designers, design sprints, usability testing
+  - **Assets:** Design systems, accessibility guidelines, prototype libraries
+
+- **Automation Pool:** Workflow engineering, SIPOC facilitation, operational readiness
+  - **Engagement:** Process automation design, SIPOC workshops, integration support
+  - **Assets:** Automation blueprints, workflow templates, integration adapters
 
 ## Engagement Model
 

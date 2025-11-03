@@ -1,0 +1,1 @@
+--8<-- "DOCS/02-architecture.md"

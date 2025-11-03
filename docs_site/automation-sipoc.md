@@ -1,0 +1,1 @@
+--8<-- "DOCS/04-automation-sipoc.md"

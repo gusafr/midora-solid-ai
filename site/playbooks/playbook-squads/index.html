@@ -24,6 +24,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#squad-playbook">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -277,6 +280,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -323,12 +334,87 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Squads
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mission">
+<span class="md-ellipsis">
+      Mission
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-models">
+<span class="md-ellipsis">
+      Squad Models
+    </span>
+</a>
+<nav aria-label="Squad Models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-triad-recommended-for-lean-operations">
+<span class="md-ellipsis">
+      Product Triad (Recommended for Lean Operations)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-squad">
+<span class="md-ellipsis">
+      Extended Squad
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cadence">
+<span class="md-ellipsis">
+      Cadence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow">
+<span class="md-ellipsis">
+      Workflow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-pool-collaboration">
+<span class="md-ellipsis">
+      Squad-Pool Collaboration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kpis">
+<span class="md-ellipsis">
+      KPIs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../playbook-pools/">
@@ -354,6 +440,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbook-midora-implementation/">
+<span class="md-ellipsis">
+    Midora Implementation
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -369,13 +463,177 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mission">
+<span class="md-ellipsis">
+      Mission
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-models">
+<span class="md-ellipsis">
+      Squad Models
+    </span>
+</a>
+<nav aria-label="Squad Models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-triad-recommended-for-lean-operations">
+<span class="md-ellipsis">
+      Product Triad (Recommended for Lean Operations)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-squad">
+<span class="md-ellipsis">
+      Extended Squad
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cadence">
+<span class="md-ellipsis">
+      Cadence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow">
+<span class="md-ellipsis">
+      Workflow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-pool-collaboration">
+<span class="md-ellipsis">
+      Squad-Pool Collaboration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kpis">
+<span class="md-ellipsis">
+      KPIs
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Squads</h1>
+<h1 id="squad-playbook">Squad Playbook<a class="headerlink" href="#squad-playbook" title="Permanent link">¶</a></h1>
+<p>This playbook guides cross-functional squads delivering outcomes within the solid.ai framework.</p>
+<h2 id="mission">Mission<a class="headerlink" href="#mission" title="Permanent link">¶</a></h2>
+<p>Deliver stakeholder value by combining human expertise with AI agents, anchored by the solid.ai principles.</p>
+<h2 id="squad-models">Squad Models<a class="headerlink" href="#squad-models" title="Permanent link">¶</a></h2>
+<p>Squads can organize in different patterns based on outcome complexity and organizational maturity:</p>
+<h3 id="product-triad-recommended-for-lean-operations">Product Triad (Recommended for Lean Operations)<a class="headerlink" href="#product-triad-recommended-for-lean-operations" title="Permanent link">¶</a></h3>
+<p>A <strong>three-person core</strong> optimized for agility and clear accountability:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibilities</th>
+<th>Can be AI Agent?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product Owner</strong></td>
+<td>Purpose alignment, stakeholder management, value prioritization</td>
+<td>Phase 2+</td>
+</tr>
+<tr>
+<td><strong>System Architect</strong></td>
+<td>Technical design, data contracts, AI agent orchestration</td>
+<td>Phase 2+</td>
+</tr>
+<tr>
+<td><strong>Project Manager</strong></td>
+<td>Execution coordination, dependencies, observability tracking</td>
+<td>Yes (with human oversight)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>When to use:</strong> Fast-moving initiatives, clear scope, access to specialized pools for deeper skills.</p>
+<h3 id="extended-squad">Extended Squad<a class="headerlink" href="#extended-squad" title="Permanent link">¶</a></h3>
+<p>Larger squads with embedded specialists:</p>
+<ul>
+<li><strong>Squad Lead:</strong> Aligns work with purpose, manages stakeholder expectations.</li>
+<li><strong>Human Specialists:</strong> Designers, engineers, analysts, domain experts.</li>
+<li><strong>AI Agents:</strong> Embedded cognitive teammates providing insights or automation.</li>
+<li><strong>Ops Steward:</strong> Ensures observability, compliance, and incident readiness.</li>
+</ul>
+<p><strong>When to use:</strong> Complex initiatives requiring sustained deep expertise, longer-term engagements.</p>
+<h2 id="cadence">Cadence<a class="headerlink" href="#cadence" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>Ritual</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily</td>
+<td>Sync or async stand-up</td>
+<td>Progress, blockers, agent status</td>
+</tr>
+<tr>
+<td>Weekly</td>
+<td>Outcome review</td>
+<td>Inspect metrics, adjust backlog</td>
+</tr>
+<tr>
+<td>Biweekly</td>
+<td>Learning session</td>
+<td>Share insights, update knowledge base</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Governance checkpoint</td>
+<td>Validate adherence to RFC/ADR decisions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">¶</a></h2>
+<ol>
+<li>Intake opportunity, validate purpose alignment, and capture in backlog.</li>
+<li>Draft RFC if change extends beyond squad scope.</li>
+<li>Collaborate with pools for specialized skills or data products.</li>
+<li>Implement with AI agents in co-pilot or auto-resolve mode.</li>
+<li>Observe outcomes, log insights, and update documentation.</li>
+</ol>
+<h2 id="squad-pool-collaboration">Squad-Pool Collaboration<a class="headerlink" href="#squad-pool-collaboration" title="Permanent link">¶</a></h2>
+<p>Squads draw on <strong>capability pools</strong> for specialized expertise:</p>
+<ul>
+<li><strong>Embedded engagement:</strong> Pool member joins squad for full sprint/cycle</li>
+<li><strong>On-demand engagement:</strong> Pool provides time-boxed consultation or pairing</li>
+<li><strong>Self-service:</strong> Squad consumes pool-managed assets (data products, templates, tools)</li>
+</ul>
+<p>See <strong>playbook-pools.md</strong> for detailed pool engagement models.</p>
+<h2 id="kpis">KPIs<a class="headerlink" href="#kpis" title="Permanent link">¶</a></h2>
+<ul>
+<li>Outcome delivery rate vs. planned objectives.</li>
+<li>Quality of agent-assisted outputs (accuracy, explainability).</li>
+<li>Incident rate and resolution time.</li>
+<li>Learning contributions (RFCs, ADRs, playbook updates).</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

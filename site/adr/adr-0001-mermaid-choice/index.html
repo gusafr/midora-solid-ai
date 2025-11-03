@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="The organizational nervous system for AI-Native companies." name="description"/>
 <link href="https://gusafr.github.io/solid.ai/adr/adr-0001-mermaid-choice/" rel="canonical"/>
-<link href="../../rfc/rfc-0002-data-layer/" rel="prev"/>
+<link href="../../rfc/rfc-0003-midora-organizational-topology/" rel="prev"/>
 <link href="../../playbooks/playbook-squads/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
@@ -24,6 +24,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#adr-0001-adopt-mermaid-for-diagrams">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -277,6 +280,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -297,12 +308,55 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid Choice
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     ADR 0001 – Mermaid Choice
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context">
+<span class="md-ellipsis">
+      Context
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decision">
+<span class="md-ellipsis">
+      Decision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consequences">
+<span class="md-ellipsis">
+      Consequences
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternatives-considered">
+<span class="md-ellipsis">
+      Alternatives Considered
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -354,6 +408,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../playbooks/playbook-midora-implementation/">
+<span class="md-ellipsis">
+    Midora Implementation
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -369,13 +431,71 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context">
+<span class="md-ellipsis">
+      Context
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decision">
+<span class="md-ellipsis">
+      Decision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consequences">
+<span class="md-ellipsis">
+      Consequences
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternatives-considered">
+<span class="md-ellipsis">
+      Alternatives Considered
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>ADR 0001 – Mermaid Choice</h1>
+<h1 id="adr-0001-adopt-mermaid-for-diagrams">ADR-0001: Adopt Mermaid for Diagrams<a class="headerlink" href="#adr-0001-adopt-mermaid-for-diagrams" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Context:</strong> 2025-11-02</li>
+<li><strong>Deciders:</strong> Gustavo Freitas, Midora Education Labs</li>
+<li><strong>Consulted:</strong> solid.ai community (early contributors)</li>
+<li><strong>Related RFCs:</strong> RFC-0001, RFC-0002</li>
+</ul>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h2>
+<p>solid.ai documentation requires clear, version-controlled diagrams to represent architecture, organizational flows, and governance models. Contributors need a lightweight format that fits well with Markdown-first workflows and integrates with MkDocs.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">¶</a></h2>
+<p>Adopt Mermaid (<code>.mmd</code>) as the canonical diagramming language for the repository.</p>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">¶</a></h2>
+<ul>
+<li>Diagrams live in version control and are easy to review via diffs.</li>
+<li>MkDocs Material can render Mermaid diagrams without additional tooling.</li>
+<li>Contributors can edit diagrams with any text editor or Mermaid-compatible UI tools.</li>
+<li>Future tooling can export Mermaid diagrams to SVG or PNG for presentations.</li>
+</ul>
+<h2 id="alternatives-considered">Alternatives Considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Draw.io / Excalidraw:</strong> Provide rich visual editing but harder to diff and automate.</li>
+<li><strong>PlantUML:</strong> Powerful but requires additional setup and Java runtime for previews.</li>
+<li><strong>Static Images:</strong> Simple but limit collaboration and increase maintenance overhead.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

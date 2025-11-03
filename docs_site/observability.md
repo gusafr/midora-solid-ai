@@ -1,0 +1,1 @@
+--8<-- "DOCS/07-observability.md"
