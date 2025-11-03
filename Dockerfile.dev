@@ -1,0 +1,17 @@
+# Development Dockerfile with live reload
+FROM python:3.11-slim
+
+WORKDIR /docs
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all source files (will be overridden by volume mount)
+COPY . .
+
+# Expose MkDocs development server port
+EXPOSE 8000
+
+# Run MkDocs development server with live reload
+CMD ["mkdocs", "serve", "--dev-addr=0.0.0.0:8000"]

@@ -32,7 +32,30 @@ First off—thank you for helping shape the solid.ai framework. We welcome issue
 
 - Documentation lives under `/DOCS/`. Each numbered file is ordered within the MkDocs navigation.
 - Diagrams use Mermaid (`.mmd`). Keep diagrams updated when underlying flows or models change.
-- Run `mkdocs serve` to preview documentation prior to submitting a PR.
+- Run `mkdocs serve` locally to preview documentation prior to submitting a PR.
+- **Docker users:** Use `.\docker.ps1 dev` or `docker-compose --profile dev up` for live preview.
+
+## Testing Changes
+
+### Local Testing (Python)
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+mkdocs serve
+```
+
+### Local Testing (Docker)
+```powershell
+# Development mode with live reload
+.\docker.ps1 dev
+
+# Or test production build
+.\docker.ps1 build
+.\docker.ps1 test
+```
+
+See [DOCKER.md](DOCKER.md) for complete Docker documentation.
 
 ## Style Guidelines
 

@@ -33,16 +33,32 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | `mkdocs.yml` | MkDocs Material configuration for publishing the site |
 
 ## Quick Start
+
+### Option 1: Using Docker (Recommended)
 1. Clone the repository:
 	```powershell
-	git clone https://github.com/gusafr/solid.ai.git
-	cd solid.ai
+	git clone https://github.com/gusafr/midora-solid-ai.git
+	cd midora-solid-ai
 	```
-2. (Optional) Prepare the documentation site locally:
+2. Run with Docker Compose:
+	```powershell
+	docker-compose --profile dev up
+	```
+3. Open `http://localhost:8000` in your browser to explore the docs.
+
+See [DOCKER.md](DOCKER.md) for production builds, deployment options, and CI/CD integration.
+
+### Option 2: Local Python Environment
+1. Clone the repository:
+	```powershell
+	git clone https://github.com/gusafr/midora-solid-ai.git
+	cd midora-solid-ai
+	```
+2. Prepare the documentation site locally:
 	```powershell
 	python -m venv .venv
 	.venv\Scripts\Activate.ps1
-	pip install mkdocs-material mkdocs-mermaid2-plugin
+	pip install -r requirements.txt
 	mkdocs serve
 	```
 3. Open `http://127.0.0.1:8000` in your browser to explore the docs.
