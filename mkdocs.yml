@@ -16,6 +16,9 @@ nav:
   - Governance & Ethics: governance-ethics.md
   - Observability: observability.md
   - Glossary: glossary.md
+  - Guides:
+    - Docker Setup: docker.md
+    - Cleanup & Optimization: cleanup.md
   - Manifesto:
     - solid.ai Manifesto v1.0: manifesto/solid-ai-manifesto-v1.md
   - Reference:

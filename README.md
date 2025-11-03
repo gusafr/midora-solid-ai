@@ -48,7 +48,7 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 	```
 3. Open `http://localhost:8000` in your browser to explore the docs.
 
-See [DOCKER.md](DOCKER.md) for production builds, deployment options, and CI/CD integration.
+See [Docker Setup](docker.md) for production builds, deployment options, and CI/CD integration.
 
 ### Option 2: Local Python Environment
 1. Clone the repository:
