@@ -19,6 +19,7 @@ nav:
   - Guides:
     - Docker Setup: docker.md
     - Cleanup & Optimization: cleanup.md
+    - Backstage Integration: backstage.md
   - Manifesto:
     - solid.ai Manifesto v1.0: manifesto/solid-ai-manifesto-v1.md
   - Reference:

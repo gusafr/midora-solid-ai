@@ -1,0 +1,114 @@
+name: Validate Backstage Catalog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'catalog-info.yaml'
+  pull_request:
+    paths:
+      - 'catalog-info.yaml'
+  workflow_dispatch:
+
+jobs:
+  validate-catalog:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Backstage CLI
+        run: |
+          npm install -g @backstage/cli
+
+      - name: Validate catalog file
+        run: |
+          echo "Validating catalog-info.yaml..."
+          npx @backstage/cli catalog:validate catalog-info.yaml
+
+      - name: Check YAML syntax
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: catalog-info.yaml
+          config_data: |
+            extends: default
+            rules:
+              line-length:
+                max: 120
+                level: warning
+              document-start: disable
+              truthy:
+                check-keys: false
+
+      - name: Validate entity kinds
+        run: |
+          echo "Checking entity kinds..."
+          
+          # Check for required kinds
+          if ! grep -q "kind: Component" catalog-info.yaml; then
+            echo "❌ Missing Component entity"
+            exit 1
+          fi
+          
+          if ! grep -q "kind: System" catalog-info.yaml; then
+            echo "❌ Missing System entity"
+            exit 1
+          fi
+          
+          echo "✅ All required entity kinds present"
+
+      - name: Validate metadata
+        run: |
+          echo "Checking metadata fields..."
+          
+          # Check for required metadata
+          if ! grep -q "metadata:" catalog-info.yaml; then
+            echo "❌ Missing metadata section"
+            exit 1
+          fi
+          
+          if ! grep -q "name:" catalog-info.yaml; then
+            echo "❌ Missing name field"
+            exit 1
+          fi
+          
+          if ! grep -q "description:" catalog-info.yaml; then
+            echo "❌ Missing description field"
+            exit 1
+          fi
+          
+          echo "✅ All required metadata fields present"
+
+      - name: Check for broken links
+        run: |
+          echo "Checking external links in catalog..."
+          
+          # Extract URLs from catalog
+          urls=$(grep -oP 'url:\s*\K[^"]+' catalog-info.yaml || true)
+          
+          failed=0
+          for url in $urls; do
+            echo "Checking: $url"
+            if ! curl -sSf -o /dev/null -w "%{http_code}" "$url" > /dev/null 2>&1; then
+              echo "⚠️  Warning: Could not reach $url"
+              # Don't fail on link check, just warn
+            else
+              echo "✅ $url is reachable"
+            fi
+          done
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "✅ Backstage catalog validation successful!"
+          echo ""
+          echo "Catalog can be imported into Backstage using:"
+          echo "https://github.com/${{ github.repository }}/blob/main/catalog-info.yaml"

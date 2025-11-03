@@ -1,0 +1,274 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: solid-ai-docs
+  title: solid.ai Documentation
+  description: |
+    The organizational nervous system for AI-native companies. Complete framework documentation
+    covering principles, architecture, governance patterns, and operational playbooks.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: gusafr/midora-solid-ai
+    backstage.io/source-location: url:https://github.com/gusafr/midora-solid-ai
+  tags:
+    - documentation
+    - framework
+    - ai-native
+    - organizational-design
+    - mkdocs
+  links:
+    - url: https://gusafr.github.io/midora-solid-ai/
+      title: Documentation Site
+      icon: docs
+    - url: https://github.com/gusafr/midora-solid-ai
+      title: GitHub Repository
+      icon: github
+    - url: https://github.com/gusafr/midora-solid-ai/blob/main/CONTRIBUTING.md
+      title: Contributing Guide
+      icon: edit
+spec:
+  type: documentation
+  lifecycle: production
+  owner: solid-ai-team
+  system: solid-ai-framework
+  providesApis:
+    - solid-ai-framework-api
+  consumesApis: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: solid-ai-framework
+  title: solid.ai Framework
+  description: |
+    Complete organizational framework for AI-native companies, including six layers:
+    Purpose, Data Spine, Cognitive, Automation Mesh, Organizational, and Governance & Ethics.
+  tags:
+    - framework
+    - ai-native
+    - organizational-nervous-system
+  links:
+    - url: https://gusafr.github.io/midora-solid-ai/
+      title: Framework Documentation
+      icon: docs
+spec:
+  owner: solid-ai-team
+  domain: organizational-design
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: organizational-design
+  title: Organizational Design
+  description: |
+    Domain covering organizational architecture, team topology, governance patterns,
+    and AI-human collaboration models.
+  tags:
+    - organizational-design
+    - ai-native
+    - governance
+spec:
+  owner: solid-ai-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: solid-ai-team
+  title: solid.ai Framework Team
+  description: Maintainers and contributors to the solid.ai framework
+spec:
+  type: team
+  profile:
+    displayName: solid.ai Framework Team
+    email: team@solid-ai.example.com
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: solid-ai-framework-api
+  title: solid.ai Framework Conceptual API
+  description: |
+    Conceptual API representing the solid.ai framework's six layers and their interactions.
+    This is not a REST API but a conceptual model for organizational design patterns.
+  tags:
+    - framework
+    - conceptual-model
+    - organizational-design
+  links:
+    - url: https://gusafr.github.io/midora-solid-ai/architecture/
+      title: Architecture Documentation
+      icon: docs
+    - url: https://gusafr.github.io/midora-solid-ai/rfc/rfc-0001-foundations/
+      title: RFC 0001 - Foundations
+      icon: docs
+spec:
+  type: openapi
+  lifecycle: production
+  owner: solid-ai-team
+  system: solid-ai-framework
+  definition: |
+    # solid.ai Framework Layers
+    
+    ## Purpose Layer
+    - Strategic intent, ethics, human oversight
+    - Coherent direction and alignment
+    
+    ## Data Spine
+    - Shared data contracts, interoperability, observability
+    - Trusted information flow
+    
+    ## Cognitive Layer
+    - AI agents, orchestration (MAGI), learning loops
+    - Responsible intelligence
+    
+    ## Automation Mesh
+    - Event-driven execution, SIPOC automation patterns
+    - Reliable, adaptive operations
+    
+    ## Organizational Layer
+    - Squads, pools, adaptive topology
+    - Symbiotic human-AI collaboration
+    
+    ## Governance & Ethics Layer
+    - Accountability, transparency, auditability
+    - Trustworthy scale
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: solid-ai-playbooks
+  title: solid.ai Playbooks
+  description: |
+    Operational playbooks for implementing solid.ai framework patterns including
+    squads, pools, operations, AI integration, and Midora reference implementation.
+  tags:
+    - playbooks
+    - operations
+    - implementation-guide
+  links:
+    - url: https://gusafr.github.io/midora-solid-ai/playbooks/playbook-squads/
+      title: Squads Playbook
+      icon: docs
+    - url: https://gusafr.github.io/midora-solid-ai/playbooks/playbook-pools/
+      title: Pools Playbook
+      icon: docs
+    - url: https://gusafr.github.io/midora-solid-ai/playbooks/playbook-midora-implementation/
+      title: Midora Implementation
+      icon: docs
+spec:
+  type: documentation
+  owner: solid-ai-team
+  system: solid-ai-framework
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: solid-ai-diagrams
+  title: solid.ai Architecture Diagrams
+  description: |
+    Mermaid diagram library covering framework architecture, organizational flows,
+    SIPOC automation, cognitive decision flows, and implementation patterns.
+  tags:
+    - diagrams
+    - mermaid
+    - architecture
+    - visualization
+  links:
+    - url: https://github.com/gusafr/midora-solid-ai/tree/main/DIAGRAMS
+      title: Diagram Source Files
+      icon: github
+spec:
+  type: documentation
+  owner: solid-ai-team
+  system: solid-ai-framework
+---
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: solid-ai-squad-template
+  title: Create solid.ai Product Triad Squad
+  description: |
+    Template for creating a new Product Triad squad following solid.ai framework patterns.
+    Includes squad charter, pool engagement plan, and observability setup.
+  tags:
+    - squad
+    - product-triad
+    - organizational-template
+spec:
+  owner: solid-ai-team
+  type: service
+  parameters:
+    - title: Squad Information
+      required:
+        - squad_name
+        - outcome
+      properties:
+        squad_name:
+          title: Squad Name
+          type: string
+          description: Name of the squad (e.g., "AI Assessment Engine Squad")
+        outcome:
+          title: Strategic Outcome
+          type: string
+          description: The outcome this squad will deliver
+          ui:widget: textarea
+        product_owner:
+          title: Product Owner
+          type: string
+          description: Product Owner name or email
+        system_architect:
+          title: System Architect
+          type: string
+          description: System Architect name or email
+        project_manager:
+          title: Project Manager
+          type: string
+          description: Project Manager name or email (can be AI agent)
+    - title: Pool Capabilities Needed
+      properties:
+        developers_needed:
+          title: Developers Needed
+          type: number
+          default: 0
+        qa_needed:
+          title: QA Engineers Needed
+          type: number
+          default: 0
+        architects_needed:
+          title: Solutions Architects Needed
+          type: number
+          default: 0
+  steps:
+    - id: log
+      name: Log Squad Creation
+      action: debug:log
+      input:
+        message: |
+          Creating squad: ${{ parameters.squad_name }}
+          Outcome: ${{ parameters.outcome }}
+          Product Triad:
+            - PO: ${{ parameters.product_owner }}
+            - Architect: ${{ parameters.system_architect }}
+            - PM: ${{ parameters.project_manager }}
+  output:
+    text:
+      - title: Squad Created
+        content: |
+          # Squad: ${{ parameters.squad_name }}
+          
+          ## Strategic Outcome
+          ${{ parameters.outcome }}
+          
+          ## Product Triad
+          - **Product Owner:** ${{ parameters.product_owner }}
+          - **System Architect:** ${{ parameters.system_architect }}
+          - **Project Manager:** ${{ parameters.project_manager }}
+          
+          ## Next Steps
+          1. Draft RFC if initiative impacts platform/governance
+          2. Request pool resources via PMO
+          3. Set up observability dashboards
+          4. Schedule first sprint planning
+          
+          See: https://gusafr.github.io/midora-solid-ai/playbooks/playbook-squads/

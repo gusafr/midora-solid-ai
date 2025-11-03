@@ -26,6 +26,8 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | `CONTRIBUTING.md` | Workflow for RFCs, ADRs, and documentation updates |
 | `DOCKER.md` | Docker containerization guide for development and deployment |
 | `CLEANUP.md` | Resource optimization and cleanup strategies |
+| `BACKSTAGE.md` | Backstage IDP integration guide |
+| `catalog-info.yaml` | Backstage catalog definitions for framework components |
 | `MANIFESTO/solid-ai-manifesto-v1.md` | Foundational manifesto outlining philosophy and roadmap |
 | `DOCS/` | Modular documentation covering principles, architecture, governance, and glossary |
 | `DIAGRAMS/` | Mermaid source files for architecture, organizational flows, and implementation patterns (10 diagrams) |
