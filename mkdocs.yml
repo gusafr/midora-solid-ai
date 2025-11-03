@@ -7,6 +7,7 @@ edit_uri: edit/main/
 docs_dir: docs_site
 nav:
   - Home: index.md
+  - 🚀 Quick Start: quick-start.md
   - Overview: overview.md
   - Principles: principles.md
   - Architecture: architecture.md
@@ -16,6 +17,30 @@ nav:
   - Governance & Ethics: governance-ethics.md
   - Observability: observability.md
   - Glossary: glossary.md
+  - Adoption Pack:
+    - Overview: adoption/index.md
+    - Reference Cards:
+      - Developer: adoption/reference-cards/developer.md
+      - Product Manager: adoption/reference-cards/product-manager.md
+      - Operations: adoption/reference-cards/operations.md
+      - Leadership: adoption/reference-cards/leadership.md
+    - Prompt Templates:
+      - Purpose-Driven Feature: adoption/prompt-templates/purpose-driven-feature.md
+      - AI Agent Definition: adoption/prompt-templates/ai-agent-definition.md
+      - Data Contract Design: adoption/prompt-templates/data-contract-design.md
+      - Retrospective Facilitation: adoption/prompt-templates/retrospective-facilitation.md
+      - Ethical Decision-Making: adoption/prompt-templates/ethical-decision-making.md
+    - Checklists:
+      - AI Agent Integration: adoption/checklists/ai-agent-integration.md
+      - Squad Formation: adoption/checklists/squad-formation.md
+      - Data Spine Implementation: adoption/checklists/data-spine-implementation.md
+      - Governance & Ethics Review: adoption/checklists/governance-ethics-review.md
+    - Templates:
+      - Agent Definition: adoption/templates/agent-definition.md
+      - Squad Charter: adoption/templates/squad-charter.md
+      - Data Contract: adoption/templates/data-contract.md
+      - RFC Template: adoption/templates/rfc-template.md
+      - ADR Template: adoption/templates/adr-template.md
   - Guides:
     - Docker Setup: docker.md
     - Cleanup & Optimization: cleanup.md

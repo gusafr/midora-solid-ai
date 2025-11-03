@@ -1,0 +1,128 @@
+# AI Agent Definition Template
+
+This template helps you define AI agents following SOLID.AI principles. Copy this file and fill in each section.
+
+---
+
+```yaml
+agent:
+  # ============================================================================
+  # AGENT IDENTITY
+  # ============================================================================
+  identity:
+    name: ""  # e.g., "SupportTriage-Agent", "RecommendationEngine", "CodeReviewAssistant"
+    role: ""  # What is this agent's function?
+    persona: ""  # How should it behave/communicate?
+  
+  # ============================================================================
+  # PURPOSE STATEMENT
+  # ============================================================================
+  purpose:
+    statement: ""  # Why does this agent exist? What human need does it serve?
+    alignment: ""  # How does this connect to our mission and values?
+  
+  # ============================================================================
+  # CAPABILITIES (What it CAN do)
+  # ============================================================================
+  capabilities:
+    - task: ""
+      input: ""
+      output: ""
+      performance: ""  # e.g., "95% accuracy, <2s latency"
+    
+    # Add more capabilities as needed
+  
+  # ============================================================================
+  # GUARDRAILS (What it CANNOT or MUST NOT do)
+  # ============================================================================
+  guardrails:
+    prohibited:
+      - ""  # Actions the agent must never take
+    
+    boundaries:
+      - ""  # Limits and escalation triggers
+    
+    safe_defaults:
+      - ""  # What to do when uncertain or encountering errors
+  
+  # ============================================================================
+  # HUMAN OVERSIGHT
+  # ============================================================================
+  human_oversight:
+    autonomy_level: ""  # co-pilot | supervised | autonomous
+    review_frequency: ""  # e.g., "Every decision", "Daily sample", "Exception only"
+    reviewers: ""  # Role or team responsible
+    escalation: ""  # When and how to escalate to humans
+  
+  # ============================================================================
+  # SUCCESS METRICS
+  # ============================================================================
+  success_metrics:
+    value:
+      - ""  # How we measure if agent creates value (user outcomes)
+    
+    performance:
+      - ""  # Technical metrics (accuracy, latency, throughput)
+    
+    ethical:
+      - ""  # Fairness, bias, privacy, transparency metrics
+  
+  # ============================================================================
+  # OBSERVABILITY REQUIREMENTS
+  # ============================================================================
+  observability:
+    logging:
+      - ""  # What decisions, actions, or events to log
+    
+    dashboards:
+      - ""  # What visualizations operators need
+    
+    alerts:
+      - ""  # What conditions trigger notifications
+  
+  # ============================================================================
+  # LEARNING & ITERATION
+  # ============================================================================
+  learning:
+    improvement_loop: ""  # How the agent improves over time
+    feedback: ""  # How human feedback is captured and used
+    review_cadence: ""  # When we review and update agent definition
+  
+  # ============================================================================
+  # DATA & PRIVACY
+  # ============================================================================
+  data_privacy:
+    access: ""  # What data the agent can access
+    protection: ""  # How privacy and security are ensured
+    retention: ""  # How long data is kept
+  
+  # ============================================================================
+  # FAILURE & ROLLBACK PLAN
+  # ============================================================================
+  failure_plan:
+    failure_modes:
+      - ""  # What could go wrong and recovery approach
+    
+    rollback: ""  # How to safely disable the agent
+    backup: ""  # Manual process if agent unavailable
+```
+
+---
+
+## Usage Instructions
+
+1. **Copy this template** to your repository
+2. **Fill in each section** - use the prompt in [PROMPT-TEMPLATES/ai-agent-definition.md](../PROMPT-TEMPLATES/ai-agent-definition.md) to help
+3. **Review with team** - get input from engineers, product, ethics reviewers
+4. **Publish to agent registry** - make this definition discoverable
+5. **Update as agent evolves** - treat as living document
+
+## Related Resources
+
+- **AI Agent Definition Prompt:** [PROMPT-TEMPLATES/ai-agent-definition.md](../PROMPT-TEMPLATES/ai-agent-definition.md)
+- **AI Integration Checklist:** [CHECKLISTS/ai-agent-integration.md](../CHECKLISTS/ai-agent-integration.md)
+- **AI Agents Documentation:** [DOCS/05-ai-agents.md](../../DOCS/05-ai-agents.md)
+
+---
+
+**Version:** 1.0 | **Framework:** SOLID.AI

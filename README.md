@@ -21,6 +21,7 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | Path | Description |
 | --- | --- |
 | `README.md` | Entry point and orientation for contributors and adopters |
+| `QUICK-START-GUIDE.md` | **NEW!** 5-minute guide to start using SOLID.AI today |
 | `LICENSE` | MIT License granting open-source usage |
 | `CODE_OF_CONDUCT.md` | Community expectations and escalation paths |
 | `CONTRIBUTING.md` | Workflow for RFCs, ADRs, and documentation updates |
@@ -34,7 +35,18 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | `RFC/` | Request for Comments governing strategic evolutions |
 | `ADR/` | Architecture Decision Records tracking technical choices |
 | `PLAYBOOKS/` | Operational guides for squads, pools, operations, and AI integration |
+| `ADOPTION/` | **NEW!** Ready-to-use adoption pack: prompts, templates, checklists, and reference cards |
 | `mkdocs.yml` | MkDocs Material configuration for publishing the site |
+
+## 🚀 New to SOLID.AI? Start Here!
+
+**[Read the Quick Start Guide](QUICK-START-GUIDE.md)** — Learn SOLID.AI in 5 minutes and get 10 essential AI prompts to use today.
+
+**Explore the Adoption Pack:**
+- **[Reference Cards](ADOPTION/REFERENCE-CARDS/)** — Role-specific AI prompting patterns for developers, product managers, operations, and leadership
+- **[Prompt Templates](ADOPTION/PROMPT-TEMPLATES/)** — Ready-to-use prompts for feature development, AI agents, data contracts, ethics, and retrospectives
+- **[Checklists](ADOPTION/CHECKLISTS/)** — Step-by-step guides for AI integration, squad formation, data spine, and governance
+- **[Templates](ADOPTION/TEMPLATES/)** — File templates for agent definitions, squad charters, data contracts, RFCs, and ADRs
 
 ## Quick Start
 
