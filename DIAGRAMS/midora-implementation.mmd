@@ -1,0 +1,87 @@
+```mermaid
+graph TB
+    subgraph Platform["🏗️ midora-core (Platform Foundation)"]
+        direction TB
+        Backend[midora-back-end-py<br/>FastAPI/Django<br/>Core Services]
+        APIGateway[midora-api-openapi<br/>API Gateway<br/>Service Mesh]
+        IDP[midora-idp-backstage<br/>Developer Portal<br/>Golden Paths]
+    end
+
+    subgraph Intelligence["🧠 midora-intelligence (AI/ML Engine)"]
+        direction TB
+        MLService[midora-ml-service<br/>Model Serving<br/>Inference API]
+        MAGI[midora-magi-py<br/>Agent Orchestration<br/>Workflow Engine]
+    end
+
+    subgraph Learning["📚 learning-apps (Student Experience)"]
+        direction TB
+        Flutter[midora-front-end-fl-v2<br/>Mobile App<br/>Dart/Flutter]
+        TypeScript[midora-front-end-ts<br/>Web App<br/>React/TypeScript]
+        PHP[midora-portal-ph<br/>Legacy Portal<br/>PHP (Maintenance)]
+    end
+
+    subgraph Content["📝 content-pipeline (Content Generation)"]
+        direction TB
+        Generator[midora-course-generator-py<br/>Content AI<br/>Course Synthesis]
+    end
+
+    subgraph Pools["🏊 Capability Pools (Cross-Cutting)"]
+        direction LR
+        Devs[Multidisciplinary<br/>Developers]
+        Arch[Solutions<br/>Architecture]
+        QA[Quality<br/>Assurance]
+    end
+
+    subgraph Squads["🎯 Product Triad Squads"]
+        direction LR
+        Squad1[Assessment Engine<br/>Squad]
+        Squad2[Content Pipeline<br/>Squad]
+        Squad3[Mobile UX<br/>Squad]
+    end
+
+    %% System dependencies
+    Intelligence -->|ML Inference| Platform
+    Learning -->|API Calls| Platform
+    Content -->|Orchestration| Intelligence
+    Learning -->|AI Features| Intelligence
+
+    %% Pool ownership
+    Arch -.->|Governs| Platform
+    Devs -.->|Builds| Intelligence
+    Devs -.->|Builds| Learning
+    Devs -.->|Builds| Content
+    QA -.->|Tests All| Platform
+    QA -.->|Tests All| Intelligence
+
+    %% Squad to systems
+    Squad1 -->|Works on| MLService
+    Squad1 -->|Works on| MAGI
+    Squad1 -->|Works on| Flutter
+    Squad1 -->|Works on| APIGateway
+
+    Squad2 -->|Works on| Generator
+    Squad2 -->|Works on| MAGI
+    Squad2 -->|Works on| Backend
+
+    Squad3 -->|Works on| Flutter
+    Squad3 -->|Works on| TypeScript
+    Squad3 -->|Works on| APIGateway
+
+    %% Infrastructure layer
+    subgraph Automation["⚙️ 100% Automated Operations"]
+        Finance[Finance<br/>95% Auto]
+        Infra[Infrastructure<br/>90% Auto]
+        HR[HR<br/>95% Auto]
+    end
+
+    Automation -.->|Supports| Platform
+    Automation -.->|Monitors| Intelligence
+
+    style Platform fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Intelligence fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style Learning fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Content fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Pools fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+    style Squads fill:#fff4e6,stroke:#ff9800,stroke-width:2px
+    style Automation fill:#f1f8e9,stroke:#689f38,stroke-width:2px
+```

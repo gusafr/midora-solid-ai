@@ -1,32 +1,74 @@
 ```mermaid
-graph TD
-    Purpose[Purpose Layer]
-    DataSpine[Data Spine]
-    Cognitive[Cognitive Layer]
-    Automation[Automation Mesh]
-    Org[Organizational Layer]
-    Governance[Governance & Ethics Layer]
-
-    Purpose --> Governance
-    Purpose --> Org
-    Purpose --> Cognitive
-
-    DataSpine --> Cognitive
-    DataSpine --> Automation
-    DataSpine --> Governance
-
-    Cognitive --> Automation
-    Cognitive --> Org
-
-    Automation --> Org
-    Automation --> Governance
-
-    Org --> Governance
-    Governance --> Purpose
-
-    subgraph Feedback Loops
-        Governance --> Cognitive
-        Org --> DataSpine
-        Automation --> DataSpine
+graph TB
+    subgraph Purpose["🎯 Purpose Layer"]
+        Mission[Mission & Strategy]
+        Values[Values & Ethics]
+        Outcomes[Outcome Definitions]
     end
+
+    subgraph DataSpine["🧬 Data Spine (Central Nervous System)"]
+        Contracts[Data Contracts & APIs]
+        Products[Data Products]
+        Lineage[Lineage & Catalog]
+        Observability[Observability Signals]
+    end
+
+    subgraph Cognitive["🧠 Cognitive Layer"]
+        Agents[AI Agents]
+        Orchestration[Agent Orchestration]
+        Learning[Learning Systems]
+    end
+
+    subgraph Automation["⚙️ Automation Mesh"]
+        Workflows[Event-Driven Workflows]
+        SIPOC[SIPOC Processes]
+        RPA[Process Automation]
+    end
+
+    subgraph Org["👥 Organizational Layer"]
+        Squads[Squads<br/>Outcome Delivery]
+        Pools[Pools<br/>Capability Hubs]
+        Roles[Human-AI Roles]
+    end
+
+    subgraph Governance["🛡️ Governance & Ethics Layer"]
+        Policies[Policies & Guardrails]
+        Compliance[Compliance & Audit]
+        Circle[Governance Circle]
+    end
+
+    %% Forward flows
+    Mission --> Outcomes
+    Outcomes --> Squads
+    Values --> Policies
+    
+    Squads --> Contracts
+    Pools --> Contracts
+    Contracts --> Products
+    Products --> Agents
+    Products --> Workflows
+    
+    Agents --> Orchestration
+    Orchestration --> Workflows
+    Workflows --> SIPOC
+    SIPOC --> Roles
+    
+    Policies --> Agents
+    Policies --> Workflows
+    Circle --> Policies
+    
+    %% Feedback loops (dashed)
+    Observability -.->|Telemetry| Circle
+    Observability -.->|Metrics| Learning
+    Roles -.->|Outcomes| Observability
+    Workflows -.->|Audit Logs| Compliance
+    Compliance -.->|Recommendations| Mission
+    Learning -.->|Improvements| Orchestration
+
+    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
+    style Purpose fill:#fff4e6,stroke:#ff9800
+    style Cognitive fill:#f3e5f5,stroke:#9c27b0
+    style Automation fill:#e8f5e9,stroke:#4caf50
+    style Org fill:#fff9c4,stroke:#fbc02d
+    style Governance fill:#ffebee,stroke:#d32f2f
 ```

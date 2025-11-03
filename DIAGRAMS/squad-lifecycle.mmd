@@ -1,0 +1,72 @@
+```mermaid
+stateDiagram-v2
+    [*] --> Formation: Strategic Outcome Identified
+
+    Formation --> Active: Product Triad Assembled<br/>Pool Resources Allocated<br/>RFC Approved
+
+    state Formation {
+        [*] --> OutcomeDefinition: Portfolio Pool
+        OutcomeDefinition --> TriadSelection: PMO Pool
+        TriadSelection --> CapabilityRequest: Product Triad
+        CapabilityRequest --> GovernanceReview: Resource Match
+        GovernanceReview --> [*]: Approval
+    }
+
+    state Active {
+        [*] --> Delivery
+        Delivery --> Retrospective: Biweekly
+        Retrospective --> Delivery: Improvements Applied
+        Delivery --> StakeholderReview: Weekly
+        StakeholderReview --> Delivery: Feedback
+        Delivery --> GovernanceCheckpoint: Monthly
+        GovernanceCheckpoint --> Delivery: Alignment Confirmed
+    }
+
+    Active --> OutcomeAchieved: Success Criteria Met
+    Active --> Blocked: Critical Blocker
+
+    Blocked --> Active: Blocker Resolved
+    Blocked --> Pivot: Strategic Shift Required
+
+    OutcomeAchieved --> Dissolve: One-Time Outcome
+    OutcomeAchieved --> Pivot: New Related Outcome
+    OutcomeAchieved --> Sustain: Ongoing Support Needed
+
+    state Dissolve {
+        [*] --> KnowledgeCapture
+        KnowledgeCapture --> ResourceReturn: Publish RFC/ADR<br/>Update Playbooks
+        ResourceReturn --> [*]: Triad to Pool/New Squad
+    }
+
+    state Pivot {
+        [*] --> NewOutcome: Redefine Mission
+        NewOutcome --> [*]: Return to Active
+    }
+
+    state Sustain {
+        [*] --> MaintenanceMode: Reduce Capacity<br/>Automate Operations
+        MaintenanceMode --> [*]: Operational Team Takes Over
+    }
+
+    Dissolve --> [*]
+    Pivot --> Active
+    Sustain --> [*]
+
+    note right of Formation
+        Duration: 1-2 weeks
+        Governance: RFC review
+        Output: Squad charter
+    end note
+
+    note right of Active
+        Duration: Varies (4-16 weeks typical)
+        Rhythm: Daily standups, weekly reviews
+        Metrics: Outcome progress, quality, velocity
+    end note
+
+    note right of OutcomeAchieved
+        Criteria: Success metrics met
+        Documentation: Lessons learned
+        Handoff: Knowledge transfer
+    end note
+```

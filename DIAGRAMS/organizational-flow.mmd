@@ -1,38 +1,89 @@
 ```mermaid
-flowchart LR
-    subgraph Squads
-        S1[Discovery Squad]
-        S2[Delivery Squad]
+graph TB
+    subgraph Portfolio["📊 Portfolio Management"]
+        Outcomes[Strategic Outcomes]
+        Priorities[Prioritization]
     end
 
-    subgraph Pools
-        P1[Data Pool]
-        P2[AI Ops Pool]
-        P3[Design Pool]
+    subgraph Squad["🎯 Product Triad Squad"]
+        PO[Product Owner<br/>Purpose & Value]
+        SA[System Architect<br/>Technical Design]
+        PM[Project Manager<br/>Execution Flow]
     end
 
-    subgraph Governance
-        G1[Governance Circle]
-        G2[Ethics Review]
+    subgraph Pools["🏊 Capability Pools"]
+        DevPool[Multidisciplinary<br/>Developers]
+        QAPool[Quality<br/>Assurance]
+        ArchPool[Solutions<br/>Architecture]
+        PMOPool[PMO]
+        CoachPool[Agile<br/>Coaching]
+        PortPool[Portfolio<br/>Strategy]
     end
 
-    subgraph Cognitive
-        A1[Cognitive Orchestrator]
-        A2[Insight Agent]
+    subgraph Cognitive["🤖 AI Agent Layer"]
+        PMAgent[Project Manager<br/>AI Agent]
+        QAAgent[QA Automation<br/>Agents]
+        OpsAgent[Operational<br/>Agents]
     end
 
-    S1 -->|RFC Draft| G1
-    S2 -->|Observability Signals| G2
-    G1 -->|Policy Update| P1
-    G1 -->|Policy Update| P2
-    G2 -->|Ethical Guidance| S1
-    G2 -->|Ethical Guidance| S2
+    subgraph Governance["🛡️ Governance Circle"]
+        Ethics[Ethics Review]
+        Compliance[Compliance Audit]
+        CircleLead[Circle Leadership]
+    end
 
-    P1 -->|Data Products| A2
-    P2 -->|Ops Guardrails| A1
-    P3 -->|Experience Patterns| S1
+    subgraph DataSpine["🧬 Data Spine"]
+        Metrics[Observability<br/>Metrics]
+        Contracts[API Contracts]
+        Catalog[Asset Catalog]
+    end
 
-    A2 -->|Intelligence Brief| S1
-    A1 -->|Automated Workflow| S2
-    A1 -->|Telemetry| G1
+    %% Portfolio to Squad
+    Outcomes --> Priorities
+    Priorities --> PO
+    PortPool -.->|Strategic Input| PO
+
+    %% Squad Internal
+    PO <--> SA
+    SA <--> PM
+    PM <--> PO
+
+    %% Squad to Pools (engagement)
+    SA -->|Technical Request| ArchPool
+    PM -->|Capacity Request| PMOPool
+    PO -->|Market Research| PortPool
+    Squad -->|Skill Request| DevPool
+    Squad -->|Testing Request| QAPool
+    Squad -->|Process Audit| CoachPool
+
+    %% Pools to AI Agents
+    PMOPool -.->|Automate| PMAgent
+    QAPool -.->|Automate| QAAgent
+    DevPool -.->|Automate| OpsAgent
+
+    %% AI Agents support Squad
+    PMAgent -.->|Status & Reports| PM
+    QAAgent -.->|Test Results| QAPool
+    OpsAgent -.->|Automation| Squad
+
+    %% Data Spine connections
+    Squad --> Metrics
+    Pools --> Catalog
+    Cognitive --> Contracts
+    Metrics --> Governance
+
+    %% Governance oversight
+    Ethics -.->|Guardrails| Cognitive
+    Compliance -.->|Audit| Squad
+    CircleLead -.->|Policy| Pools
+
+    %% Feedback loops
+    Metrics -.->|Learning| Cognitive
+    Governance -.->|Recommendations| Portfolio
+
+    style Squad fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Pools fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Cognitive fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style Governance fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
 ```

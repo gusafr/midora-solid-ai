@@ -1,0 +1,48 @@
+```mermaid
+sequenceDiagram
+    participant Event as Event/Trigger
+    participant Orchestrator as Agent Orchestrator
+    participant DataSpine as Data Spine
+    participant Agent as AI Agent
+    participant Policy as Policy Engine
+    participant Human as Human Curator
+    participant Action as Action System
+    participant Obs as Observability
+
+    Event->>Orchestrator: New task arrives
+    Orchestrator->>DataSpine: Request relevant data products
+    DataSpine-->>Orchestrator: Return curated data + contracts
+    
+    Orchestrator->>Agent: Initialize decision context
+    Agent->>DataSpine: Fetch additional context if needed
+    DataSpine-->>Agent: Provide data + lineage
+    
+    Agent->>Agent: Generate decision options
+    Agent->>Policy: Check decision against guardrails
+    
+    alt High Confidence & Compliant
+        Policy-->>Agent: Approved (confidence >95%)
+        Agent->>Action: Execute automated action
+        Action->>Obs: Log decision + rationale + outcome
+        Obs->>DataSpine: Store metrics for learning
+    else Medium Confidence or Edge Case
+        Policy-->>Agent: Requires human review (confidence 70-95%)
+        Agent->>Human: Escalate with recommendation + explanation
+        Human->>Human: Review context & rationale
+        Human->>Action: Approve/Modify/Reject decision
+        Action->>Obs: Log human override + reasoning
+        Obs->>Agent: Feedback for model improvement
+    else Low Confidence or Policy Violation
+        Policy-->>Agent: Blocked (confidence <70% or violates policy)
+        Agent->>Human: Escalate with detailed analysis
+        Human->>Human: Make decision manually
+        Human->>Obs: Log manual decision + context
+        Obs->>Policy: Update policy if needed
+    end
+
+    Obs->>Orchestrator: Emit telemetry for all paths
+    
+    Note over Orchestrator,Obs: Continuous Learning Loop
+    Obs->>Agent: Periodic retraining on approved decisions
+    Obs->>Policy: Policy refinement based on patterns
+```

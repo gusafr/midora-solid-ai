@@ -26,7 +26,7 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | `CONTRIBUTING.md` | Workflow for RFCs, ADRs, and documentation updates |
 | `MANIFESTO/solid-ai-manifesto-v1.md` | Foundational manifesto outlining philosophy and roadmap |
 | `DOCS/` | Modular documentation covering principles, architecture, governance, and glossary |
-| `DIAGRAMS/` | Mermaid source files for architecture and organizational flows |
+| `DIAGRAMS/` | Mermaid source files for architecture, organizational flows, and implementation patterns (10 diagrams) |
 | `RFC/` | Request for Comments governing strategic evolutions |
 | `ADR/` | Architecture Decision Records tracking technical choices |
 | `PLAYBOOKS/` | Operational guides for squads, pools, operations, and AI integration |

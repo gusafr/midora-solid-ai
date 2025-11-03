@@ -1,0 +1,104 @@
+```mermaid
+graph TB
+    subgraph Sources["📥 Data Sources"]
+        Transactional[Transactional DBs<br/>OLTP Systems]
+        Events[Event Streams<br/>Kafka, Pulsar]
+        External[External APIs<br/>SaaS Integrations]
+        Logs[Application Logs<br/>Telemetry]
+    end
+
+    subgraph Ingestion["🔄 Ingestion Layer"]
+        CDC[Change Data Capture]
+        Streaming[Stream Processing]
+        Batch[Batch ETL/ELT]
+        RealTime[Real-Time APIs]
+    end
+
+    subgraph Storage["💾 Unified Storage"]
+        Lakehouse[Lakehouse<br/>Bronze/Silver/Gold Layers]
+        Semantic[Semantic Layer<br/>Business Metrics]
+        Vector[Vector Store<br/>Embeddings for AI]
+    end
+
+    subgraph Contracts["📜 Data Contracts"]
+        Schema[Schema Registry<br/>Versioned Definitions]
+        APISpec[API Specifications<br/>OpenAPI, AsyncAPI]
+        SLA[Data SLAs<br/>Freshness, Quality]
+    end
+
+    subgraph Products["📦 Data Products"]
+        Customer[Customer 360]
+        Financial[Financial Reports]
+        Operational[Operational Metrics]
+        MLFeatures[ML Feature Store]
+    end
+
+    subgraph Catalog["📚 Data Catalog"]
+        Lineage[Data Lineage<br/>Impact Analysis]
+        Discovery[Asset Discovery<br/>Search & Browse]
+        Governance[Access Control<br/>Data Policies]
+    end
+
+    subgraph Observability["👁️ Observability"]
+        Quality[Data Quality<br/>Validation & Profiling]
+        Monitoring[Pipeline Monitoring<br/>Alerts & SLAs]
+        Usage[Usage Analytics<br/>Consumer Metrics]
+    end
+
+    subgraph Consumers["👥 Data Consumers"]
+        BI[Business Intelligence<br/>Dashboards]
+        AIAgents[AI Agents<br/>Decision Making]
+        Apps[Applications<br/>APIs]
+        Analytics[Analytics Teams<br/>Data Science]
+    end
+
+    %% Ingestion flows
+    Transactional --> CDC
+    Events --> Streaming
+    External --> RealTime
+    Logs --> Batch
+
+    CDC --> Lakehouse
+    Streaming --> Lakehouse
+    Batch --> Lakehouse
+    RealTime --> Lakehouse
+
+    %% Storage to Products
+    Lakehouse --> Semantic
+    Semantic --> Products
+    Lakehouse --> Vector
+    Vector --> MLFeatures
+
+    %% Contracts govern everything
+    Schema -.->|Define| Lakehouse
+    APISpec -.->|Specify| Products
+    SLA -.->|Enforce| Quality
+
+    %% Products to Catalog
+    Products --> Discovery
+    Products --> Lineage
+    Contracts --> Governance
+
+    %% Observability monitors all
+    Lakehouse --> Quality
+    Products --> Monitoring
+    Consumers --> Usage
+
+    %% Consumers access Products
+    Customer --> BI
+    Financial --> BI
+    Operational --> AIAgents
+    MLFeatures --> AIAgents
+    Products --> Apps
+    Products --> Analytics
+
+    %% Feedback loops
+    Usage -.->|Demand Signals| Products
+    Quality -.->|Issues| Ingestion
+    Monitoring -.->|Alerts| Governance
+
+    style Storage fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
+    style Contracts fill:#fff4e6,stroke:#ff9800,stroke-width:2px
+    style Products fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Observability fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+```

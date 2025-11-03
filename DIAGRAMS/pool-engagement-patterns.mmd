@@ -1,0 +1,58 @@
+```mermaid
+graph LR
+    subgraph Squad["🎯 Product Triad Squad"]
+        SquadNeed[Need: Capability Gap]
+    end
+
+    subgraph Pool["🏊 Capability Pool"]
+        Intake[Request Intake<br/>Automated Triage]
+        Assess[Capacity Assessment<br/>Availability Check]
+        Match[Skill Matching<br/>AI-Powered]
+        Assign[Resource Assigned]
+    end
+
+    subgraph Engagement["📋 Engagement Models"]
+        Embedded[Embedded<br/>Full Sprint 2-4 weeks<br/>Dedicated Resource]
+        OnDemand[On-Demand<br/>Hours/Days<br/>Consultation/Review]
+        SelfService[Self-Service<br/>Instant<br/>Assets/Templates/Tools]
+    end
+
+    subgraph Delivery["🚀 Delivery & Feedback"]
+        Work[Work Delivered]
+        Assets[Reusable Assets Created]
+        Feedback[Squad Satisfaction Score]
+        Learning[Pool Learning Loop]
+    end
+
+    %% Request flow
+    SquadNeed --> Intake
+    Intake --> Assess
+    Assess --> Match
+
+    %% Engagement decision
+    Match -->|High Effort| Embedded
+    Match -->|Medium Effort| OnDemand
+    Match -->|Low Effort| SelfService
+
+    %% Delivery
+    Embedded --> Work
+    OnDemand --> Work
+    SelfService --> Work
+
+    %% Feedback loops
+    Work --> Assets
+    Work --> Feedback
+    Feedback --> Learning
+    Assets -.->|Enrich| SelfService
+    Learning -.->|Improve| Match
+
+    %% Metrics tracking
+    Assess -.->|Utilization| PMO[PMO Dashboard]
+    Feedback -.->|Quality| PMO
+    Learning -.->|Efficiency| PMO
+
+    style Squad fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Pool fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Engagement fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Delivery fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+```
