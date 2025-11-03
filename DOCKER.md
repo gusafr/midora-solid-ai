@@ -375,6 +375,19 @@ docker build -t solid-ai:latest .
 docker build --cache-from solid-ai:latest -t solid-ai:latest .
 ```
 
+### Cleanup and Resource Management
+
+```powershell
+# Use the cleanup helper script
+.\cleanup.ps1 all           # Clean everything
+.\cleanup.ps1 docker        # Clean only Docker resources
+.\cleanup.ps1 -DryRun all   # Preview what would be deleted
+
+# Manual Docker cleanup
+docker system prune -af --volumes  # Remove all unused resources
+docker builder prune -af            # Remove build cache
+```
+
 ## Security Considerations
 
 1. **Scan images regularly:**

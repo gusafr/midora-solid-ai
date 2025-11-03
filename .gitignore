@@ -29,6 +29,7 @@ env/
 
 # MkDocs
 /site/
+.cache/
 
 # IDEs
 .vscode/

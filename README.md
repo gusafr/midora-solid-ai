@@ -24,6 +24,8 @@ solid.ai is the open framework for designing intelligent, ethical, and adaptive 
 | `LICENSE` | MIT License granting open-source usage |
 | `CODE_OF_CONDUCT.md` | Community expectations and escalation paths |
 | `CONTRIBUTING.md` | Workflow for RFCs, ADRs, and documentation updates |
+| `DOCKER.md` | Docker containerization guide for development and deployment |
+| `CLEANUP.md` | Resource optimization and cleanup strategies |
 | `MANIFESTO/solid-ai-manifesto-v1.md` | Foundational manifesto outlining philosophy and roadmap |
 | `DOCS/` | Modular documentation covering principles, architecture, governance, and glossary |
 | `DIAGRAMS/` | Mermaid source files for architecture, organizational flows, and implementation patterns (10 diagrams) |

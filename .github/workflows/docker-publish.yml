@@ -1,11 +1,12 @@
 name: Build and Push Docker Image
 
 on:
-  push:
-    branches: 
-      - main
-    tags:
-      - 'v*'
+  # Temporarily disabled automatic builds
+  # push:
+  #   branches: 
+  #     - main
+  #   tags:
+  #     - 'v*'
   pull_request:
     branches: 
       - main
@@ -62,6 +63,11 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
+
+      - name: Cleanup old build cache
+        if: github.event_name != 'pull_request'
+        run: |
+          echo "Current cache usage will be cleaned up automatically by GitHub Actions cache limits"
 
       - name: Build development image (no push)
         uses: docker/build-push-action@v5
