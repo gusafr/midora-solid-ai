@@ -1,9 +1,13 @@
 name: Deploy to GitHub Pages
 
+# This workflow is currently disabled until GitHub Pages is enabled in repository settings
+# To enable: Go to Settings → Pages → Source: GitHub Actions
+
 on:
-  push:
-    branches:
-      - main
+  # Temporarily disabled - enable after configuring GitHub Pages
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 permissions:
