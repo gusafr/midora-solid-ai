@@ -8,6 +8,7 @@ docs_dir: docs_site
 nav:
   - Home: index.md
   - 🚀 Quick Start: quick-start.md
+  - 📚 Reading Paths: README.md
   - Overview: overview.md
   - Principles: principles.md
   - Architecture: architecture.md
@@ -16,14 +17,34 @@ nav:
   - AI Agents: ai-agents.md
   - Governance & Ethics: governance-ethics.md
   - Observability: observability.md
+  - Human-AI Collaboration: human-ai-collaboration.md
+  - Role Hierarchy (Human & AI): role-hierarchy-human-ai.md
+  - AI-Native Agile & SAFe: ai-native-agile.md
+  - Whole-Org Transformation: whole-organization-transformation.md
   - Glossary: glossary.md
+  - 📊 Diagrams: diagrams.md
   - Adoption Pack:
     - Overview: adoption/index.md
     - Reference Cards:
-      - Developer: adoption/reference-cards/developer.md
-      - Product Manager: adoption/reference-cards/product-manager.md
-      - Operations: adoption/reference-cards/operations.md
-      - Leadership: adoption/reference-cards/leadership.md
+      - Software Development:
+        - Developer: adoption/reference-cards/developer.md
+        - Product Manager: adoption/reference-cards/product-manager.md
+        - Operations: adoption/reference-cards/operations.md
+        - Leadership: adoption/reference-cards/leadership.md
+      - Business Functions:
+        - Sales: adoption/reference-cards/sales.md
+        - Administration: adoption/reference-cards/administration.md
+        - Marketing: adoption/reference-cards/marketing.md
+      - Production & Commerce:
+        - Commerce & Retail: adoption/reference-cards/commerce.md
+        - Manufacturing: adoption/reference-cards/manufacturing.md
+      - Highly Regulated:
+        - Healthcare: adoption/reference-cards/healthcare.md
+        - Financial Services: adoption/reference-cards/financial-services.md
+      - Service Sectors:
+        - Professional Services: adoption/reference-cards/professional-services.md
+        - Logistics: adoption/reference-cards/logistics.md
+        - Human Resources: adoption/reference-cards/human-resources.md
     - Prompt Templates:
       - Purpose-Driven Feature: adoption/prompt-templates/purpose-driven-feature.md
       - AI Agent Definition: adoption/prompt-templates/ai-agent-definition.md
@@ -55,11 +76,31 @@ nav:
     - ADRs:
       - ADR 0001 – Mermaid Choice: adr/adr-0001-mermaid-choice.md
     - Playbooks:
-      - Squads: playbooks/playbook-squads.md
-      - Pools: playbooks/playbook-pools.md
-      - Operations: playbooks/playbook-operations.md
-      - AI Integration: playbooks/playbook-ai-integration.md
-      - Midora Implementation: playbooks/playbook-midora-implementation.md
+      - 📖 Overview: playbooks/README.md
+      - By Company Stage:
+        - 🚀 Startup (AI-Native): playbooks/by-stage/startup-ai-native.md
+        - 📈 SME Transformation: playbooks/by-stage/sme-transformation.md
+      - By Sector:
+        - Business Functions:
+          - Sales: playbooks/by-sector/business-functions/sales.md
+          - Administration & Finance: playbooks/by-sector/business-functions/administration.md
+          - Marketing: playbooks/by-sector/business-functions/marketing.md
+        - Production & Commerce:
+          - Commerce & Retail: playbooks/by-sector/production-commerce/commerce.md
+          - Manufacturing: playbooks/by-sector/production-commerce/manufacturing.md
+        - Regulated Industries:
+          - Healthcare: playbooks/by-sector/regulated/healthcare.md
+          - Financial Services: playbooks/by-sector/regulated/financial-services.md
+        - Service Industries:
+          - Professional Services: playbooks/by-sector/services/professional-services.md
+          - Logistics: playbooks/by-sector/services/logistics.md
+          - Human Resources: playbooks/by-sector/services/human-resources.md
+      - Organizational Patterns:
+        - Squads: playbooks/organizational/squads.md
+        - Pools: playbooks/organizational/pools.md
+        - Operations: playbooks/organizational/operations.md
+        - AI Integration: playbooks/organizational/ai-integration.md
+        - MIDORA Implementation: playbooks/organizational/midora-implementation.md
 
 theme:
   name: material

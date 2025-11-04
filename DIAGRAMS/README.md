@@ -40,8 +40,9 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 **Purpose:** How squads, pools, AI agents, and governance interact in practice
 
 **Key Elements:**
-- Product Triad squad structure (PO + System Architect + PM)
-- Six capability pools with specializations
+- Product Triad squad structure (PO + System Architect + PM) with role levels
+- Six capability pools with specializations and role level ranges
+- Role hierarchy annotations (Executive/High/Intermediate/Low levels)
 - AI agent layer supporting humans
 - Governance Circle oversight
 - Data Spine as integration backbone
@@ -49,9 +50,27 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 **Use Cases:** Organizational design workshops, team formation, role clarity
 
+**Updated:** 2025-11-04 (Added role hierarchy levels to squads and pools)
+
 ---
 
-### 4. **ai-native-safe-model.mmd**
+### 4. **role-hierarchy-framework.mmd** ✨ NEW
+**Purpose:** Visual framework for 4-level role hierarchy with decision authority, AI delegation, and career paths
+
+**Key Elements:**
+- Four levels: Executive (🎯), High (🏆), Intermediate (⚙️), Low (🌱)
+- Decision authority per level (budget ranges, strategic impact)
+- AI delegation patterns (what AI handles vs. what humans decide)
+- Compensation ranges (market-competitive transparency)
+- Career progression paths (promotion criteria, timelines)
+- Role examples per level (CTO, Principal Engineer, Software Engineer II, Junior Developer)
+- Transition criteria between levels
+
+**Use Cases:** Role definition, career laddering, compensation planning, hiring, performance reviews
+
+---
+
+### 5. **ai-native-safe-model.mmd**
 **Purpose:** Sequence diagram showing ethical AI governance in action
 
 **Key Elements:**
@@ -68,7 +87,7 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ## Operational Pattern Diagrams
 
-### 5. **sipoc-automation-pattern.mmd**
+### 6. **sipoc-automation-pattern.mmd**
 **Purpose:** How to automate any operational process using SIPOC methodology
 
 **Key Elements:**
@@ -82,7 +101,7 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
-### 6. **pool-engagement-patterns.mmd**
+### 7. **pool-engagement-patterns.mmd**
 **Purpose:** Three engagement models for pool-squad collaboration
 
 **Key Elements:**
@@ -97,7 +116,7 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
-### 7. **squad-lifecycle.mmd**
+### 8. **squad-lifecycle.mmd**
 **Purpose:** State diagram showing squad formation, active delivery, and transition
 
 **Key Elements:**
@@ -111,7 +130,7 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
-### 8. **cognitive-decision-flow.mmd**
+### 9. **cognitive-decision-flow.mmd**
 **Purpose:** Detailed sequence of how AI agents make decisions with human oversight
 
 **Key Elements:**
@@ -127,22 +146,58 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
-### 9. **human-ai-evolution.mmd**
-**Purpose:** Gantt chart showing the evolution of human-AI role allocation over time
+### 10. **ai-native-sprint-flow.mmd** ✨ NEW
+**Purpose:** Week-long AI-Native Agile sprint showing daily ceremonies with AI agent participation
 
 **Key Elements:**
-- Phase 1 (current): Mostly human with AI copilots
-- Phase 2 (6-12 months): Balanced human-AI collaboration
-- Phase 3 (12-24 months): AI-majority with human curation
+- **Monday (Planning):** SprintPlanner-Agent pre-generates sprint options, team finalizes
+- **Tuesday-Thursday (Build):** StandupFacilitator-Agent runs daily standups, CIAgent automates testing
+- **Wednesday (Refinement):** BacklogRefiner-Agent analyzes upcoming stories, estimates effort
+- **Friday (Review & Retro):** DemoCoordinator-Agent prepares demo, RetroAnalyzer-Agent finds patterns
+- Human-AI collaboration throughout (squad makes decisions, AI provides insights)
+- Data Spine integration for metrics, backlog, deployment
+- Governance policy checks
+
+**Use Cases:** AI-Native Agile implementation, sprint planning, team coaching, transformation roadmaps
+
+---
+
+### 11. **collaboration-models-matrix.mmd** ✨ NEW
+**Purpose:** Comprehensive visualization of 5 Human-AI collaboration models with task examples
+
+**Key Elements:**
+- **Model 1 - Reserved for Humans:** Ethics, vision, culture, relationships (100% human)
+- **Model 2 - Human-Led with AI Support:** Strategic planning, architecture (70-85% AI confidence)
+- **Model 3 - Human-AI Partnership:** Software dev, content creation (85-92% AI confidence, 50/50 collaboration)
+- **Model 4 - AI-Led with Human Oversight:** Testing, monitoring, L1 support (92-97% AI confidence)
+- **Model 5 - AI-Autonomous with Human Curation:** CI/CD, data entry, scheduling (97%+ AI confidence)
+- Decision tree for choosing the right model
+- Evolution timeline (2025 → 2027+)
+- Role examples per model
+
+**Use Cases:** Collaboration model design, task allocation, AI adoption planning, workforce planning
+
+---
+
+### 12. **human-ai-evolution.mmd**
+**Purpose:** Gantt chart showing the evolution of human-AI role allocation mapped to collaboration models
+
+**Key Elements:**
+- Phase 1 (2025): Mostly human with AI copilots (Reserved, Human-Led, Partnership models)
+- Phase 2 (2026): Balanced human-AI collaboration (Partnership, AI-Led models)
+- Phase 3 (2027+): AI-majority with human curation (AI-Led, Autonomous models)
 - Role-by-role breakdown (PO, Architect, PM, Developers, QA, PMO, Operations)
+- Explicit mapping to 5 collaboration models (not just percentages)
 
 **Use Cases:** Transformation roadmaps, workforce planning, change management
+
+**Updated:** 2025-11-04 (Mapped timeline to 5 collaboration models for clarity)
 
 ---
 
 ## Implementation Examples
 
-### 10. **midora-implementation.mmd**
+### 13. **midora-implementation.mmd**
 **Purpose:** Concrete implementation showing Midora's 4 systems, 10+ repositories, pools, and squads
 
 **Key Elements:**
@@ -155,6 +210,22 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 - 100% automated operations layer
 
 **Use Cases:** Reference implementation, case studies, real-world examples
+
+---
+
+## Additional Resources
+
+### 14. **bipolar-vs-ai-native.md**
+**Purpose:** Text-based visual comparison of traditional "bipolar organization" vs. AI-Native organization
+
+**Key Elements:**
+- Side-by-side ASCII diagrams (IT department fast, rest of company slow vs. entire org AI-native)
+- Economics comparison (cost structure, scalability, profit margins)
+- Competitive outcomes (5-year projection table)
+- Leadership choice framework (status quo, partial, whole-org transformation)
+- Getting started roadmap (Week 1 → Month 24)
+
+**Use Cases:** Executive presentations, transformation case, competitive strategy
 
 ---
 
@@ -214,6 +285,8 @@ When updating diagrams:
 
 **Versioning:** Track major changes in git history; consider version tags for breaking changes
 
+**Diagram Count:** 13 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
+
 ---
 
 ## Contributing
@@ -222,6 +295,6 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on proposing new diagra
 
 ---
 
-**Last Updated:** 2025-11-02  
+**Last Updated:** 2025-11-04  
 **Maintained by:** solid.ai Framework Team  
 **License:** MIT

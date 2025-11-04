@@ -15,10 +15,34 @@ This adoption pack bridges the gap between comprehensive framework documentation
 ### 📋 Quick Reference Cards
 Role-based one-page guides with AI prompting patterns:
 
+**Software Development:**
+
 - **[Developer Reference](reference-cards/developer.md)** - AI prompts for code, architecture, and technical decisions
 - **[Product Manager Reference](reference-cards/product-manager.md)** - AI prompts for roadmaps, user stories, and prioritization
 - **[Operations Reference](reference-cards/operations.md)** - AI prompts for incident response, monitoring, and optimization
 - **[Leadership Reference](reference-cards/leadership.md)** - AI prompts for strategy, governance, and organizational design
+
+**Business Functions:**
+
+- **[Sales Reference](reference-cards/sales.md)** - AI prompts for prospecting, deal strategy, and pipeline management
+- **[Administration & Finance Reference](reference-cards/administration.md)** - AI prompts for HR, finance, procurement, and compliance
+- **[Marketing Reference](reference-cards/marketing.md)** - AI prompts for content, campaigns, analytics, and customer insights
+
+**Production & Commerce:**
+
+- **[Commerce & Retail Reference](reference-cards/commerce.md)** - AI prompts for demand forecasting, personalization, inventory, fraud detection
+- **[Manufacturing Reference](reference-cards/manufacturing.md)** - AI prompts for predictive maintenance, quality control, production optimization
+
+**Highly Regulated:**
+
+- **[Healthcare Reference](reference-cards/healthcare.md)** - AI prompts for clinical decision support, diagnostics, patient care (HIPAA-compliant)
+- **[Financial Services Reference](reference-cards/financial-services.md)** - AI prompts for fraud detection, credit risk, AML/KYC, regulatory compliance
+
+**Service Sectors:**
+
+- **[Professional Services Reference](reference-cards/professional-services.md)** - AI prompts for consulting, proposals, knowledge management, client delivery
+- **[Logistics Reference](reference-cards/logistics.md)** - AI prompts for route optimization, warehouse operations, supply chain management
+- **[Human Resources Reference](reference-cards/human-resources.md)** - AI prompts for recruiting, onboarding, performance, retention (bias-free)
 
 ### 🎯 Prompt Templates
 Ready-to-use AI prompt templates aligned with SOLID.AI principles:

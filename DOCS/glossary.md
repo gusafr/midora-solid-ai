@@ -22,3 +22,24 @@
 | **RFC (Request for Comments)** | Proposal document for material changes to architecture, governance, or organizational design. |
 | **SIPOC** | Supplier-Input-Process-Output-Customer model used to align automations with purpose and ethics. |
 | **Squad** | Cross-functional, outcome-oriented team combining human expertise and AI agents. |
+---
+
+## Next Steps
+
+**Start Learning:**
+- [Overview](00-overview.md) — Framework introduction
+- [Reading Paths](README.md) — Recommended learning sequence
+- [Quick Start Guide](../QUICK-START-GUIDE.md) — 5-minute introduction
+
+**Deep Dive:**
+- [Architecture](02-architecture.md) — Understand all 6 layers
+- [AI Agents](05-ai-agents.md) — Define AI teammates
+- [AI-Native Agile](11-ai-native-agile.md) — Integrate with Scrum/SAFe
+
+**Get Started:**
+- [Adoption Pack](../ADOPTION/) — Templates, checklists, prompts
+- [Playbooks](../PLAYBOOKS/) — Sector-specific guides
+
+---
+
+**Version:** 1.0 | **Last Updated:** November 2025 | **Framework:** SOLID.AI
