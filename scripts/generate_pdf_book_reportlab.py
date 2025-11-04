@@ -420,8 +420,28 @@ class PDFBookGenerator:
                 code_lines.append(line)
                 continue
             
-            # Skip diagram placeholders
-            if '--8<--' in line or 'mermaid' in line:
+            # Handle diagram placeholders
+            if '--8<--' in line:
+                # Extract diagram filename
+                match = re.search(r'--8<--\s*"?([^"]+\.mmd)"?', line)
+                if match:
+                    diagram_path = match.group(1)
+                    diagram_name = diagram_path.split('/')[-1].replace('.mmd', '').replace('-', ' ').title()
+                    
+                    # Add visual placeholder box
+                    elements.append(Spacer(1, 0.3*cm))
+                    
+                    # Diagram title with icon
+                    placeholder_text = f"📊 <b>Diagram: {diagram_name}</b>"
+                    elements.append(Paragraph(placeholder_text, self.styles['CustomHeading3']))
+                    
+                    # Reference note
+                    note_text = (
+                        f'<i>View this interactive diagram online at:</i><br/>'
+                        f'<font color="#8b5cf6">https://gusafr.github.io/midora-solid-ai/diagrams/</font>'
+                    )
+                    elements.append(Paragraph(note_text, self.styles['CustomBody']))
+                    elements.append(Spacer(1, 0.3*cm))
                 continue
             
             # Headers

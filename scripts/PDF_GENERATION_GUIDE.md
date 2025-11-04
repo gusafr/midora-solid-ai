@@ -196,6 +196,38 @@ Both scripts produce professional PDFs with:
 
 ---
 
+## Diagram Handling
+
+### Current Approach: Interactive Placeholders
+
+The PDF generator handles Mermaid diagrams by creating **interactive placeholders** that direct readers to the online documentation:
+
+**What appears in the PDF:**
+```
+📊 Diagram: Solid AI Architecture
+View this interactive diagram online at:
+https://gusafr.github.io/midora-solid-ai/diagrams/
+```
+
+**Benefits:**
+- ✅ PDFs generate successfully without errors
+- ✅ Readers are informed about diagram availability
+- ✅ Links direct to interactive, zoomable versions
+- ✅ No additional dependencies required
+- ✅ Smaller PDF file sizes
+
+**Alternatives (if needed in the future):**
+1. **Pre-render to PNG**: Install Mermaid CLI and convert diagrams to images
+2. **Mermaid Live API**: Auto-render diagrams via web service during generation
+3. **Manual export**: Save diagrams as images and embed them
+
+For most use cases, the current placeholder approach is **recommended** because:
+- Users can interact with diagrams online (zoom, pan, click)
+- Diagrams remain up-to-date with the website
+- Simpler build process without Node.js dependency
+
+---
+
 ## Next Steps
 
 1. **Try ReportLab first** (easiest):
@@ -225,5 +257,5 @@ Both scripts produce professional PDFs with:
 ---
 
 **Last Updated:** November 4, 2025  
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Production Ready ✅

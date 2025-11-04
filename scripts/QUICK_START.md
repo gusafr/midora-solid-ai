@@ -249,6 +249,33 @@ Both generators create PDFs with:
    - Prompt templates
    - File templates
 
+7. **Diagrams**
+   - Interactive placeholders with web links
+   - Directs readers to online diagrams
+   - Format: "📊 Diagram: [Name] - View at [URL]"
+
+---
+
+## 📊 Diagram Handling
+
+**Current approach:** Interactive placeholders in PDF that link to the website.
+
+**In the PDF, diagrams appear as:**
+```
+📊 Diagram: Solid AI Architecture
+View this interactive diagram online at:
+https://gusafr.github.io/midora-solid-ai/diagrams/
+```
+
+**Why placeholders?**
+- ✅ No additional dependencies (no Node.js needed)
+- ✅ Readers get interactive, zoomable diagrams online
+- ✅ Diagrams stay up-to-date with the website
+- ✅ Faster PDF generation
+- ✅ Smaller file sizes
+
+**Need diagrams embedded in PDF?** See `scripts/PDF_GENERATION_GUIDE.md` for alternatives.
+
 ---
 
 ## ✅ Tested Configurations
