@@ -20,7 +20,7 @@ SOLID.AI recognizes that both **humans and AI agents** operate at different leve
 The following diagram illustrates the complete 4-level hierarchy with decision authority, AI delegation patterns, compensation ranges, and career progression paths:
 
 ```mermaid
---8<-- "../DIAGRAMS/role-hierarchy-framework.mmd"
+--8<-- "DIAGRAMS/role-hierarchy-framework.mmd"
 ```
 
 💡 **Tip:** This visual shows how each level differs in strategic impact, decision authority, and AI collaboration patterns. Use it for role definitions, career planning, and organizational design.

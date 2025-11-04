@@ -13,7 +13,7 @@ All diagrams are created using [Mermaid](https://mermaid.js.org/) and can be emb
 Complete architecture showing the central role of the Data Spine as the organizational nervous system.
 
 ```mermaid
---8<-- "../DIAGRAMS/solid-ai-architecture.mmd"
+--8<-- "DIAGRAMS/solid-ai-architecture.mmd"
 ```
 
 **Use Cases:** Architecture overviews, technical presentations, onboarding
@@ -25,7 +25,7 @@ Complete architecture showing the central role of the Data Spine as the organiza
 Detailed breakdown of the Data Spine components: contracts, products, lineage, observability.
 
 ```mermaid
---8<-- "../DIAGRAMS/data-spine-architecture.mmd"
+--8<-- "DIAGRAMS/data-spine-architecture.mmd"
 ```
 
 **Use Cases:** Data platform design, data engineering, governance discussions
@@ -37,7 +37,7 @@ Detailed breakdown of the Data Spine components: contracts, products, lineage, o
 How squads, pools, AI agents, and governance interact in practice, with role hierarchy levels.
 
 ```mermaid
---8<-- "../DIAGRAMS/organizational-flow.mmd"
+--8<-- "DIAGRAMS/organizational-flow.mmd"
 ```
 
 **Use Cases:** Organizational design workshops, team formation, role clarity
@@ -49,7 +49,7 @@ How squads, pools, AI agents, and governance interact in practice, with role hie
 4-level role hierarchy (Executive/High/Intermediate/Low) with decision authority, AI delegation, compensation, and career paths.
 
 ```mermaid
---8<-- "../DIAGRAMS/role-hierarchy-framework.mmd"
+--8<-- "DIAGRAMS/role-hierarchy-framework.mmd"
 ```
 
 **Use Cases:** Role definition, career laddering, compensation planning, hiring, performance reviews
@@ -63,7 +63,7 @@ How squads, pools, AI agents, and governance interact in practice, with role hie
 Sequence diagram showing ethical AI governance with policy constraints and human oversight.
 
 ```mermaid
---8<-- "../DIAGRAMS/ai-native-safe-model.mmd"
+--8<-- "DIAGRAMS/ai-native-safe-model.mmd"
 ```
 
 **Use Cases:** AI safety discussions, governance design, ethical AI implementation
@@ -77,7 +77,7 @@ Sequence diagram showing ethical AI governance with policy constraints and human
 How to automate any operational process using SIPOC methodology with human curatorship.
 
 ```mermaid
---8<-- "../DIAGRAMS/sipoc-automation-pattern.mmd"
+--8<-- "DIAGRAMS/sipoc-automation-pattern.mmd"
 ```
 
 **Use Cases:** Process automation design, operational excellence, back-office automation
@@ -89,7 +89,7 @@ How to automate any operational process using SIPOC methodology with human curat
 Three engagement models for pool-squad collaboration: Embedded, On-Demand, Self-Service.
 
 ```mermaid
---8<-- "../DIAGRAMS/pool-engagement-patterns.mmd"
+--8<-- "DIAGRAMS/pool-engagement-patterns.mmd"
 ```
 
 **Use Cases:** Resource allocation, pool design, capacity planning
@@ -101,7 +101,7 @@ Three engagement models for pool-squad collaboration: Embedded, On-Demand, Self-
 State diagram showing squad formation, active delivery, blocked state, and transition options.
 
 ```mermaid
---8<-- "../DIAGRAMS/squad-lifecycle.mmd"
+--8<-- "DIAGRAMS/squad-lifecycle.mmd"
 ```
 
 **Use Cases:** Squad management, outcome planning, knowledge management
@@ -113,7 +113,7 @@ State diagram showing squad formation, active delivery, blocked state, and trans
 How AI agents make decisions with confidence-based escalation and human oversight.
 
 ```mermaid
---8<-- "../DIAGRAMS/cognitive-decision-flow.mmd"
+--8<-- "DIAGRAMS/cognitive-decision-flow.mmd"
 ```
 
 **Use Cases:** AI agent design, decision automation, human-in-the-loop patterns
@@ -125,7 +125,7 @@ How AI agents make decisions with confidence-based escalation and human oversigh
 Week-long AI-Native Agile sprint showing daily ceremonies with 6 AI agents participating.
 
 ```mermaid
---8<-- "../DIAGRAMS/ai-native-sprint-flow.mmd"
+--8<-- "DIAGRAMS/ai-native-sprint-flow.mmd"
 ```
 
 **Use Cases:** AI-Native Agile implementation, sprint planning, team coaching
@@ -139,7 +139,7 @@ Week-long AI-Native Agile sprint showing daily ceremonies with 6 AI agents parti
 Comprehensive visualization of 5 collaboration models with task examples and decision tree.
 
 ```mermaid
---8<-- "../DIAGRAMS/collaboration-models-matrix.mmd"
+--8<-- "DIAGRAMS/collaboration-models-matrix.mmd"
 ```
 
 **Use Cases:** Collaboration model design, task allocation, AI adoption planning, workforce planning
@@ -153,7 +153,7 @@ Comprehensive visualization of 5 collaboration models with task examples and dec
 Gantt chart showing evolution of human-AI role allocation mapped to collaboration models (2025→2027+).
 
 ```mermaid
---8<-- "../DIAGRAMS/human-ai-evolution.mmd"
+--8<-- "DIAGRAMS/human-ai-evolution.mmd"
 ```
 
 **Use Cases:** Transformation roadmaps, workforce planning, change management
@@ -167,7 +167,7 @@ Gantt chart showing evolution of human-AI role allocation mapped to collaboratio
 Concrete implementation showing Midora's 4 systems, 10+ repositories, 6 pools, and product triad squads.
 
 ```mermaid
---8<-- "../DIAGRAMS/midora-implementation.mmd"
+--8<-- "DIAGRAMS/midora-implementation.mmd"
 ```
 
 **Use Cases:** Reference implementation, case studies, real-world examples
@@ -180,7 +180,7 @@ Concrete implementation showing Midora's 4 systems, 10+ repositories, 6 pools, a
 
 Text-based visual comparison showing the competitive disadvantage of "bipolar organizations" (IT fast, business slow) vs. AI-Native organizations (entire org fast).
 
-📄 **[View Bipolar vs. AI-Native Comparison](../DIAGRAMS/bipolar-vs-ai-native.md)**
+📄 **[View Bipolar vs. AI-Native Comparison](DIAGRAMS/bipolar-vs-ai-native.md)**
 
 Includes:
 - Side-by-side ASCII diagrams

@@ -2,82 +2,390 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gusafr.github.io/solid.ai/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/00-overview/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/01-principles/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/02-architecture/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/03-organizational-model/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/04-automation-sipoc/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/05-ai-agents/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/06-governance-ethics/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/07-observability/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/08-human-ai-collaboration/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/09-whole-organization-transformation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/10-role-hierarchy-human-ai/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/11-ai-native-agile/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/ai-agents/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/ai-native-agile/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/architecture/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/automation-sipoc/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/backstage/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/cleanup/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/diagrams/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/docker/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/glossary/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/governance-ethics/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/human-ai-collaboration/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/observability/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/organizational-model/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/overview/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/principles/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/quick-start/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/role-hierarchy-human-ai/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/whole-organization-transformation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/ai-agent-integration/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/ai-native-sprint/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/data-spine-implementation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/governance-ethics-review/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/role-hierarchy-implementation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/sme-transformation-roadmap/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/squad-formation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/checklists/startup-launch/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/ai-agent-definition/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/ai-native-sprint-planning/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/bipolar-organization-assessment/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/data-contract-design/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/ethical-decision-making/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/human-ai-collaboration-assessment/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/purpose-driven-feature/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/retrospective-facilitation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/prompt-templates/role-level-definition/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/administration/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/commerce/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/developer-reference/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/developer/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/financial-services/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/healthcare/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/human-resources/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/leadership-reference/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/leadership/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/logistics/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/manufacturing/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/marketing/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/operations-reference/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/operations/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/product-manager-reference/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/product-manager/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/professional-services/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/sales/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/90-day-transformation-plan/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/adr-template/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/agent-definition/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/ai-native-sprint-template/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/data-contract/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/rfc-template/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/squad-charter/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/adr/adr-0001-mermaid-choice/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/manifesto/solid-ai-manifesto-v1/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
-         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-ai-integration/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
-         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-midora-implementation/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/business-functions/administration/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
-         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-operations/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/business-functions/marketing/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
-         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-pools/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/business-functions/sales/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
-         <loc>https://gusafr.github.io/solid.ai/playbooks/playbook-squads/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/production-commerce/commerce/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/production-commerce/manufacturing/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/regulated/financial-services/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/regulated/healthcare/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/services/human-resources/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/services/logistics/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-sector/services/professional-services/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-stage/sme-transformation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/by-stage/startup-ai-native/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/organizational/ai-integration/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/organizational/midora-implementation/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/organizational/operations/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/organizational/pools/</loc>
+         <lastmod>2025-11-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/playbooks/organizational/squads/</loc>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/rfc/rfc-0001-foundations/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/rfc/rfc-0002-data-layer/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
     <url>
          <loc>https://gusafr.github.io/solid.ai/rfc/rfc-0003-midora-organizational-topology/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-04</lastmod>
     </url>
 </urlset>

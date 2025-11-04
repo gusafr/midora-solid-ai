@@ -17,7 +17,7 @@ This document identifies the **irreplaceable human dimensions** across all busin
 The following diagram shows the complete spectrum of collaboration patterns, from human-only to AI-autonomous:
 
 ```mermaid
---8<-- "../DIAGRAMS/collaboration-models-matrix.mmd"
+--8<-- "DIAGRAMS/collaboration-models-matrix.mmd"
 ```
 
 💡 **Tip:** Use this framework to classify tasks by collaboration model. Most strategic work stays in Models 1-2 (human-led), while repetitive work moves to Models 4-5 (AI-led).

@@ -45,7 +45,7 @@ Sprint Planning → Daily Standup → Development → Sprint Review → Retrospe
 The following diagram shows a complete week-long sprint (Monday→Friday) with all 6 AI agents participating in ceremonies:
 
 ```mermaid
---8<-- "../DIAGRAMS/ai-native-sprint-flow.mmd"
+--8<-- "DIAGRAMS/ai-native-sprint-flow.mmd"
 ```
 
 💡 **Tip:** This sequence diagram shows how AI agents (SprintPlanner, StandupFacilitator, BacklogRefiner, DemoCoordinator, RetroAnalyzer, CIAgent) integrate with the product squad throughout the sprint cycle.
