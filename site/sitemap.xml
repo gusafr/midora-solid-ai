@@ -285,6 +285,10 @@
          <lastmod>2025-11-05</lastmod>
     </url>
     <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/reference-cards/squad-organization-quick-ref/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
          <loc>https://gusafr.github.io/solid.ai/adoption/templates/90-day-transformation-plan/</loc>
          <lastmod>2025-11-05</lastmod>
     </url>
@@ -321,11 +325,31 @@
          <lastmod>2025-11-05</lastmod>
     </url>
     <url>
+         <loc>https://gusafr.github.io/solid.ai/adoption/templates/squad-charter-template/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
          <loc>https://gusafr.github.io/solid.ai/adoption/templates/squad-charter/</loc>
          <lastmod>2025-11-05</lastmod>
     </url>
     <url>
+         <loc>https://gusafr.github.io/solid.ai/adr/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
          <loc>https://gusafr.github.io/solid.ai/adr/adr-0001-mermaid-choice/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adr/adr-0002-business-service-organization/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adr/adr-0003-data-spine-automation-mesh-integration/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://gusafr.github.io/solid.ai/adr/adr-0004-reportlab-pdf-generation/</loc>
          <lastmod>2025-11-05</lastmod>
     </url>
     <url>

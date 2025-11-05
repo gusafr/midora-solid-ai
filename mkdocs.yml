@@ -26,6 +26,8 @@ nav:
   - Adoption Pack:
     - Overview: adoption/index.md
     - Reference Cards:
+      - Organizational Patterns:
+        - Squad Organization: adoption/reference-cards/squad-organization-quick-ref.md
       - Software Development:
         - Developer: adoption/reference-cards/developer.md
         - Product Manager: adoption/reference-cards/product-manager.md
@@ -95,7 +97,11 @@ nav:
       - RFC 0002 – Data Spine: rfc/rfc-0002-data-layer.md
       - RFC 0003 – Midora Topology: rfc/rfc-0003-midora-organizational-topology.md
     - ADRs:
-      - ADR 0001 – Mermaid Choice: adr/adr-0001-mermaid-choice.md
+      - 📋 ADR Overview: adr/README.md
+      - ADR 0001 – Mermaid for Diagrams: adr/adr-0001-mermaid-choice.md
+      - ADR 0002 – Business Service Organization: adr/adr-0002-business-service-organization.md
+      - ADR 0003 – Data Spine & Automation Mesh Integration: adr/adr-0003-data-spine-automation-mesh-integration.md
+      - ADR 0004 – ReportLab PDF Generation: adr/adr-0004-reportlab-pdf-generation.md
     - Playbooks:
       - 📖 Overview: playbooks/README.md
       - Foundation:
