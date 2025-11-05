@@ -80,6 +80,41 @@ python scripts/generate_pdf_book_reportlab.py --color-scheme grayscale
 python scripts/generate_pdf_book_reportlab.py --page-size Letter
 ```
 
+### ReportLab Features (v1.2)
+
+The ReportLab generator now includes comprehensive markdown support:
+
+**Text Formatting:**
+- ✅ **Bold** (`**text**`) and *italic* (`*text*`)
+- ✅ Inline `code` with syntax highlighting
+- ✅ Hyperlinks with colored, underlined styling
+- ✅ Headers (H2, H3) with proper hierarchy
+- ✅ Horizontal rules as visual dividers
+
+**Lists:**
+- ✅ Bullet lists (simple and nested)
+- ✅ Numbered lists with proper indentation
+- ✅ Mixed list types supported
+
+**Advanced Elements:**
+- ✅ **Tables** - Full markdown table support with styled headers
+- ✅ **Code blocks** - Syntax-highlighted with purple theme
+- ✅ **Blockquotes** - Italic text with colored side border
+- ✅ **Callout boxes** - Visual boxes for "See also:", "Next Steps:", etc.
+- ✅ **Diagram placeholders** - Links to interactive online diagrams
+
+**Organization:**
+- ✅ Chapter numbering in headers
+- ✅ Table of contents
+- ✅ Page numbers and headers
+- ✅ Section divider pages
+
+**Output Quality:**
+- 📦 File size: ~0.18-0.35 MB
+- 📄 Pages: ~80-250 pages
+- ⚡ Generation: 5-15 seconds
+- 🎨 Professional typography with proper spacing
+
 ---
 
 ## Quick Start (Recommended Path)
@@ -257,5 +292,5 @@ For most use cases, the current placeholder approach is **recommended** because:
 ---
 
 **Last Updated:** November 4, 2025  
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** Production Ready ✅

@@ -34,7 +34,7 @@ try:
     from reportlab.lib.units import cm, mm
     from reportlab.platypus import (
         SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle,
-        Preformatted, Image, KeepTogether, ListFlowable, ListItem
+        Preformatted, Image, KeepTogether, ListFlowable, ListItem, HRFlowable
     )
     from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT, TA_JUSTIFY
     from reportlab.pdfgen import canvas
@@ -387,24 +387,38 @@ class PDFBookGenerator:
         return elements
     
     def _create_chapter(self, part: Dict[str, str]) -> List:
-        """Create chapter from markdown content."""
+        """Create chapter from markdown content with full markdown support."""
         elements = []
         
         # Chapter break
         elements.append(PageBreak())
         
-        # Chapter title
-        elements.append(Paragraph(f"<b>{part['title']}</b>", self.styles['ChapterTitle']))
+        # Chapter title (with numbering if it's a numbered chapter)
+        chapter_title = part['title']
+        if part.get('filename', '').startswith(('00-', '01-', '02-', '03-', '04-', '05-', '06-', '07-', '08-', '09-', '10-', '11-')):
+            chapter_num = part['filename'][:2]
+            chapter_title = f"{chapter_num}. {part['title']}"
+        
+        elements.append(Paragraph(f"<b>{chapter_title}</b>", self.styles['ChapterTitle']))
         elements.append(Spacer(1, 0.5*cm))
         
-        # Process markdown content
-        # Simple processing - convert to paragraphs
+        # Process markdown content with enhanced parsing
         lines = part['content'].split('\n')
         
         in_code_block = False
+        in_table = False
+        in_list = False
+        in_blockquote = False
         code_lines = []
+        table_lines = []
+        list_items = []
+        blockquote_lines = []
+        current_list_type = None  # 'bullet' or 'numbered'
         
-        for line in lines:
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            
             # Code blocks
             if line.strip().startswith('```'):
                 if in_code_block:
@@ -414,11 +428,113 @@ class PDFBookGenerator:
                     elements.append(Spacer(1, 0.3*cm))
                     code_lines = []
                 in_code_block = not in_code_block
+                i += 1
                 continue
             
             if in_code_block:
                 code_lines.append(line)
+                i += 1
                 continue
+            
+            # Markdown tables (detect | at start or in line)
+            if '|' in line and not in_table:
+                # Start collecting table
+                in_table = True
+                table_lines = [line]
+                i += 1
+                continue
+            
+            if in_table:
+                if '|' in line or line.strip().startswith('|'):
+                    table_lines.append(line)
+                    i += 1
+                    continue
+                else:
+                    # End of table, render it
+                    if table_lines:
+                        table_element = self._create_table(table_lines)
+                        if table_element:
+                            elements.append(table_element)
+                            elements.append(Spacer(1, 0.4*cm))
+                    table_lines = []
+                    in_table = False
+                    # Don't increment i, process current line
+                    continue
+            
+            # Bullet lists (-, *, +)
+            if re.match(r'^\s*[-*+]\s+', line):
+                if not in_list or current_list_type != 'bullet':
+                    # Start new bullet list or switch from numbered
+                    if in_list and list_items:
+                        # Finish previous list
+                        elements.extend(self._create_list(list_items, current_list_type))
+                        list_items = []
+                    in_list = True
+                    current_list_type = 'bullet'
+                
+                # Extract bullet item
+                indent = len(line) - len(line.lstrip())
+                content = re.sub(r'^\s*[-*+]\s+', '', line)
+                list_items.append({'indent': indent, 'content': content})
+                i += 1
+                continue
+            
+            # Numbered lists (1. 2. etc.)
+            if re.match(r'^\s*\d+\.\s+', line):
+                if not in_list or current_list_type != 'numbered':
+                    # Start new numbered list or switch from bullet
+                    if in_list and list_items:
+                        # Finish previous list
+                        elements.extend(self._create_list(list_items, current_list_type))
+                        list_items = []
+                    in_list = True
+                    current_list_type = 'numbered'
+                
+                # Extract numbered item
+                indent = len(line) - len(line.lstrip())
+                content = re.sub(r'^\s*\d+\.\s+', '', line)
+                list_items.append({'indent': indent, 'content': content})
+                i += 1
+                continue
+            
+            # If we were in a list and this line doesn't continue it
+            if in_list:
+                # Empty line within list - allow it
+                if not line.strip():
+                    i += 1
+                    continue
+                # Non-list line that's not empty - end the list
+                else:
+                    # End the list
+                    elements.extend(self._create_list(list_items, current_list_type))
+                    list_items = []
+                    in_list = False
+                    current_list_type = None
+                    # Continue to process current line (don't increment i)
+                    # Fall through to process the line below
+            
+            # Blockquotes (> )
+            if line.strip().startswith('> '):
+                if not in_blockquote:
+                    in_blockquote = True
+                    blockquote_lines = []
+                content = line.strip()[2:]  # Remove "> "
+                blockquote_lines.append(content)
+                i += 1
+                continue
+            
+            if in_blockquote:
+                if line.strip().startswith('> '):
+                    content = line.strip()[2:]
+                    blockquote_lines.append(content)
+                    i += 1
+                    continue
+                else:
+                    # End blockquote
+                    elements.extend(self._create_blockquote(blockquote_lines))
+                    blockquote_lines = []
+                    in_blockquote = False
+                    # Don't increment i, process current line (fall through)
             
             # Handle diagram placeholders
             if '--8<--' in line:
@@ -442,31 +558,258 @@ class PDFBookGenerator:
                     )
                     elements.append(Paragraph(note_text, self.styles['CustomBody']))
                     elements.append(Spacer(1, 0.3*cm))
+                i += 1
+                continue
+            
+            # Horizontal rules (---, ***, ___)
+            if re.match(r'^\s*(-{3,}|\*{3,}|_{3,})\s*$', line):
+                elements.append(Spacer(1, 0.3*cm))
+                # Create a horizontal line
+                from reportlab.platypus import HRFlowable
+                elements.append(HRFlowable(width="80%", thickness=1, color=self.text_light, 
+                                          spaceAfter=0.3*cm, spaceBefore=0.3*cm))
+                i += 1
                 continue
             
             # Headers
             if line.startswith('# '):
+                i += 1
                 continue  # Skip H1 (already have chapter title)
             elif line.startswith('## '):
                 text = line[3:].strip()
                 elements.append(Spacer(1, 0.5*cm))
                 elements.append(Paragraph(f"<b>{text}</b>", self.styles['CustomHeading2']))
+                i += 1
+                continue
             elif line.startswith('### '):
                 text = line[4:].strip()
                 elements.append(Spacer(1, 0.3*cm))
                 elements.append(Paragraph(f"<b>{text}</b>", self.styles['CustomHeading3']))
-            elif line.startswith('---'):
-                elements.append(Spacer(1, 0.5*cm))
-            elif line.strip():
-                # Regular paragraph
-                text = line.strip()
-                # Clean up markdown
-                text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
-                text = re.sub(r'\*(.+?)\*', r'<i>\1</i>', text)
-                text = re.sub(r'`(.+?)`', r'<font name="Courier" color="#8b5cf6">\1</font>', text)
+                i += 1
+                continue
+            
+            # Callout boxes (See also:, Next Steps:, See:, etc.)
+            if re.match(r'^(See also:|Next Steps:|See:|\*\*See also:\*\*|\*\*Next Steps:\*\*|\*\*See:\*\*)', line, re.IGNORECASE):
+                # Collect callout content
+                callout_lines = [line]
+                i += 1
+                while i < len(lines) and lines[i].strip() and not lines[i].startswith('#'):
+                    callout_lines.append(lines[i])
+                    i += 1
+                    if i < len(lines) and not lines[i].strip():
+                        break
                 
-                if text:
-                    elements.append(Paragraph(text, self.styles['CustomBody']))
+                elements.extend(self._create_callout(callout_lines))
+                continue
+            
+            # Empty lines
+            if not line.strip():
+                i += 1
+                continue
+            
+            # Regular paragraph
+            text = line.strip()
+            if text:
+                # Clean up markdown formatting
+                text = self._format_inline_markdown(text)
+                elements.append(Paragraph(text, self.styles['CustomBody']))
+            
+            i += 1
+        
+        # Handle any remaining open blocks
+        if in_code_block and code_lines:
+            code_text = '\n'.join(code_lines)
+            elements.append(Preformatted(code_text, self.styles['CustomCode']))
+        
+        if in_table and table_lines:
+            table_element = self._create_table(table_lines)
+            if table_element:
+                elements.append(table_element)
+        
+        if in_list and list_items:
+            elements.extend(self._create_list(list_items, current_list_type))
+        
+        if in_blockquote and blockquote_lines:
+            elements.extend(self._create_blockquote(blockquote_lines))
+        
+        return elements
+    
+    def _format_inline_markdown(self, text: str) -> str:
+        """Format inline markdown (bold, italic, code, links)."""
+        # Links [text](url) - style as colored underlined text
+        text = re.sub(
+            r'\[([^\]]+)\]\(([^)]+)\)',
+            r'<font color="#06b6d4"><u>\1</u></font>',
+            text
+        )
+        
+        # Bold **text**
+        text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
+        
+        # Italic *text*
+        text = re.sub(r'\*(.+?)\*', r'<i>\1</i>', text)
+        
+        # Inline code `text`
+        text = re.sub(
+            r'`(.+?)`',
+            r'<font name="Courier" color="#8b5cf6">\1</font>',
+            text
+        )
+        
+        return text
+    
+    def _create_table(self, table_lines: List[str]) -> Optional[Table]:
+        """Create a table from markdown table lines."""
+        if not table_lines:
+            return None
+        
+        # Parse table rows
+        rows = []
+        for line in table_lines:
+            # Skip separator lines (|---|---|)
+            if re.match(r'^\s*\|[\s\-:|]+\|\s*$', line):
+                continue
+            
+            # Split by | and clean up
+            cells = [cell.strip() for cell in line.split('|')]
+            # Remove empty first/last elements from leading/trailing |
+            if cells and not cells[0]:
+                cells = cells[1:]
+            if cells and not cells[-1]:
+                cells = cells[:-1]
+            
+            if cells:
+                # Format cell content
+                formatted_cells = [
+                    Paragraph(self._format_inline_markdown(cell), self.styles['CustomBody'])
+                    for cell in cells
+                ]
+                rows.append(formatted_cells)
+        
+        if not rows:
+            return None
+        
+        # Create table
+        table = Table(rows, hAlign='LEFT')
+        
+        # Style the table
+        table_style = TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.primary),  # Header background
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),   # Header text
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 10),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('TOPPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor('#f9fafb')),
+            ('GRID', (0, 0), (-1, -1), 0.5, self.text_light),
+            ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+            ('FONTSIZE', (0, 1), (-1, -1), 9),
+            ('TOPPADDING', (0, 1), (-1, -1), 8),
+            ('BOTTOMPADDING', (0, 1), (-1, -1), 8),
+            ('LEFTPADDING', (0, 0), (-1, -1), 10),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+        ])
+        table.setStyle(table_style)
+        
+        return table
+    
+    def _create_list(self, items: List[Dict], list_type: str) -> List:
+        """Create a formatted list (bullet or numbered)."""
+        elements = []
+        
+        if not items:
+            return elements
+        
+        # Group items by indentation level for nesting
+        base_indent = min(item['indent'] for item in items)
+        
+        for item in items:
+            indent_level = (item['indent'] - base_indent) // 2  # Assume 2 spaces per level
+            content = self._format_inline_markdown(item['content'])
+            
+            # Create paragraph with left indent
+            left_indent = 15 + (indent_level * 15)
+            bullet_style = ParagraphStyle(
+                'ListItem',
+                parent=self.styles['CustomBody'],
+                leftIndent=left_indent,
+                bulletIndent=left_indent - 10,
+                spaceAfter=6
+            )
+            
+            if list_type == 'bullet':
+                bullet_text = '•'
+            else:  # numbered
+                bullet_text = '•'  # For simplicity, using bullets for all levels
+            
+            para = Paragraph(f"{bullet_text} {content}", bullet_style)
+            elements.append(para)
+        
+        elements.append(Spacer(1, 0.2*cm))
+        return elements
+    
+    def _create_blockquote(self, lines: List[str]) -> List:
+        """Create a styled blockquote."""
+        elements = []
+        
+        if not lines:
+            return elements
+        
+        # Combine lines
+        text = ' '.join(lines)
+        text = self._format_inline_markdown(text)
+        
+        # Create blockquote style with side border
+        blockquote_style = ParagraphStyle(
+            'Blockquote',
+            parent=self.styles['CustomBody'],
+            leftIndent=20,
+            rightIndent=20,
+            textColor=self.text_light,
+            fontName='Helvetica-Oblique',
+            borderWidth=3,
+            borderColor=self.accent,
+            borderPadding=10,
+            backColor=colors.HexColor('#f0f9ff'),
+            spaceAfter=12
+        )
+        
+        elements.append(Spacer(1, 0.2*cm))
+        elements.append(Paragraph(text, blockquote_style))
+        elements.append(Spacer(1, 0.2*cm))
+        
+        return elements
+    
+    def _create_callout(self, lines: List[str]) -> List:
+        """Create a callout box for cross-references and important notes."""
+        elements = []
+        
+        if not lines:
+            return elements
+        
+        # Format all lines
+        formatted_text = '<br/>'.join(
+            self._format_inline_markdown(line.strip()) for line in lines
+        )
+        
+        # Create callout style with colored background
+        callout_style = ParagraphStyle(
+            'Callout',
+            parent=self.styles['CustomBody'],
+            leftIndent=15,
+            rightIndent=15,
+            backColor=colors.HexColor('#eff6ff'),
+            borderWidth=1,
+            borderColor=self.accent,
+            borderPadding=12,
+            spaceAfter=12,
+            fontSize=9
+        )
+        
+        elements.append(Spacer(1, 0.3*cm))
+        elements.append(Paragraph(formatted_text, callout_style))
+        elements.append(Spacer(1, 0.3*cm))
         
         return elements
     
