@@ -336,9 +336,73 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
+### 20. **squad-business-service-organization.mmd**
+**Purpose:** Anti-pattern vs. Best Practice comparison for organizing squads
+
+**Key Elements:**
+- **Left side (❌ Anti-Pattern):** Squads organized by technical layers
+  - Front-End Squad, Back-End Squad, Database Squad
+  - Problems: coordination overhead, unclear ownership, slow feature delivery
+  
+- **Right side (✅ Best Practice):** Squads organized by business services
+  - Order Fulfillment Squad, Customer Onboarding Squad, Payment Processing Squad
+  - Benefits: end-to-end ownership, autonomous deployment, clear business value
+
+- Side-by-side flowcharts showing impact on feature delivery
+- Real-world examples of business services by domain (E-Commerce, SaaS, Finance, Healthcare)
+
+**Use Cases:** Squad formation workshops, organizational design, DDD implementation, avoiding Conway's Law anti-patterns
+
+**Related Docs:**
+- PLAYBOOKS/organizational/squads.md
+- DOCS/03-organizational-model.md
+- ADOPTION/CHECKLISTS/squad-formation.md
+
+---
+
+### 21. **business-service-full-integration.mmd** ✨ NEW
+**Purpose:** Complete architecture showing how business services integrate with Data Spine and Automation Mesh
+
+**Key Elements:**
+- **Example Service:** Order Fulfillment Squad with SIPOC workflow (5 steps)
+- **Data Spine Integration (REQUIRED):**
+  - Data Contracts (Input: OrderPlaced, InventoryLevels | Output: OrderFulfilled, InventoryUpdated)
+  - Business Events (Event Catalog with 4 stakeholders)
+  - Observability (Metrics: latency/throughput/errors, Lineage, Quality SLAs)
+  
+- **Automation Mesh Integration (REQUIRED):**
+  - Workflow (SIPOC + Automation levels: 95-100% automated)
+  - Event-Driven (Subscribe to 3 events, Publish 3 events)
+  - Error Handling (Retry, DLQ, Circuit breaker)
+  
+- **OKRs & KPIs (REQUIRED):**
+  - Service-Level OKRs (3 objectives with KRs)
+  - KPI Dashboard (7 metrics with targets/current/trends)
+  - Business Value (Revenue +$2M, Cost -40%, NPS +15, Capacity 2x)
+  
+- **Data Governance (REQUIRED):**
+  - Event Ownership (Authoritative source for OrderFulfilled)
+  - Breaking Change Policy (Additive/Breaking/Deprecation rules)
+  - Compliance (PII, 7-year retention, RBAC, GDPR/SOX)
+  
+- **Cross-Service Event Flow:** 6 services communicating via events
+- **Integration Checklist:** 10 required items (✅ all must be complete)
+
+**Use Cases:** Squad charter creation, integration planning, architecture reviews, Data Spine + Automation Mesh adoption
+
+**Related Docs:**
+- PLAYBOOKS/organizational/squads.md (Critical Integration section)
+- ADOPTION/CHECKLISTS/squad-formation.md (Integration checklist items)
+- ADOPTION/TEMPLATES/squad-charter-template.md (Integration templates)
+- DOCS/03-organizational-model.md (Required integrations)
+
+**Created:** 2025-11-05 (Architecture Integration Update)
+
+---
+
 ## Implementation Examples
 
-### 13. **midora-implementation.mmd**
+### 22. **midora-implementation.mmd**
 **Purpose:** Concrete implementation showing Midora's 4 systems, 10+ repositories, pools, and squads
 
 **Key Elements:**
@@ -426,7 +490,7 @@ When updating diagrams:
 
 **Versioning:** Track major changes in git history; consider version tags for breaking changes
 
-**Diagram Count:** 20 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
+**Diagram Count:** 24 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
 
 ---
 

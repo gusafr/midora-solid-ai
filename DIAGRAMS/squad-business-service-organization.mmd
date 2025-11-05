@@ -1,0 +1,114 @@
+---
+title: "Squad Organization by Business Services"
+description: "Diagram showing how squads are organized around business services (bounded contexts) to avoid duplication and enable autonomy"
+category: organizational
+framework: SOLID.AI
+version: 1.0
+created: 2025-11-05
+---
+
+graph TD
+    subgraph "❌ Anti-Pattern: Technical Layer Organization"
+        TechOrg[Organization]
+        Frontend[Frontend Squad<br/>6 developers]
+        Backend[Backend Squad<br/>8 developers]
+        Database[Database Squad<br/>4 DBAs]
+        QA[QA Squad<br/>5 testers]
+        
+        TechOrg --> Frontend
+        TechOrg --> Backend
+        TechOrg --> Database
+        TechOrg --> QA
+        
+        Frontend -.->|Handoff| Backend
+        Backend -.->|Handoff| Database
+        Database -.->|Handoff| QA
+        
+        Problems1[❌ Coordination Overhead<br/>❌ Handoff Delays<br/>❌ Unclear Ownership<br/>❌ Duplicate Efforts]
+    end
+    
+    subgraph "✅ Recommended: Business Service Organization"
+        BizOrg[Organization]
+        
+        subgraph Service1["🛒 Order Fulfillment Squad"]
+            S1Team[Cross-functional Team<br/>PO + Architect + Devs + QA]
+            S1Service[Service Boundary:<br/>Purchase → Payment → Inventory → Shipping]
+            S1Output[Outputs: OrderCompleted Event]
+        end
+        
+        subgraph Service2["👤 Customer Onboarding Squad"]
+            S2Team[Cross-functional Team<br/>PO + UX + Devs + QA]
+            S2Service[Service Boundary:<br/>Signup → Verification → Activation]
+            S2Output[Outputs: CustomerActivated Event]
+        end
+        
+        subgraph Service3["🛡️ Fraud Detection Squad"]
+            S3Team[Cross-functional Team<br/>PO + Data Scientist + ML Eng + Ops]
+            S3Service[Service Boundary:<br/>Transaction Analysis → Risk Scoring → Alerts]
+            S3Output[Outputs: FraudAssessment Event]
+        end
+        
+        subgraph Service4["💰 Invoice Processing Squad"]
+            S4Team[Cross-functional Team<br/>PO + Automation Eng + Finance Analyst]
+            S4Service[Service Boundary:<br/>Invoice Receipt → Validation → Payment]
+            S4Output[Outputs: InvoicePaid Event]
+        end
+        
+        BizOrg --> Service1
+        BizOrg --> Service2
+        BizOrg --> Service3
+        BizOrg --> Service4
+        
+        Service1 -.->|Event-Driven| Service2
+        Service1 -.->|Event-Driven| Service3
+        Service2 -.->|Event-Driven| Service1
+        
+        Benefits[✅ Clear Ownership<br/>✅ Autonomous Teams<br/>✅ No Duplication<br/>✅ Scalable Growth]
+    end
+    
+    subgraph "🎯 Business Service Criteria"
+        Criteria1[1. Self-Contained Capability]
+        Criteria2[2. Delivers Business Value Independently]
+        Criteria3[3. Clear Input/Output Contracts]
+        Criteria4[4. Minimal Cross-Squad Dependencies]
+        Criteria5[5. Maps to Stakeholder Outcomes]
+        Criteria6[6. Sustainable Scope - Not Too Broad/Narrow]
+    end
+    
+    subgraph "📊 Service Boundary Validation"
+        Q1[Q: What business capability does this serve?]
+        Q2[Q: Who are the end users/stakeholders?]
+        Q3[Q: What value does it deliver independently?]
+        Q4[Q: What are the clear input/output contracts?]
+        Q5[Q: Can this squad succeed without constant coordination?]
+        
+        Q1 --> Q2 --> Q3 --> Q4 --> Q5
+        Q5 -->|Yes| Valid[✅ Valid Business Service]
+        Q5 -->|No| Invalid[❌ Boundary Needs Refinement]
+    end
+    
+    subgraph "🔄 Pools Support All Squads"
+        DesignPool[Design Pool<br/>UX/UI Specialists]
+        DataPool[Data Pool<br/>Analytics Engineers]
+        DevOpsPool[DevOps Pool<br/>Platform Engineers]
+        QAPool[QA Pool<br/>Test Automation]
+        
+        DesignPool -.->|On-Demand| Service1
+        DesignPool -.->|On-Demand| Service2
+        DataPool -.->|On-Demand| Service3
+        DataPool -.->|On-Demand| Service4
+        DevOpsPool -.->|Platform Services| Service1
+        DevOpsPool -.->|Platform Services| Service2
+        QAPool -.->|Embedded| Service1
+        QAPool -.->|Embedded| Service3
+    end
+    
+    style Service1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Service2 fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Service3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Service4 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    
+    style Problems1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style Benefits fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Valid fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Invalid fill:#ffebee,stroke:#c62828,stroke-width:2px

@@ -35,6 +35,7 @@ solid.ai principles encode the behaviors required to build responsible, adaptive
 
 - Empower teams at the edge with decision-making authority and transparent data.
 - Maintain coherence through shared principles, playbooks, and guardrails.
+- **Organize squads around business services** (bounded contexts), not technical layers, to ensure clear ownership, minimize dependencies, and avoid duplication.
 
 ## Cognitive Workforce
 

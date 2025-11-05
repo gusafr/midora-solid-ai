@@ -4,10 +4,64 @@ solid.ai organizes humans and AI agents into adaptive structures optimized for c
 
 ## Structural Elements
 
-- **Squads:** Cross-functional units focused on delivering customer or stakeholder outcomes.
+- **Squads:** Cross-functional units focused on delivering customer or stakeholder outcomes. **Organized around business services** (bounded contexts) to ensure clear ownership, minimize dependencies, and avoid duplication.
 - **Pools:** Shared capability hubs (e.g., Data, AI Ops, Design) that provide expertise on demand.
 - **Cognitive Agents:** AI teammates embedded in squads or pools with defined responsibilities.
 - **Governance Circle:** Multi-disciplinary group that reviews ethics, observability, and compliance.
+
+### Squad Organization Principle: Business Service Ownership
+
+Squads are **anchored to business services**, not technical layers or temporary features. This ensures:
+
+1. **No Duplication:** Each business service has exactly one owning squad
+2. **Clear Boundaries:** Services have well-defined inputs/outputs (data contracts)
+3. **Autonomous Operation:** Squads can deliver end-to-end without constant handoffs
+4. **Scalable Growth:** New squads = new business services (not reorganizing existing ones)
+5. **Integrated Architecture:** Each service properly integrated with Data Spine and Automation Mesh
+
+**Example Business Services:**
+- Customer Onboarding (not "Frontend Squad")
+- Order Fulfillment (not "Logistics Team")  
+- Fraud Detection (not "ML Platform Team")
+- Invoice Processing (not "Finance Automation")
+
+Each service is self-contained, outcome-focused, and maps directly to stakeholder value.
+
+### Required Integrations for Every Business Service
+
+**1. Data Spine Integration:**
+- Input/output data contracts (schema, SLA, versioning)
+- Business events catalog (domain events the service owns)
+- Event stakeholders (who consumes your events)
+- Observability dashboards (metrics, lineage, quality)
+- Data governance (PII classification, retention, access controls)
+
+**2. Automation Mesh Integration:**
+- SIPOC workflow mapping (suppliers → inputs → process → outputs → customers)
+- Automation strategy (AI-automated vs. human-in-loop steps)
+- Event-driven architecture (subscriptions and publications)
+- Error handling (retry policies, circuit breakers, dead letter queues)
+
+**3. OKRs & KPIs:**
+- Service-level objectives aligned with business strategy
+- Real-time KPI dashboards (business impact, efficiency, quality, AI augmentation)
+- Quarterly review cadence with stakeholders
+
+**4. Data Governance:**
+- Event ownership (squad is authoritative source for domain events)
+- Breaking change policy (RFC process for schema changes)
+- Compliance requirements (GDPR, SOX, HIPAA, PCI-DSS)
+- Audit logging (all data access tracked)
+
+**Benefits of Integrated Services:**
+- **Observability:** Real-time visibility into service health and business impact
+- **Reusability:** Other services safely consume your events (event-driven architecture)
+- **Autonomy:** Squad owns end-to-end delivery without dependencies
+- **Measurability:** Business value tracked continuously via OKRs/KPIs
+- **Compliance:** Data governance enforced automatically
+- **AI-Native:** Automation opportunities explicit in SIPOC mapping
+
+See [Squad Playbook](../PLAYBOOKS/organizational/squads.md) for detailed integration requirements.
 
 ## Operating Rhythm
 

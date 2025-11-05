@@ -8,11 +8,26 @@
 
 ## Pre-Formation (Discovery & Planning)
 
+### Business Service Definition (CRITICAL FIRST STEP)
+- [ ] **Business service identified** - squad owns a self-contained capability (e.g., "Order Fulfillment" NOT "Backend Team")
+- [ ] **Service boundary validation** - clear start/end, inputs/outputs, no overlap with other squads
+- [ ] **Domain experts consulted** - verified this is a genuine bounded context in Domain-Driven Design sense
+- [ ] **Duplication check** - confirmed no other squad already owns this service
+- [ ] **Value independence** - service can deliver business value without constant coordination
+- [ ] **Scalability verified** - service scope sustainable (not too broad to split, not too narrow to combine)
+
+**Examples of Good Business Services:**
+- ✅ Customer Onboarding (signup → activation)
+- ✅ Subscription Management (plans → billing → cancellation)
+- ✅ Fraud Detection (real-time risk scoring)
+- ❌ "Frontend Team" (technical layer, not business service)
+- ❌ "Feature X Squad" (temporary, not sustainable service)
+
 ### Purpose & Mission
 - [ ] **Squad mission** defined - clear statement of why this squad exists
 - [ ] **Organizational alignment** verified - connects to company strategy and values
 - [ ] **Outcome focus** articulated - what success looks like, not just tasks
-- [ ] **Scope boundaries** set - what's in and out of squad's domain
+- [ ] **Scope boundaries** set - what's in and out of squad's domain (aligned with business service)
 - [ ] **Stakeholder needs** understood - who depends on this squad's work
 
 ### Composition & Roles
@@ -30,6 +45,39 @@
 - [ ] **Success metrics** identified - how squad measures impact and health
 - [ ] **Constraints and guardrails** documented - what squad cannot do or must comply with
 - [ ] **Decision rights** clarified - what squad can decide autonomously vs. escalate
+
+### Data Spine Integration (CRITICAL)
+- [ ] **Input data contracts** defined - what data/events service consumes (schema, SLA, source)
+- [ ] **Output data contracts** defined - what data/events service produces (schema, SLA, consumers)
+- [ ] **Business events** cataloged - all domain events service publishes (with ownership)
+- [ ] **Event stakeholders** identified - which other services will consume your events
+- [ ] **Schema registry** configured - contracts registered with versioning
+- [ ] **Data quality SLAs** defined - accuracy, completeness, timeliness guarantees
+- [ ] **Observability plan** created - dashboards for service health, data lineage, quality monitoring
+
+### Automation Mesh Integration (CRITICAL)
+- [ ] **SIPOC workflow** documented - Suppliers → Inputs → Process → Outputs → Customers
+- [ ] **Automation opportunities** identified - which steps are AI-automated vs. human-in-loop
+- [ ] **Event subscriptions** configured - what events service consumes from other services
+- [ ] **Event publications** registered - what events service produces for other services
+- [ ] **Workflow orchestration** defined - how service triggers/responds to events
+- [ ] **Error handling** designed - retry policies, dead letter queues, escalation paths
+- [ ] **Circuit breakers** configured - graceful degradation when dependencies fail
+
+### OKRs & KPIs (CRITICAL)
+- [ ] **Service-level OKRs** defined - quarterly objectives aligned with business strategy
+- [ ] **KPI dashboard** configured - real-time metrics (business impact, efficiency, quality, speed)
+- [ ] **AI augmentation metrics** tracked - automation rate, human-AI collaboration effectiveness
+- [ ] **Business value metrics** defined - revenue, cost savings, customer satisfaction
+- [ ] **Quarterly review cadence** established - OKR check-ins with stakeholders
+
+### Data Governance Compliance
+- [ ] **Event ownership** documented - squad is authoritative source for domain events
+- [ ] **Breaking change policy** communicated - RFC process for schema changes affecting consumers
+- [ ] **Data classification** applied - PII, sensitive, public data properly tagged
+- [ ] **Retention policies** defined - how long data is kept (GDPR, SOX, etc.)
+- [ ] **Access controls** configured - role-based permissions for service data
+- [ ] **Audit logging** enabled - all data access logged for compliance
 
 ---
 
