@@ -1,0 +1,77 @@
+---
+title: "Organizational Scalability: 3 Dimensions & 4 Ceiling Patterns"
+description: "Scale humans and culture, not just technology"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/people-culture/organizational-scalability.md"
+  - "ADOPTION/CHECKLISTS/organizational-scalability-assessment.md"
+---
+
+graph TB
+    Start["<b>🚀 Starting to Scale</b><br/>10-50 employees<br/>Growing revenue<br/>Hiring more people"]
+
+    %% Three Dimensions
+    Start --> Assess["<b>ASSESS 3 SCALABILITY DIMENSIONS</b>"]
+
+    Assess --> Tech["<b>1. TECHNICAL SCALABILITY</b><br/>(0-100 score)<br/><br/>🔴 0-20: Manual chaos, no APIs<br/>🟠 21-40: Basic automation, siloed tools<br/>🟡 41-60: API-first, event-driven emerging<br/>🟢 61-80: Automation mesh, 60%+ automated<br/>🔵 81-100: Autonomous systems, self-healing"]
+
+    Assess --> Human["<b>2. HUMAN SCALABILITY</b><br/>(0-100 score)<br/><br/>🔴 0-20: Hero culture, knowledge in heads<br/>🟠 21-40: Some docs, still 'Ask Jane'<br/>🟡 41-60: Playbooks exist, 3-month ramp<br/>🟢 61-80: Self-service knowledge, 1-month ramp<br/>🔵 81-100: AI co-pilots, &lt;2 week ramp"]
+
+    Assess --> Culture["<b>3. CULTURAL SCALABILITY</b><br/>(0-100 score)<br/><br/>🔴 0-20: Founder dependency, all decisions escalate<br/>🟠 21-40: Unwritten rules, 'you had to be there'<br/>🟡 41-60: Values documented, not fully lived<br/>🟢 61-80: Values embedded, culture propagates<br/>🔵 81-100: Self-reinforcing culture, AI enforces values"]
+
+    %% Calculate Overall
+    Tech --> Overall
+    Human --> Overall
+    Culture --> Overall
+
+    Overall["<b>OVERALL SCALABILITY</b><br/><br/>(Tech + Human + Culture) / 3<br/><br/>0-40: High risk of hitting ceiling soon<br/>41-60: Moderate, targeted improvements needed<br/>61-80: Good, ready for 2-3x growth<br/>81-100: Excellent, ready for 10x+ growth"]
+
+    %% Four Ceiling Patterns
+    Overall --> Ceiling1{Hitting<br/>Ceiling?}
+
+    Ceiling1 -->|Yes| C1["<b>CEILING 1: FOUNDER BOTTLENECK</b><br/><br/>🚨 Symptoms:<br/>• CEO approves all hires, deals, decisions<br/>• Team waits for founder input<br/>• Founder working 70+ hours/week<br/>• Decision velocity slows<br/><br/>✅ Fix:<br/>• Codify decision frameworks<br/>• Delegate authority by tier<br/>• Type 1 vs Type 2 decisions<br/>• Empower managers"]
+
+    Ceiling1 -->|Yes| C2["<b>CEILING 2: COMMUNICATION OVERHEAD</b><br/><br/>🚨 Symptoms:<br/>• Meetings multiply (n² problem)<br/>• Information silos between teams<br/>• Context constantly re-explained<br/>• Duplicate work discovered<br/><br/>✅ Fix:<br/>• Build shared context layer (Data Spine)<br/>• Knowledge graphs, AI assistants<br/>• Async-first communication<br/>• Cross-functional squads"]
+
+    Ceiling1 -->|Yes| C3["<b>CEILING 3: KNOWLEDGE SILOS</b><br/><br/>🚨 Symptoms:<br/>• Bus factor = 1 for key processes<br/>• New hires take 6+ months to ramp<br/>• Documentation outdated/unused<br/>• 'Ask [person name]' culture<br/><br/>✅ Fix:<br/>• Externalize knowledge (playbooks)<br/>• AI assistants for self-service<br/>• Cross-train (T-shaped people)<br/>• Job rotations (20% time)"]
+
+    Ceiling1 -->|Yes| C4["<b>CEILING 4: PROCESS RIGIDITY</b><br/><br/>🚨 Symptoms:<br/>• Manual approval chains (5+ steps)<br/>• Processes designed for current size<br/>• Exception handling requires heroics<br/>• 'That's how we've always done it'<br/><br/>✅ Fix:<br/>• Automate approvals (AI agents)<br/>• Self-service processes<br/>• Design for 10x scale<br/>• API-first architecture"]
+
+    %% Anti-Patterns to Avoid
+    C1 --> AntiPatterns
+    C2 --> AntiPatterns
+    C3 --> AntiPatterns
+    C4 --> AntiPatterns
+
+    AntiPatterns["<b>⚠️ 5 ANTI-PATTERNS TO AVOID</b><br/><br/>❌ Premature Scaling: Hiring aggressively before PMF<br/>❌ Process Bureaucracy: Adding approval layers 'for control'<br/>❌ Hero Worship: Celebrating 'saving the day' instead of systems<br/>❌ Culture Neglect: 'We'll worry about culture later'<br/>❌ Scaling Dysfunction: Hiring more people to fix broken processes"]
+
+    %% Solution Path
+    AntiPatterns --> Solution["<b>✅ SCALABILITY ACTION PLAN</b><br/><br/>1. Assess all 3 dimensions (use checklist)<br/>2. Identify biggest ceiling (1-4)<br/>3. Fix the ceiling FIRST<br/>4. Then scale (don't scale dysfunction)<br/>5. Monitor monthly (re-score dimensions)<br/><br/>🎯 Goal: All 3 dimensions &gt;60 before 2x growth"]
+
+    Solution --> Scaled["<b>🎉 SUCCESSFULLY SCALED</b><br/><br/>Tech: Automation mesh operational<br/>Human: &lt;1 month ramp time<br/>Culture: Self-reinforcing values<br/><br/>Ready for 10x growth 🚀"]
+
+    %% Examples
+    Example1["<b>EXAMPLE: 50-person startup</b><br/>Tech: 30/100 (some automation)<br/>Human: 40/100 (docs exist, not used)<br/>Culture: 25/100 (founder approves all)<br/>Overall: 32/100 ⚠️<br/><br/>Ceiling: #1 Founder Bottleneck<br/>Fix: Delegate hiring to managers,<br/>create decision framework"]
+
+    Example2["<b>EXAMPLE: 200-person SME</b><br/>Tech: 70/100 (API-first, agents)<br/>Human: 50/100 (3-month ramp)<br/>Culture: 60/100 (values documented)<br/>Overall: 60/100 ⚠️<br/><br/>Ceiling: #2 Communication Overhead<br/>Fix: Build Data Spine,<br/>deploy AI assistants"]
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Assess fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Tech fill:#ffccbc,stroke:#e64a19,stroke-width:2px
+    style Human fill:#c5e1a5,stroke:#689f38,stroke-width:2px
+    style Culture fill:#b39ddb,stroke:#5e35b1,stroke-width:2px
+    style Overall fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+
+    style C1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style C2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style C3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style C4 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+
+    style AntiPatterns fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Solution fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
+    style Scaled fill:#a5d6a7,stroke:#2e7d32,stroke-width:3px
+
+    style Example1 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px
+    style Example2 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px

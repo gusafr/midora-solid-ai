@@ -1,0 +1,377 @@
+# Risk Assessment Template (YAML)
+
+# AI Initiative Risk Assessment
+# Framework: SOLID.AI Governance
+# Reference: PLAYBOOKS/governance/ai-governance-risk-assessment.md
+# Last Updated: November 2025
+
+---
+initiative:
+  name: ""  # e.g., "AI-Powered Lead Scoring Agent"
+  description: ""  # Brief description of the AI initiative
+  owner: ""  # DRI (Directly Responsible Individual)
+  function: ""  # Sales, Engineering, Finance, Marketing, CS, HR, etc.
+  stage: ""  # Concept | Design | Pilot | Production
+  submission_date: ""  # YYYY-MM-DD
+
+---
+# STEP 1: SCORE IMPACT (1-5)
+
+impact:
+  # Score each dimension 1-5 (1=Negligible, 5=Catastrophic)
+  
+  financial:
+    score: 0  # 1-5
+    description: ""  # e.g., "Could lose $10K-$100K if AI makes errors"
+    examples:
+      - "1 = <$1K potential loss"
+      - "2 = $1K-$10K potential loss"
+      - "3 = $10K-$100K potential loss"
+      - "4 = $100K-$1M potential loss"
+      - "5 = >$1M potential loss"
+  
+  reputational:
+    score: 0  # 1-5
+    description: ""  # e.g., "Could damage customer trust if biased decisions"
+    examples:
+      - "1 = Internal only, no external impact"
+      - "2 = Minor customer complaints"
+      - "3 = Negative reviews, some churn"
+      - "4 = Media coverage, significant churn"
+      - "5 = Brand crisis, regulatory scrutiny"
+  
+  legal:
+    score: 0  # 1-5
+    description: ""  # e.g., "GDPR implications if data handled incorrectly"
+    examples:
+      - "1 = No legal/regulatory concerns"
+      - "2 = Minor compliance questions"
+      - "3 = Potential fines <$100K"
+      - "4 = Major fines $100K-$1M or lawsuits"
+      - "5 = Existential legal threat (>$1M fines, criminal liability)"
+  
+  operational:
+    score: 0  # 1-5
+    description: ""  # e.g., "If agent fails, sales team can't function"
+    examples:
+      - "1 = No operational impact (nice-to-have)"
+      - "2 = Minor inconvenience"
+      - "3 = Moderate disruption, manual workarounds available"
+      - "4 = Major disruption, critical process affected"
+      - "5 = Complete operational failure, no workarounds"
+  
+  human_safety:
+    score: 0  # 1-5
+    description: ""  # e.g., "Medical diagnosis AI, wrong answer = patient harm"
+    examples:
+      - "1 = No human safety concerns"
+      - "2 = Minor stress/inconvenience"
+      - "3 = Moderate health/safety risk"
+      - "4 = Serious injury possible"
+      - "5 = Life-threatening or catastrophic harm"
+
+  # MAXIMUM IMPACT SCORE (take the highest score across all dimensions)
+  max_impact: 0  # Calculated: max(financial, reputational, legal, operational, human_safety)
+
+---
+# STEP 2: SCORE LIKELIHOOD (1-5)
+
+likelihood:
+  # Score 1-5 (1=Rare, 5=Almost Certain)
+  
+  score: 0  # 1-5
+  description: ""  # e.g., "Agent makes errors 10% of the time in testing"
+  examples:
+    - "1 = Rare (<5% chance of risk materializing)"
+    - "2 = Unlikely (5-20% chance)"
+    - "3 = Possible (20-50% chance)"
+    - "4 = Likely (50-80% chance)"
+    - "5 = Almost Certain (>80% chance)"
+  
+  evidence:
+    # What makes you think this likelihood score is accurate?
+    - ""  # e.g., "Testing shows 10% error rate"
+    - ""  # e.g., "Similar agent at Company X failed 30% of the time"
+    - ""  # e.g., "Model benchmarks show 90% accuracy"
+
+---
+# STEP 3: SCORE AUTONOMY (1-5)
+
+autonomy:
+  # Score 1-5 (1=Fully Human-Controlled, 5=Fully Autonomous)
+  
+  score: 0  # 1-5
+  description: ""  # e.g., "Agent auto-sends emails without human review"
+  examples:
+    - "1 = Human-in-the-loop: Human reviews EVERY decision before execution"
+    - "2 = Recommend & Wait: AI suggests, human approves before action"
+    - "3 = Act & Notify: AI acts, but human can review/undo immediately"
+    - "4 = Semi-Autonomous: AI acts, periodic human audits"
+    - "5 = Fully Autonomous: AI acts with no human oversight"
+  
+  human_oversight:
+    validation_rate: 0  # % of decisions validated by humans (0-100)
+    validation_frequency: ""  # Real-time | Daily | Weekly | Monthly | Never
+    can_override: false  # true | false (can humans override AI decisions?)
+    escalation_rules: ""  # e.g., "Escalate if confidence <80% or amount >$10K"
+
+---
+# STEP 4: CALCULATE RISK SCORE
+
+risk_calculation:
+  # Formula: Risk Score = Impact × Likelihood × Autonomy
+  
+  impact_score: 0  # From Step 1 (max_impact)
+  likelihood_score: 0  # From Step 2
+  autonomy_score: 0  # From Step 3
+  
+  total_risk_score: 0  # impact × likelihood × autonomy (range: 1-125)
+  
+  risk_tier: ""  # Calculated below:
+    # Tier 5 (Extreme): 80-125 → Board + Ethics Board review
+    # Tier 4 (High): 40-79 → VP + Legal + Compliance review
+    # Tier 3 (Medium): 20-39 → Director + Compliance review
+    # Tier 2 (Low): 8-19 → Manager review
+    # Tier 1 (Minimal): 1-7 → DRI self-certifies
+
+---
+# STEP 5: DETERMINE REVIEW PROCESS
+
+governance_review:
+  required_reviewers:
+    # Based on risk tier above
+    - role: ""  # e.g., "VP Engineering" (Tier 4+)
+    - role: ""  # e.g., "Legal Counsel" (Tier 4+)
+    - role: ""  # e.g., "Ethics Board" (Tier 5)
+    - role: ""  # e.g., "Compliance Officer" (Tier 3+)
+    - role: ""  # e.g., "DRI's Manager" (Tier 2+)
+  
+  approval_required_from:
+    # Who must sign off before production?
+    - ""  # e.g., "VP Engineering"
+    - ""  # e.g., "Legal (for GDPR compliance)"
+  
+  review_sla:
+    # How long does each tier have to review?
+    tier_5: "5 business days"  # Board meeting cadence
+    tier_4: "3 business days"  # VP review
+    tier_3: "2 business days"  # Director review
+    tier_2: "1 business day"  # Manager review
+    tier_1: "Same day"  # Self-certify
+
+---
+# STEP 6: CONFIGURE ALERTS
+
+alerts:
+  # What conditions trigger alerts to humans?
+  
+  alert_1_confidence_threshold:
+    condition: ""  # e.g., "AI confidence <80%"
+    action: ""  # e.g., "Escalate to human for review"
+    notify: ""  # e.g., "Sales Manager (Slack + Email)"
+  
+  alert_2_high_impact_decision:
+    condition: ""  # e.g., "Deal value >$10K"
+    action: ""  # e.g., "Require VP approval before proceeding"
+    notify: ""  # e.g., "VP Sales"
+  
+  alert_3_edge_case:
+    condition: ""  # e.g., "Input doesn't match expected pattern"
+    action: ""  # e.g., "Flag for human review, don't auto-execute"
+    notify: ""  # e.g., "DRI (Slack)"
+  
+  alert_4_bias_detected:
+    condition: ""  # e.g., "Demographic parity <95%"
+    action: ""  # e.g., "Pause agent, trigger audit"
+    notify: ""  # e.g., "Ethics Board + Legal"
+  
+  alert_5_performance_degradation:
+    condition: ""  # e.g., "Accuracy drops below 90%"
+    action: ""  # e.g., "Auto-rollback to previous version"
+    notify: ""  # e.g., "Engineering + DRI"
+
+---
+# STEP 7: MITIGATION PLAN
+
+mitigation:
+  # How will you reduce risk?
+  
+  reduce_impact:
+    # Lower the impact score
+    - action: ""  # e.g., "Cap AI decisions at $5K (down from $50K)"
+    - action: ""  # e.g., "Add human validation for top 20% highest-value decisions"
+  
+  reduce_likelihood:
+    # Lower the likelihood score
+    - action: ""  # e.g., "Improve model accuracy from 85% to 95%"
+    - action: ""  # e.g., "Add input validation to catch edge cases"
+  
+  reduce_autonomy:
+    # Lower the autonomy score
+    - action: ""  # e.g., "Require human approval for decisions >$10K"
+    - action: ""  # e.g., "Implement 'recommend & wait' mode for first 3 months"
+  
+  monitoring:
+    # How will you catch issues early?
+    - metric: ""  # e.g., "Error rate (target: <5%)"
+    - metric: ""  # e.g., "Human override rate (target: <10%)"
+    - metric: ""  # e.g., "Bias metrics (demographic parity within ±5%)"
+    - dashboard: ""  # Link to monitoring dashboard
+
+---
+# STEP 8: BIAS & FAIRNESS ASSESSMENT (if applicable)
+
+bias_fairness:
+  # Only required for Tier 3+ or decisions affecting people (hiring, lending, scoring)
+  
+  protected_attributes:
+    # What attributes should NOT influence AI decisions?
+    - ""  # e.g., "Gender"
+    - ""  # e.g., "Race"
+    - ""  # e.g., "Age"
+    - ""  # e.g., "Disability status"
+  
+  fairness_metrics:
+    demographic_parity:
+      metric: ""  # e.g., "P(approved | male) ≈ P(approved | female)"
+      target: ""  # e.g., "Within ±5%"
+      current: ""  # e.g., "Male: 70%, Female: 68% → 2% gap (PASS)"
+    
+    equal_opportunity:
+      metric: ""  # e.g., "P(predicted positive | true positive, Group A) ≈ P(predicted positive | true positive, Group B)"
+      target: ""  # e.g., "Within ±10%"
+      current: ""  # e.g., "Not yet measured"
+  
+  bias_testing:
+    test_frequency: ""  # e.g., "Monthly"
+    test_method: ""  # e.g., "Compare outcomes across demographic groups in production data"
+    audit_trail: ""  # Link to bias audit logs
+
+---
+# STEP 9: HUMAN ACCOUNTABILITY
+
+accountability:
+  # Humans are ALWAYS accountable, never the AI
+  
+  dri: ""  # Directly Responsible Individual (owns this AI agent)
+  escalation_owner: ""  # Who receives escalations? (usually DRI's manager)
+  
+  non_delegable_duties:
+    # These CANNOT be delegated to AI
+    - ""  # e.g., "Final hiring decision (AI can score, human decides)"
+    - ""  # e.g., "Ethical judgment calls (AI flags, human reviews)"
+    - ""  # e.g., "Approvals >$50K (AI recommends, human approves)"
+  
+  audit_frequency: ""  # How often are decisions audited? (Daily | Weekly | Monthly)
+  audit_sample_size: ""  # e.g., "10% of all decisions" or "All decisions >$10K"
+
+---
+# STEP 10: SIGN-OFF
+
+approvals:
+  # All required approvers must sign before production
+  
+  - reviewer: ""  # Name
+    role: ""  # e.g., "VP Engineering"
+    decision: ""  # Approved | Rejected | Needs Revision
+    date: ""  # YYYY-MM-DD
+    comments: ""
+  
+  - reviewer: ""
+    role: ""  # e.g., "Legal Counsel"
+    decision: ""
+    date: ""
+    comments: ""
+  
+  - reviewer: ""
+    role: ""  # e.g., "Ethics Board Chair"
+    decision: ""
+    date: ""
+    comments: ""
+
+  final_decision: ""  # Approved for Production | Approved for Pilot | Rejected | On Hold
+  production_date: ""  # YYYY-MM-DD (when agent goes live)
+
+---
+# EXAMPLE: Completed Risk Assessment
+
+# Example: AI-Powered Lead Scoring Agent
+# initiative:
+#   name: "AI Lead Scoring Agent"
+#   description: "Scores inbound leads 0-100, routes high scores to sales reps"
+#   owner: "Jane Doe (Head of Sales Ops)"
+#   function: "Sales"
+#   stage: "Pilot"
+#   submission_date: "2025-11-01"
+
+# impact:
+#   financial:
+#     score: 3  # $10K-$100K (missed revenue if high-value leads scored low)
+#   reputational:
+#     score: 2  # Minor (internal only, customers don't see scores)
+#   legal:
+#     score: 1  # None (B2B sales, no protected attributes)
+#   operational:
+#     score: 3  # Moderate (sales team relies on this, but can manually review)
+#   human_safety:
+#     score: 1  # None
+#   max_impact: 3  # Financial is highest
+
+# likelihood:
+#   score: 3  # Possible (testing shows 75% accuracy, so 25% chance of errors)
+#   evidence:
+#     - "Pilot testing: 75% accuracy on historical data"
+#     - "Model sometimes misses enterprise deals (scores them low)"
+
+# autonomy:
+#   score: 4  # Semi-Autonomous (agent scores leads, sales reps can override)
+#   human_oversight:
+#     validation_rate: 20  # Sales reps review top 20% of leads manually
+#     validation_frequency: "Daily"
+#     can_override: true
+#     escalation_rules: "Escalate if score <50 but company size >1000 employees"
+
+# risk_calculation:
+#   impact_score: 3
+#   likelihood_score: 3
+#   autonomy_score: 4
+#   total_risk_score: 36  # 3 × 3 × 4 = 36
+#   risk_tier: "Tier 3 (Medium)"  # 20-39 range
+
+# governance_review:
+#   required_reviewers:
+#     - role: "Director of Sales"
+#     - role: "Compliance Officer"
+#   approval_required_from:
+#     - "Director of Sales"
+#   review_sla:
+#     tier_3: "2 business days"
+
+# alerts:
+#   alert_1_confidence_threshold:
+#     condition: "AI confidence <70%"
+#     action: "Flag for manual review"
+#     notify: "Sales Manager (Slack)"
+#   
+#   alert_2_high_impact_decision:
+#     condition: "Company size >1000 employees OR deal value >$50K"
+#     action: "Require sales rep review before routing"
+#     notify: "Assigned Sales Rep"
+
+# mitigation:
+#   reduce_likelihood:
+#     - "Improve model accuracy to 85% (add more enterprise deal training data)"
+#     - "Add input validation (flag leads missing key data fields)"
+#   monitoring:
+#     - "Error rate: Track % of high-scored leads that don't convert (target: <15%)"
+#     - "Override rate: Track % of scores manually changed by reps (target: <20%)"
+
+# approvals:
+#   - reviewer: "John Smith"
+#     role: "Director of Sales"
+#     decision: "Approved"
+#     date: "2025-11-05"
+#     comments: "Looks good, start pilot with 50 leads/day"
+#   
+#   final_decision: "Approved for Pilot"
+#   production_date: "2025-12-01"

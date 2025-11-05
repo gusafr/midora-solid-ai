@@ -31,7 +31,10 @@
 
 **Output:** `BASELINE-ASSESSMENT.md` file
 
-**See:** [SME Transformation Playbook — Phase 0](../PLAYBOOKS/by-stage/sme-transformation.md#phase-0-assessment-month-1-2)
+**See:** 
+- [SME Transformation Playbook — Phase 0](../../PLAYBOOKS/by-stage/sme-transformation.md#phase-0-assessment-month-1-2)
+- [SOLID.AI Maturity Model](../../PLAYBOOKS/foundation/solid-ai-maturity-model.md) - Assess your L0-L5 maturity level
+- [AI Maturity Assessment Checklist](./ai-maturity-assessment.md) - Detailed 8-dimension assessment
 
 ---
 
@@ -92,7 +95,10 @@ Use this scorecard to identify friction between IT practices and business practi
 
 **Output:** `24-MONTH-TRANSFORMATION-PLAN.md`
 
-**See:** [90-Day Transformation Plan Template](../ADOPTION/TEMPLATES/90-day-transformation-plan.md)
+**See:** 
+- [90-Day Transformation Plan Template](../ADOPTION/TEMPLATES/90-day-transformation-plan.md)
+- [AI-Native OKRs & KPIs](../../PLAYBOOKS/people-culture/ai-native-okrs-kpis.md) - Set measurable goals
+- [OKR Template](../TEMPLATES/okr-template.yaml) - Copy-paste OKR format
 
 ---
 
@@ -193,7 +199,11 @@ Use this scorecard to identify friction between IT practices and business practi
   - Share metrics: "Month-end close now 7 days (was 15), team time on insights +40%"
   - Highlight career growth: "Finance team now strategic partners (forecasting, scenario planning) vs. data entry clerks"
 
-**See:** [Human-AI Collaboration](../DOCS/08-human-ai-collaboration.md), [Whole-Organization Transformation](../DOCS/09-whole-organization-transformation.md)
+**See:** 
+- [Human-AI Collaboration](../../DOCS/08-human-ai-collaboration.md)
+- [Whole-Organization Transformation](../../DOCS/09-whole-organization-transformation.md)
+- [Implementing AI Agents - Practical Guide](../../PLAYBOOKS/implementation/implementing-ai-agents-practical-guide.md)
+- [Process Mapping & SIPOC Integration](../../PLAYBOOKS/implementation/process-mapping-sipoc-integration.md)
 
 ---
 
@@ -221,7 +231,10 @@ Use this scorecard to identify friction between IT practices and business practi
   - Role: Orchestrate deal workflow (demo → trial → contract → onboarding)
   - Target: Deal cycle time <30 days (was 60-90)
 
-**See:** [Sales Playbook](../PLAYBOOKS/by-sector/business-functions/sales.md)
+**See:** 
+- [Sales Playbook](../../PLAYBOOKS/by-sector/business-functions/sales.md)
+- [AI-Native OKRs & KPIs](../../PLAYBOOKS/people-culture/ai-native-okrs-kpis.md) - Set Sales OKRs
+- [Learning & Development](../../PLAYBOOKS/people-culture/ai-learning-development.md) - Train Sales team
 
 ---
 
@@ -271,6 +284,10 @@ Use this scorecard to identify friction between IT practices and business practi
 
 **Target:** 80-120 AI agents for 100-person company (60-80% of tasks automated)
 
+**See:**
+- [Organizational Scalability](../../PLAYBOOKS/people-culture/organizational-scalability.md) - Avoid scaling ceilings
+- [Organizational Scalability Assessment](./organizational-scalability-assessment.md) - Diagnose bottlenecks
+
 ---
 
 ### 🔗 **Deploy Coordinator Agents (Intermediate-Level)**
@@ -290,7 +307,9 @@ Use this scorecard to identify friction between IT practices and business practi
   - Coordinates: ResumeScreener, OnboardingGuide, PerformanceTracker
   - Target: Employee lifecycle fully automated
 
-**See:** [Organizational Flow Diagram](../DIAGRAMS/organizational-flow.mmd)
+**See:** 
+- [Organizational Flow Diagram](../../DIAGRAMS/organizational-flow.mmd)
+- [Data Spine Analytics & Insights](../../PLAYBOOKS/implementation/data-spine-analytics-insights.md) - Correlate data across agents
 
 ---
 
@@ -309,7 +328,10 @@ Map all roles (human + AI) to 4-level framework:
 - [ ] Map current employees to levels
 - [ ] Identify career paths: "Junior Analyst (Low) → Senior Analyst (Intermediate) → Finance Manager (High) → CFO (Executive)"
 
-**See:** [Role Hierarchy](../DOCS/10-role-hierarchy.md), [Role Hierarchy Matrix Template](../ADOPTION/TEMPLATES/role-hierarchy-matrix.yaml)
+**See:** 
+- [Role Hierarchy](../../DOCS/10-role-hierarchy.md)
+- [Role Hierarchy Matrix Template](../TEMPLATES/role-hierarchy-matrix.yaml)
+- [AI Governance & Risk Assessment](../../PLAYBOOKS/governance/ai-governance-risk-assessment.md) - Assign decision authority
 
 ---
 

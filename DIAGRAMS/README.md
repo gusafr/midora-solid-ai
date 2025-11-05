@@ -195,6 +195,147 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
+## New Playbook Support Diagrams (2025-11-05)
+
+### 13. **ai-maturity-model-progression.mmd** ✨ NEW
+**Purpose:** Visual roadmap showing L0 → L5 maturity progression with timelines and metrics
+
+**Key Elements:**
+- Six maturity levels (L0: Traditional → L5: Leadership)
+- Four dimensions per level (Technology, Data, Governance, Culture)
+- Typical timelines (3-6 months per level)
+- Key metrics per level (agent count, automation %, revenue/employee)
+- Progression gates (what's needed to advance)
+- Color-coded by risk/maturity (red → green → blue)
+
+**Use Cases:** Transformation roadmaps, maturity assessments, executive planning, progress tracking
+
+**Related Docs:** 
+- PLAYBOOKS/foundation/solid-ai-maturity-model.md
+- ADOPTION/CHECKLISTS/ai-maturity-assessment.md
+
+---
+
+### 14. **risk-scoring-framework.mmd** ✨ NEW
+**Purpose:** Decision tree for AI governance risk assessment with tiered review process
+
+**Key Elements:**
+- 3-factor risk score: Impact (1-5) × Likelihood (1-5) × Autonomy (1-5)
+- 5 risk tiers (Minimal/Low/Medium/High/Extreme) with review requirements
+- Required approvers per tier (DRI → Manager → Director → VP → Board)
+- 5 alert categories (Confidence, High-Impact, Edge Case, Bias, Performance)
+- 4 real-world examples with calculated risk scores
+- SLA timelines per tier
+
+**Use Cases:** AI governance setup, risk assessment process, approval workflows, compliance
+
+**Related Docs:**
+- PLAYBOOKS/governance/ai-governance-risk-assessment.md
+- ADOPTION/CHECKLISTS/governance-ethics-review.md
+- ADOPTION/TEMPLATES/risk-assessment-template.yaml
+
+---
+
+### 15. **learning-path-structure.mmd** ✨ NEW
+**Purpose:** 4-level certification ladder showing progression from AI Awareness to AI Specialist
+
+**Key Elements:**
+- Level 1: Awareness (4h, 100% of employees, universal content)
+- Level 2: Practitioner (20h, 60-80%, 7 function-specific tracks)
+- Level 3: Power User (40h, 20-30%, custom agents, training others)
+- Level 4: Specialist (100h+, 5-10%, MLOps, research, innovation)
+- Target completion rates and incentives per level
+- Continuous reskilling programs (Learning Sprints, AI Guild, Role Rotations)
+
+**Use Cases:** Training program design, L&D rollout, certification planning, career development
+
+**Related Docs:**
+- PLAYBOOKS/people-culture/ai-learning-development.md
+- ADOPTION/CHECKLISTS/learning-development-rollout.md
+- ADOPTION/TEMPLATES/learning-path-template.yaml
+
+---
+
+### 16. **organizational-scalability-ceilings.mmd** ✨ NEW
+**Purpose:** Identify and overcome 4 common scalability bottlenecks
+
+**Key Elements:**
+- 3 scalability dimensions (Technical/Human/Cultural with 0-100 scoring)
+- 4 ceiling patterns with symptoms and fixes:
+  - Ceiling 1: Founder Bottleneck
+  - Ceiling 2: Communication Overhead
+  - Ceiling 3: Knowledge Silos
+  - Ceiling 4: Process Rigidity
+- 5 anti-patterns to avoid (Premature Scaling, Process Bureaucracy, etc.)
+- Scalability action plan (assess → identify ceiling → fix → scale)
+- 2 real-world examples (50-person startup, 200-person SME)
+
+**Use Cases:** Growth planning, bottleneck diagnosis, organizational design, scaling strategy
+
+**Related Docs:**
+- PLAYBOOKS/people-culture/organizational-scalability.md
+- ADOPTION/CHECKLISTS/organizational-scalability-assessment.md
+
+---
+
+### 17. **process-sipoc-example.mmd** ✨ NEW
+**Purpose:** Complete SIPOC example (Invoice Processing) with AI agents and automation mesh
+
+**Key Elements:**
+- Full SIPOC flow (Suppliers → Inputs → Process → Outputs → Customers)
+- 6 AI agents in process (EmailMonitor, InvoiceParser, ValidationBot, etc.)
+- Human intervention points (only for >$5K or discrepancies)
+- Event-driven integration contracts (invoice.received, payment.processed, etc.)
+- Metrics (5 days → <24 hours, 0% → 85% automation, $15 → $2 cost/invoice)
+
+**Use Cases:** Process automation design, SIPOC workshops, AI agent deployment planning
+
+**Related Docs:**
+- PLAYBOOKS/implementation/process-mapping-sipoc-integration.md
+- DIAGRAMS/sipoc-automation-pattern.mmd (general pattern)
+
+---
+
+### 18. **data-analytics-patterns.mmd** ✨ NEW
+**Purpose:** 5 analytics patterns for extracting insights from the Data Spine
+
+**Key Elements:**
+- Pattern 1: Event Correlation (connect disparate events)
+- Pattern 2: Predictive Analytics (forecast future outcomes)
+- Pattern 3: Diagnostic Analytics (understand why something happened)
+- Pattern 4: Prescriptive Analytics (recommend optimal action)
+- Pattern 5: Learning Loops (AI learns and improves autonomously)
+- 5 real-world use cases (Revenue Ops, Proactive CS, Process Optimization, etc.)
+- Analytics architecture (Dashboards, Alerts, AI agents consuming insights)
+
+**Use Cases:** Analytics strategy, Data Spine implementation, AI agent design, insight generation
+
+**Related Docs:**
+- PLAYBOOKS/implementation/data-spine-analytics-insights.md
+- DIAGRAMS/data-spine-architecture.mmd
+
+---
+
+### 19. **augmentation-factor-calculation.mmd** ✨ NEW
+**Purpose:** Visual guide to calculating and tracking the Augmentation Factor metric
+
+**Key Elements:**
+- Formula: (Human+AI Output) / (Human-Only Output)
+- 4-step process (Baseline → Deploy AI → Measure → Calculate)
+- Examples by role (Sales 1.3x, Engineering 1.4x, Finance 4.0x, CS 2.0x)
+- Company-wide augmentation (revenue per employee improvement)
+- Monthly tracking (Month 1-12 progression)
+- Setting AI-native OKRs with augmentation factor targets
+- Common pitfalls to avoid
+
+**Use Cases:** AI impact measurement, OKR setting, productivity tracking, ROI calculation
+
+**Related Docs:**
+- PLAYBOOKS/people-culture/ai-native-okrs-kpis.md
+- ADOPTION/CHECKLISTS/okr-kpi-setup.md
+
+---
+
 ## Implementation Examples
 
 ### 13. **midora-implementation.mmd**
@@ -285,7 +426,7 @@ When updating diagrams:
 
 **Versioning:** Track major changes in git history; consider version tags for breaking changes
 
-**Diagram Count:** 13 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
+**Diagram Count:** 20 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
 
 ---
 
@@ -295,6 +436,6 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on proposing new diagra
 
 ---
 
-**Last Updated:** 2025-11-04  
+**Last Updated:** 2025-11-05  
 **Maintained by:** solid.ai Framework Team  
 **License:** MIT

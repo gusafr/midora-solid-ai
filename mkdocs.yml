@@ -52,16 +52,37 @@ nav:
       - Retrospective Facilitation: adoption/prompt-templates/retrospective-facilitation.md
       - Ethical Decision-Making: adoption/prompt-templates/ethical-decision-making.md
     - Checklists:
-      - AI Agent Integration: adoption/checklists/ai-agent-integration.md
-      - Squad Formation: adoption/checklists/squad-formation.md
-      - Data Spine Implementation: adoption/checklists/data-spine-implementation.md
-      - Governance & Ethics Review: adoption/checklists/governance-ethics-review.md
+      - By Assessment & Planning:
+        - AI Maturity Assessment: adoption/checklists/ai-maturity-assessment.md
+        - Organizational Scalability Assessment: adoption/checklists/organizational-scalability-assessment.md
+        - Learning & Development Rollout: adoption/checklists/learning-development-rollout.md
+        - OKR & KPI Setup: adoption/checklists/okr-kpi-setup.md
+      - By Implementation:
+        - AI Agent Integration: adoption/checklists/ai-agent-integration.md
+        - Squad Formation: adoption/checklists/squad-formation.md
+        - Data Spine Implementation: adoption/checklists/data-spine-implementation.md
+        - Governance & Ethics Review: adoption/checklists/governance-ethics-review.md
+      - By Journey:
+        - SME Transformation Roadmap: adoption/checklists/sme-transformation-roadmap.md
+        - Startup Launch: adoption/checklists/startup-launch.md
+        - AI-Native Sprint: adoption/checklists/ai-native-sprint.md
+        - Role Hierarchy Implementation: adoption/checklists/role-hierarchy-implementation.md
     - Templates:
-      - Agent Definition: adoption/templates/agent-definition.md
-      - Squad Charter: adoption/templates/squad-charter.md
-      - Data Contract: adoption/templates/data-contract.md
-      - RFC Template: adoption/templates/rfc-template.md
-      - ADR Template: adoption/templates/adr-template.md
+      - Organizational:
+        - Agent Definition: adoption/templates/agent-definition.md
+        - Squad Charter: adoption/templates/squad-charter.md
+        - Data Contract: adoption/templates/data-contract.md
+      - Planning & Metrics:
+        - Risk Assessment Template: adoption/templates/risk-assessment-template.md
+        - Learning Path Template: adoption/templates/learning-path-template.md
+        - OKR Template: adoption/templates/okr-template.md
+        - 90-Day Transformation Plan: adoption/templates/90-day-transformation-plan.md
+        - Role Hierarchy Matrix: adoption/templates/role-hierarchy-matrix.md
+      - Governance:
+        - RFC Template: adoption/templates/rfc-template.md
+        - ADR Template: adoption/templates/adr-template.md
+      - Sprint Planning:
+        - AI-Native Sprint Template: adoption/templates/ai-native-sprint-template.md
   - Guides:
     - Docker Setup: docker.md
     - Cleanup & Optimization: cleanup.md
@@ -77,6 +98,17 @@ nav:
       - ADR 0001 – Mermaid Choice: adr/adr-0001-mermaid-choice.md
     - Playbooks:
       - 📖 Overview: playbooks/README.md
+      - Foundation:
+        - 🎯 SOLID.AI Maturity Model: playbooks/foundation/solid-ai-maturity-model.md
+      - Governance:
+        - 🛡️ AI Governance & Risk Assessment: playbooks/governance/ai-governance-risk-assessment.md
+      - Implementation:
+        - 🔄 Process Mapping & SIPOC Integration: playbooks/implementation/process-mapping-sipoc-integration.md
+        - 📊 Data Spine Analytics & Insights: playbooks/implementation/data-spine-analytics-insights.md
+      - People & Culture:
+        - 📈 Organizational Scalability: playbooks/people-culture/organizational-scalability.md
+        - 🎓 AI Learning & Development: playbooks/people-culture/ai-learning-development.md
+        - 🎯 AI-Native OKRs & KPIs: playbooks/people-culture/ai-native-okrs-kpis.md
       - By Company Stage:
         - 🚀 Startup (AI-Native): playbooks/by-stage/startup-ai-native.md
         - 📈 SME Transformation: playbooks/by-stage/sme-transformation.md

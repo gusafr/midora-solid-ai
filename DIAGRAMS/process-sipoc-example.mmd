@@ -1,0 +1,114 @@
+---
+title: "SIPOC + AI Agents: Invoice Processing Example"
+description: "Complete SIPOC flow with AI agent integration and automation mesh"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/implementation/process-mapping-sipoc-integration.md"
+  - "DIAGRAMS/sipoc-automation-pattern.mmd"
+---
+
+graph LR
+    subgraph Suppliers["<b>SUPPLIERS</b><br/>(Who provides inputs?)"]
+        S1["Vendors<br/>(External)"]
+        S2["Internal Teams<br/>(Sales, Ops)"]
+        S3["Email System<br/>(Inbound)"]
+    end
+
+    subgraph Inputs["<b>INPUTS</b><br/>(What's received?)"]
+        I1["📧 PDF Invoices<br/>(email attachments)"]
+        I2["📄 PO Numbers<br/>(from sales)"]
+        I3["📊 Vendor Master Data<br/>(from ERP)"]
+        I4["💰 Payment Terms<br/>(Net 30, Net 60)"]
+    end
+
+    subgraph Process["<b>PROCESS</b><br/>(How is work done?)"]
+        P1["1️⃣ Receive Invoice<br/><b>🤖 EmailMonitor-Agent</b><br/>Watches inbox 24/7<br/>Extracts attachments"]
+        P2["2️⃣ Extract Data<br/><b>🤖 InvoiceParser-Agent</b><br/>OCR + LLM extraction<br/>Vendor, Amount, Date, PO"]
+        P3["3️⃣ Validate<br/><b>🤖 ValidationBot</b><br/>Match PO to invoice<br/>Check payment terms<br/>Flag discrepancies"]
+        P4["4️⃣ Approve/Escalate<br/><b>🤖 ApprovalRouter-Agent</b><br/>Auto-approve if &lt;$5K & matched<br/>Escalate to human if &gt;$5K"]
+        P5["5️⃣ Process Payment<br/><b>🤖 PaymentBot</b><br/>Create payment in ERP<br/>Schedule by due date<br/>Notify vendor"]
+        P6["6️⃣ Reconcile<br/><b>🤖 ReconciliationBot</b><br/>Match payment to bank statement<br/>Update accounting system"]
+
+        P1 --> P2 --> P3 --> P4
+        P4 -->|Auto-approved| P5
+        P4 -->|Escalated| Human["👤 Human Review<br/>(Finance Manager)<br/><br/>Reviews:<br/>• Discrepancies<br/>• High-value (&gt;$5K)<br/>• New vendors<br/>• Unusual terms"]
+        Human -->|Approved| P5
+        Human -->|Rejected| Reject["❌ Reject & Notify<br/>Send to vendor<br/>Request correction"]
+        P5 --> P6
+    end
+
+    subgraph Outputs["<b>OUTPUTS</b><br/>(What's produced?)"]
+        O1["✅ Payment Processed<br/>(in ERP)"]
+        O2["📊 Accounting Entry<br/>(GL updated)"]
+        O3["📧 Vendor Notification<br/>(payment confirmed)"]
+        O4["📈 Analytics Event<br/>(to Data Spine)"]
+    end
+
+    subgraph Customers["<b>CUSTOMERS</b><br/>(Who receives outputs?)"]
+        C1["Vendors<br/>(get paid)"]
+        C2["Finance Team<br/>(reconciliation)"]
+        C3["Leadership<br/>(cash flow insights)"]
+        C4["Auditors<br/>(compliance trail)"]
+    end
+
+    %% SIPOC Flow
+    S1 --> I1
+    S2 --> I2
+    S3 --> I3
+    S3 --> I1
+
+    I1 --> P1
+    I2 --> P3
+    I3 --> P3
+    I4 --> P3
+
+    P6 --> O1
+    P6 --> O2
+    P5 --> O3
+    P6 --> O4
+
+    O1 --> C2
+    O2 --> C2
+    O3 --> C1
+    O4 --> C3
+    O1 --> C4
+
+    %% Integration Contracts (Event-Driven)
+    subgraph Contracts["<b>INTEGRATION CONTRACTS</b><br/>(Event-Driven Data Spine)"]
+        Event1["📡 Event: invoice.received<br/>Payload: {vendor, amount, pdf_url, timestamp}<br/>Trigger: EmailMonitor-Agent → InvoiceParser-Agent"]
+        Event2["📡 Event: invoice.validated<br/>Payload: {invoice_id, status, discrepancies}<br/>Trigger: ValidationBot → ApprovalRouter-Agent"]
+        Event3["📡 Event: payment.processed<br/>Payload: {invoice_id, payment_id, amount, date}<br/>Trigger: PaymentBot → ReconciliationBot + Analytics"]
+    end
+
+    P1 -.->|Publishes| Event1
+    Event1 -.->|Subscribes| P2
+
+    P3 -.->|Publishes| Event2
+    Event2 -.->|Subscribes| P4
+
+    P5 -.->|Publishes| Event3
+    Event3 -.->|Subscribes| P6
+    Event3 -.->|Subscribes| O4
+
+    %% Metrics
+    Metrics["<b>📊 PROCESS METRICS</b><br/><br/>⏱️ Cycle Time: 5 days → <24 hours (80% reduction)<br/>🤖 Automation Rate: 0% → 85% (only &gt;$5K or discrepancies need humans)<br/>💰 Cost per Invoice: $15 → $2 (87% reduction)<br/>✅ Accuracy: 92% → 98% (AI catches errors humans miss)<br/>👤 Human Intervention: 100% → 15% (only exceptions)<br/>📈 Volume Capacity: 500/month → 5,000/month (10x with same team)"]
+
+    style Suppliers fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Inputs fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    style Outputs fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Customers fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    style Contracts fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    style Metrics fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+
+    style P1 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+    style P2 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+    style P3 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+    style P4 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+    style P5 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+    style P6 fill:#ce93d8,stroke:#7b1fa2,stroke-width:2px
+
+    style Human fill:#ffccbc,stroke:#e64a19,stroke-width:2px
+    style Reject fill:#ef9a9a,stroke:#c62828,stroke-width:2px

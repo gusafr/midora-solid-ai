@@ -1,0 +1,71 @@
+---
+title: "Data Spine: 5 Analytics Patterns for AI-Native Organizations"
+description: "From event correlation to autonomous learning loops"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/implementation/data-spine-analytics-insights.md"
+  - "DIAGRAMS/data-spine-architecture.mmd"
+---
+
+graph TB
+    subgraph DataSpine["<b>DATA SPINE (Central Event Stream)</b>"]
+        Events["📡 All Events Flow Here<br/><br/>• invoice.received<br/>• lead.scored<br/>• candidate.screened<br/>• payment.processed<br/>• support.ticket.created<br/>• sales.demo.completed<br/>• code.deployed<br/>• user.churned"]
+    end
+
+    %% Pattern 1: Event Correlation
+    Events --> P1["<b>PATTERN 1: EVENT CORRELATION</b><br/><br/>Connect disparate events to find patterns<br/><br/>Example: Lead Journey<br/>1. lead.scored (Marketing)<br/>2. demo.booked (Sales)<br/>3. trial.started (Product)<br/>4. invoice.sent (Finance)<br/>5. customer.onboarded (CS)<br/><br/>Insight: 'Leads from webinars convert 3x faster'"]
+
+    %% Pattern 2: Predictive Analytics
+    Events --> P2["<b>PATTERN 2: PREDICTIVE ANALYTICS</b><br/><br/>Use historical events to predict future<br/><br/>Example: Churn Prediction<br/>Signals:<br/>• login.frequency decreased 50%<br/>• support.tickets increased 3x<br/>• feature.usage.declined<br/>• nps.score &lt; 6<br/><br/>Prediction: '80% chance of churn in 30 days'<br/>Action: Trigger retention campaign"]
+
+    %% Pattern 3: Diagnostic Analytics
+    Events --> P3["<b>PATTERN 3: DIAGNOSTIC ANALYTICS</b><br/><br/>Understand WHY something happened<br/><br/>Example: Why did revenue drop 15%?<br/>Root cause analysis:<br/>1. lead.volume normal<br/>2. demo.show.rate dropped 20%<br/>3. Correlation: New demo.booking.bot deployed<br/>4. Diagnosis: Bot confirmation emails in spam<br/><br/>Fix: Whitelist bot email domain"]
+
+    %% Pattern 4: Prescriptive Analytics
+    Events --> P4["<b>PATTERN 4: PRESCRIPTIVE ANALYTICS</b><br/><br/>Recommend optimal action<br/><br/>Example: Pricing Optimization<br/>Inputs:<br/>• customer.segment (Enterprise, SMB)<br/>• deal.size<br/>• competitive.intel<br/>• close.probability<br/><br/>Recommendation: 'Offer 15% discount (85% chance of close)'<br/>Agent: Auto-generate proposal"]
+
+    %% Pattern 5: Learning Loops
+    Events --> P5["<b>PATTERN 5: LEARNING LOOPS</b><br/><br/>AI learns from outcomes, improves over time<br/><br/>Example: Lead Scoring Refinement<br/>1. LeadScoring-Agent scores lead = 80/100<br/>2. Sales rep books demo<br/>3. Outcome: lead.converted = true<br/>4. Feedback loop: 'High score → conversion' (model reinforced)<br/>5. Model accuracy: 75% → 82% after 1000 examples<br/><br/>Continuous improvement without human intervention"]
+
+    %% Analytics Architecture
+    P1 --> Analytics["<b>ANALYTICS LAYER</b>"]
+    P2 --> Analytics
+    P3 --> Analytics
+    P4 --> Analytics
+    P5 --> Analytics
+
+    Analytics --> Dashboards["<b>DASHBOARDS & ALERTS</b><br/><br/>📊 Executive Dashboard<br/>• Revenue, churn, efficiency metrics<br/>• Real-time updates<br/><br/>📈 Function Dashboards<br/>• Sales: Pipeline, win rate, velocity<br/>• Finance: Cash flow, AR/AP aging<br/>• CS: CSAT, NPS, churn risk<br/><br/>🚨 Automated Alerts<br/>• Churn risk &gt;70%: Notify CS manager<br/>• Deal stalled &gt;30 days: Notify sales rep<br/>• Invoice overdue: Escalate to finance"]
+
+    Analytics --> Agents["<b>AI AGENTS CONSUME INSIGHTS</b><br/><br/>🤖 ChurnPredictor-Agent<br/>Reads: Pattern 2 predictions<br/>Action: Trigger retention campaign<br/><br/>🤖 DealOptimizer-Agent<br/>Reads: Pattern 4 recommendations<br/>Action: Suggest pricing, upsells<br/><br/>🤖 ProcessImprovement-Agent<br/>Reads: Pattern 3 diagnostics<br/>Action: Identify bottlenecks, propose fixes"]
+
+    %% Example Use Cases
+    UseCase1["<b>USE CASE 1: Revenue Operations</b><br/><br/>Problem: Can't see full customer journey<br/><br/>Solution: Pattern 1 (Event Correlation)<br/>• Track: lead → demo → trial → customer<br/>• Insight: 'Leads who see demo within 48h convert 2x'<br/>• Action: Deploy faster demo.booking automation"]
+
+    UseCase2["<b>USE CASE 2: Proactive Customer Success</b><br/><br/>Problem: Reactive churn (customers leave before we know)<br/><br/>Solution: Pattern 2 (Predictive Analytics)<br/>• Monitor: usage, support, NPS, payment events<br/>• Predict: Churn risk 30 days ahead<br/>• Action: Human CS rep reaches out proactively"]
+
+    UseCase3["<b>USE CASE 3: Process Optimization</b><br/><br/>Problem: Month-end close takes 15 days<br/><br/>Solution: Pattern 3 (Diagnostic Analytics)<br/>• Analyze: Which steps take longest?<br/>• Diagnose: Manual reconciliation = 60% of time<br/>• Action: Deploy ReconciliationBot (reduce to 3 days)"]
+
+    UseCase4["<b>USE CASE 4: Sales Enablement</b><br/><br/>Problem: Inconsistent win rates across reps<br/><br/>Solution: Pattern 4 (Prescriptive Analytics)<br/>• Learn: Top rep strategies (demos, pricing, objections)<br/>• Recommend: 'Use demo deck v2 for Enterprise'<br/>• Action: ProposalGenerator-Agent uses best practices"]
+
+    UseCase5["<b>USE CASE 5: Continuous AI Improvement</b><br/><br/>Problem: AI agent accuracy plateaus<br/><br/>Solution: Pattern 5 (Learning Loops)<br/>• Capture: All agent decisions + outcomes<br/>• Learn: What worked, what didn't<br/>• Improve: Retrain model monthly (accuracy +5-10%)"]
+
+    style DataSpine fill:#e1f5fe,stroke:#0277bd,stroke-width:3px
+    style Events fill:#b3e5fc,stroke:#0277bd,stroke-width:2px
+
+    style P1 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style P2 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style P3 fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style P4 fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style P5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+
+    style Analytics fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+    style Dashboards fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Agents fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
+
+    style UseCase1 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+    style UseCase2 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+    style UseCase3 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+    style UseCase4 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+    style UseCase5 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px

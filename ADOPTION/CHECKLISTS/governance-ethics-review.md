@@ -228,9 +228,76 @@
 
 ---
 
+## Risk Scoring Framework
+
+### Calculate Risk Score (Impact × Likelihood × Autonomy)
+
+**Impact (1-5):**
+- [ ] **Financial:** ___/5 (1=<$1K loss, 5=>$1M loss)
+- [ ] **Reputational:** ___/5 (1=Internal only, 5=Brand crisis)
+- [ ] **Legal:** ___/5 (1=No concerns, 5=Existential threat)
+- [ ] **Operational:** ___/5 (1=Nice-to-have, 5=Complete failure)
+- [ ] **Human Safety:** ___/5 (1=No concerns, 5=Life-threatening)
+- **Maximum Impact:** ___/5 (take highest score above)
+
+**Likelihood (1-5):**
+- [ ] **Probability of risk materializing:** ___/5 (1=<5% chance, 5=>80% chance)
+- **Evidence:** _______________________________________
+
+**Autonomy (1-5):**
+- [ ] **Level of AI autonomy:** ___/5 (1=Human-in-loop, 5=Fully autonomous)
+- **Human validation rate:** ___% (% of decisions validated by humans)
+- **Escalation rules:** _______________________________________
+
+**Total Risk Score:** Impact × Likelihood × Autonomy = _____/125
+
+**Risk Tier:**
+- [ ] **Tier 5 (Extreme, 80-125):** Board + Ethics Board review required
+- [ ] **Tier 4 (High, 40-79):** VP + Legal + Compliance review required
+- [ ] **Tier 3 (Medium, 20-39):** Director + Compliance review required
+- [ ] **Tier 2 (Low, 8-19):** Manager review required
+- [ ] **Tier 1 (Minimal, 1-7):** DRI self-certifies
+
+**Required Reviewers (based on tier):** _______________________________________
+
+---
+
+## Automated Alerts Configuration
+
+**Set up these 5 alert categories:**
+
+- [ ] **Alert 1: Confidence Threshold**
+  - Condition: AI confidence < ___% (typical: 80%)
+  - Action: Escalate to human for review
+  - Notify: _______________________________________
+
+- [ ] **Alert 2: High-Impact Decision**
+  - Condition: Impact exceeds $_____ or affects >_____ people
+  - Action: Require VP approval before proceeding
+  - Notify: _______________________________________
+
+- [ ] **Alert 3: Edge Case Detection**
+  - Condition: Input doesn't match expected pattern
+  - Action: Flag for human review, don't auto-execute
+  - Notify: _______________________________________
+
+- [ ] **Alert 4: Bias/Fairness Violation**
+  - Condition: Demographic parity < ___% (typical: 95%)
+  - Action: Pause agent, trigger audit
+  - Notify: Ethics Board + Legal
+
+- [ ] **Alert 5: Performance Degradation**
+  - Condition: Accuracy drops below ___% (typical: 90%)
+  - Action: Auto-rollback to previous version
+  - Notify: Engineering + DRI
+
+---
+
 ## Tools & Templates
 
 - **Governance & Ethics Docs:** [DOCS/06-governance-ethics.md](../../DOCS/06-governance-ethics.md)
+- **Risk Assessment Playbook:** [PLAYBOOKS/governance/ai-governance-risk-assessment.md](../../PLAYBOOKS/governance/ai-governance-risk-assessment.md)
+- **Risk Assessment Template:** [TEMPLATES/risk-assessment-template.yaml](../TEMPLATES/risk-assessment-template.yaml)
 - **Ethical Decision Prompt:** [PROMPT-TEMPLATES/ethical-decision-making.md](../PROMPT-TEMPLATES/ethical-decision-making.md)
 - **AI Integration Playbook:** [PLAYBOOKS/playbook-ai-integration.md](../../PLAYBOOKS/playbook-ai-integration.md)
 - **Manifesto:** [MANIFESTO/solid-ai-manifesto-v1.md](../../MANIFESTO/solid-ai-manifesto-v1.md)

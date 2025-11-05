@@ -171,15 +171,122 @@ class PDFBookGenerator:
                 'content': ''
             })
             
-            playbook_paths = [
+            # Foundation Playbooks
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Foundation',
+                'content': ''
+            })
+            foundation_playbooks = [
+                ('foundation/solid-ai-maturity-model.md', 'SOLID.AI Maturity Model: L0→L5 Evolution'),
+            ]
+            for path, title in foundation_playbooks:
+                file_path = self.playbooks_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # Governance Playbooks
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Governance',
+                'content': ''
+            })
+            governance_playbooks = [
+                ('governance/ai-governance-risk-assessment.md', 'AI Governance & Risk Assessment'),
+            ]
+            for path, title in governance_playbooks:
+                file_path = self.playbooks_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # Implementation Playbooks
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Implementation',
+                'content': ''
+            })
+            implementation_playbooks = [
+                ('implementation/process-mapping-sipoc-integration.md', 'Process Mapping & SIPOC Integration'),
+                ('implementation/data-spine-analytics-insights.md', 'Data Spine Analytics & Insights'),
+            ]
+            for path, title in implementation_playbooks:
+                file_path = self.playbooks_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # People & Culture Playbooks
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'People & Culture',
+                'content': ''
+            })
+            people_culture_playbooks = [
+                ('people-culture/organizational-scalability.md', 'Organizational Scalability'),
+                ('people-culture/ai-learning-development.md', 'AI Learning & Development'),
+                ('people-culture/ai-native-okrs-kpis.md', 'AI-Native OKRs & KPIs'),
+            ]
+            for path, title in people_culture_playbooks:
+                file_path = self.playbooks_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # By Stage Playbooks
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'By Company Stage',
+                'content': ''
+            })
+            stage_playbooks = [
                 ('by-stage/startup-ai-native.md', 'Startup: AI-Native from Day One'),
                 ('by-stage/sme-transformation.md', 'SME: Transformation Journey'),
+            ]
+            for path, title in stage_playbooks:
+                file_path = self.playbooks_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # Organizational Patterns
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Organizational Patterns',
+                'content': ''
+            })
+            organizational_playbooks = [
                 ('organizational/squads.md', 'Squads Implementation'),
                 ('organizational/pools.md', 'Pools Implementation'),
                 ('organizational/ai-integration.md', 'AI Integration'),
             ]
-            
-            for path, title in playbook_paths:
+            for path, title in organizational_playbooks:
                 file_path = self.playbooks_dir / path
                 if file_path.exists():
                     with open(file_path, 'r', encoding='utf-8') as f:
@@ -198,8 +305,174 @@ class PDFBookGenerator:
                 'title': 'Adoption Pack',
                 'content': ''
             })
-            # Add selected adoption materials
-            # (Can be expanded based on specific needs)
+            
+            # Checklists - By Assessment & Planning
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Checklists: Assessment & Planning',
+                'content': ''
+            })
+            assessment_checklists = [
+                ('CHECKLISTS/ai-maturity-assessment.md', 'AI Maturity Assessment'),
+                ('CHECKLISTS/organizational-scalability-assessment.md', 'Organizational Scalability Assessment'),
+                ('CHECKLISTS/learning-development-rollout.md', 'Learning & Development Rollout'),
+                ('CHECKLISTS/okr-kpi-setup.md', 'OKR & KPI Setup'),
+            ]
+            for path, title in assessment_checklists:
+                file_path = self.adoption_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # Checklists - By Implementation
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Checklists: Implementation',
+                'content': ''
+            })
+            implementation_checklists = [
+                ('CHECKLISTS/ai-agent-integration.md', 'AI Agent Integration'),
+                ('CHECKLISTS/squad-formation.md', 'Squad Formation'),
+                ('CHECKLISTS/data-spine-implementation.md', 'Data Spine Implementation'),
+                ('CHECKLISTS/governance-ethics-review.md', 'Governance & Ethics Review'),
+            ]
+            for path, title in implementation_checklists:
+                file_path = self.adoption_dir / path
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        parts.append({
+                            'type': 'chapter',
+                            'title': title,
+                            'content': f.read(),
+                            'filename': path
+                        })
+            
+            # Templates - Planning & Metrics
+            parts.append({
+                'type': 'subsection_header',
+                'title': 'Templates: Planning & Metrics',
+                'content': ''
+            })
+            
+            # For templates, we'll include the markdown wrappers which contain
+            # the YAML templates embedded with instructions
+            template_note = '''
+# About Templates
+
+The following templates are provided in YAML format for easy copy-paste into your documentation and planning tools.
+
+Each template includes:
+- **Complete structure** ready to copy
+- **Instructions** on how to fill it out
+- **Examples** from real implementations
+- **Related resources** for additional guidance
+
+**Note:** These templates are shown in embedded format. For the raw YAML files, 
+visit: `github.com/gusafr/midora-solid-ai/ADOPTION/TEMPLATES/`
+
+---
+            '''
+            parts.append({
+                'type': 'chapter',
+                'title': 'Template Guide',
+                'content': template_note,
+                'filename': 'templates-intro'
+            })
+            
+            # Note: We don't include the full YAML templates in PDF as they're very long
+            # Instead, we include a reference/summary
+            template_summary = '''
+# Available Templates
+
+The SOLID.AI Adoption Pack includes the following ready-to-use templates:
+
+## 1. Risk Assessment Template (`risk-assessment-template.yaml`)
+
+**Purpose:** AI governance risk assessment using Impact × Likelihood × Autonomy framework
+
+**Includes:**
+- Risk scoring framework (5 dimensions of impact)
+- Automated tier calculation (maps 1-125 risk score to 5 tiers)
+- Alert configuration (5 alert types)
+- Mitigation planning
+- Bias assessment
+- Accountability assignment
+- Complete example: Invoice processing automation
+
+**Size:** ~500 lines  
+**Format:** YAML
+
+---
+
+## 2. Learning Path Template (`learning-path-template.yaml`)
+
+**Purpose:** Design 4-level AI learning & development paths by function
+
+**Includes:**
+- Level 1 Awareness (4h, 100% target)
+- Level 2 Practitioner (20h, 60-80%, function-specific)
+- Level 3 Power User (40h, 20-30%)
+- Level 4 Specialist (100h+, 5-10%)
+- Rollout plan (Pilot → Scale)
+- Metrics framework
+- Complete example: Sales function learning path
+
+**Size:** ~700 lines  
+**Format:** YAML
+
+---
+
+## 3. OKR Template (`okr-template.yaml`)
+
+**Purpose:** AI-native OKRs with augmentation factors
+
+**Includes:**
+- Objective + 3-4 Key Results
+- Augmentation factor calculation ((Human+AI) / Human-Only)
+- 8 Universal AI Agent KPIs
+- Weekly check-ins
+- End-of-quarter review
+- Complete examples: Sales and Engineering OKRs
+
+**Size:** ~650 lines  
+**Format:** YAML
+
+---
+
+## 4. Additional Templates
+
+The Adoption Pack also includes:
+
+- **Agent Definition Template** - Define AI agents with capabilities, data contracts, governance
+- **Squad Charter Template** - Squad mission, composition, ways of working
+- **Data Contract Template** - Schema, SLAs, lineage, observability
+- **90-Day Transformation Plan** - Phased transformation roadmap
+- **Role Hierarchy Matrix** - 4-level progression (Assistant → Specialist) for humans & AI
+- **RFC Template** - Request for Comments for strategic changes
+- **ADR Template** - Architecture Decision Records
+- **AI-Native Sprint Template** - Sprint planning with AI integration
+
+---
+
+**To access these templates:**
+
+1. **Online:** Visit `github.com/gusafr/midora-solid-ai/ADOPTION/TEMPLATES/`
+2. **Command Line:** Clone the repo and navigate to `ADOPTION/TEMPLATES/`
+3. **Website:** Visit the SOLID.AI documentation site
+
+All templates are licensed under MIT and free to use, modify, and distribute.
+            '''
+            parts.append({
+                'type': 'chapter',
+                'title': 'Template Catalog',
+                'content': template_summary,
+                'filename': 'templates-catalog'
+            })
         
         return parts
     
@@ -227,6 +500,9 @@ class PDFBookGenerator:
             elif part['type'] == 'section_divider':
                 # Section divider
                 html_parts.append(f'<div class="section-divider"><h1>{part["title"]}</h1></div>')
+            elif part['type'] == 'subsection_header':
+                # Subsection header (within a section)
+                html_parts.append(f'<div class="subsection-header"><h2>{part["title"]}</h2></div>')
             elif part['type'] == 'chapter':
                 # Convert markdown to HTML
                 chapter_html = md.convert(part['content'])
@@ -513,6 +789,23 @@ class PDFBookGenerator:
             color: {primary};
             text-align: center;
             letter-spacing: -0.02em;
+        }}
+        
+        /* ===== Subsection Header ===== */
+        
+        .subsection-header {{
+            page-break-before: always;
+            padding: 1.5cm 0 1cm 0;
+            border-bottom: 3px solid {primary};
+            margin-bottom: 1cm;
+        }}
+        
+        .subsection-header h2 {{
+            font-size: 20pt;
+            font-weight: 700;
+            color: {primary};
+            letter-spacing: -0.02em;
+            margin: 0;
         }}
         
         /* ===== Chapters ===== */
