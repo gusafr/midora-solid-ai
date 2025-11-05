@@ -4,12 +4,16 @@ solid.ai organizes humans and AI agents into adaptive structures optimized for c
 
 ## Structural Elements
 
+--8<-- "DIAGRAMS/organizational-flow.mmd"
+
 - **Squads:** Cross-functional units focused on delivering customer or stakeholder outcomes. **Organized around business services** (bounded contexts) to ensure clear ownership, minimize dependencies, and avoid duplication.
 - **Pools:** Shared capability hubs (e.g., Data, AI Ops, Design) that provide expertise on demand.
 - **Cognitive Agents:** AI teammates embedded in squads or pools with defined responsibilities.
 - **Governance Circle:** Multi-disciplinary group that reviews ethics, observability, and compliance.
 
 ### Squad Organization Principle: Business Service Ownership
+
+--8<-- "DIAGRAMS/squad-business-service-organization.mmd"
 
 Squads are **anchored to business services**, not technical layers or temporary features. This ensures:
 
@@ -28,6 +32,8 @@ Squads are **anchored to business services**, not technical layers or temporary 
 Each service is self-contained, outcome-focused, and maps directly to stakeholder value.
 
 ### Required Integrations for Every Business Service
+
+--8<-- "DIAGRAMS/business-service-full-integration.mmd"
 
 **1. Data Spine Integration:**
 - Input/output data contracts (schema, SLA, versioning)

@@ -92,6 +92,9 @@ nav:
   - Manifesto:
     - solid.ai Manifesto v1.0: manifesto/solid-ai-manifesto-v1.md
   - Reference:
+    - Diagrams:
+      - 📊 Diagram Gallery: diagrams/README.md
+      - 🖼️ Generated Images: diagrams/images/README.md
     - RFCs:
       - RFC 0001 – Foundations: rfc/rfc-0001-foundations.md
       - RFC 0002 – Data Spine: rfc/rfc-0002-data-layer.md

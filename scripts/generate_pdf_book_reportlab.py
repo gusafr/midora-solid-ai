@@ -45,6 +45,14 @@ except ImportError as e:
     print("  pip install reportlab markdown2 pygments")
     sys.exit(1)
 
+# Import SVG helper (optional dependency)
+try:
+    from svg_helper import create_diagram_flowable, check_dependencies
+    SVG_SUPPORT = check_dependencies()
+except ImportError:
+    SVG_SUPPORT = False
+    print("ℹ️  Info: SVG support not available (install svglib for diagram embedding)")
+
 
 class PDFBookGenerator:
     """Generate SOLID.AI framework PDF book using ReportLab (cross-platform)."""
@@ -733,6 +741,30 @@ The SOLID.AI Adoption Pack includes 11 ready-to-use YAML templates for implement
                 match = re.search(r'--8<--\s*"?([^"]+\.mmd)"?', line)
                 if match:
                     diagram_path = match.group(1)
+                    
+                    # Try to embed actual SVG/PNG diagram
+                    if SVG_SUPPORT:
+                        diagram_flowable, diagram_name = create_diagram_flowable(
+                            diagram_path, self.diagrams_dir, width=13*cm  # Fit within margins
+                        )
+                        
+                        if diagram_flowable:
+                            # Successfully loaded diagram - embed it
+                            elements.append(Spacer(1, 0.3*cm))
+                            
+                            # Diagram title
+                            title_text = f"📊 <b>{diagram_name}</b>"
+                            elements.append(Paragraph(title_text, self.styles['CustomHeading3']))
+                            elements.append(Spacer(1, 0.2*cm))
+                            
+                            # Add the actual diagram
+                            elements.append(diagram_flowable)
+                            elements.append(Spacer(1, 0.3*cm))
+                            
+                            i += 1
+                            continue
+                    
+                    # Fallback: Use placeholder if SVG not available
                     diagram_name = diagram_path.split('/')[-1].replace('.mmd', '').replace('-', ' ').title()
                     
                     # Add visual placeholder box
@@ -1093,6 +1125,13 @@ def main():
     )
     
     args = parser.parse_args()
+    
+    # Show SVG support status
+    if SVG_SUPPORT:
+        print("✅ SVG diagram support enabled")
+    else:
+        print("⚠️  SVG diagram support disabled (install svglib: pip install svglib)")
+    print()
     
     # Generate PDF
     generator = PDFBookGenerator(

@@ -38,9 +38,12 @@ solid.ai is intentionally technology-neutral. It focuses on patterns that can be
 - Establish human-in-the-loop checkpoints for high-risk decisions.
 - Monitor saturation points (compute cost, data freshness, queue depth) and trigger alerts.
 
-## Diagram
+## Architecture Diagram
 
-See `DIAGRAMS/solid-ai-architecture.mmd` for a Mermaid representation of the layer interactions.
+--8<-- "DIAGRAMS/solid-ai-architecture.mmd"
+
+The diagram above shows the six interdependent layers and their interactions.
+
 ---
 
 ## Next Steps
