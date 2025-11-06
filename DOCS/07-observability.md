@@ -1,6 +1,6 @@
 # Observability
 
-Observability is the nervous system feedback loop of solid.ai. It links data, cognition, automation, and organizational response into measurable signals.
+Observability is the nervous system feedback loop of SOLID.AI. It links data, cognition, automation, and organizational response into measurable signals.
 
 ## Objectives
 

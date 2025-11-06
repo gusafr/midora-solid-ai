@@ -1,6 +1,21 @@
 # Overview
 
-solid.ai is the organizational nervous system for AI-native companies. It provides a holistic blueprint for connecting purpose, data, intelligence, automation, and organizational design into an ethical, adaptive ecosystem.
+SOLID.AI is the organizational nervous system for AI-native companies. It provides a holistic blueprint for connecting purpose, data, intelligence, automation, and organizational design into an ethical, adaptive ecosystem.
+
+## The Vision: Intelligent Hybrid Organization
+
+**The ultimate goal of SOLID.AI is to enable the creation of Intelligent Hybrid Organizations** — enterprises where humans and AI agents collaborate as peers in a sustainable, scalable, and ethically governed ecosystem.
+
+**Intelligent Hybrid Organization Characteristics:**
+- **Hybrid Workforce:** Teams composed of both humans and AI agents working as peers (not humans using AI tools)
+- **Intelligent Operations:** Data-driven decision-making at every level, powered by AI insights and human judgment
+- **Sustainable Scalability:** Growth through AI multiplication (not just hiring), maintaining quality and culture
+- **Ethical Governance:** Transparent, accountable, and auditable processes ensuring trust and compliance
+- **Adaptive Evolution:** Continuous learning and improvement embedded in organizational DNA
+
+**This is not science fiction—it's the competitive imperative for the next decade.**
+
+---
 
 ## The Transformation Imperative
 

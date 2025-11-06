@@ -1,6 +1,6 @@
 # AI Agents
 
-AI agents in solid.ai operate as accountable members of the organization. They collaborate with humans, adhere to governance policies, and continuously improve through feedback.
+AI agents in SOLID.AI operate as accountable members of the organization. They collaborate with humans, adhere to governance policies, and continuously improve through feedback.
 
 ## Agent Lifecycle
 

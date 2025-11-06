@@ -1,6 +1,6 @@
 # Governance & Ethics
 
-Governance in solid.ai ensures intelligence scales responsibly. Ethics is woven into every layer through transparency, accountability, and continuous oversight.
+Governance in SOLID.AI ensures intelligence scales responsibly. Ethics is woven into every layer through transparency, accountability, and continuous oversight.
 
 ## Pillars
 

@@ -555,13 +555,19 @@ agent:
 1. **Portfolio:** Strategic Themes, Investment Guardrails (CEO, CFO, CIO)
 2. **Large Solution:** Multi-ART coordination for complex products (Solution Architects)
 3. **Program (ART - Agile Release Train):** 50-125 people, 5-12 teams (Release Train Engineer)
-4. **Team:** 5-9 people, 2-week sprints (Scrum Master)
+4. **Team:** 5-9 people (squads), 2-week sprints (Scrum Master)
 
-**SAFe Ceremonies:**
-- **PI Planning:** Quarterly, 2-day event, align all teams on 10-week plan
-- **Scrum of Scrums:** Weekly, coordinate across teams
-- **ART Sync:** Daily, resolve cross-team dependencies
-- **System Demo:** Every 2 weeks, integrated demo of all teams' work
+**SOLID.AI + Scaled Scrum:** In SOLID.AI, squads (teams) are organized into **Communities** for knowledge sharing and coordination:
+
+- **Communities of Practice (CoP):** Squads grouped by technical discipline (Frontend, Backend, Data, AI/ML, DevOps)
+- **Business Communities:** Squads grouped by business domain (Customer Experience, Order Fulfillment, Finance, Risk)
+- **Purpose:** Communities facilitate cross-squad collaboration, technical standards, and knowledge transfer while preserving squad autonomy
+
+**SAFe Ceremonies (SOLID.AI Alignment):**
+- **PI Planning:** Quarterly, 2-day event, align all squads within ARTs on 10-week plan
+- **Community Sync:** Monthly, coordinate squads within same community (replaces traditional "Scrum of Scrums" where applicable)
+- **ART Sync:** Daily, resolve cross-squad dependencies across communities
+- **System Demo:** Every 2 weeks, integrated demo of all squads' work
 - **Inspect & Adapt:** Quarterly, retrospective + planning for next PI
 
 **Challenge:** At scale (500-5,000 people), coordination overhead is massive (meetings, alignment, handoffs consume 40-60% of time)
@@ -654,16 +660,17 @@ agent:
 
 **PI Planning (Traditional: 2 days → AI-Native: 1 day):**
 - **Day 1 Morning (AI Preparation):** ARTCoordinator-Agent presents dependency graph, capacity plan
-- **Day 1 Afternoon:** Teams plan sprints with pre-identified dependencies
-- **Day 1 EOD:** Teams commit to PI objectives (instead of Day 2)
+- **Day 1 Afternoon:** Squads plan sprints with pre-identified dependencies
+- **Day 1 EOD:** Squads commit to PI objectives (instead of Day 2)
 
-**Scrum of Scrums (Traditional: 1 hour weekly → AI-Native: 15 min weekly):**
-- AI pre-summarizes each team's progress, blockers
-- Meeting focuses only on cross-team issues
+**Community Sync (Traditional: 1 hour weekly → AI-Native: 15 min weekly):**
+- AI pre-summarizes each squad's progress, blockers within the community
+- Meeting focuses only on cross-squad issues (knowledge sharing, technical standards, dependencies)
+- **Communities coordinate horizontally** (e.g., all Data Platform squads share learnings), while **ARTs coordinate vertically** (e.g., all squads working on same customer journey)
 
 **ART Sync (Traditional: 30 min daily → AI-Native: Async via Slack):**
 - AI posts daily sync summary to Slack
-- Teams respond asynchronously, meet only if critical issue
+- Squads respond asynchronously, meet only if critical cross-community issue
 
 **Time Savings:** 60% reduction in coordination time (equivalent to 2-3 FTE per ART)
 
@@ -709,7 +716,7 @@ agent:
 | **Retrospective** | 1 hour | 30 min | RetroAnalyzer-Agent surfaces data-driven insights | 50% |
 | **Backlog Refinement** | 2 hours | 1 hour | FeatureBreakdown-Agent generates stories | 50% |
 | **PI Planning (SAFe)** | 2 days | 1 day | ARTCoordinator-Agent detects dependencies | 50% |
-| **Scrum of Scrums (SAFe)** | 1 hour | 15 min | ARTCoordinator-Agent pre-summarizes team status | 75% |
+| **Community Sync (Scaled Scrum)** | 1 hour | 15 min | ARTCoordinator-Agent pre-summarizes squad status within community | 75% |
 
 **Total Time Savings:** 40-60% of ceremony time reclaimed for productive work
 

@@ -1,6 +1,10 @@
 # Principles
 
-solid.ai principles encode the behaviors required to build responsible, adaptive, AI-native organizations. They apply across strategy, design, and operations.
+SOLID.AI principles encode the behaviors required to build responsible, adaptive, AI-native organizations. They apply across strategy, design, and operations.
+
+**Guiding Vision:** Build **Intelligent Hybrid Organizations** where humans and AI collaborate sustainably, scale exponentially, and operate with uncompromising ethics and governance.
+
+---
 
 ## Whole-Organization Coherence
 
@@ -46,16 +50,19 @@ solid.ai principles encode the behaviors required to build responsible, adaptive
 
 - Make automations explainable, auditable, and observable by design.
 - Balance automation throughput with human oversight and consent.
+- **Ensure all AI operations are governed ethically** — no automation without accountability, no intelligence without transparency.
 
 ## Scalable Simplicity
 
 - Strive for solutions that are simple to understand, extend, and govern.
 - Let complexity emerge from interaction, not upfront design.
+- **Scale sustainably** — growth should strengthen governance, not weaken it.
 
 ## Human–Machine Symbiosis
 
 - Combine human empathy, creativity, and purpose with AI scale and precision.
 - Foster collaboration rituals where humans and AI agents co-create value.
+- **Build Intelligent Hybrid Organizations** where the whole is greater than the sum of its parts.
 
 ---
 

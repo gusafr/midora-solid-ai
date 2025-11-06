@@ -1,6 +1,6 @@
 # Architecture
 
-The solid.ai architecture connects six interdependent layers. Each layer is modular yet synchronized through shared contracts, data flows, and governance policies.
+The SOLID.AI architecture connects six interdependent layers. Each layer is modular yet synchronized through shared contracts, data flows, and governance policies.
 
 ## Layer Overview
 
@@ -19,7 +19,7 @@ The solid.ai architecture connects six interdependent layers. Each layer is modu
 
 ## Technology Agnostic
 
-solid.ai is intentionally technology-neutral. It focuses on patterns that can be implemented with cloud-native, on-premises, or hybrid stacks. Reference implementations may use tools such as:
+SOLID.AI is intentionally technology-neutral. It focuses on patterns that can be implemented with cloud-native, on-premises, or hybrid stacks. Reference implementations may use tools such as:
 
 - Data: Lakehouse platforms, semantic layers, data catalogs.
 - Cognitive: Orchestration frameworks (e.g., MAGI), LLM service layers, agent runtimes.
