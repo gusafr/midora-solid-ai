@@ -1,5 +1,11 @@
 # SOLID.AI — Organizational Nervous System for AI-Native Companies
 
+<div align="center">
+  <img src="assets/images/solid-ai-logo.png" alt="SOLID.AI Logo" width="300"/>
+</div>
+
+---
+
 SOLID.AI is the open framework for designing intelligent, ethical, and adaptive organizations where humans and AI co-create value. The repository captures the reference model, governance patterns, and playbooks required to connect purpose, data, intelligence, automation, and organizational design into one cohesive operating system.
 
 **Ultimate Goal:** Enable the creation of **Intelligent Hybrid Organizations** — sustainable, scalable enterprises where humans and AI agents collaborate as peers under unwavering ethical governance.

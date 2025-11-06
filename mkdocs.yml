@@ -147,6 +147,8 @@ nav:
 theme:
   name: material
   language: en
+  logo: assets/images/solid-ai-logo.png
+  favicon: assets/images/solid-ai-logo.png
   features:
     - navigation.expand
     - navigation.sections
