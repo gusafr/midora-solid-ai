@@ -45,6 +45,14 @@ Use this template to define your squad's purpose, scope, and operating model.
 
 **Squad Name:** [Choose a meaningful name that reflects your mission]
 
+**Squad Category:** [Select one: Tech Core | Business Core | Operations Core | Innovation & Intelligence]
+
+**Category Justification:**
+- **Tech Core:** Platform/infrastructure that enables other squads
+- **Business Core:** Direct customer value or revenue generation
+- **Operations Core:** Internal operations and enterprise functions
+- **Innovation & Intelligence:** Experimental, R&D, or strategic initiatives
+
 **Formation Date:** [When this squad was formed]
 
 **Squad Lead:** [Name and contact]

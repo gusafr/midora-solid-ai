@@ -90,6 +90,53 @@ Each service is self-contained, outcome-focused, and maps directly to stakeholde
 
 See [Squad Playbook](../PLAYBOOKS/organizational/squads.md) for detailed integration requirements.
 
+### Squad Categories
+
+Squads are organized into four strategic categories to clarify their primary function and stakeholder focus:
+
+#### 1. Tech Core (Platform & Enablement)
+Build and maintain technical infrastructure that enables other squads:
+- Platform Services (Infrastructure, DevOps, API Gateway)
+- Data Platform (Data Engineering, Warehousing, Governance)
+- AI/ML Platform (MLOps, Model Serving, Agent Infrastructure)
+- Security & Compliance Platform
+- Developer Experience (Internal tools, SDKs, documentation)
+
+**Focus:** Platform reliability, developer productivity, technical excellence
+
+#### 2. Business Core (Customer & Revenue)
+Deliver direct customer value or generate revenue:
+- E-Commerce (Product Catalog, Checkout, Order Fulfillment)
+- SaaS (Onboarding, Subscription Management, Integrations)
+- Financial Services (Payments, Fraud Detection, Risk Assessment)
+- Healthcare (Patient Care, Clinical Documentation, Telemedicine)
+- Marketing & Growth (Acquisition, Retention, Personalization)
+
+**Focus:** Customer satisfaction, revenue growth, product innovation
+
+#### 3. Operations Core (Enterprise Functions)
+Enable internal operations and administrative functions:
+- Finance Operations (AP/AR, Reconciliation, FP&A, Procurement)
+- HR Operations (Recruiting, Payroll, Performance Management)
+- Legal & Compliance (Contracts, Regulatory Reporting, Risk)
+- Supply Chain & Logistics (Inventory, Warehousing, Distribution)
+- Facilities & Administration (Workplace, Assets, Travel)
+
+**Focus:** Operational efficiency, cost reduction, regulatory compliance
+
+#### 4. Innovation & Intelligence (Experimental & Strategic)
+Explore new capabilities and drive strategic initiatives:
+- Research & Development (Emerging tech, POCs, innovation labs)
+- Advanced Analytics & BI (Predictive analytics, data science)
+- Strategic Initiatives (Transformation programs, new markets, M&A)
+
+**Focus:** Learning, experimentation, future readiness
+
+**Cross-Category Collaboration Example:**
+A Fraud Detection service (Business Core) depends on ML Platform (Tech Core), feeds Compliance Reporting (Operations Core), and uses algorithms validated by R&D (Innovation). Categories clarify ownership while enabling seamless collaboration.
+
+See [Squad Playbook](../PLAYBOOKS/organizational/squads.md) for complete category characteristics and examples.
+
 ## Operating Rhythm
 
 | Cadence | Activity | Participants |

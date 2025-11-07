@@ -236,14 +236,52 @@ When business services are properly integrated with Data Spine and Automation Me
 | **Compliance** | Data governance enforced automatically | PII access logged, retention policies enforced |
 | **AI-Native** | Automation opportunities explicit | 80% of Invoice Processing automated (up from 20%) |
 
-### Common Business Services by Domain
+### Squad Categories & Common Business Services
+
+Squads are organized into four strategic categories based on their primary function and stakeholder focus:
+
+#### 1. Tech Core (Platform & Enablement)
+Squads that build and maintain the technical foundation enabling other squads:
+
+**Platform Services:**
+- Infrastructure & DevOps (CI/CD, Container Orchestration, Cloud Operations)
+- API Gateway & Service Mesh
+- Identity & Access Management
+- Monitoring & Observability Platform
+
+**Data Platform:**
+- Data Engineering & Pipeline Automation
+- Data Warehouse & Lake Management
+- Master Data Management
+- Data Quality & Governance
+
+**AI/ML Platform:**
+- Model Training & MLOps
+- AI Agent Infrastructure
+- Feature Store & Experimentation Platform
+- ML Model Registry & Serving
+
+**Security & Compliance:**
+- Security Operations Center (SOC)
+- Vulnerability Management
+- Compliance Automation (SOX, GDPR, HIPAA)
+- Incident Response
+
+**Developer Experience:**
+- Internal Developer Portal
+- SDK & Library Management
+- Documentation Platform
+- Development Environment Automation
+
+#### 2. Business Core (Customer & Revenue)
+Squads that directly deliver customer value or generate revenue:
 
 **E-Commerce:**
 - Product Catalog Management
 - Shopping Cart & Checkout
 - Order Fulfillment
 - Returns & Refunds
-- Customer Support
+- Customer Support Automation
 
 **SaaS:**
 - User Onboarding & Activation
@@ -252,19 +290,106 @@ When business services are properly integrated with Data Spine and Automation Me
 - Integration Marketplace
 - Customer Success Operations
 
-**Finance:**
+**Financial Services:**
 - Payment Processing
 - Fraud Detection & Prevention
-- Reconciliation & Settlement
-- Regulatory Reporting
 - Credit Risk Assessment
+- Investment Portfolio Management
+- Customer Account Management
 
 **Healthcare:**
-- Patient Registration
-- Appointment Scheduling
-- Clinical Documentation
-- Claims Processing
+- Patient Registration & Scheduling
+- Clinical Documentation & EHR
+- Telemedicine Platform
 - Care Coordination
+- Patient Engagement
+
+**Marketing & Growth:**
+- Customer Acquisition (SEO, SEM, Campaigns)
+- Conversion Optimization
+- Personalization & Recommendations
+- Retention & Loyalty Programs
+
+#### 3. Operations Core (Enterprise Functions)
+Squads that enable internal operations and administrative functions:
+
+**Finance Operations:**
+- Accounts Payable/Receivable Automation
+- Reconciliation & Settlement
+- Financial Planning & Analysis (FP&A)
+- Regulatory Reporting
+- Procurement & Vendor Management
+
+**HR Operations:**
+- Recruiting & Applicant Tracking
+- Employee Onboarding & Offboarding
+- Payroll & Benefits Administration
+- Performance Management
+- Learning & Development
+
+**Legal & Compliance:**
+- Contract Lifecycle Management
+- Regulatory Compliance Automation
+- IP & Patent Management
+- Litigation Support
+- Policy & Risk Management
+
+**Supply Chain & Logistics:**
+- Inventory Management
+- Warehouse Automation
+- Shipping & Distribution
+- Demand Planning
+- Supplier Relationship Management
+
+**Facilities & Administration:**
+- Workplace Management
+- Asset Tracking & Maintenance
+- Travel & Expense Management
+- Document Management
+
+#### 4. Innovation & Intelligence (Experimental & Strategic)
+Squads exploring new capabilities, conducting research, or driving strategic initiatives:
+
+**Research & Development:**
+- Emerging Technology Exploration (Blockchain, Quantum, etc.)
+- Proof-of-Concept Development
+- Innovation Lab Projects
+- Technology Scouting
+
+**Advanced Analytics & BI:**
+- Predictive Analytics
+- Business Intelligence Dashboards
+- Data Science Research
+- Customer Insights & Segmentation
+
+**Strategic Initiatives:**
+- Digital Transformation Programs
+- New Market Exploration
+- Partnership & Ecosystem Development
+- M&A Integration Projects
+
+### Category Characteristics
+
+| Category | Primary Focus | Success Metrics | Governance Intensity |
+|----------|--------------|-----------------|---------------------|
+| **Tech Core** | Platform reliability, developer productivity | Uptime, API latency, developer satisfaction | High (security, compliance) |
+| **Business Core** | Customer value, revenue growth | Revenue, NPS, activation rate, retention | Medium (product quality, data privacy) |
+| **Operations Core** | Efficiency, cost reduction, compliance | Cost per transaction, automation rate, audit score | High (regulatory, audit trails) |
+| **Innovation & Intelligence** | Learning, experimentation, future readiness | Experiments run, insights generated, tech adoption | Low (fast iteration, controlled risk) |
+
+### Cross-Category Collaboration
+
+**Example: Fraud Detection Service**
+- **Business Core Squad:** Owns "Fraud Detection" business service (customer-facing)
+- **Tech Core Dependency:** Consumes ML Platform (model serving) and Data Platform (real-time streams)
+- **Operations Core Integration:** Feeds compliance reporting (suspicious activity reports)
+- **Innovation Input:** R&D squad tested new anomaly detection algorithm, graduated to production
+
+**Collaboration Patterns:**
+- **Tech Core → Business Core:** Platform services enable customer-facing features
+- **Business Core → Operations Core:** Customer data flows into finance/HR processes
+- **Innovation → All Categories:** Validated experiments graduate into production squads
+- **Operations Core → Tech Core:** Compliance requirements drive platform capabilities
 
 ## Squad Models
 

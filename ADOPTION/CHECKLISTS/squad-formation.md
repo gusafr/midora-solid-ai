@@ -23,7 +23,13 @@
 - ❌ "Frontend Team" (technical layer, not business service)
 - ❌ "Feature X Squad" (temporary, not sustainable service)
 
-### Purpose & Mission
+### Squad Category & Purpose
+- [ ] **Squad category** selected - Tech Core | Business Core | Operations Core | Innovation & Intelligence
+  - **Tech Core:** Platform/infrastructure enabling other squads (e.g., Data Platform, MLOps, DevOps)
+  - **Business Core:** Direct customer value or revenue (e.g., Order Fulfillment, Customer Onboarding)
+  - **Operations Core:** Internal operations (e.g., Finance AP/AR, HR Payroll, Compliance)
+  - **Innovation & Intelligence:** R&D, experimentation, strategic initiatives
+- [ ] **Category alignment** validated - category matches squad's primary function and stakeholder focus
 - [ ] **Squad mission** defined - clear statement of why this squad exists
 - [ ] **Organizational alignment** verified - connects to company strategy and values
 - [ ] **Outcome focus** articulated - what success looks like, not just tasks
@@ -159,6 +165,11 @@
 - [ ] **Data privacy** maintained - squad handling data responsibly
 - [ ] **AI accountability** ensured - AI agents used transparently and safely
 - [ ] **Audit readiness** - squad can explain decisions and show compliance
+- [ ] **Category-specific governance** met:
+  - **Tech Core:** High security/compliance standards (platform vulnerabilities = org-wide impact)
+  - **Business Core:** Medium oversight (product quality, customer data privacy)
+  - **Operations Core:** High regulatory compliance (SOX, GDPR, labor laws, audit trails)
+  - **Innovation:** Low governance (fast iteration, controlled risk, experimental approval)
 
 ---
 

@@ -52,12 +52,29 @@ If you can't answer all 6 clearly → **Boundary needs refinement**
 
 ## Examples by Domain
 
+### 🔧 Tech Core (Platform & Enablement)
+**Platform Services:**
+- Infrastructure & DevOps
+- API Gateway & Service Mesh
+- Identity & Access Management
+
+**Data Platform:**
+- Data Engineering & Pipelines
+- Data Warehouse Management
+- Data Quality & Governance
+
+**AI/ML Platform:**
+- Model Training & MLOps
+- AI Agent Infrastructure
+- Feature Store & Experimentation
+
+### 💼 Business Core (Customer & Revenue)
 **E-Commerce:**
 - Product Catalog Management
 - Shopping Cart & Checkout
 - Order Fulfillment
 - Returns & Refunds
-- Customer Support
+- Customer Support Automation
 
 **SaaS:**
 - User Onboarding & Activation
@@ -66,19 +83,67 @@ If you can't answer all 6 clearly → **Boundary needs refinement**
 - Integration Marketplace
 - Customer Success Operations
 
-**Finance:**
+**Financial Services:**
 - Payment Processing
 - Fraud Detection & Prevention
-- Reconciliation & Settlement
-- Regulatory Reporting
 - Credit Risk Assessment
+- Investment Portfolio Management
 
 **Healthcare:**
-- Patient Registration
-- Appointment Scheduling
-- Clinical Documentation
-- Claims Processing
+- Patient Registration & Scheduling
+- Clinical Documentation & EHR
+- Telemedicine Platform
 - Care Coordination
+
+### 🏢 Operations Core (Enterprise Functions)
+**Finance Operations:**
+- AP/AR Automation
+- Reconciliation & Settlement
+- FP&A (Planning & Analysis)
+- Regulatory Reporting
+
+**HR Operations:**
+- Recruiting & Applicant Tracking
+- Payroll & Benefits Administration
+- Performance Management
+- Learning & Development
+
+**Legal & Compliance:**
+- Contract Lifecycle Management
+- Regulatory Compliance Automation
+- IP & Patent Management
+
+**Supply Chain:**
+- Inventory Management
+- Warehouse Automation
+- Shipping & Distribution
+
+### 🔬 Innovation & Intelligence (Experimental & Strategic)
+**R&D:**
+- Emerging Technology Exploration
+- Proof-of-Concept Development
+- Innovation Lab Projects
+
+**Advanced Analytics:**
+- Predictive Analytics
+- Business Intelligence Dashboards
+- Customer Insights & Segmentation
+
+**Strategic Initiatives:**
+- Digital Transformation Programs
+- New Market Exploration
+- M&A Integration Projects
+
+---
+
+## Category Characteristics
+
+| Category | Focus | Success Metrics | Governance |
+|----------|-------|----------------|------------|
+| **Tech Core** | Platform reliability, developer productivity | Uptime, API latency, dev satisfaction | High |
+| **Business Core** | Customer value, revenue growth | Revenue, NPS, retention | Medium |
+| **Operations Core** | Efficiency, cost reduction, compliance | Cost per transaction, audit score | High |
+| **Innovation** | Learning, experimentation | Experiments run, insights generated | Low |
 
 ---
 
