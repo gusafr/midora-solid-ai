@@ -20,7 +20,9 @@ nav:
   - Observability: observability.md
   - Human-AI Collaboration: human-ai-collaboration.md
   - Role Hierarchy (Human & AI): role-hierarchy-human-ai.md
-  - AI-Native Agile & SAFe: ai-native-agile.md
+  - AI-Native Agile:
+    - AI-Native Agile & SAFe (Scrum): ai-native-agile.md
+    - AI-Native Kanban: ai-native-kanban.md
   - Whole-Org Transformation: whole-organization-transformation.md
   - Glossary: glossary.md
   - 📊 Diagrams: diagrams.md
@@ -54,6 +56,7 @@ nav:
       - Data Contract Design: adoption/prompt-templates/data-contract-design.md
       - Retrospective Facilitation: adoption/prompt-templates/retrospective-facilitation.md
       - Ethical Decision-Making: adoption/prompt-templates/ethical-decision-making.md
+      - AI-Native Sprint Planning: adoption/prompt-templates/ai-native-sprint-planning.md
     - Checklists:
       - By Assessment & Planning:
         - AI Maturity Assessment: adoption/checklists/ai-maturity-assessment.md
@@ -69,6 +72,7 @@ nav:
         - SME Transformation Roadmap: adoption/checklists/sme-transformation-roadmap.md
         - Startup Launch: adoption/checklists/startup-launch.md
         - AI-Native Sprint: adoption/checklists/ai-native-sprint.md
+        - Kanban Setup: adoption/checklists/kanban-setup.md
         - Role Hierarchy Implementation: adoption/checklists/role-hierarchy-implementation.md
     - Templates:
       - Organizational:
@@ -84,8 +88,10 @@ nav:
       - Governance:
         - RFC Template: adoption/templates/rfc-template.md
         - ADR Template: adoption/templates/adr-template.md
+        - Impact Analysis Template: adoption/templates/impact-analysis-template.md
       - Sprint Planning:
         - AI-Native Sprint Template: adoption/templates/ai-native-sprint-template.md
+        - Kanban Board Template: adoption/templates/kanban-board-template.md
   - Guides:
     - Docker Setup: docker.md
     - Cleanup & Optimization: cleanup.md
@@ -112,9 +118,11 @@ nav:
         - 🎯 SOLID.AI Maturity Model: playbooks/foundation/solid-ai-maturity-model.md
       - Governance:
         - 🛡️ AI Governance & Risk Assessment: playbooks/governance/ai-governance-risk-assessment.md
+        - 📊 Impact Analysis: playbooks/governance/impact-analysis.md
       - Implementation:
         - 🔄 Process Mapping & SIPOC Integration: playbooks/implementation/process-mapping-sipoc-integration.md
         - 📊 Data Spine Analytics & Insights: playbooks/implementation/data-spine-analytics-insights.md
+        - 📋 AI-Native Kanban: playbooks/implementation/ai-native-kanban.md
       - People & Culture:
         - 📈 Organizational Scalability: playbooks/people-culture/organizational-scalability.md
         - 🎓 AI Learning & Development: playbooks/people-culture/ai-learning-development.md

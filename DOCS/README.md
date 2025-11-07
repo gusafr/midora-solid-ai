@@ -50,9 +50,10 @@ Welcome to the **SOLID.AI** framework documentation! This guide helps you naviga
 3. **[AI Agents](05-ai-agents.md)** (60 min) — How to define agents (identity, capabilities, guardrails, oversight, metrics)
 4. **[Organizational Model](03-organizational-model.md)** (60 min) — Squads, pools, MIDORA topology, adaptive scaling
 5. **[AI-Native Agile](11-ai-native-agile.md)** (90 min) — Integrate AI with Scrum/SAFe (ceremonies, value stream, Portfolio/Program/Team)
-6. **[Governance & Ethics](06-governance-ethics.md)** (60 min) — Accountability, transparency, compliance, ethical frameworks
-7. **[Observability](07-observability.md)** (45 min) — Monitoring, metrics, telemetry, alerting for humans and AI
-8. **[Automation SIPOC](04-automation-sipoc.md)** (45 min) — Workflow patterns, event-driven architecture, SIPOC mapping
+6. **[AI-Native Kanban](12-ai-native-kanban.md)** (60 min) — Continuous flow with AI optimization (FlowAnalyzer, BottleneckDetector, KanbanOptimizer agents)
+7. **[Governance & Ethics](06-governance-ethics.md)** (60 min) — Accountability, transparency, compliance, ethical frameworks
+8. **[Observability](07-observability.md)** (45 min) — Monitoring, metrics, telemetry, alerting for humans and AI
+9. **[Automation SIPOC](04-automation-sipoc.md)** (45 min) — Workflow patterns, event-driven architecture, SIPOC mapping
 
 **Key Takeaways:**
 - Define AI agents like teammates: identity, capabilities, guardrails, human oversight, success metrics
@@ -84,9 +85,10 @@ Welcome to the **SOLID.AI** framework documentation! This guide helps you naviga
 
 **Start Here:**
 1. **[AI-Native Agile](11-ai-native-agile.md)** — AI + Scrum/SAFe integration, value stream automation
-2. **[Organizational Model](03-organizational-model.md)** — Squads, pools, adaptive topology
-3. **[AI Agents](05-ai-agents.md)** — How to define AI teammates for your product squad
-4. **[Observability](07-observability.md)** — Metrics, telemetry, monitoring
+2. **[AI-Native Kanban](12-ai-native-kanban.md)** — Continuous flow methodology with AI optimization
+3. **[Organizational Model](03-organizational-model.md)** — Squads, pools, adaptive topology
+4. **[AI Agents](05-ai-agents.md)** — How to define AI teammates for your product squad
+5. **[Observability](07-observability.md)** — Metrics, telemetry, monitoring
 
 **Key Question:** How can AI accelerate your Epic→Feature→Story→Task→Code workflow from 17 weeks to 6 weeks?
 
@@ -161,9 +163,10 @@ Welcome to the **SOLID.AI** framework documentation! This guide helps you naviga
 7. **[06-governance-ethics.md](06-governance-ethics.md)** — Accountability, ethics, compliance
 8. **[07-observability.md](07-observability.md)** — Monitoring, metrics, telemetry
 9. **[08-human-ai-collaboration.md](08-human-ai-collaboration.md)** — Human-AI symbiosis
-10. **[09-whole-organization-transformation.md](09-whole-organization-transformation.md)** — Bipolar org problem, economics
-11. **[10-role-hierarchy-human-ai.md](10-role-hierarchy-human-ai.md)** — 4-level progression framework
-12. **[11-ai-native-agile.md](11-ai-native-agile.md)** — Agile/SAFe + AI integration
+9. **[09-whole-organization-transformation.md](09-whole-organization-transformation.md)** — Bipolar org problem, economics
+10. **[10-role-hierarchy-human-ai.md](10-role-hierarchy-human-ai.md)** — 4-level progression framework
+11. **[11-ai-native-agile.md](11-ai-native-agile.md)** — Agile/SAFe + AI integration (Scrum-based)
+12. **[12-ai-native-kanban.md](12-ai-native-kanban.md)** — Kanban + AI optimization (continuous flow)
 13. **[glossary.md](glossary.md)** — Terminology reference
 
 **Estimated Total Time:** 10-12 hours for complete mastery
