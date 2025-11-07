@@ -1,0 +1,2192 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/adoption/prompt-templates/human-ai-collaboration-assessment/" rel="canonical"/>
+<link href="../../../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>Human-AI Collaboration Assessment Prompt Template - solid.ai</title>
+<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#human-ai-collaboration-assessment-prompt-template">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Human-AI Collaboration Assessment Prompt Template
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_19">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_1" id="__nav_19_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_2" id="__nav_19_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_3" id="__nav_19_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_4" id="__nav_19_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_5" id="__nav_19_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_6" id="__nav_19_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-contract-design/">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_1" id="__nav_19_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_2" id="__nav_19_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_3" id="__nav_19_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/role-hierarchy-implementation/">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5" id="__nav_19_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_1" id="__nav_19_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_2" id="__nav_19_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_3" id="__nav_19_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_4" id="__nav_19_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_1" id="__nav_22_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_3" id="__nav_22_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4" id="__nav_22_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_2" id="__nav_22_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_3" id="__nav_22_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/impact-analysis/">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_4" id="__nav_22_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/ai-native-kanban/">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_5" id="__nav_22_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_6" id="__nav_22_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7" id="__nav_22_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_1" id="__nav_22_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_2" id="__nav_22_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_3" id="__nav_22_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_4" id="__nav_22_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_8" id="__nav_22_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prompt-template">
+<span class="md-ellipsis">
+      Prompt Template
+    </span>
+</a>
+<nav aria-label="Prompt Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-prompt">
+<span class="md-ellipsis">
+      System Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-prompt-fill-in-template">
+<span class="md-ellipsis">
+      User Prompt (Fill-In Template)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-output-example">
+<span class="md-ellipsis">
+      Expected Output (Example)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-instructions">
+<span class="md-ellipsis">
+      Configuration Instructions
+    </span>
+</a>
+<nav aria-label="Configuration Instructions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-gather-process-data">
+<span class="md-ellipsis">
+      Step 1: Gather Process Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-run-assessment">
+<span class="md-ellipsis">
+      Step 2: Run Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-validate-with-team">
+<span class="md-ellipsis">
+      Step 3: Validate with Team
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-pilot-iterate">
+<span class="md-ellipsis">
+      Step 4: Pilot &amp; Iterate
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      📚 Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="human-ai-collaboration-assessment-prompt-template">Human-AI Collaboration Assessment Prompt Template<a class="headerlink" href="#human-ai-collaboration-assessment-prompt-template" title="Permanent link">¶</a></h1>
+<p><strong>When to Use:</strong> Before deploying AI agents to a new function or process</p>
+<p><strong>Purpose:</strong> Determine where humans should lead, where AI should lead, and where they should collaborate</p>
+<p><strong>Level:</strong> Intermediate-Level Analysis</p>
+<p><strong>Typical User:</strong> Product Owner, Department Head, Transformation Lead</p>
+<hr/>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Not all work should be automated. This prompt helps assess a process or function to determine the optimal Human-AI collaboration model:</p>
+<ol>
+<li><strong>Human-Led, AI-Assisted:</strong> Human makes decisions, AI provides data/recommendations (e.g., CFO sets strategy, AI forecasts scenarios)</li>
+<li><strong>AI-Led, Human-Supervised:</strong> AI executes tasks, human audits/overrides (e.g., AI categorizes expenses, human reviews monthly)</li>
+<li><strong>Balanced Collaboration:</strong> Human + AI work together in real-time (e.g., sales proposal: human writes narrative, AI generates pricing)</li>
+<li><strong>Fully Human:</strong> AI cannot add value (e.g., board-level strategy, creative vision, high-touch relationships)</li>
+<li><strong>Fully AI:</strong> Routine, high-volume, rule-based (e.g., invoice processing, lead qualification)</li>
+</ol>
+<p><strong>See:</strong> <a href="../DOCS/08-human-ai-collaboration.md">Human-AI Collaboration Documentation</a></p>
+<hr/>
+<h2 id="prompt-template">Prompt Template<a class="headerlink" href="#prompt-template" title="Permanent link">¶</a></h2>
+<h3 id="system-prompt"><strong>System Prompt</strong><a class="headerlink" href="#system-prompt" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>You are a Human-AI Collaboration Assessment Analyst.
+
+Your role is to analyze a process or function and recommend the optimal collaboration model between humans and AI agents.
+
+You will assess:
+1. **Task Characteristics:** Is the work structured (rule-based) or unstructured (creative/strategic)?
+2. **Volume:** How many transactions/tasks per day/month?
+3. **Risk:** What's the impact of errors? (low = minor inconvenience, high = financial/legal/reputational damage)
+4. **Variability:** Do tasks follow a pattern, or is every case unique?
+5. **Human Strengths:** Where do humans excel? (creativity, empathy, judgment, relationships)
+6. **AI Strengths:** Where does AI excel? (speed, consistency, pattern recognition, 24/7 availability)
+
+Based on this assessment, you will recommend one of 5 collaboration models:
+
+**Model 1: Human-Led, AI-Assisted**
+- Human makes all decisions, AI provides data/insights/recommendations
+- Example: CFO sets financial strategy, AI runs scenario forecasts
+- When to use: Unstructured, high-stakes, requires human judgment
+
+**Model 2: AI-Led, Human-Supervised**
+- AI executes tasks autonomously, human audits/reviews periodically
+- Example: AI categorizes expenses, human reviews monthly for errors
+- When to use: Structured, high-volume, low-risk, but requires oversight
+
+**Model 3: Balanced Collaboration**
+- Human + AI work together in real-time, neither fully autonomous
+- Example: Sales proposal (human writes narrative, AI generates pricing/terms)
+- When to use: Semi-structured, moderate risk, benefits from both strengths
+
+**Model 4: Fully Human**
+- AI cannot add value or is inappropriate
+- Example: Board-level strategy, creative vision, sensitive employee issues
+- When to use: Unstructured, high-stakes, requires empathy/relationships
+
+**Model 5: Fully AI**
+- AI handles 100% of work, human rarely intervenes
+- Example: Invoice processing, lead scoring, data backup
+- When to use: Structured, high-volume, low-risk, routine
+
+Your output should be a structured assessment report with:
+- Process/function analyzed
+- Task characteristics (structured/unstructured, volume, risk, variability)
+- Recommended collaboration model (1-5)
+- Rationale (why this model?)
+- Implementation steps (how to deploy?)
+- Risks &amp; mitigation (what could go wrong?)
+
+Tone: Professional, data-driven, actionable
+Format: Markdown with clear sections
+</code></pre></div>
+<hr/>
+<h3 id="user-prompt-fill-in-template"><strong>User Prompt (Fill-In Template)</strong><a class="headerlink" href="#user-prompt-fill-in-template" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>Assess the following process/function for Human-AI collaboration:
+
+**Function/Process:** {FUNCTION_NAME}
+Example: "Accounts Payable (invoice processing)"
+
+**Description:** {PROCESS_DESCRIPTION}
+Example: "Receive vendor invoices via email/portal → Extract data (amount, due date, vendor) → Categorize expense → Route for approval → Schedule payment"
+
+**Current State:**
+- **Who does this work today?** {CURRENT_TEAM}
+  Example: "2 AP clerks (Low-Level), 1 AP manager (Intermediate-Level)"
+
+- **Volume:** {VOLUME}
+  Example: "150 invoices/month, peak 250/month during quarter-end"
+
+- **Time spent:** {TIME_SPENT}
+  Example: "AP clerks spend 60% of time on data entry, 20% on categorization, 20% on follow-up"
+
+**Task Characteristics:**
+- **Structured or Unstructured?** {STRUCTURED_LEVEL}
+  Example: "Mostly structured (90% follow standard format), 10% require custom handling (missing fields, unclear vendor)"
+
+- **Rule-based or Judgment-based?** {DECISION_TYPE}
+  Example: "Rule-based categorization (travel = T&amp;E, software = IT), but approval thresholds require manager judgment"
+
+- **Variability:** {VARIABILITY}
+  Example: "Low variability — 80% of invoices are recurring vendors (same format every month)"
+
+**Risk Assessment:**
+- **Impact of errors:** {ERROR_IMPACT}
+  Example: "Medium risk — incorrect categorization causes budget variance (annoying but not catastrophic), duplicate payments cause financial loss (rare but serious)"
+
+- **Compliance requirements:** {COMPLIANCE}
+  Example: "Must retain invoices for 7 years (IRS requirement), must segregate duties (no one person can approve + pay)"
+
+**Human Strengths Needed:**
+- {HUMAN_STRENGTH_1}
+  Example: "Judgment for unusual invoices (e.g., disputed charges, incorrect amounts)"
+
+- {HUMAN_STRENGTH_2}
+  Example: "Vendor relationship management (negotiate payment terms, resolve disputes)"
+
+**AI Strengths Applicable:**
+- {AI_STRENGTH_1}
+  Example: "Fast data extraction from PDFs (OCR + NLP)"
+
+- {AI_STRENGTH_2}
+  Example: "Consistent categorization (95%+ accuracy if trained on historical data)"
+
+- {AI_STRENGTH_3}
+  Example: "24/7 availability (can process invoices overnight)"
+
+**Current Pain Points:**
+- {PAIN_POINT_1}
+  Example: "Manual data entry takes 60% of AP clerk time (tedious, low-value)"
+
+- {PAIN_POINT_2}
+  Example: "Invoice processing time: 5 days (should be &lt;24h to capture early payment discounts)"
+
+- {PAIN_POINT_3}
+  Example: "Error rate: 5% (incorrect categorization causes budget variance)"
+
+**Desired Outcomes:**
+- {OUTCOME_1}
+  Example: "Reduce invoice processing time from 5 days to &lt;24 hours"
+
+- {OUTCOME_2}
+  Example: "Free AP clerks from data entry → focus on vendor relationship management + exception handling"
+
+- {OUTCOME_3}
+  Example: "Improve categorization accuracy from 95% to &gt;98%"
+
+Now generate the Human-AI Collaboration Assessment.
+</code></pre></div>
+<hr/>
+<h3 id="expected-output-example"><strong>Expected Output (Example)</strong><a class="headerlink" href="#expected-output-example" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># Human-AI Collaboration Assessment: Accounts Payable (Invoice Processing)</span>
+
+<span class="gs">**Assessed by:**</span> AI Collaboration Analyst  
+<span class="gs">**Date:**</span> November 2025  
+<span class="gs">**Function:**</span> Finance — Accounts Payable  
+
+---
+
+<span class="gu">## 📊 Process Overview</span>
+
+<span class="gs">**Process:**</span> Accounts Payable (Invoice Processing)
+
+<span class="gs">**Description:**</span>
+<span class="k">1.</span> Receive vendor invoices (email/portal)
+<span class="k">2.</span> Extract data (amount, due date, vendor, line items)
+<span class="k">3.</span> Categorize expense (travel, software, office supplies, etc.)
+<span class="k">4.</span> Route for approval (manager approves &gt;$1K)
+<span class="k">5.</span> Schedule payment (ACH/check)
+
+<span class="gs">**Current Team:**</span>
+<span class="k">-</span><span class="w"> </span>2 AP clerks (Low-Level): Data entry, categorization, follow-up
+<span class="k">-</span><span class="w"> </span>1 AP manager (Intermediate-Level): Approvals, vendor relationships, month-end close
+
+<span class="gs">**Volume:**</span> 150 invoices/month (peak 250/month)
+
+<span class="gs">**Current Processing Time:**</span> 5 days (median)
+
+<span class="gs">**Current Error Rate:**</span> 5% (incorrect categorization)
+
+---
+
+<span class="gu">## 🔍 Task Characteristics Analysis</span>
+
+| Dimension | Assessment | Score (1-5) | Notes |
+|-----------|------------|-------------|-------|
+| <span class="gs">**Structured**</span> | High | 4/5 | 90% of invoices follow standard format, 10% require custom handling |
+| <span class="gs">**Rule-Based**</span> | High | 4/5 | Categorization follows clear rules (travel=T&amp;E, software=IT), approvals threshold-based |
+| <span class="gs">**Volume**</span> | High | 4/5 | 150-250 invoices/month = 7-12/day (high enough for automation ROI) |
+| <span class="gs">**Variability**</span> | Low | 2/5 | 80% recurring vendors (same format), 20% one-time vendors (varied format) |
+| <span class="gs">**Risk (Errors)**</span> | Medium | 3/5 | Incorrect categorization = budget variance (annoying), duplicate payment = financial loss (rare but serious) |
+| <span class="gs">**Human Judgment Needed**</span> | Low | 2/5 | Most tasks rule-based, judgment only for exceptions (disputed charges, missing data) |
+
+<span class="gs">**Overall Automation Suitability:**</span> <span class="gs">**4.2/5**</span> — High (good candidate for AI-led automation with human supervision)
+
+---
+
+<span class="gu">## 🤖 Recommended Collaboration Model</span>
+
+<span class="gu">### **Model 2: AI-Led, Human-Supervised**</span>
+
+<span class="gs">**Rationale:**</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**High structure + high volume + low variability**</span> = AI can handle 90%+ of invoices autonomously
+<span class="k">-</span><span class="w"> </span><span class="gs">**Medium risk**</span> = Requires human oversight (monthly audit), not full autonomy
+<span class="k">-</span><span class="w"> </span><span class="gs">**Low judgment needed**</span> = Rule-based categorization and approval routing don't require strategic thinking
+
+<span class="gs">**How It Works:**</span>
+<span class="k">1.</span> <span class="gs">**AI Agent (InvoiceProcessor-Agent, Low-Level) handles 90% of invoices:**</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Extracts data from PDF/email (OCR + NLP)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Categorizes expense (trained on 2 years of historical data, 95%+ accuracy)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Routes for approval if &gt;$1K
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Schedules payment if approved
+
+<span class="k">2.</span> <span class="gs">**Human AP Clerk (Low-Level) handles 10% of exceptions:**</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Invoices with missing data (no amount, unclear vendor)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Disputed charges (vendor charged wrong amount)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>First-time vendors (no historical data for categorization)
+
+<span class="k">3.</span> <span class="gs">**Human AP Manager (Intermediate-Level) supervises monthly:**</span>
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Audits 10% sample of AI-processed invoices (check categorization accuracy)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Reviews exceptions handled by clerk
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Manages vendor relationships (negotiate terms, resolve disputes)
+
+<span class="gs">**Expected Impact:**</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Processing time:**</span> 5 days → &lt;24 hours (AI processes invoices same-day)
+<span class="k">-</span><span class="w"> </span><span class="gs">**AP clerk time on data entry:**</span> 60% → &lt;10% (AI handles bulk, clerks handle exceptions)
+<span class="k">-</span><span class="w"> </span><span class="gs">**AP clerk time on high-value work:**</span> 40% → 90% (vendor relationships, exception handling, process improvement)
+<span class="k">-</span><span class="w"> </span><span class="gs">**Categorization accuracy:**</span> 95% → &gt;98% (AI more consistent than humans)
+<span class="k">-</span><span class="w"> </span><span class="gs">**Cost:**</span> $500/month (AI agent subscription) vs. $8,000/month (additional AP clerk hire)
+
+---
+
+<span class="gu">## 🛠️ Implementation Steps</span>
+
+<span class="gu">### **Step 1: Deploy InvoiceProcessor-Agent (Week 1-2)**</span>
+
+<span class="k">- [ ]</span> <span class="gs">**Choose AI Tool:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Option 1: Bill.com (invoice automation SaaS, $500/month)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Option 2: Stampli (invoice processing + approval workflows, $800/month)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Option 3: Custom (Zapier + ChatGPT API, $300/month)
+
+<span class="k">- [ ]</span> <span class="gs">**Train AI Agent:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Upload last 2 years of invoice history (categorization labels)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Train on your expense categories (T&amp;E, IT, office supplies, etc.)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Test on 50 sample invoices, validate &gt;95% accuracy
+
+<span class="k">- [ ]</span> <span class="gs">**Set Escalation Rules:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>If invoice missing required fields (amount, vendor, due date) → escalate to AP clerk
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>If invoice &gt;$1K → route to AP manager for approval
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>If vendor not in system → escalate to AP clerk (new vendor setup)
+
+<span class="gu">### **Step 2: Run Parallel for 1 Month (Week 3-6)**</span>
+
+<span class="k">- [ ]</span> <span class="gs">**AI processes invoices, humans verify:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>AI extracts data → Human reviews before saving
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>AI categorizes → Human approves categorization
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Goal: Build trust, catch edge cases, refine AI training
+
+<span class="k">- [ ]</span> <span class="gs">**Track Metrics:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>AI accuracy: ___% (target: &gt;95%)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Time savings: ___ hours/week (target: 50%+ reduction in data entry)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Exceptions flagged: ___% (should be &lt;10%)
+
+<span class="gu">### **Step 3: Increase AI Autonomy (Week 7+)**</span>
+
+<span class="k">- [ ]</span> <span class="gs">**AI processes invoices autonomously:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>90%+ of invoices fully automated (no human review)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>&lt;10% escalated to humans for exceptions
+
+<span class="k">- [ ]</span> <span class="gs">**Human shifts to supervision:**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>AP clerk: Handle exceptions only (10% of invoices)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>AP manager: Monthly audit (review 10% sample of AI-processed invoices)
+
+---
+
+<span class="gu">## ⚠️ Risks &amp; Mitigation</span>
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|------------|--------|------------|
+| <span class="gs">**AI categorization error**</span> | Medium | Medium | Human audits 10% sample monthly, AI learns from corrections |
+| <span class="gs">**Duplicate payment**</span> | Low | High | AI flags duplicates (same vendor + amount + due date), requires human approval |
+| <span class="gs">**Vendor relationship damage**</span> | Low | Medium | Human AP manager still owns vendor relationships (AI doesn't interact with vendors) |
+| <span class="gs">**Compliance violation**</span> | Low | High | AI retains invoices for 7 years (IRS requirement), segregation of duties enforced (AI can't approve + pay) |
+| <span class="gs">**AP clerks fear job loss**</span> | High | Medium | Reframe: AI handles tedious work, clerks upskill to vendor management (career growth) |
+
+---
+
+<span class="gu">## 📈 Success Metrics (6 Months)</span>
+
+| Metric | Baseline | Target | Month 1 | Month 3 | Month 6 |
+|--------|----------|--------|---------|---------|---------|
+| Invoice processing time | 5 days | &lt;24h | ___ | ___ | ___ |
+| Categorization accuracy | 95% | &gt;98% | ___ | ___ | ___ |
+| AP clerk time on data entry | 60% | &lt;10% | ___ | ___ | ___ |
+| AP clerk time on high-value work | 40% | &gt;90% | ___ | ___ | ___ |
+| Cost (AI vs. additional hire) | N/A | $500/mo vs. $8K/mo | ___ | ___ | ___ |
+
+---
+
+<span class="gu">## 🎯 Alternative Models Considered</span>
+
+<span class="gu">### **Why NOT Model 1 (Human-Led, AI-Assisted)?**</span>
+<span class="k">-</span><span class="w"> </span>Invoice processing is 90% structured, rule-based → AI can lead, not just assist
+<span class="k">-</span><span class="w"> </span>Having humans review every AI recommendation wastes time (defeats automation purpose)
+
+<span class="gu">### **Why NOT Model 3 (Balanced Collaboration)?**</span>
+<span class="k">-</span><span class="w"> </span>Real-time collaboration not needed — AI can process invoices overnight (no human waiting)
+<span class="k">-</span><span class="w"> </span>Human involvement only needed for exceptions (&lt;10% of cases)
+
+<span class="gu">### **Why NOT Model 5 (Fully AI)?**</span>
+<span class="k">-</span><span class="w"> </span>Medium risk (compliance, financial loss) requires human oversight
+<span class="k">-</span><span class="w"> </span>10% of invoices have exceptions (missing data, disputes) that AI can't handle yet
+
+---
+
+<span class="gu">## 📚 Next Steps</span>
+
+<span class="k">1.</span> <span class="gs">**Get buy-in:**</span> Present this assessment to CFO + AP manager
+<span class="k">2.</span> <span class="gs">**Budget approval:**</span> $500/month AI agent cost (vs. $8K/month additional hire)
+<span class="k">3.</span> <span class="gs">**Pilot:**</span> Deploy InvoiceProcessor-Agent, run parallel for 1 month
+<span class="k">4.</span> <span class="gs">**Scale:**</span> Increase autonomy after 1 month, shift humans to supervision
+<span class="k">5.</span> <span class="gs">**Measure:**</span> Track metrics monthly, iterate based on accuracy/time savings
+
+---
+
+<span class="gu">## 📖 Resources</span>
+
+<span class="gs">**Documentation:**</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Human-AI Collaboration</span>](<span class="na">../DOCS/08-human-ai-collaboration.md</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">AI Agents</span>](<span class="na">../DOCS/05-ai-agents.md</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Automation SIPOC</span>](<span class="na">../DOCS/04-automation-sipoc.md</span>)
+
+<span class="gs">**Templates:**</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Agent Definition Template</span>](<span class="na">../ADOPTION/TEMPLATES/agent-definition-template.yaml</span>)
+
+<span class="gs">**Playbooks:**</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Finance Playbook</span>](<span class="na">../PLAYBOOKS/by-sector/business-functions/finance.md</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">SME Transformation</span>](<span class="na">../PLAYBOOKS/by-stage/sme-transformation.md</span>)
+
+---
+
+<span class="gs">**Assessment Completed:**</span> November 2025  
+<span class="gs">**Recommendation:**</span> Deploy AI-Led, Human-Supervised model for Accounts Payable invoice processing  
+<span class="gs">**Expected ROI:**</span> 16x cost savings ($500/month AI vs. $8K/month human hire), 5 days → &lt;24h processing time
+</code></pre></div>
+<hr/>
+<h2 id="configuration-instructions">Configuration Instructions<a class="headerlink" href="#configuration-instructions" title="Permanent link">¶</a></h2>
+<h3 id="step-1-gather-process-data"><strong>Step 1: Gather Process Data</strong><a class="headerlink" href="#step-1-gather-process-data" title="Permanent link">¶</a></h3>
+<p>Before running this prompt, collect:
+- [ ] Process description (step-by-step workflow)
+- [ ] Current team (who does this work? titles, time allocation)
+- [ ] Volume metrics (transactions/day, peak periods)
+- [ ] Time spent (% on data entry vs. judgment vs. relationships)
+- [ ] Error rate (% of tasks requiring rework)
+- [ ] Pain points (what frustrates team most?)</p>
+<hr/>
+<h3 id="step-2-run-assessment"><strong>Step 2: Run Assessment</strong><a class="headerlink" href="#step-2-run-assessment" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Fill in user prompt template with process data</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Submit to AI (ChatGPT, Claude, or custom LLM)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Review output: Does recommended model make sense?</li>
+</ul>
+<hr/>
+<h3 id="step-3-validate-with-team"><strong>Step 3: Validate with Team</strong><a class="headerlink" href="#step-3-validate-with-team" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Share assessment with:</li>
+<li>Department head (do they agree with model?)</li>
+<li>Team members doing the work (do they feel AI would help or hinder?)</li>
+<li>
+<p>IT/compliance (any technical or regulatory blockers?)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Adjust based on feedback (e.g., if team fears job loss, emphasize career growth)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="step-4-pilot-iterate"><strong>Step 4: Pilot &amp; Iterate</strong><a class="headerlink" href="#step-4-pilot-iterate" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Deploy recommended model on small scale (1 month pilot)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Track metrics (time savings, accuracy, employee satisfaction)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Iterate: If Model 2 (AI-Led) causes too many errors, downgrade to Model 3 (Balanced) or upgrade AI training</li>
+</ul>
+<hr/>
+<h2 id="resources">📚 Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p><strong>Documentation:</strong>
+- <a href="../DOCS/08-human-ai-collaboration.md">Human-AI Collaboration</a>
+- <a href="../DOCS/05-ai-agents.md">AI Agents</a>
+- <a href="../DOCS/04-automation-sipoc.md">Automation SIPOC</a></p>
+<p><strong>Checklists:</strong>
+- <a href="../ADOPTION/CHECKLISTS/ai-agent-integration.md">AI Agent Integration</a>
+- <a href="../ADOPTION/CHECKLISTS/sme-transformation-roadmap.md">SME Transformation Roadmap</a></p>
+<p><strong>Playbooks:</strong>
+- <a href="../PLAYBOOKS/by-sector/business-functions/finance.md">Finance</a>
+- <a href="../PLAYBOOKS/by-sector/business-functions/sales.md">Sales</a>
+- <a href="../PLAYBOOKS/by-sector/business-functions/hr.md">HR</a></p>
+<hr/>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Framework:</strong> SOLID.AI</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,2140 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/adoption/prompt-templates/data-contract-design/" rel="canonical"/>
+<link href="../ai-agent-definition/" rel="prev"/>
+<link href="../retrospective-facilitation/" rel="next"/>
+<link href="../../../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>Data Contract Design - solid.ai</title>
+<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#data-contract-design-prompt">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Data Contract Design
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_19_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_19">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_1" id="__nav_19_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_2" id="__nav_19_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_3" id="__nav_19_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_4" id="__nav_19_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_5" id="__nav_19_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_6" id="__nav_19_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_19_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-to-use-this-prompt">
+<span class="md-ellipsis">
+      When to Use This Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-prompt">
+<span class="md-ellipsis">
+      The Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-usage">
+<span class="md-ellipsis">
+      Example Usage
+    </span>
+</a>
+<nav aria-label="Example Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#input">
+<span class="md-ellipsis">
+      Input
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-output-yaml-format">
+<span class="md-ellipsis">
+      Expected Output (YAML format)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#customization-tips">
+<span class="md-ellipsis">
+      Customization Tips
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#follow-up-prompts">
+<span class="md-ellipsis">
+      Follow-Up Prompts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solidai-principles-applied">
+<span class="md-ellipsis">
+      SOLID.AI Principles Applied
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-resources">
+<span class="md-ellipsis">
+      Related Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_1" id="__nav_19_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_2" id="__nav_19_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_3" id="__nav_19_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../checklists/role-hierarchy-implementation/">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5" id="__nav_19_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_1" id="__nav_19_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_2" id="__nav_19_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_3" id="__nav_19_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_4" id="__nav_19_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_1" id="__nav_22_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_3" id="__nav_22_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4" id="__nav_22_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_2" id="__nav_22_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_3" id="__nav_22_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/impact-analysis/">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_4" id="__nav_22_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/ai-native-kanban/">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_5" id="__nav_22_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_6" id="__nav_22_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7" id="__nav_22_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_1" id="__nav_22_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_2" id="__nav_22_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_3" id="__nav_22_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_4" id="__nav_22_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_8" id="__nav_22_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-to-use-this-prompt">
+<span class="md-ellipsis">
+      When to Use This Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-prompt">
+<span class="md-ellipsis">
+      The Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-usage">
+<span class="md-ellipsis">
+      Example Usage
+    </span>
+</a>
+<nav aria-label="Example Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#input">
+<span class="md-ellipsis">
+      Input
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-output-yaml-format">
+<span class="md-ellipsis">
+      Expected Output (YAML format)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#customization-tips">
+<span class="md-ellipsis">
+      Customization Tips
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#follow-up-prompts">
+<span class="md-ellipsis">
+      Follow-Up Prompts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solidai-principles-applied">
+<span class="md-ellipsis">
+      SOLID.AI Principles Applied
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-resources">
+<span class="md-ellipsis">
+      Related Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="data-contract-design-prompt">Data Contract Design Prompt<a class="headerlink" href="#data-contract-design-prompt" title="Permanent link">¶</a></h1>
+<p><strong>Category:</strong> Data Architecture | <strong>Framework:</strong> SOLID.AI | <strong>Use Case:</strong> Creating data interfaces</p>
+<hr/>
+<h2 id="when-to-use-this-prompt">When to Use This Prompt<a class="headerlink" href="#when-to-use-this-prompt" title="Permanent link">¶</a></h2>
+<p>Use this prompt when <strong>defining any new data contract</strong> for the Data Spine to ensure clear ownership, quality, and interoperability.</p>
+<p><strong>Ideal for:</strong>
+- Designing APIs or events
+- Creating new data models
+- Establishing service contracts
+- Enabling cross-team data sharing</p>
+<hr/>
+<h2 id="the-prompt">The Prompt<a class="headerlink" href="#the-prompt" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>I need to design a data contract for: [ENTITY, EVENT, OR API]
+
+Context:
+- Producer: [Team/system creating this data]
+- Consumers: [Teams/systems using this data]
+- Purpose: [Why this data exists]
+
+Help me create a comprehensive data contract following SOLID.AI Data Spine principles:
+
+1. **Contract Identity**
+   - Name: [Clear, semantic name]
+   - Version: [Semantic versioning strategy]
+   - Type: [Entity / Event / API / Stream]
+
+2. **Semantic Definition**
+   - What does this data represent in business terms?
+   - What real-world concepts or events does it model?
+   - How does it relate to other contracts in our domain?
+
+3. **Schema**
+   - Fields with types, constraints, and semantic meaning
+   - Required vs. optional fields
+   - Enumerations and valid value ranges
+   - Nesting and relationships
+
+4. **Ownership &amp; Lifecycle**
+   - Owner: [Team responsible for this contract]
+   - Lifecycle: [Creation, updates, deletion/expiry rules]
+   - Change management: [How breaking changes are handled]
+   - SLA: [Availability, freshness, latency commitments]
+
+5. **Quality Expectations**
+   - Completeness: [What fields must always be present?]
+   - Accuracy: [What validation rules apply?]
+   - Freshness: [How recent must data be?]
+   - Consistency: [What invariants must hold?]
+
+6. **Privacy &amp; Security**
+   - Sensitivity level: [Public / Internal / Confidential / Restricted]
+   - PII/PHI present: [Yes/No - which fields?]
+   - Access controls: [Who can read/write?]
+   - Encryption requirements: [At rest, in transit]
+   - Retention policy: [How long is data kept?]
+
+7. **Consuming Systems**
+   - Current consumers: [List teams/systems]
+   - Use cases: [What they do with this data]
+   - Dependencies: [Critical vs. nice-to-have]
+
+8. **Observability**
+   - Monitoring: [What health metrics are tracked?]
+   - Alerts: [What triggers notifications?]
+   - Lineage: [How is data flow tracked?]
+
+9. **Evolution Strategy**
+   - Versioning approach: [Backward compatible, versioned endpoints, etc.]
+   - Deprecation policy: [How old versions are sunset]
+   - Migration support: [How consumers are helped to upgrade]
+
+10. **Examples &amp; Documentation**
+    - Sample data (valid examples)
+    - Edge cases and special scenarios
+    - Integration guide for new consumers
+
+Generate the contract in YAML or JSON Schema format.
+</code></pre></div>
+<hr/>
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">¶</a></h2>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>I need to design a data contract for: User enrollment events when students join a course
+
+Context:
+- Producer: Enrollment Service
+- Consumers: Analytics, Email Service, Recommendation Engine
+- Purpose: Track student course enrollments for notifications, analytics, and personalization
+
+Help me create a comprehensive data contract following SOLID.AI Data Spine principles:
+[... paste full prompt above ...]
+</code></pre></div>
+<h3 id="expected-output-yaml-format">Expected Output (YAML format)<a class="headerlink" href="#expected-output-yaml-format" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">contract</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"user-enrollment-event"</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"1.0.0"</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"event"</span>
+
+<span class="w">  </span><span class="nt">semantic_definition</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Emitted</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">enrolls</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">course"</span>
+<span class="w">    </span><span class="nt">business_concepts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"student"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"course"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"enrollment"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"academic_term"</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">related_contracts</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"user-profile-entity"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"course-catalog-entity"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"enrollment-cancelled-event"</span>
+
+<span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="s">"JSON</span><span class="nv"> </span><span class="s">Schema</span><span class="nv"> </span><span class="s">v2020-12"</span>
+<span class="w">    </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"event_id"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"string</span><span class="nv"> </span><span class="s">(UUID)"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">instance"</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"timestamp"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"string</span><span class="nv"> </span><span class="s">(ISO</span><span class="nv"> </span><span class="s">8601)"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"When</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">enrollment</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(UTC)"</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"user_id"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"string</span><span class="nv"> </span><span class="s">(UUID)"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Student's</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier"</span>
+<span class="w">        </span><span class="nt">pii</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"course_id"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"string"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Course</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">catalog"</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"enrollment_type"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"enum"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">values</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"free"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"paid"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"scholarship"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"audit"</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">enrollment"</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"payment_amount"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"number</span><span class="nv"> </span><span class="s">(decimal)"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Amount</span><span class="nv"> </span><span class="s">paid</span><span class="nv"> </span><span class="s">(if</span><span class="nv"> </span><span class="s">enrollment_type=paid)"</span>
+<span class="w">        </span><span class="nt">constraint</span><span class="p">:</span><span class="w"> </span><span class="s">"&gt;=</span><span class="nv"> </span><span class="s">0"</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"referral_source"</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">"string"</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"How</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">course</span><span class="nv"> </span><span class="s">(marketing</span><span class="nv"> </span><span class="s">attribution)"</span>
+<span class="w">        </span><span class="nt">values</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"organic"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"email"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"social"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"partner"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"direct"</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">ownership</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">owner_team</span><span class="p">:</span><span class="w"> </span><span class="s">"Enrollment</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Team"</span>
+<span class="w">    </span><span class="nt">maintainer</span><span class="p">:</span><span class="w"> </span><span class="s">"enrollment-team@company.com"</span>
+<span class="w">    </span><span class="nt">lifecycle</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="s">"At</span><span class="nv"> </span><span class="s">successful</span><span class="nv"> </span><span class="s">enrollment</span><span class="nv"> </span><span class="s">transaction"</span>
+<span class="w">      </span><span class="nt">updated</span><span class="p">:</span><span class="w"> </span><span class="s">"Events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">immutable</span><span class="nv"> </span><span class="s">(publish</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">changes)"</span>
+<span class="w">      </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">"7</span><span class="nv"> </span><span class="s">years</span><span class="nv"> </span><span class="s">(regulatory</span><span class="nv"> </span><span class="s">requirement)"</span>
+
+<span class="w">    </span><span class="nt">sla</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">availability</span><span class="p">:</span><span class="w"> </span><span class="s">"99.9%"</span>
+<span class="w">      </span><span class="nt">freshness</span><span class="p">:</span><span class="w"> </span><span class="s">"Events</span><span class="nv"> </span><span class="s">published</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">seconds</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">enrollment"</span>
+<span class="w">      </span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="s">"p95</span><span class="nv"> </span><span class="s">delivery</span><span class="nv"> </span><span class="s">&lt;</span><span class="nv"> </span><span class="s">500ms"</span>
+
+<span class="w">  </span><span class="nt">quality_expectations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">completeness</span><span class="p">:</span><span class="w"> </span><span class="s">"All</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">fields</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">present;</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">missing</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">fields</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">rejected"</span>
+<span class="w">    </span><span class="nt">accuracy</span><span class="p">:</span><span class="w"> </span><span class="s">"user_id</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">course_id</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">respective</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">emission"</span>
+<span class="w">    </span><span class="nt">freshness</span><span class="p">:</span><span class="w"> </span><span class="s">"timestamp</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">60</span><span class="nv"> </span><span class="s">seconds</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">published"</span>
+<span class="w">    </span><span class="nt">consistency</span><span class="p">:</span><span class="w"> </span><span class="s">"If</span><span class="nv"> </span><span class="s">enrollment_type=paid,</span><span class="nv"> </span><span class="s">payment_amount</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&gt;0"</span>
+
+<span class="w">  </span><span class="nt">privacy_security</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sensitivity</span><span class="p">:</span><span class="w"> </span><span class="s">"confidential"</span>
+<span class="w">    </span><span class="nt">pii_fields</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"user_id"</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">access_controls</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">read</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"analytics-team"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"email-service"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"recommendation-engine"</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">write</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"enrollment-service"</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">encryption</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">at_rest</span><span class="p">:</span><span class="w"> </span><span class="s">"AES-256"</span>
+<span class="w">      </span><span class="nt">in_transit</span><span class="p">:</span><span class="w"> </span><span class="s">"TLS</span><span class="nv"> </span><span class="s">1.3"</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="s">"7</span><span class="nv"> </span><span class="s">years,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">anonymized</span><span class="nv"> </span><span class="s">(user_id</span><span class="nv"> </span><span class="s">hashed)"</span>
+
+<span class="w">  </span><span class="nt">consumers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Analytics</span><span class="nv"> </span><span class="s">Service"</span>
+<span class="w">      </span><span class="nt">use_case</span><span class="p">:</span><span class="w"> </span><span class="s">"Track</span><span class="nv"> </span><span class="s">enrollment</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">funnel</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">cohort</span><span class="nv"> </span><span class="s">reports"</span>
+<span class="w">      </span><span class="nt">criticality</span><span class="p">:</span><span class="w"> </span><span class="s">"high"</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Email</span><span class="nv"> </span><span class="s">Service"</span>
+<span class="w">      </span><span class="nt">use_case</span><span class="p">:</span><span class="w"> </span><span class="s">"Send</span><span class="nv"> </span><span class="s">welcome</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">course</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">details"</span>
+<span class="w">      </span><span class="nt">criticality</span><span class="p">:</span><span class="w"> </span><span class="s">"high"</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Recommendation</span><span class="nv"> </span><span class="s">Engine"</span>
+<span class="w">      </span><span class="nt">use_case</span><span class="p">:</span><span class="w"> </span><span class="s">"Personalize</span><span class="nv"> </span><span class="s">course</span><span class="nv"> </span><span class="s">recommendations</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enrollment</span><span class="nv"> </span><span class="s">patterns"</span>
+<span class="w">      </span><span class="nt">criticality</span><span class="p">:</span><span class="w"> </span><span class="s">"medium"</span>
+
+<span class="w">  </span><span class="nt">observability</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">monitoring</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Event</span><span class="nv"> </span><span class="s">publish</span><span class="nv"> </span><span class="s">rate</span><span class="nv"> </span><span class="s">(events/second)"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Schema</span><span class="nv"> </span><span class="s">validation</span><span class="nv"> </span><span class="s">failure</span><span class="nv"> </span><span class="s">rate"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Consumer</span><span class="nv"> </span><span class="s">lag</span><span class="nv"> </span><span class="s">(time</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">process)"</span>
+
+<span class="w">    </span><span class="nt">alerts</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">"Schema</span><span class="nv"> </span><span class="s">validation</span><span class="nv"> </span><span class="s">failures</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">1%</span><span class="nv"> </span><span class="s">over</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">minutes"</span>
+<span class="w">        </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">"high"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">"No</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">published</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10</span><span class="nv"> </span><span class="s">minutes</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">business</span><span class="nv"> </span><span class="s">hours"</span>
+<span class="w">        </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="s">"critical"</span>
+
+<span class="w">    </span><span class="nt">lineage</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">"enrollment-service</span><span class="nv"> </span><span class="s">database</span><span class="nv"> </span><span class="s">(enrollments</span><span class="nv"> </span><span class="s">table)"</span>
+<span class="w">      </span><span class="nt">transformations</span><span class="p">:</span><span class="w"> </span><span class="s">"Enriched</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">course</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">catalog</span><span class="nv"> </span><span class="s">service"</span>
+<span class="w">      </span><span class="nt">destinations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"analytics-datalake"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"email-queue"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"recommendation-cache"</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">evolution</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">versioning</span><span class="p">:</span><span class="w"> </span><span class="s">"Semantic</span><span class="nv"> </span><span class="s">versioning;</span><span class="nv"> </span><span class="s">breaking</span><span class="nv"> </span><span class="s">changes</span><span class="nv"> </span><span class="s">require</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">major</span><span class="nv"> </span><span class="s">version"</span>
+<span class="w">    </span><span class="nt">deprecation_policy</span><span class="p">:</span><span class="w"> </span><span class="s">"90-day</span><span class="nv"> </span><span class="s">notice</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">breaking</span><span class="nv"> </span><span class="s">changes;</span><span class="nv"> </span><span class="s">6-month</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">old</span><span class="nv"> </span><span class="s">versions"</span>
+<span class="w">    </span><span class="nt">migration_support</span><span class="p">:</span><span class="w"> </span><span class="s">"Dual-publish</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">transition;</span><span class="nv"> </span><span class="s">migration</span><span class="nv"> </span><span class="s">guides</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">docs"</span>
+
+<span class="w">  </span><span class="nt">examples</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">valid_example</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">event_id</span><span class="p">:</span><span class="w"> </span><span class="s">"a3bb189e-8bf9-4f3f-8ae0-3e5f79c3c3e7"</span>
+<span class="w">      </span><span class="nt">timestamp</span><span class="p">:</span><span class="w"> </span><span class="s">"2025-11-02T14:30:00Z"</span>
+<span class="w">      </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">"f47ac10b-58cc-4372-a567-0e02b2c3d479"</span>
+<span class="w">      </span><span class="nt">course_id</span><span class="p">:</span><span class="w"> </span><span class="s">"CS101"</span>
+<span class="w">      </span><span class="nt">enrollment_type</span><span class="p">:</span><span class="w"> </span><span class="s">"paid"</span>
+<span class="w">      </span><span class="nt">payment_amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">299.99</span>
+<span class="w">      </span><span class="nt">referral_source</span><span class="p">:</span><span class="w"> </span><span class="s">"email"</span>
+
+<span class="w">    </span><span class="nt">edge_case_free_enrollment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">event_id</span><span class="p">:</span><span class="w"> </span><span class="s">"b4cc299f-9cg0-5g4g-9bf1-4f6g80d4d4f8"</span>
+<span class="w">      </span><span class="nt">timestamp</span><span class="p">:</span><span class="w"> </span><span class="s">"2025-11-02T15:45:00Z"</span>
+<span class="w">      </span><span class="nt">user_id</span><span class="p">:</span><span class="w"> </span><span class="s">"g58bd21c-69dd-5483-b678-1f13c3d4e570"</span>
+<span class="w">      </span><span class="nt">course_id</span><span class="p">:</span><span class="w"> </span><span class="s">"INTRO-FREE"</span>
+<span class="w">      </span><span class="nt">enrollment_type</span><span class="p">:</span><span class="w"> </span><span class="s">"free"</span>
+<span class="w">      </span><span class="nt">referral_source</span><span class="p">:</span><span class="w"> </span><span class="s">"organic"</span>
+
+<span class="w">  </span><span class="nt">documentation</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">integration_guide</span><span class="p">:</span><span class="w"> </span><span class="s">"https://docs.company.com/data-contracts/user-enrollment-event"</span>
+<span class="w">    </span><span class="nt">changelog</span><span class="p">:</span><span class="w"> </span><span class="s">"https://github.com/company/data-contracts/blob/main/CHANGELOG.md#user-enrollment-event"</span>
+</code></pre></div>
+<hr/>
+<h2 id="customization-tips">Customization Tips<a class="headerlink" href="#customization-tips" title="Permanent link">¶</a></h2>
+<p><strong>For real-time streams:</strong>
+Add: "What partitioning strategy ensures scalability?"</p>
+<p><strong>For sensitive data:</strong>
+Add: "What data masking or anonymization is required?"</p>
+<p><strong>For high-volume data:</strong>
+Add: "What sampling or aggregation reduces load?"</p>
+<p><strong>For regulatory compliance:</strong>
+Add: "What audit trail or compliance requirements exist?"</p>
+<hr/>
+<h2 id="follow-up-prompts">Follow-Up Prompts<a class="headerlink" href="#follow-up-prompts" title="Permanent link">¶</a></h2>
+<p>After generating the contract:</p>
+<div class="highlight"><pre><span></span><code>Review this data contract for potential privacy risks or GDPR compliance issues.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Generate tests to validate this contract's schema and quality expectations.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Create a migration plan for existing consumers to adopt this contract.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Design monitoring dashboards to track this contract's health and usage.
+</code></pre></div>
+<hr/>
+<h2 id="solidai-principles-applied">SOLID.AI Principles Applied<a class="headerlink" href="#solidai-principles-applied" title="Permanent link">¶</a></h2>
+<ul>
+<li>✅ <strong>Data Spine</strong> - Creates shared, trusted data contracts</li>
+<li>✅ <strong>Purpose-Led Decisions</strong> - Grounds data in business meaning</li>
+<li>✅ <strong>Ethical Automation</strong> - Bakes in privacy and security</li>
+<li>✅ <strong>Scalable Simplicity</strong> - Clear, semantic, evolvable contracts</li>
+<li>✅ <strong>Continuous Learning</strong> - Enables observability and iteration</li>
+</ul>
+<hr/>
+<h2 id="related-resources">Related Resources<a class="headerlink" href="#related-resources" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Data Spine RFC:</strong> <a href="../../RFC/rfc-0002-data-layer.md">RFC/rfc-0002-data-layer.md</a></li>
+<li><strong>Architecture:</strong> <a href="../../DOCS/02-architecture.md">DOCS/02-architecture.md</a></li>
+<li><strong>Template:</strong> <a href="../TEMPLATES/data-contract-template.yaml">TEMPLATES/data-contract-template.yaml</a></li>
+</ul>
+<hr/>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Share Your Results:</strong> <a href="https://github.com/gusafr/midora-solid-ai/discussions">GitHub Discussions</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>

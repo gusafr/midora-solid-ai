@@ -1,0 +1,3607 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/playbooks/governance/impact-analysis/" rel="canonical"/>
+<link href="../ai-governance-risk-assessment/" rel="prev"/>
+<link href="../../implementation/process-mapping-sipoc-integration/" rel="next"/>
+<link href="../../../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>📊 Impact Analysis - solid.ai</title>
+<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#impact-analysis-playbook-for-initiatives-projects">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              📊 Impact Analysis
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_19">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_1" id="__nav_19_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_2" id="__nav_19_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_3" id="__nav_19_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_4" id="__nav_19_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_5" id="__nav_19_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_6" id="__nav_19_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/data-contract-design/">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_1" id="__nav_19_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_2" id="__nav_19_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_3" id="__nav_19_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/role-hierarchy-implementation/">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5" id="__nav_19_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_1" id="__nav_19_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_2" id="__nav_19_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_3" id="__nav_19_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_4" id="__nav_19_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_1" id="__nav_22_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_3" id="__nav_22_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4" id="__nav_22_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_2" id="__nav_22_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_3" id="__nav_22_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-impact-analysis-matters">
+<span class="md-ellipsis">
+      Why Impact Analysis Matters
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#t-shirt-sizing-framework">
+<span class="md-ellipsis">
+      T-Shirt Sizing Framework
+    </span>
+</a>
+<nav aria-label="T-Shirt Sizing Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#size-definitions-pp-to-gg">
+<span class="md-ellipsis">
+      Size Definitions (PP to GG)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sizing-criteria-matrix">
+<span class="md-ellipsis">
+      Sizing Criteria Matrix
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#impact-dimensions">
+<span class="md-ellipsis">
+      Impact Dimensions
+    </span>
+</a>
+<nav aria-label="Impact Dimensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-technical-impact">
+<span class="md-ellipsis">
+      1. Technical Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-organizational-impact">
+<span class="md-ellipsis">
+      2. Organizational Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operational-impact">
+<span class="md-ellipsis">
+      3. Operational Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-architectural-impact">
+<span class="md-ellipsis">
+      4. Architectural Impact
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#impact-analysis-template">
+<span class="md-ellipsis">
+      Impact Analysis Template
+    </span>
+</a>
+<nav aria-label="Impact Analysis Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiative-initiative-name">
+<span class="md-ellipsis">
+      Initiative: [Initiative Name]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-initiative-description">
+<span class="md-ellipsis">
+      1. Initiative Description
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-technical-impact-assessment">
+<span class="md-ellipsis">
+      2. Technical Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-organizational-impact-assessment">
+<span class="md-ellipsis">
+      3. Organizational Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-operational-impact-assessment">
+<span class="md-ellipsis">
+      4. Operational Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-architectural-impact-assessment">
+<span class="md-ellipsis">
+      5. Architectural Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-overall-t-shirt-size">
+<span class="md-ellipsis">
+      6. Overall T-Shirt Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-resource-estimate">
+<span class="md-ellipsis">
+      7. Resource Estimate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-risk-assessment">
+<span class="md-ellipsis">
+      8. Risk Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-dependencies-blockers">
+<span class="md-ellipsis">
+      9. Dependencies &amp; Blockers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-gono-go-recommendation">
+<span class="md-ellipsis">
+      10. Go/No-Go Recommendation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-approval-sign-off">
+<span class="md-ellipsis">
+      11. Approval &amp; Sign-Off
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-agent-impactanalyzer-agent">
+<span class="md-ellipsis">
+      AI Agent: ImpactAnalyzer-Agent
+    </span>
+</a>
+<nav aria-label="AI Agent: ImpactAnalyzer-Agent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      Purpose
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-definition">
+<span class="md-ellipsis">
+      Agent Definition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-use-impactanalyzer-agent">
+<span class="md-ellipsis">
+      How to Use ImpactAnalyzer-Agent
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-assessments">
+<span class="md-ellipsis">
+      Example Assessments
+    </span>
+</a>
+<nav aria-label="Example Assessments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-1-pp-extra-small-change-log-level">
+<span class="md-ellipsis">
+      Example 1: PP (Extra Small) — Change Log Level
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-2-p-small-add-csv-export-button">
+<span class="md-ellipsis">
+      Example 2: P (Small) — Add CSV Export Button
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-3-m-medium-implement-notification-preferences">
+<span class="md-ellipsis">
+      Example 3: M (Medium) — Implement Notification Preferences
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-4-g-large-migrate-from-mysql-to-postgresql">
+<span class="md-ellipsis">
+      Example 4: G (Large) — Migrate from MySQL to PostgreSQL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-5-gg-extra-large-microservices-migration">
+<span class="md-ellipsis">
+      Example 5: GG (Extra Large) — Microservices Migration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prioritization-framework">
+<span class="md-ellipsis">
+      Prioritization Framework
+    </span>
+</a>
+<nav aria-label="Prioritization Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#value-vs-complexity-matrix">
+<span class="md-ellipsis">
+      Value vs. Complexity Matrix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rice-scoring-alternative">
+<span class="md-ellipsis">
+      RICE Scoring (Alternative)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-guide">
+<span class="md-ellipsis">
+      Implementation Guide
+    </span>
+</a>
+<nav aria-label="Implementation Guide" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-adopt-impact-analysis-template-week-1">
+<span class="md-ellipsis">
+      Step 1: Adopt Impact Analysis Template (Week 1)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-deploy-impactanalyzer-agent-week-2-3">
+<span class="md-ellipsis">
+      Step 2: Deploy ImpactAnalyzer-Agent (Week 2-3)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-establish-governance-process-week-4">
+<span class="md-ellipsis">
+      Step 3: Establish Governance Process (Week 4)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_4" id="__nav_22_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../implementation/process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../implementation/data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../implementation/ai-native-kanban/">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_5" id="__nav_22_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_6" id="__nav_22_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7" id="__nav_22_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_1" id="__nav_22_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_2" id="__nav_22_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_3" id="__nav_22_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_4" id="__nav_22_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_8" id="__nav_22_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-impact-analysis-matters">
+<span class="md-ellipsis">
+      Why Impact Analysis Matters
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#t-shirt-sizing-framework">
+<span class="md-ellipsis">
+      T-Shirt Sizing Framework
+    </span>
+</a>
+<nav aria-label="T-Shirt Sizing Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#size-definitions-pp-to-gg">
+<span class="md-ellipsis">
+      Size Definitions (PP to GG)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sizing-criteria-matrix">
+<span class="md-ellipsis">
+      Sizing Criteria Matrix
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#impact-dimensions">
+<span class="md-ellipsis">
+      Impact Dimensions
+    </span>
+</a>
+<nav aria-label="Impact Dimensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-technical-impact">
+<span class="md-ellipsis">
+      1. Technical Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-organizational-impact">
+<span class="md-ellipsis">
+      2. Organizational Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operational-impact">
+<span class="md-ellipsis">
+      3. Operational Impact
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-architectural-impact">
+<span class="md-ellipsis">
+      4. Architectural Impact
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#impact-analysis-template">
+<span class="md-ellipsis">
+      Impact Analysis Template
+    </span>
+</a>
+<nav aria-label="Impact Analysis Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiative-initiative-name">
+<span class="md-ellipsis">
+      Initiative: [Initiative Name]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-initiative-description">
+<span class="md-ellipsis">
+      1. Initiative Description
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-technical-impact-assessment">
+<span class="md-ellipsis">
+      2. Technical Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-organizational-impact-assessment">
+<span class="md-ellipsis">
+      3. Organizational Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-operational-impact-assessment">
+<span class="md-ellipsis">
+      4. Operational Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-architectural-impact-assessment">
+<span class="md-ellipsis">
+      5. Architectural Impact Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-overall-t-shirt-size">
+<span class="md-ellipsis">
+      6. Overall T-Shirt Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-resource-estimate">
+<span class="md-ellipsis">
+      7. Resource Estimate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-risk-assessment">
+<span class="md-ellipsis">
+      8. Risk Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-dependencies-blockers">
+<span class="md-ellipsis">
+      9. Dependencies &amp; Blockers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-gono-go-recommendation">
+<span class="md-ellipsis">
+      10. Go/No-Go Recommendation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-approval-sign-off">
+<span class="md-ellipsis">
+      11. Approval &amp; Sign-Off
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-agent-impactanalyzer-agent">
+<span class="md-ellipsis">
+      AI Agent: ImpactAnalyzer-Agent
+    </span>
+</a>
+<nav aria-label="AI Agent: ImpactAnalyzer-Agent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      Purpose
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-definition">
+<span class="md-ellipsis">
+      Agent Definition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-use-impactanalyzer-agent">
+<span class="md-ellipsis">
+      How to Use ImpactAnalyzer-Agent
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-assessments">
+<span class="md-ellipsis">
+      Example Assessments
+    </span>
+</a>
+<nav aria-label="Example Assessments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-1-pp-extra-small-change-log-level">
+<span class="md-ellipsis">
+      Example 1: PP (Extra Small) — Change Log Level
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-2-p-small-add-csv-export-button">
+<span class="md-ellipsis">
+      Example 2: P (Small) — Add CSV Export Button
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-3-m-medium-implement-notification-preferences">
+<span class="md-ellipsis">
+      Example 3: M (Medium) — Implement Notification Preferences
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-4-g-large-migrate-from-mysql-to-postgresql">
+<span class="md-ellipsis">
+      Example 4: G (Large) — Migrate from MySQL to PostgreSQL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-5-gg-extra-large-microservices-migration">
+<span class="md-ellipsis">
+      Example 5: GG (Extra Large) — Microservices Migration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prioritization-framework">
+<span class="md-ellipsis">
+      Prioritization Framework
+    </span>
+</a>
+<nav aria-label="Prioritization Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#value-vs-complexity-matrix">
+<span class="md-ellipsis">
+      Value vs. Complexity Matrix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rice-scoring-alternative">
+<span class="md-ellipsis">
+      RICE Scoring (Alternative)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-guide">
+<span class="md-ellipsis">
+      Implementation Guide
+    </span>
+</a>
+<nav aria-label="Implementation Guide" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-adopt-impact-analysis-template-week-1">
+<span class="md-ellipsis">
+      Step 1: Adopt Impact Analysis Template (Week 1)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-deploy-impactanalyzer-agent-week-2-3">
+<span class="md-ellipsis">
+      Step 2: Deploy ImpactAnalyzer-Agent (Week 2-3)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-establish-governance-process-week-4">
+<span class="md-ellipsis">
+      Step 3: Establish Governance Process (Week 4)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="impact-analysis-playbook-for-initiatives-projects">Impact Analysis Playbook for Initiatives &amp; Projects<a class="headerlink" href="#impact-analysis-playbook-for-initiatives-projects" title="Permanent link">¶</a></h1>
+<p><strong>For:</strong> Product Managers, Tech Leads, Architects, Portfolio Managers assessing internal initiatives</p>
+<p><strong>Purpose:</strong> Systematically evaluate impact across technical, organizational, operational, and architectural dimensions before committing resources</p>
+<p><strong>Outcome:</strong> Clear t-shirt size (PP/P/M/G/GG), risk assessment, resource estimate, and go/no-go recommendation</p>
+<hr/>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<h3 id="why-impact-analysis-matters">Why Impact Analysis Matters<a class="headerlink" href="#why-impact-analysis-matters" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Teams commit to initiatives without fully understanding:
+- <strong>Technical complexity</strong> (how many systems affected? data migration required?)
+- <strong>Organizational impact</strong> (how many teams involved? skills gaps?)
+- <strong>Operational risk</strong> (downtime? rollback plan? monitoring?)
+- <strong>Architectural debt</strong> (quick fix or strategic investment?)</p>
+<p><strong>Solution:</strong> Structured impact analysis provides:
+- <strong>Visibility:</strong> All stakeholders see full scope before commitment
+- <strong>Prioritization:</strong> Rank initiatives by business value vs. complexity
+- <strong>Resource planning:</strong> Accurate estimates (not guesses)
+- <strong>Risk mitigation:</strong> Identify blockers early, plan mitigations
+- <strong>AI assistance:</strong> ImpactAnalyzer-Agent automates 60% of assessment work</p>
+<hr/>
+<h2 id="t-shirt-sizing-framework">T-Shirt Sizing Framework<a class="headerlink" href="#t-shirt-sizing-framework" title="Permanent link">¶</a></h2>
+<h3 id="size-definitions-pp-to-gg">Size Definitions (PP to GG)<a class="headerlink" href="#size-definitions-pp-to-gg" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Effort</th>
+<th>Team Size</th>
+<th>Duration</th>
+<th>Complexity</th>
+<th>Risk</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PP (Extra Small)</strong></td>
+<td>1-3 days</td>
+<td>1 person</td>
+<td>&lt;1 week</td>
+<td>Trivial</td>
+<td>Low</td>
+<td>Config change, flag toggle, log level adjustment</td>
+</tr>
+<tr>
+<td><strong>P (Small)</strong></td>
+<td>3-10 days</td>
+<td>1-2 people</td>
+<td>1-2 weeks</td>
+<td>Low</td>
+<td>Low-Medium</td>
+<td>Bug fix, UI tweak, add field to existing form</td>
+</tr>
+<tr>
+<td><strong>M (Medium)</strong></td>
+<td>10-30 days</td>
+<td>2-4 people</td>
+<td>1-2 months</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>New feature (single service), API endpoint, dashboard</td>
+</tr>
+<tr>
+<td><strong>G (Large)</strong></td>
+<td>30-90 days</td>
+<td>4-8 people</td>
+<td>2-4 months</td>
+<td>High</td>
+<td>High</td>
+<td>Multi-service feature, data migration, new module</td>
+</tr>
+<tr>
+<td><strong>GG (Extra Large)</strong></td>
+<td>90+ days</td>
+<td>8+ people</td>
+<td>4+ months</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Platform rewrite, architecture overhaul, system migration</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="sizing-criteria-matrix">Sizing Criteria Matrix<a class="headerlink" href="#sizing-criteria-matrix" title="Permanent link">¶</a></h3>
+<p><strong>Use this matrix to determine t-shirt size across 4 dimensions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>PP</th>
+<th>P</th>
+<th>M</th>
+<th>G</th>
+<th>GG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Technical Complexity</strong></td>
+<td>Single file change</td>
+<td>Single service</td>
+<td>2-3 services</td>
+<td>4+ services</td>
+<td>System-wide</td>
+</tr>
+<tr>
+<td><strong>Data Impact</strong></td>
+<td>No data changes</td>
+<td>Read-only</td>
+<td>CRUD (single table)</td>
+<td>Multi-table migration</td>
+<td>Database redesign</td>
+</tr>
+<tr>
+<td><strong>Dependencies</strong></td>
+<td>None</td>
+<td>1 internal</td>
+<td>2-3 internal</td>
+<td>4+ internal OR 1 external</td>
+<td>Multiple external</td>
+</tr>
+<tr>
+<td><strong>Testing Required</strong></td>
+<td>Unit tests</td>
+<td>Unit + integration</td>
+<td>E2E tests</td>
+<td>Performance tests</td>
+<td>Load + chaos testing</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Code comments</td>
+<td>README update</td>
+<td>API docs + runbook</td>
+<td>Architecture docs</td>
+<td>Full system redesign docs</td>
+</tr>
+<tr>
+<td><strong>Rollback Complexity</strong></td>
+<td>Instant (revert commit)</td>
+<td>&lt;1 hour</td>
+<td>&lt;1 day</td>
+<td>1-3 days</td>
+<td>&gt;3 days (may be irreversible)</td>
+</tr>
+<tr>
+<td><strong>Teams Involved</strong></td>
+<td>1 team</td>
+<td>1 team</td>
+<td>2 teams</td>
+<td>3-4 teams</td>
+<td>5+ teams</td>
+</tr>
+<tr>
+<td><strong>Skills Required</strong></td>
+<td>Existing team skills</td>
+<td>1 new skill</td>
+<td>2-3 new skills</td>
+<td>Cross-functional</td>
+<td>Specialized experts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to Size:</strong>
+1. Score each dimension (PP/P/M/G/GG)
+2. Take the <strong>maximum score</strong> across all dimensions
+3. If 2+ dimensions are high (G/GG), escalate size by 1 level</p>
+<p><strong>Example:</strong>
+- Technical: P (single service)
+- Data: M (multi-table update)
+- Dependencies: P (1 internal)
+- Testing: M (E2E tests)
+- <strong>Result:</strong> M (Medium) — highest score is M</p>
+<hr/>
+<h2 id="impact-dimensions">Impact Dimensions<a class="headerlink" href="#impact-dimensions" title="Permanent link">¶</a></h2>
+<h3 id="1-technical-impact">1. Technical Impact<a class="headerlink" href="#1-technical-impact" title="Permanent link">¶</a></h3>
+<p><strong>Questions to Ask:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>How many services/applications affected?</strong></li>
+<li>1 service → PP/P</li>
+<li>2-3 services → M</li>
+<li>4+ services → G</li>
+<li>
+<p>System-wide → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Code complexity?</strong></p>
+</li>
+<li>Config change → PP</li>
+<li>Single module → P</li>
+<li>Multiple modules → M</li>
+<li>Refactor required → G</li>
+<li>
+<p>Rewrite required → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Data model changes?</strong></p>
+</li>
+<li>No changes → PP</li>
+<li>Read-only → P</li>
+<li>Add fields (backward compatible) → P/M</li>
+<li>Schema migration (breaking changes) → G</li>
+<li>
+<p>Database redesign → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>API changes?</strong></p>
+</li>
+<li>No API changes → PP/P</li>
+<li>New endpoint (backward compatible) → M</li>
+<li>Breaking API changes → G</li>
+<li>
+<p>API versioning required → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Performance impact?</strong></p>
+</li>
+<li>No performance concern → PP/P</li>
+<li>Minor optimization → M</li>
+<li>Requires caching/indexing → G</li>
+<li>Requires infrastructure scaling → GG</li>
+</ul>
+<hr/>
+<h3 id="2-organizational-impact">2. Organizational Impact<a class="headerlink" href="#2-organizational-impact" title="Permanent link">¶</a></h3>
+<p><strong>Questions to Ask:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>How many teams involved?</strong></li>
+<li>1 team → PP/P/M</li>
+<li>2 teams → M/G</li>
+<li>3-4 teams → G</li>
+<li>
+<p>5+ teams → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Cross-functional coordination?</strong></p>
+</li>
+<li>Single function (e.g., only Engineering) → PP/P/M</li>
+<li>2 functions (e.g., Eng + Product) → M/G</li>
+<li>
+<p>3+ functions (e.g., Eng + Product + Sales + Legal) → G/GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Skills gap?</strong></p>
+</li>
+<li>Team has all skills → PP/P/M</li>
+<li>1-2 new skills needed (can learn on the job) → M/G</li>
+<li>
+<p>Specialized skills (requires hiring/training) → G/GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Change management?</strong></p>
+</li>
+<li>No user-facing changes → PP/P</li>
+<li>Internal users (small training) → M</li>
+<li>External users (communication plan required) → G</li>
+<li>
+<p>Large user base (phased rollout) → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Stakeholder alignment?</strong></p>
+</li>
+<li>Single stakeholder (Tech Lead) → PP/P</li>
+<li>2-3 stakeholders (Product Owner + Tech Lead) → M</li>
+<li>4+ stakeholders (requires steering committee) → G/GG</li>
+</ul>
+<hr/>
+<h3 id="3-operational-impact">3. Operational Impact<a class="headerlink" href="#3-operational-impact" title="Permanent link">¶</a></h3>
+<p><strong>Questions to Ask:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Deployment complexity?</strong></li>
+<li>Standard CI/CD pipeline → PP/P</li>
+<li>Blue-green deployment → M</li>
+<li>Canary rollout → G</li>
+<li>
+<p>Multi-region phased rollout → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Downtime required?</strong></p>
+</li>
+<li>No downtime → PP/P</li>
+<li>&lt;1 hour maintenance window → M</li>
+<li>
+<blockquote>
+<p>1 hour planned downtime → G</p>
+</blockquote>
+</li>
+<li>
+<p>Multi-day migration → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Rollback plan?</strong></p>
+</li>
+<li>Instant (revert commit) → PP</li>
+<li>&lt;1 hour (database rollback) → P/M</li>
+<li>1-3 days (complex rollback) → G</li>
+<li>
+<p>Irreversible (migration only) → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Monitoring &amp; alerting?</strong></p>
+</li>
+<li>Existing metrics sufficient → PP/P</li>
+<li>New metrics required → M</li>
+<li>New dashboards + alerts → G</li>
+<li>
+<p>Full observability redesign → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Security/compliance review?</strong></p>
+</li>
+<li>No review needed → PP/P</li>
+<li>Standard security review → M</li>
+<li>Full compliance audit (GDPR, SOC2) → G/GG</li>
+</ul>
+<hr/>
+<h3 id="4-architectural-impact">4. Architectural Impact<a class="headerlink" href="#4-architectural-impact" title="Permanent link">¶</a></h3>
+<p><strong>Questions to Ask:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Architectural pattern?</strong></li>
+<li>Fits existing patterns → PP/P/M</li>
+<li>Introduces new pattern (e.g., event-driven) → G</li>
+<li>
+<p>Requires architecture redesign → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Technical debt?</strong></p>
+</li>
+<li>No debt introduced → PP/P/M</li>
+<li>Tactical solution (debt acceptable) → M/G</li>
+<li>
+<p>Strategic investment (removes debt) → G/GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Scalability?</strong></p>
+</li>
+<li>Scales with existing infrastructure → PP/P/M</li>
+<li>Requires horizontal scaling → G</li>
+<li>
+<p>Requires new infrastructure (e.g., Kafka, Redis) → GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Integration complexity?</strong></p>
+</li>
+<li>Internal APIs only → PP/P/M</li>
+<li>1 external integration → M/G</li>
+<li>
+<p>Multiple external integrations → G/GG</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Long-term maintainability?</strong></p>
+</li>
+<li>Easy to maintain (standard stack) → PP/P/M</li>
+<li>Requires specialized knowledge → G</li>
+<li>Tech stack migration (e.g., Java → Go) → GG</li>
+</ul>
+<hr/>
+<h2 id="impact-analysis-template">Impact Analysis Template<a class="headerlink" href="#impact-analysis-template" title="Permanent link">¶</a></h2>
+<h3 id="initiative-initiative-name">Initiative: [Initiative Name]<a class="headerlink" href="#initiative-initiative-name" title="Permanent link">¶</a></h3>
+<p><strong>Proposed by:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><em><br/>
+<strong>Date:</strong> <strong><em>_</em></strong><strong><em>_</em></strong></em><br/>
+<strong>Stakeholders:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_  </p>
+<hr/>
+<h3 id="1-initiative-description">1. Initiative Description<a class="headerlink" href="#1-initiative-description" title="Permanent link">¶</a></h3>
+<p><strong>Problem Statement:</strong>
+[What problem are we solving? Why now?]</p>
+<p><strong>Proposed Solution:</strong>
+[High-level approach — what will we build/change?]</p>
+<p><strong>Business Value:</strong>
+- [ ] Revenue impact: $ <strong><em>_</em></strong><strong><em>_</em></strong><em> (increase/protect)
+- [ ] Cost savings: $ <strong><em>_</em></strong><strong><em>_</em></strong></em> (reduced manual work, infrastructure)
+- [ ] Customer satisfaction: <strong><em>_</em></strong><strong><em>_</em></strong><em> (CSAT improvement, NPS)
+- [ ] Risk mitigation: <strong><em>_</em></strong><strong><em>_</em></strong></em> (security, compliance, reliability)</p>
+<hr/>
+<h3 id="2-technical-impact-assessment">2. Technical Impact Assessment<a class="headerlink" href="#2-technical-impact-assessment" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Score (PP/P/M/G/GG)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Services Affected</strong></td>
+<td>___</td>
+<td>[List services: Service A, Service B, etc.]</td>
+</tr>
+<tr>
+<td><strong>Code Complexity</strong></td>
+<td>___</td>
+<td>[Single module? Refactor? Rewrite?]</td>
+</tr>
+<tr>
+<td><strong>Data Model Changes</strong></td>
+<td>___</td>
+<td>[Schema migration? Breaking changes?]</td>
+</tr>
+<tr>
+<td><strong>API Changes</strong></td>
+<td>___</td>
+<td>[New endpoints? Breaking changes?]</td>
+</tr>
+<tr>
+<td><strong>Performance Impact</strong></td>
+<td>___</td>
+<td>[Caching? Scaling? Optimization?]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Technical Complexity:</strong> ___ (highest score above)</p>
+<p><strong>Key Technical Risks:</strong>
+1. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>
+2. </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>
+3. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<hr/>
+<h3 id="3-organizational-impact-assessment">3. Organizational Impact Assessment<a class="headerlink" href="#3-organizational-impact-assessment" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Score (PP/P/M/G/GG)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Teams Involved</strong></td>
+<td>___</td>
+<td>[List teams: Engineering, Product, DevOps, etc.]</td>
+</tr>
+<tr>
+<td><strong>Cross-Functional Coordination</strong></td>
+<td>___</td>
+<td>[How many functions?]</td>
+</tr>
+<tr>
+<td><strong>Skills Gap</strong></td>
+<td>___</td>
+<td>[New skills needed? Training? Hiring?]</td>
+</tr>
+<tr>
+<td><strong>Change Management</strong></td>
+<td>___</td>
+<td>[User impact? Communication plan?]</td>
+</tr>
+<tr>
+<td><strong>Stakeholder Alignment</strong></td>
+<td>___</td>
+<td>[How many decision-makers?]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Organizational Complexity:</strong> ___ (highest score above)</p>
+<p><strong>Key Organizational Risks:</strong>
+1. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>
+2. </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>
+3. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<hr/>
+<h3 id="4-operational-impact-assessment">4. Operational Impact Assessment<a class="headerlink" href="#4-operational-impact-assessment" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Score (PP/P/M/G/GG)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deployment Complexity</strong></td>
+<td>___</td>
+<td>[CI/CD? Blue-green? Canary?]</td>
+</tr>
+<tr>
+<td><strong>Downtime Required</strong></td>
+<td>___</td>
+<td>[Zero downtime? Maintenance window?]</td>
+</tr>
+<tr>
+<td><strong>Rollback Plan</strong></td>
+<td>___</td>
+<td>[Instant? Hours? Days? Irreversible?]</td>
+</tr>
+<tr>
+<td><strong>Monitoring &amp; Alerting</strong></td>
+<td>___</td>
+<td>[Existing metrics? New dashboards?]</td>
+</tr>
+<tr>
+<td><strong>Security/Compliance</strong></td>
+<td>___</td>
+<td>[Review required? Audit?]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operational Complexity:</strong> ___ (highest score above)</p>
+<p><strong>Key Operational Risks:</strong>
+1. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>
+2. </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>
+3. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<hr/>
+<h3 id="5-architectural-impact-assessment">5. Architectural Impact Assessment<a class="headerlink" href="#5-architectural-impact-assessment" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Score (PP/P/M/G/GG)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architectural Pattern</strong></td>
+<td>___</td>
+<td>[Fits existing? New pattern?]</td>
+</tr>
+<tr>
+<td><strong>Technical Debt</strong></td>
+<td>___</td>
+<td>[Introduces debt? Removes debt?]</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>___</td>
+<td>[Horizontal scaling? New infrastructure?]</td>
+</tr>
+<tr>
+<td><strong>Integration Complexity</strong></td>
+<td>___</td>
+<td>[Internal? External? How many?]</td>
+</tr>
+<tr>
+<td><strong>Long-Term Maintainability</strong></td>
+<td>___</td>
+<td>[Standard stack? Specialized?]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Architectural Complexity:</strong> ___ (highest score above)</p>
+<p><strong>Key Architectural Risks:</strong>
+1. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>
+2. </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>
+3. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<hr/>
+<h3 id="6-overall-t-shirt-size">6. Overall T-Shirt Size<a class="headerlink" href="#6-overall-t-shirt-size" title="Permanent link">¶</a></h3>
+<p><strong>Dimension Scores:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technical</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Organizational</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Operational</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Architectural</td>
+<td>___</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall T-Shirt Size:</strong> ___ (maximum score across all dimensions)</p>
+<p><strong>Escalation Rule Applied?</strong>
+- [ ] Yes — 2+ dimensions are G/GG, escalate by 1 level
+- [ ] No — use maximum score as-is</p>
+<p><strong>Final T-Shirt Size:</strong> ___</p>
+<hr/>
+<h3 id="7-resource-estimate">7. Resource Estimate<a class="headerlink" href="#7-resource-estimate" title="Permanent link">¶</a></h3>
+<p><strong>Effort:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Estimated Days</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backend Engineer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>Frontend Engineer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>DevOps Engineer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>QA Engineer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>Product Manager</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>Designer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td>Data Engineer</td>
+<td>___ days</td>
+<td>[Work involved]</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>___ days</strong></td>
+<td><strong>___ person-months</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Timeline:</strong></p>
+<ul>
+<li>Estimated duration: ___ weeks/months</li>
+<li>Dependencies: <strong><em>_</em></strong><strong><em>_</em></strong>_ (blocked by? blocks?)</li>
+<li>Milestones:</li>
+<li><strong><em>_</em></strong><strong><em>_</em></strong>_ (date: <strong><em>_</em></strong>)</li>
+<li><strong><em>_</em></strong><strong><em>_</em></strong>_ (date: <strong><em>_</em></strong>)</li>
+<li><strong><em>_</em></strong><strong><em>_</em></strong>_ (date: <strong><em>_</em></strong>)</li>
+</ul>
+<hr/>
+<h3 id="8-risk-assessment">8. Risk Assessment<a class="headerlink" href="#8-risk-assessment" title="Permanent link">¶</a></h3>
+<p><strong>Risk Level:</strong> ___ (Low / Medium / High / Very High)</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood (1-5)</th>
+<th>Impact (1-5)</th>
+<th>Score</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Risk 1]</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+<td>[How to mitigate?]</td>
+</tr>
+<tr>
+<td>[Risk 2]</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+<td>[How to mitigate?]</td>
+</tr>
+<tr>
+<td>[Risk 3]</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+<td>[How to mitigate?]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Score Calculation:</strong> Likelihood × Impact (1-25 scale)
+- 1-5: Low risk
+- 6-12: Medium risk
+- 13-20: High risk
+- 21-25: Very high risk</p>
+<hr/>
+<h3 id="9-dependencies-blockers">9. Dependencies &amp; Blockers<a class="headerlink" href="#9-dependencies-blockers" title="Permanent link">¶</a></h3>
+<p><strong>Internal Dependencies:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Team</th>
+<th>Status</th>
+<th>ETA</th>
+<th>Blocker?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Dependency 1]</td>
+<td>___</td>
+<td>Not Started / In Progress / Done</td>
+<td>_____</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>[Dependency 2]</td>
+<td>___</td>
+<td>Not Started / In Progress / Done</td>
+<td>_____</td>
+<td>Yes / No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>External Dependencies:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Vendor/Team</th>
+<th>Status</th>
+<th>ETA</th>
+<th>Blocker?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[External API]</td>
+<td>___</td>
+<td>Not Started / In Progress / Done</td>
+<td>_____</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>[3rd Party Tool]</td>
+<td>___</td>
+<td>Not Started / In Progress / Done</td>
+<td>_____</td>
+<td>Yes / No</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="10-gono-go-recommendation">10. Go/No-Go Recommendation<a class="headerlink" href="#10-gono-go-recommendation" title="Permanent link">¶</a></h3>
+<p><strong>Recommendation:</strong> ___ (Go / No-Go / Defer)</p>
+<p><strong>Rationale:</strong></p>
+<ul>
+<li><strong>Business Value:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_ (High / Medium / Low)</li>
+<li><strong>Complexity:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_ (T-shirt size: PP/P/M/G/GG)</li>
+<li><strong>Risk:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_ (Low / Medium / High / Very High)</li>
+<li><strong>Resource Availability:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_ (Team has capacity? Need to hire?)</li>
+<li><strong>Strategic Alignment:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_ (Aligns with roadmap? Ad-hoc request?)</li>
+</ul>
+<p><strong>Decision Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Business Value</th>
+<th>Complexity</th>
+<th>Risk</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>PP/P/M</td>
+<td>Low/Medium</td>
+<td><strong>Go</strong> — prioritize high</td>
+</tr>
+<tr>
+<td>High</td>
+<td>G/GG</td>
+<td>Medium/High</td>
+<td><strong>Go</strong> — allocate resources, plan carefully</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>PP/P</td>
+<td>Low</td>
+<td><strong>Go</strong> — quick win</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>M/G</td>
+<td>Medium</td>
+<td><strong>Go (conditional)</strong> — if capacity available</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>GG</td>
+<td>High</td>
+<td><strong>Defer</strong> — wait for more capacity</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>PP/P</td>
+<td>Low</td>
+<td><strong>Defer</strong> — backlog for future</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>M/G/GG</td>
+<td>Any</td>
+<td><strong>No-Go</strong> — not worth investment</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final Recommendation:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p><strong>Conditions (if conditional go):</strong>
+1. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>
+2. </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>
+3. <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<hr/>
+<h3 id="11-approval-sign-off">11. Approval &amp; Sign-Off<a class="headerlink" href="#11-approval-sign-off" title="Permanent link">¶</a></h3>
+<p><strong>Reviewed by:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Signature</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Owner</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Tech Lead</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Architect</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Engineering Manager</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+<td>_____</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Approval Status:</strong> ___ (Approved / Rejected / Needs Revision)</p>
+<p><strong>Next Steps:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Add to roadmap (if approved)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Create epic/feature in Jira/Linear</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Break down into stories</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Assign to squad</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Schedule kickoff meeting</li>
+</ul>
+<hr/>
+<h2 id="ai-agent-impactanalyzer-agent">AI Agent: ImpactAnalyzer-Agent<a class="headerlink" href="#ai-agent-impactanalyzer-agent" title="Permanent link">¶</a></h2>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h3>
+<p>Automate 60% of impact analysis work by:
+- Analyzing codebase to identify affected services
+- Calculating technical complexity scores
+- Identifying dependencies (internal/external)
+- Recommending t-shirt size based on historical data
+- Flagging risks based on past incidents</p>
+<hr/>
+<h3 id="agent-definition">Agent Definition<a class="headerlink" href="#agent-definition" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ImpactAnalyzer-Agent</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intermediate (Analyst)</span>
+<span class="w">    </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Automate impact assessment for initiatives</span>
+
+<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identify affected services</span>
+<span class="w">      </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Initiative description (text)</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">List of services likely affected (with confidence scores)</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">- Parse initiative description for keywords (e.g., "checkout", "payment", "authentication")</span>
+<span class="w">        </span><span class="no">- Search codebase for matching services/modules</span>
+<span class="w">        </span><span class="no">- Analyze service dependency graph (from architecture docs or code)</span>
+<span class="w">      </span><span class="nt">performance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">85% accuracy (validated against human assessments)</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Calculate technical complexity score</span>
+<span class="w">      </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Affected services, data model changes, API changes</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">T-shirt size (PP/P/M/G/GG) with rationale</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">- Count # services affected</span>
+<span class="w">        </span><span class="no">- Analyze code churn (lines changed in similar past initiatives)</span>
+<span class="w">        </span><span class="no">- Check for data migrations (schema changes)</span>
+<span class="w">        </span><span class="no">- Check for API version bumps</span>
+<span class="w">      </span><span class="nt">performance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">±1 size accuracy (90% of cases)</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identify dependencies</span>
+<span class="w">      </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Affected services</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">List of internal dependencies, external integrations</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">- Parse service dependency graph</span>
+<span class="w">        </span><span class="no">- Check import statements in code</span>
+<span class="w">        </span><span class="no">- Scan API contracts for external dependencies</span>
+<span class="w">      </span><span class="nt">performance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95% recall (finds 95% of dependencies)</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recommend t-shirt size</span>
+<span class="w">      </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Initiative description + affected services + dependencies</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recommended t-shirt size (PP/P/M/G/GG) + confidence score</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">- Score each dimension (Technical, Org, Ops, Arch)</span>
+<span class="w">        </span><span class="no">- Apply sizing rules (max score + escalation rule)</span>
+<span class="w">        </span><span class="no">- Compare to historical initiatives (similarity matching)</span>
+<span class="w">      </span><span class="nt">performance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80% match with human assessments</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Flag risks</span>
+<span class="w">      </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Initiative description + affected services</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">List of risks (with likelihood + impact scores)</span>
+<span class="w">      </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">- Check incident history (past outages, bugs in affected services)</span>
+<span class="w">        </span><span class="no">- Identify high-churn areas (frequently changed code = higher risk)</span>
+<span class="w">        </span><span class="no">- Flag external dependencies (vendor downtime history)</span>
+<span class="w">      </span><span class="nt">performance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70% of flagged risks materialize (precision)</span>
+
+<span class="w">  </span><span class="nt">human_oversight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">autonomy_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Assisted (AI recommends, human reviews)</span>
+<span class="w">    </span><span class="nt">review_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Product Owner + Tech Lead review all recommendations</span>
+<span class="w">    </span><span class="nt">escalation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If AI confidence &lt;70%, escalate to Architect for manual assessment</span>
+
+<span class="w">  </span><span class="nt">tools</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Codebase search (GitHub API, GitLab API)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dependency graph analysis (Dependabot, npm/pip dependency trees)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service mesh metadata (Istio, Linkerd service maps)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Incident history (PagerDuty API, Jira bug history)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ChatGPT/Claude API (natural language processing of initiative descriptions)</span>
+
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">accuracy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80% (t-shirt size matches human assessment)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time_savings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60% (3 hours → 1.2 hours per assessment)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95% (finds 95% of dependencies, 85% of affected services)</span>
+
+<span class="w">  </span><span class="nt">cost</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">monthly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$500 (API costs + compute)</span>
+<span class="w">    </span><span class="nt">human_equivalent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$3,000/month (Product Manager time on impact assessments)</span>
+<span class="w">    </span><span class="nt">roi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6x cost savings</span>
+</code></pre></div>
+<hr/>
+<h3 id="how-to-use-impactanalyzer-agent">How to Use ImpactAnalyzer-Agent<a class="headerlink" href="#how-to-use-impactanalyzer-agent" title="Permanent link">¶</a></h3>
+<p><strong>Step 1: Provide Initiative Description</strong></p>
+<div class="highlight"><pre><span></span><code>Input to AI Agent:
+"We need to add OAuth 2.0 authentication to our API gateway. 
+Currently using basic auth. Will affect 15 downstream services 
+that call the gateway. Need to migrate existing API keys to OAuth tokens."
+</code></pre></div>
+<hr/>
+<p><strong>Step 2: AI Analyzes &amp; Recommends</strong></p>
+<div class="highlight"><pre><span></span><code>Output from ImpactAnalyzer-Agent:
+
+📊 IMPACT ANALYSIS: OAuth 2.0 Migration
+
+🔍 Affected Services (Confidence: 85%)
+1. api-gateway (Primary)
+2. auth-service (New OAuth provider)
+3. user-service (Token storage)
+4. 15 downstream services (API callers):
+   - checkout-service
+   - payment-service
+   - inventory-service
+   - ... (12 more)
+
+📐 Technical Complexity: G (Large)
+- Services affected: 17 (15+ = Large)
+- Data migration: OAuth tokens + API key deprecation (Medium-High)
+- API changes: Breaking (auth headers change from Basic to Bearer)
+- Rollback complexity: 1-3 days (requires dual-auth support during migration)
+
+👥 Organizational Complexity: G (Large)
+- Teams involved: 4 (Gateway team, Auth team, Platform team, 3 product teams)
+- Skills gap: OAuth 2.0 implementation (1 new skill, can learn)
+- Change management: High (all API consumers must update clients)
+
+⚙️ Operational Complexity: G (Large)
+- Deployment: Phased rollout required (dual-auth support for 2 weeks)
+- Downtime: Zero (backward compatible during transition)
+- Rollback: Medium (3 days to revert if issues)
+- Monitoring: New OAuth metrics required (token issuance rate, expiry, refresh)
+
+🏗️ Architectural Complexity: G (Large)
+- Pattern: Introduces OAuth 2.0 (new auth pattern)
+- Technical debt: Removes basic auth (strategic investment)
+- Scalability: Requires Redis for token caching
+- Integration: External OAuth provider (e.g., Auth0, Okta) OR build in-house
+
+📏 RECOMMENDED T-SHIRT SIZE: G (Large)
+- All 4 dimensions scored G
+- Escalation rule: Not applied (no GG scores)
+- Confidence: 85%
+
+⚠️ KEY RISKS (Flagged by AI):
+1. Breaking API changes → downstream services must update (Likelihood: 5, Impact: 4, Score: 20 — HIGH)
+   - Mitigation: Dual-auth support for 2 weeks, phased migration
+2. Auth0 vendor dependency → outage if provider down (Likelihood: 2, Impact: 5, Score: 10 — MEDIUM)
+   - Mitigation: Failover to basic auth, SLA guarantees
+3. Token expiry edge cases → users logged out unexpectedly (Likelihood: 3, Impact: 3, Score: 9 — MEDIUM)
+   - Mitigation: Refresh token flow, graceful expiry handling
+
+🔗 DEPENDENCIES:
+Internal:
+- auth-service (must implement OAuth provider)
+- user-service (token storage schema)
+External:
+- Auth0/Okta (if using external provider)
+
+⏱️ ESTIMATED EFFORT: 65 days (3 person-months)
+- Backend: 30 days (OAuth implementation, token management)
+- DevOps: 15 days (Redis setup, monitoring, deployment)
+- API consumers: 20 days (update 15 services to use OAuth)
+
+📅 TIMELINE: 2.5-3 months
+
+💡 RECOMMENDATION: Go (with conditions)
+- Business value: High (security improvement, modern auth standard)
+- Complexity: G (Large, but manageable)
+- Risk: High (breaking changes, vendor dependency)
+- Conditions:
+  1. Dual-auth support for 2-week migration period
+  2. Phased rollout (5 services/week)
+  3. Dedicated DevOps support for monitoring
+</code></pre></div>
+<hr/>
+<p><strong>Step 3: Human Review &amp; Finalize</strong></p>
+<p>Product Owner + Tech Lead review AI recommendations:</p>
+<ul>
+<li><strong>Agree with t-shirt size?</strong> Yes/No → If no, adjust manually</li>
+<li><strong>Agree with risks?</strong> Yes/No → Add missed risks, refine mitigations</li>
+<li><strong>Agree with recommendation?</strong> Yes/No → Final go/no-go decision</li>
+</ul>
+<p><strong>Save finalized assessment</strong> (Jira, Confluence, or PDF)</p>
+<hr/>
+<h2 id="example-assessments">Example Assessments<a class="headerlink" href="#example-assessments" title="Permanent link">¶</a></h2>
+<h3 id="example-1-pp-extra-small-change-log-level">Example 1: PP (Extra Small) — Change Log Level<a class="headerlink" href="#example-1-pp-extra-small-change-log-level" title="Permanent link">¶</a></h3>
+<p><strong>Initiative:</strong> Increase log level for payment service from INFO to DEBUG</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> PP (config change, no code)
+- <strong>Organizational:</strong> PP (1 person, 1 team)
+- <strong>Operational:</strong> PP (deploy via CI/CD, no downtime, instant rollback)
+- <strong>Architectural:</strong> PP (no architecture change)</p>
+<p><strong>T-Shirt Size:</strong> PP<br/>
+<strong>Effort:</strong> 1 hour<br/>
+<strong>Risk:</strong> Low<br/>
+<strong>Recommendation:</strong> Go</p>
+<hr/>
+<h3 id="example-2-p-small-add-csv-export-button">Example 2: P (Small) — Add CSV Export Button<a class="headerlink" href="#example-2-p-small-add-csv-export-button" title="Permanent link">¶</a></h3>
+<p><strong>Initiative:</strong> Add "Export to CSV" button on analytics dashboard</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> P (single service, new API endpoint, no data migration)
+- <strong>Organizational:</strong> P (1 team, frontend + backend)
+- <strong>Operational:</strong> P (standard deployment, no downtime)
+- <strong>Architectural:</strong> P (fits existing pattern)</p>
+<p><strong>T-Shirt Size:</strong> P<br/>
+<strong>Effort:</strong> 5 days<br/>
+<strong>Risk:</strong> Low<br/>
+<strong>Recommendation:</strong> Go</p>
+<hr/>
+<h3 id="example-3-m-medium-implement-notification-preferences">Example 3: M (Medium) — Implement Notification Preferences<a class="headerlink" href="#example-3-m-medium-implement-notification-preferences" title="Permanent link">¶</a></h3>
+<p><strong>Initiative:</strong> Allow users to configure email/SMS/push notification preferences</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> M (2 services: user-service + notification-service, database migration for preferences table)
+- <strong>Organizational:</strong> M (2 teams, frontend + backend)
+- <strong>Operational:</strong> M (E2E tests required, new monitoring for notification delivery)
+- <strong>Architectural:</strong> M (fits existing event-driven pattern)</p>
+<p><strong>T-Shirt Size:</strong> M<br/>
+<strong>Effort:</strong> 20 days<br/>
+<strong>Risk:</strong> Medium (notification delivery edge cases)<br/>
+<strong>Recommendation:</strong> Go</p>
+<hr/>
+<h3 id="example-4-g-large-migrate-from-mysql-to-postgresql">Example 4: G (Large) — Migrate from MySQL to PostgreSQL<a class="headerlink" href="#example-4-g-large-migrate-from-mysql-to-postgresql" title="Permanent link">¶</a></h3>
+<p><strong>Initiative:</strong> Migrate database from MySQL to PostgreSQL for better JSON support</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> G (all services affected, schema migration, SQL syntax differences)
+- <strong>Organizational:</strong> G (3 teams: Engineering, DevOps, QA)
+- <strong>Operational:</strong> G (requires downtime OR complex dual-write strategy, rollback = 3 days)
+- <strong>Architectural:</strong> G (strategic investment, removes MySQL-specific workarounds)</p>
+<p><strong>T-Shirt Size:</strong> G<br/>
+<strong>Effort:</strong> 60 days<br/>
+<strong>Risk:</strong> High (data loss, downtime, SQL compatibility issues)<br/>
+<strong>Recommendation:</strong> Go (with conditions: dedicated DBA, phased migration, extensive testing)</p>
+<hr/>
+<h3 id="example-5-gg-extra-large-microservices-migration">Example 5: GG (Extra Large) — Microservices Migration<a class="headerlink" href="#example-5-gg-extra-large-microservices-migration" title="Permanent link">¶</a></h3>
+<p><strong>Initiative:</strong> Migrate monolithic Ruby on Rails app to microservices (Node.js)</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> GG (rewrite entire application, service boundaries, API contracts)
+- <strong>Organizational:</strong> GG (5+ teams, new skills required: Node.js, Docker, Kubernetes)
+- <strong>Operational:</strong> GG (new deployment pipeline, service mesh, multi-region rollout)
+- <strong>Architectural:</strong> GG (architecture redesign, event-driven patterns, distributed tracing)</p>
+<p><strong>T-Shirt Size:</strong> GG<br/>
+<strong>Effort:</strong> 18 months (50 person-months)<br/>
+<strong>Risk:</strong> Very High (business continuity, team learning curve, tech stack migration)<br/>
+<strong>Recommendation:</strong> Go (with conditions: executive sponsorship, dedicated team, 6-month pilot)</p>
+<hr/>
+<h2 id="prioritization-framework">Prioritization Framework<a class="headerlink" href="#prioritization-framework" title="Permanent link">¶</a></h2>
+<h3 id="value-vs-complexity-matrix">Value vs. Complexity Matrix<a class="headerlink" href="#value-vs-complexity-matrix" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>High Value │ P2 │ P1 │
+           │ Go │ Go │
+           │────┼────│
+Medium Val │ P3 │ P2 │
+           │ Go │ Go │
+           │────┼────│
+Low Value  │ P4 │ P3 │
+           │Defer│Defer│
+           └────┴────┘
+             PP/P/M   G/GG
+             (Low)   (High)
+            Complexity
+</code></pre></div>
+<p><strong>Priority Levels:</strong></p>
+<ul>
+<li><strong>P1 (Highest):</strong> High value + Low complexity → Quick wins, prioritize immediately</li>
+<li><strong>P2:</strong> High value + High complexity OR Medium value + Low complexity → Plan carefully, allocate resources</li>
+<li><strong>P3:</strong> Medium value + High complexity OR Low value + Low complexity → Defer until capacity available</li>
+<li><strong>P4 (Lowest):</strong> Low value + Any complexity → Backlog or reject</li>
+</ul>
+<hr/>
+<h3 id="rice-scoring-alternative">RICE Scoring (Alternative)<a class="headerlink" href="#rice-scoring-alternative" title="Permanent link">¶</a></h3>
+<p><strong>RICE = (Reach × Impact × Confidence) / Effort</strong></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Definition</th>
+<th>Scale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reach</strong></td>
+<td># users/customers affected per quarter</td>
+<td>100, 1000, 10000+</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>How much does it improve their experience?</td>
+<td>0.25 (minimal), 0.5 (low), 1 (medium), 2 (high), 3 (massive)</td>
+</tr>
+<tr>
+<td><strong>Confidence</strong></td>
+<td>How sure are we of Reach/Impact estimates?</td>
+<td>50% (low), 80% (medium), 100% (high)</td>
+</tr>
+<tr>
+<td><strong>Effort</strong></td>
+<td>T-shirt size converted to person-months</td>
+<td>PP=0.1, P=0.5, M=2, G=4, GG=12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Reach: 10,000 users/quarter</li>
+<li>Impact: 2 (high — significantly improves workflow)</li>
+<li>Confidence: 80%</li>
+<li>Effort: M (2 person-months)</li>
+</ul>
+<p><strong>RICE Score:</strong> (10,000 × 2 × 0.8) / 2 = <strong>8,000</strong></p>
+<p><strong>Prioritize initiatives by RICE score</strong> (higher = higher priority)</p>
+<hr/>
+<h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">¶</a></h2>
+<h3 id="step-1-adopt-impact-analysis-template-week-1">Step 1: Adopt Impact Analysis Template (Week 1)<a class="headerlink" href="#step-1-adopt-impact-analysis-template-week-1" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Download template (use above markdown template)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Add to Confluence/Notion/Google Docs</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Train Product Owners + Tech Leads on how to fill out</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Run 3 pilot assessments (mix of PP, M, G sizes)</li>
+</ul>
+<hr/>
+<h3 id="step-2-deploy-impactanalyzer-agent-week-2-3">Step 2: Deploy ImpactAnalyzer-Agent (Week 2-3)<a class="headerlink" href="#step-2-deploy-impactanalyzer-agent-week-2-3" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Set up AI agent (ChatGPT API or Claude API)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Connect to codebase (GitHub API, dependency graph tools)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Train on historical initiatives (past 20-50 assessments)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Test accuracy (compare AI vs. human assessments)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Launch with human-in-the-loop (AI recommends, human reviews)</li>
+</ul>
+<hr/>
+<h3 id="step-3-establish-governance-process-week-4">Step 3: Establish Governance Process (Week 4)<a class="headerlink" href="#step-3-establish-governance-process-week-4" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Define approval workflow:</li>
+<li>PP/P: Tech Lead approves</li>
+<li>M: Product Owner + Tech Lead approve</li>
+<li>G/GG: Architecture review + Executive approval</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Set up monthly impact review meeting (review all G/GG initiatives)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Track metrics:</li>
+<li>
+<h1 id="initiatives-assessed-per-month">initiatives assessed per month<a class="headerlink" href="#initiatives-assessed-per-month" title="Permanent link">¶</a></h1>
+</li>
+<li>Accuracy of t-shirt sizing (actual effort vs. estimate)</li>
+<li>% initiatives that go over budget/timeline</li>
+<li>% initiatives that deliver expected business value</li>
+</ul>
+<hr/>
+<h3 id="step-4-iterate-improve-ongoing">Step 4: Iterate &amp; Improve (Ongoing)<a class="headerlink" href="#step-4-iterate-improve-ongoing" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Quarterly retrospective: What's working? What's not?</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Refine sizing criteria (based on actuals vs. estimates)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Update AI agent training data (new assessments)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Adjust prioritization framework (RICE scores, value matrix)</li>
+</ul>
+<hr/>
+<h2 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">¶</a></h2>
+<h3 id="pitfall-1-under-sizing-complexity">Pitfall #1: Under-Sizing Complexity<a class="headerlink" href="#pitfall-1-under-sizing-complexity" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Teams consistently under-estimate (G initiatives sized as M)</p>
+<p><strong>Solution:</strong>
+- Escalation rule: If 2+ dimensions are G/GG, escalate by 1 level
+- Historical calibration: Compare actuals to estimates quarterly
+- AI agent learns from past under-estimates</p>
+<hr/>
+<h3 id="pitfall-2-analysis-paralysis">Pitfall #2: Analysis Paralysis<a class="headerlink" href="#pitfall-2-analysis-paralysis" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Teams spend 2 weeks analyzing instead of building</p>
+<p><strong>Solution:</strong>
+- Time-box assessments: PP/P (30 min), M (1 hour), G (2 hours), GG (4 hours)
+- Use ImpactAnalyzer-Agent to automate 60% of work
+- Accept uncertainty: Confidence scores &lt;80% are OK for M/G initiatives</p>
+<hr/>
+<h3 id="pitfall-3-ignoring-organizational-impact">Pitfall #3: Ignoring Organizational Impact<a class="headerlink" href="#pitfall-3-ignoring-organizational-impact" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Technical assessment looks easy (PP), but requires 4 teams to coordinate (actually M/G)</p>
+<p><strong>Solution:</strong>
+- Score <strong>all 4 dimensions</strong> (Technical, Organizational, Operational, Architectural)
+- Take <strong>maximum score</strong> across dimensions (not average)
+- Flag cross-team dependencies early</p>
+<hr/>
+<h3 id="pitfall-4-no-follow-up">Pitfall #4: No Follow-Up<a class="headerlink" href="#pitfall-4-no-follow-up" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Assessments done, but actuals never compared to estimates</p>
+<p><strong>Solution:</strong>
+- Post-mortem after G/GG initiatives: Was sizing accurate?
+- Track estimation accuracy metric: Actual effort / Estimated effort (target: 0.8-1.2x)
+- Refine sizing criteria based on learnings</p>
+<hr/>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p><strong>Framework Documentation:</strong>
+- <a href="../../DOCS/05-ai-agents.md">AI Agents</a> — ImpactAnalyzer-Agent definition
+- <a href="../../DOCS/06-governance-ethics.md">Governance &amp; Ethics</a> — Approval workflows
+- <a href="../../DOCS/08-human-ai-collaboration.md">Human-AI Collaboration</a> — AI recommends, humans decide</p>
+<p><strong>Templates:</strong>
+- <a href="../../ADOPTION/TEMPLATES/impact-analysis-template.md">Impact Analysis Template</a> — Fillable template
+- <a href="../../ADOPTION/TEMPLATES/rfc-template.md">RFC Template</a> — For G/GG initiatives requiring architecture review</p>
+<p><strong>Checklists:</strong>
+- <a href="../../ADOPTION/CHECKLISTS/ai-agent-integration.md">AI Agent Integration</a> — Deploy ImpactAnalyzer-Agent</p>
+<p><strong>Playbooks:</strong>
+- <a href="../../DOCS/11-ai-native-agile.md">AI-Native Agile</a> — Epic → Feature → Story breakdown
+- <a href="../../DOCS/12-ai-native-kanban.md">AI-Native Kanban</a> — Sizing for continuous flow teams</p>
+<hr/>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Framework:</strong> SOLID.AI</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>

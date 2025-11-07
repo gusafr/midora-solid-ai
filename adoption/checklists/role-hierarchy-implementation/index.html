@@ -1,0 +1,2917 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/adoption/checklists/role-hierarchy-implementation/" rel="canonical"/>
+<link href="../kanban-setup/" rel="prev"/>
+<link href="../../templates/agent-definition/" rel="next"/>
+<link href="../../../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>Role Hierarchy Implementation - solid.ai</title>
+<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#role-hierarchy-implementation-checklist">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Role Hierarchy Implementation
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_19_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_19">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_1" id="__nav_19_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_2" id="__nav_19_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_3" id="__nav_19_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_4" id="__nav_19_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_5" id="__nav_19_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_6" id="__nav_19_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/data-contract-design/">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt-templates/ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_19_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_1" id="__nav_19_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_2" id="__nav_19_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_19_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_3" id="__nav_19_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_19_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-role-hierarchy-matters">
+<span class="md-ellipsis">
+      Why Role Hierarchy Matters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-review-the-4-level-framework">
+<span class="md-ellipsis">
+      Step 1: Review the 4-Level Framework
+    </span>
+</a>
+<nav aria-label="Step 1: Review the 4-Level Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#low-level-roles-assistantsanalysts">
+<span class="md-ellipsis">
+      Low-Level Roles (Assistants/Analysts)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intermediate-level-roles-consultantscoordinators">
+<span class="md-ellipsis">
+      Intermediate-Level Roles (Consultants/Coordinators)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-roles-strategistsexperts">
+<span class="md-ellipsis">
+      High-Level Roles (Strategists/Experts)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-level-roles">
+<span class="md-ellipsis">
+      Executive-Level Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-map-existing-roles-to-4-level-framework">
+<span class="md-ellipsis">
+      Step 2: Map Existing Roles to 4-Level Framework
+    </span>
+</a>
+<nav aria-label="Step 2: Map Existing Roles to 4-Level Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audit-current-roles">
+<span class="md-ellipsis">
+      Audit Current Roles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identify-gaps-overlaps">
+<span class="md-ellipsis">
+      Identify Gaps &amp; Overlaps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-define-autonomy-decision-authority-for-each-level">
+<span class="md-ellipsis">
+      Step 3: Define Autonomy &amp; Decision Authority for Each Level
+    </span>
+</a>
+<nav aria-label="Step 3: Define Autonomy &amp; Decision Authority for Each Level" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-decision-authority-matrix">
+<span class="md-ellipsis">
+      Create Decision Authority Matrix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-escalation-rules">
+<span class="md-ellipsis">
+      Define Escalation Rules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-map-ai-agents-to-role-hierarchy">
+<span class="md-ellipsis">
+      Step 4: Map AI Agents to Role Hierarchy
+    </span>
+</a>
+<nav aria-label="Step 4: Map AI Agents to Role Hierarchy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audit-current-ai-agents">
+<span class="md-ellipsis">
+      Audit Current AI Agents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formalize-ai-agent-levels">
+<span class="md-ellipsis">
+      Formalize AI Agent Levels
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-create-career-paths-humans-ai">
+<span class="md-ellipsis">
+      Step 5: Create Career Paths (Humans + AI)
+    </span>
+</a>
+<nav aria-label="Step 5: Create Career Paths (Humans + AI)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-progression-paths">
+<span class="md-ellipsis">
+      Define Progression Paths
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-agent-progression">
+<span class="md-ellipsis">
+      AI Agent Progression
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-align-compensation-with-role-level">
+<span class="md-ellipsis">
+      Step 6: Align Compensation with Role Level
+    </span>
+</a>
+<nav aria-label="Step 6: Align Compensation with Role Level" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-compensation-bands">
+<span class="md-ellipsis">
+      Set Compensation Bands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fair-compensation-for-ai-augmented-roles">
+<span class="md-ellipsis">
+      Fair Compensation for AI-Augmented Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-7-implement-communicate">
+<span class="md-ellipsis">
+      Step 7: Implement &amp; Communicate
+    </span>
+</a>
+<nav aria-label="Step 7: Implement &amp; Communicate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rollout-plan">
+<span class="md-ellipsis">
+      Rollout Plan
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-templates">
+<span class="md-ellipsis">
+      Communication Templates
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-8-monitor-iterate">
+<span class="md-ellipsis">
+      Step 8: Monitor &amp; Iterate
+    </span>
+</a>
+<nav aria-label="Step 8: Monitor &amp; Iterate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#track-metrics">
+<span class="md-ellipsis">
+      Track Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quarterly-reviews">
+<span class="md-ellipsis">
+      Quarterly Reviews
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls">
+<span class="md-ellipsis">
+      🛡️ Common Pitfalls
+    </span>
+</a>
+<nav aria-label="🛡️ Common Pitfalls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-1-title-inflation">
+<span class="md-ellipsis">
+      Pitfall #1: Title Inflation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-2-ai-will-take-my-job">
+<span class="md-ellipsis">
+      Pitfall #2: "AI Will Take My Job"
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-3-no-career-path-for-low-level">
+<span class="md-ellipsis">
+      Pitfall #3: No Career Path for Low-Level
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-4-compensation-gaps">
+<span class="md-ellipsis">
+      Pitfall #4: Compensation Gaps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      📚 Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5" id="__nav_19_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_1" id="__nav_19_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_2" id="__nav_19_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_3" id="__nav_19_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_4" id="__nav_19_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_1" id="__nav_22_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_3" id="__nav_22_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4" id="__nav_22_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_2" id="__nav_22_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_3" id="__nav_22_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/governance/impact-analysis/">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_4" id="__nav_22_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/implementation/ai-native-kanban/">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_5" id="__nav_22_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_6" id="__nav_22_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7" id="__nav_22_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_1" id="__nav_22_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_2" id="__nav_22_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_3" id="__nav_22_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_4" id="__nav_22_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_8" id="__nav_22_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../playbooks/organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-role-hierarchy-matters">
+<span class="md-ellipsis">
+      Why Role Hierarchy Matters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-review-the-4-level-framework">
+<span class="md-ellipsis">
+      Step 1: Review the 4-Level Framework
+    </span>
+</a>
+<nav aria-label="Step 1: Review the 4-Level Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#low-level-roles-assistantsanalysts">
+<span class="md-ellipsis">
+      Low-Level Roles (Assistants/Analysts)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intermediate-level-roles-consultantscoordinators">
+<span class="md-ellipsis">
+      Intermediate-Level Roles (Consultants/Coordinators)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-roles-strategistsexperts">
+<span class="md-ellipsis">
+      High-Level Roles (Strategists/Experts)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-level-roles">
+<span class="md-ellipsis">
+      Executive-Level Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-map-existing-roles-to-4-level-framework">
+<span class="md-ellipsis">
+      Step 2: Map Existing Roles to 4-Level Framework
+    </span>
+</a>
+<nav aria-label="Step 2: Map Existing Roles to 4-Level Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audit-current-roles">
+<span class="md-ellipsis">
+      Audit Current Roles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identify-gaps-overlaps">
+<span class="md-ellipsis">
+      Identify Gaps &amp; Overlaps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-define-autonomy-decision-authority-for-each-level">
+<span class="md-ellipsis">
+      Step 3: Define Autonomy &amp; Decision Authority for Each Level
+    </span>
+</a>
+<nav aria-label="Step 3: Define Autonomy &amp; Decision Authority for Each Level" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-decision-authority-matrix">
+<span class="md-ellipsis">
+      Create Decision Authority Matrix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-escalation-rules">
+<span class="md-ellipsis">
+      Define Escalation Rules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-map-ai-agents-to-role-hierarchy">
+<span class="md-ellipsis">
+      Step 4: Map AI Agents to Role Hierarchy
+    </span>
+</a>
+<nav aria-label="Step 4: Map AI Agents to Role Hierarchy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audit-current-ai-agents">
+<span class="md-ellipsis">
+      Audit Current AI Agents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formalize-ai-agent-levels">
+<span class="md-ellipsis">
+      Formalize AI Agent Levels
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-create-career-paths-humans-ai">
+<span class="md-ellipsis">
+      Step 5: Create Career Paths (Humans + AI)
+    </span>
+</a>
+<nav aria-label="Step 5: Create Career Paths (Humans + AI)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-progression-paths">
+<span class="md-ellipsis">
+      Define Progression Paths
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-agent-progression">
+<span class="md-ellipsis">
+      AI Agent Progression
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-align-compensation-with-role-level">
+<span class="md-ellipsis">
+      Step 6: Align Compensation with Role Level
+    </span>
+</a>
+<nav aria-label="Step 6: Align Compensation with Role Level" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-compensation-bands">
+<span class="md-ellipsis">
+      Set Compensation Bands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fair-compensation-for-ai-augmented-roles">
+<span class="md-ellipsis">
+      Fair Compensation for AI-Augmented Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-7-implement-communicate">
+<span class="md-ellipsis">
+      Step 7: Implement &amp; Communicate
+    </span>
+</a>
+<nav aria-label="Step 7: Implement &amp; Communicate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rollout-plan">
+<span class="md-ellipsis">
+      Rollout Plan
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-templates">
+<span class="md-ellipsis">
+      Communication Templates
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-8-monitor-iterate">
+<span class="md-ellipsis">
+      Step 8: Monitor &amp; Iterate
+    </span>
+</a>
+<nav aria-label="Step 8: Monitor &amp; Iterate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#track-metrics">
+<span class="md-ellipsis">
+      Track Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quarterly-reviews">
+<span class="md-ellipsis">
+      Quarterly Reviews
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls">
+<span class="md-ellipsis">
+      🛡️ Common Pitfalls
+    </span>
+</a>
+<nav aria-label="🛡️ Common Pitfalls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-1-title-inflation">
+<span class="md-ellipsis">
+      Pitfall #1: Title Inflation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-2-ai-will-take-my-job">
+<span class="md-ellipsis">
+      Pitfall #2: "AI Will Take My Job"
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-3-no-career-path-for-low-level">
+<span class="md-ellipsis">
+      Pitfall #3: No Career Path for Low-Level
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-4-compensation-gaps">
+<span class="md-ellipsis">
+      Pitfall #4: Compensation Gaps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      📚 Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="role-hierarchy-implementation-checklist">Role Hierarchy Implementation Checklist<a class="headerlink" href="#role-hierarchy-implementation-checklist" title="Permanent link">¶</a></h1>
+<p><strong>For:</strong> Organizations deploying the 4-level framework (Low, Intermediate, High, Executive) for humans + AI agents</p>
+<p><strong>Goal:</strong> Create clear career paths, autonomy levels, decision authority, and compensation for all roles (human and AI)</p>
+<p><strong>Time:</strong> 4-6 weeks for initial deployment, ongoing refinement</p>
+<hr/>
+<h2 id="why-role-hierarchy-matters">Why Role Hierarchy Matters<a class="headerlink" href="#why-role-hierarchy-matters" title="Permanent link">¶</a></h2>
+<p><strong>Traditional Problem:</strong>
+- Flat titles ("Software Engineer I-V") without clear autonomy/decision authority
+- No career path for AI agents (where do they fit?)
+- Compensation not tied to decision-making scope
+- Humans + AI agents compete rather than complement</p>
+<p><strong>SOLID.AI Solution:</strong>
+- <strong>4 Levels:</strong> Low (Assistants/Analysts) → Intermediate (Consultants/Coordinators) → High (Strategists/Experts) → Executive (C-Suite)
+- <strong>Clear Boundaries:</strong> Each level has defined autonomy, decision authority, tasks, compensation
+- <strong>Humans + AI Together:</strong> Both mapped to same framework, collaboration is explicit
+- <strong>Career Paths:</strong> "Junior Analyst (Low) → Senior Analyst (Intermediate) → Manager (High) → VP (Executive)"</p>
+<p><strong>See:</strong> <a href="../DOCS/10-role-hierarchy.md">Role Hierarchy Documentation</a></p>
+<hr/>
+<h2 id="step-1-review-the-4-level-framework">Step 1: Review the 4-Level Framework<a class="headerlink" href="#step-1-review-the-4-level-framework" title="Permanent link">¶</a></h2>
+<h3 id="low-level-roles-assistantsanalysts"><strong>Low-Level Roles</strong> (Assistants/Analysts)<a class="headerlink" href="#low-level-roles-assistantsanalysts" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Understand Low-Level Characteristics:</strong></li>
+<li><strong>Tasks:</strong> Structured, repetitive, rule-based (e.g., data entry, lead qualification, expense categorization)</li>
+<li><strong>Autonomy:</strong> Minimal — follow scripts, escalate edge cases</li>
+<li><strong>Decision Authority:</strong> Execute pre-defined rules, no strategic discretion</li>
+<li><strong>Compensation (Human):</strong> $40K-$60K/year (junior salary)</li>
+<li>
+<p><strong>Compensation (AI):</strong> $200-$500/month (AI agent subscription)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Examples:</strong></p>
+</li>
+<li>Human: Junior accountant, SDR (Sales Development Rep), recruiting coordinator, customer support rep</li>
+<li>AI: ExpenseCategorizer-Agent, LeadQualifier-Agent, ResumeScreener-Agent, TicketTriager-Agent</li>
+</ul>
+<hr/>
+<h3 id="intermediate-level-roles-consultantscoordinators"><strong>Intermediate-Level Roles</strong> (Consultants/Coordinators)<a class="headerlink" href="#intermediate-level-roles-consultantscoordinators" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Understand Intermediate-Level Characteristics:</strong></li>
+<li><strong>Tasks:</strong> Semi-structured, require judgment/context (e.g., proposal generation, budget forecasting, cross-team coordination)</li>
+<li><strong>Autonomy:</strong> Moderate — interpret requirements, make recommendations, escalate high-stakes decisions</li>
+<li><strong>Decision Authority:</strong> Tactical decisions within defined scope (e.g., "Which leads to prioritize?", "How to allocate budget across departments?")</li>
+<li><strong>Compensation (Human):</strong> $70K-$120K/year (mid-level salary)</li>
+<li>
+<p><strong>Compensation (AI):</strong> $1K-$3K/month (advanced AI agent or orchestration)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Examples:</strong></p>
+</li>
+<li>Human: Senior analyst, account manager, project coordinator, technical lead</li>
+<li>AI: ProposalGenerator-Agent, BudgetForecaster-Agent, RevenueOps-Coordinator, SprintPlanner-Agent</li>
+</ul>
+<hr/>
+<h3 id="high-level-roles-strategistsexperts"><strong>High-Level Roles</strong> (Strategists/Experts)<a class="headerlink" href="#high-level-roles-strategistsexperts" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Understand High-Level Characteristics:</strong></li>
+<li><strong>Tasks:</strong> Unstructured, strategic, require deep expertise (e.g., product vision, market expansion, technical architecture)</li>
+<li><strong>Autonomy:</strong> High — set priorities, make strategic decisions, guide teams</li>
+<li><strong>Decision Authority:</strong> Strategic decisions within function (e.g., "Should we build Feature X?", "Expand to Market Y?")</li>
+<li><strong>Compensation (Human):</strong> $150K-$250K/year (senior leadership)</li>
+<li>
+<p><strong>Compensation (AI):</strong> Currently rare (AI not yet capable of strategic synthesis, but emerging)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Examples:</strong></p>
+</li>
+<li>Human: VP Sales, CFO, Head of Product, Chief Architect</li>
+<li>AI: Not widely deployed yet (2025), but research emerging (StrategicAdvisor-Agent)</li>
+</ul>
+<hr/>
+<h3 id="executive-level-roles"><strong>Executive-Level Roles</strong><a class="headerlink" href="#executive-level-roles" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Understand Executive-Level Characteristics:</strong></li>
+<li><strong>Tasks:</strong> Set vision, allocate capital, manage board/investors, ultimate accountability</li>
+<li><strong>Autonomy:</strong> Full — define company direction, hire/fire leadership, M&amp;A</li>
+<li><strong>Decision Authority:</strong> All strategic decisions (company-wide)</li>
+<li><strong>Compensation (Human):</strong> $200K+ (equity, bonuses, board compensation)</li>
+<li>
+<p><strong>Compensation (AI):</strong> Not applicable (AI cannot replace CEO fiduciary duty, vision-setting, stakeholder relationships)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Examples:</strong></p>
+</li>
+<li>Human: CEO, COO, CTO, Board of Directors</li>
+<li>AI: None (AI can advise, but cannot hold executive accountability)</li>
+</ul>
+<hr/>
+<h2 id="step-2-map-existing-roles-to-4-level-framework">Step 2: Map Existing Roles to 4-Level Framework<a class="headerlink" href="#step-2-map-existing-roles-to-4-level-framework" title="Permanent link">¶</a></h2>
+<h3 id="audit-current-roles"><strong>Audit Current Roles</strong><a class="headerlink" href="#audit-current-roles" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>List all roles in your organization</strong> (use HRIS or org chart)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Current Title</th>
+<th>Function</th>
+<th># People</th>
+<th>Current Salary Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Junior Accountant</td>
+<td>Finance</td>
+<td>2</td>
+<td>$45K-$50K</td>
+</tr>
+<tr>
+<td>Senior Accountant</td>
+<td>Finance</td>
+<td>1</td>
+<td>$75K</td>
+</tr>
+<tr>
+<td>Finance Manager</td>
+<td>Finance</td>
+<td>1</td>
+<td>$120K</td>
+</tr>
+<tr>
+<td>CFO</td>
+<td>Finance</td>
+<td>1</td>
+<td>$200K</td>
+</tr>
+<tr>
+<td>SDR</td>
+<td>Sales</td>
+<td>3</td>
+<td>$50K-$60K</td>
+</tr>
+<tr>
+<td>Account Executive</td>
+<td>Sales</td>
+<td>5</td>
+<td>$80K-$100K + commission</td>
+</tr>
+<tr>
+<td>VP Sales</td>
+<td>Sales</td>
+<td>1</td>
+<td>$180K + commission</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Map each role to 4-level framework:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Current Title</th>
+<th>Mapped Level</th>
+<th>Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Junior Accountant</td>
+<td>Low-Level</td>
+<td>Rule-based tasks (expense categorization, AP/AR data entry)</td>
+</tr>
+<tr>
+<td>Senior Accountant</td>
+<td>Intermediate-Level</td>
+<td>Budget analysis, forecast variance, cross-functional coordination</td>
+</tr>
+<tr>
+<td>Finance Manager</td>
+<td>High-Level</td>
+<td>Strategic financial planning, M&amp;A support, risk management</td>
+</tr>
+<tr>
+<td>CFO</td>
+<td>Executive</td>
+<td>Capital allocation, investor relations, board reporting</td>
+</tr>
+<tr>
+<td>SDR</td>
+<td>Low-Level</td>
+<td>Follow lead qualification scripts, book meetings</td>
+</tr>
+<tr>
+<td>Account Executive</td>
+<td>Intermediate-Level</td>
+<td>Custom proposals, deal negotiation, relationship management</td>
+</tr>
+<tr>
+<td>VP Sales</td>
+<td>High-Level</td>
+<td>Sales strategy, territory planning, team hiring</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output:</strong> <code>ROLE-MAPPING.md</code> file</p>
+<hr/>
+<h3 id="identify-gaps-overlaps"><strong>Identify Gaps &amp; Overlaps</strong><a class="headerlink" href="#identify-gaps-overlaps" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Gaps:</strong> Are there levels with no humans? (e.g., no Intermediate-Level in Finance → consider promoting Senior Accountant or hiring)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Overlaps:</strong> Are multiple people doing Low-Level work that AI could handle? (e.g., 3 SDRs qualifying leads → consider LeadQualifier-Agent + 1 human AE)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Title Inflation:</strong> Are people titled "Manager" but doing Low-Level work? (common problem — fix with honest leveling)</li>
+</ul>
+<hr/>
+<h2 id="step-3-define-autonomy-decision-authority-for-each-level">Step 3: Define Autonomy &amp; Decision Authority for Each Level<a class="headerlink" href="#step-3-define-autonomy-decision-authority-for-each-level" title="Permanent link">¶</a></h2>
+<h3 id="create-decision-authority-matrix"><strong>Create Decision Authority Matrix</strong><a class="headerlink" href="#create-decision-authority-matrix" title="Permanent link">¶</a></h3>
+<p>For each function (Finance, Sales, HR, etc.), define what each level can decide:</p>
+<p><strong>Example: Finance Function</strong></p>
+<table>
+<thead>
+<tr>
+<th>Decision Type</th>
+<th>Low-Level</th>
+<th>Intermediate-Level</th>
+<th>High-Level</th>
+<th>Executive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Expense approval</strong></td>
+<td>&lt;$100 (auto-approve)</td>
+<td>$100-$5K (review, approve)</td>
+<td>$5K-$50K (strategic judgment)</td>
+<td>&gt;$50K (final authority)</td>
+</tr>
+<tr>
+<td><strong>Budget allocation</strong></td>
+<td>❌ No authority</td>
+<td>Recommend (cross-dept)</td>
+<td>Allocate within function</td>
+<td>Allocate company-wide</td>
+</tr>
+<tr>
+<td><strong>Hiring decisions</strong></td>
+<td>❌ No authority</td>
+<td>Screen candidates</td>
+<td>Hire for team</td>
+<td>Hire executives</td>
+</tr>
+<tr>
+<td><strong>Vendor contracts</strong></td>
+<td>❌ No authority</td>
+<td>$0-$10K/year</td>
+<td>$10K-$100K/year</td>
+<td>&gt;$100K/year</td>
+</tr>
+<tr>
+<td><strong>Financial strategy</strong></td>
+<td>❌ No authority</td>
+<td>❌ No authority</td>
+<td>Recommend (CFO decides)</td>
+<td>Set strategy</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Repeat for all functions:</strong> Sales, HR, Operations, IT, etc.</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Document edge cases:</strong> What happens when Low-Level agent encounters $101 expense? (escalate to Intermediate)</li>
+</ul>
+<p><strong>Output:</strong> <code>DECISION-AUTHORITY-MATRIX.md</code></p>
+<hr/>
+<h3 id="define-escalation-rules"><strong>Define Escalation Rules</strong><a class="headerlink" href="#define-escalation-rules" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Low-Level → Intermediate:</strong> When to escalate?</li>
+<li>Rule: "If task falls outside script/rules, escalate within 1 hour"</li>
+<li>
+<p>Example: LeadQualifier-Agent encounters prospect asking for custom pricing → escalate to Account Executive (Intermediate)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Intermediate → High:</strong> When to escalate?</p>
+</li>
+<li>Rule: "If decision has &gt;$10K impact or &gt;3-month horizon, escalate to High-Level"</li>
+<li>
+<p>Example: BudgetForecaster-Agent sees 20% revenue variance → escalate to CFO (High-Level)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>High → Executive:</strong> When to escalate?</p>
+</li>
+<li>Rule: "If decision impacts company vision, capital allocation, or fiduciary duty, escalate to Executive"</li>
+<li>Example: VP Sales recommends entering new market ($500K investment) → CEO decides</li>
+</ul>
+<hr/>
+<h2 id="step-4-map-ai-agents-to-role-hierarchy">Step 4: Map AI Agents to Role Hierarchy<a class="headerlink" href="#step-4-map-ai-agents-to-role-hierarchy" title="Permanent link">¶</a></h2>
+<h3 id="audit-current-ai-agents"><strong>Audit Current AI Agents</strong><a class="headerlink" href="#audit-current-ai-agents" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>List all deployed AI agents:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>AI Agent Name</th>
+<th>Function</th>
+<th>Tasks</th>
+<th>Current Level (guess)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ExpenseCategorizer-Agent</td>
+<td>Finance</td>
+<td>Auto-categorize expenses</td>
+<td>Low-Level</td>
+</tr>
+<tr>
+<td>BudgetForecaster-Agent</td>
+<td>Finance</td>
+<td>Update rolling forecasts</td>
+<td>Intermediate-Level</td>
+</tr>
+<tr>
+<td>LeadQualifier-Agent</td>
+<td>Sales</td>
+<td>Qualify inbound leads, book meetings</td>
+<td>Low-Level</td>
+</tr>
+<tr>
+<td>ProposalGenerator-Agent</td>
+<td>Sales</td>
+<td>Generate custom proposals</td>
+<td>Intermediate-Level</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="formalize-ai-agent-levels"><strong>Formalize AI Agent Levels</strong><a class="headerlink" href="#formalize-ai-agent-levels" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>For each AI agent, define:</strong></li>
+<li><strong>Level:</strong> Low, Intermediate, High, Executive (most AI agents are Low/Intermediate as of 2025)</li>
+<li><strong>Autonomy:</strong> What can it decide without human approval?</li>
+<li><strong>Escalation Rules:</strong> When does it hand off to human?</li>
+<li><strong>Compensation:</strong> What does it cost? (monthly subscription, API usage, etc.)</li>
+</ul>
+<p><strong>Example: LeadQualifier-Agent (Low-Level)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LeadQualifier-Agent</span>
+<span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Low-Level</span>
+<span class="w">  </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sales</span>
+<span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Respond to inbound leads &lt;5 minutes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Score leads (1-100) using qualification criteria</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Book qualified meetings on AE calendar</span>
+<span class="w">  </span><span class="nt">autonomy</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Can auto-respond to 90% of leads (templated responses)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Can book meetings for leads scoring &gt;70</span>
+<span class="w">  </span><span class="nt">decision_authority</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Qualify leads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Yes (follow script)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Discount pricing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">No (escalate to AE)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Custom terms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">No (escalate to AE)</span>
+<span class="w">  </span><span class="nt">escalation_rules</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If lead asks for custom pricing → escalate to Account Executive (Intermediate-Level)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If lead is enterprise (&gt;1,000 employees) → escalate to VP Sales (High-Level)</span>
+<span class="w">  </span><span class="nt">compensation</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">monthly_cost</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$300 (Zapier + AI API)</span>
+<span class="w">    </span><span class="nt">human_equivalent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$4,000/month (SDR salary)</span>
+<span class="w">    </span><span class="nt">roi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13x cost savings</span>
+</code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Repeat for all AI agents</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Store in:</strong> <code>ADOPTION/TEMPLATES/agent-definition-template.yaml</code></li>
+</ul>
+<hr/>
+<h2 id="step-5-create-career-paths-humans-ai">Step 5: Create Career Paths (Humans + AI)<a class="headerlink" href="#step-5-create-career-paths-humans-ai" title="Permanent link">¶</a></h2>
+<h3 id="define-progression-paths"><strong>Define Progression Paths</strong><a class="headerlink" href="#define-progression-paths" title="Permanent link">¶</a></h3>
+<p>For humans, map career progression across levels:</p>
+<p><strong>Example: Finance Career Path</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Title</th>
+<th>Salary Range</th>
+<th>Next Level Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-Level</td>
+<td>Junior Accountant</td>
+<td>$40K-$60K</td>
+<td>1-2 years, learn budgeting/forecasting</td>
+</tr>
+<tr>
+<td>Intermediate-Level</td>
+<td>Senior Accountant</td>
+<td>$70K-$100K</td>
+<td>3-5 years, lead cross-functional projects</td>
+</tr>
+<tr>
+<td>High-Level</td>
+<td>Finance Manager</td>
+<td>$120K-$180K</td>
+<td>5-7 years, strategic financial planning</td>
+</tr>
+<tr>
+<td>Executive</td>
+<td>CFO</td>
+<td>$200K+</td>
+<td>10+ years, manage $10M+ budgets, board experience</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Repeat for all functions:</strong> Sales, HR, Operations, IT, etc.</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Make transparent:</strong> Publish career paths in employee handbook, share in onboarding</li>
+</ul>
+<hr/>
+<h3 id="ai-agent-progression"><strong>AI Agent Progression</strong><a class="headerlink" href="#ai-agent-progression" title="Permanent link">¶</a></h3>
+<p>AI agents can also "level up":</p>
+<p><strong>Example: Lead Qualification Path</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Agent Name</th>
+<th>Capabilities</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-Level</td>
+<td>LeadQualifier-Agent</td>
+<td>Follow script, book meetings, basic qualification</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Intermediate-Level</td>
+<td>LeadStrategist-Agent</td>
+<td>Analyze lead patterns, recommend targeting, A/B test messaging</td>
+<td>$1,500</td>
+</tr>
+<tr>
+<td>High-Level</td>
+<td>Not yet available (2025)</td>
+<td>Strategic lead gen strategy, market expansion recommendations</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Define upgrade triggers:</strong> When to upgrade AI agent?</li>
+<li>Trigger: "If Low-Level agent handling &gt;80% of tasks autonomously for 3 months, consider upgrading to Intermediate"</li>
+<li>Example: LeadQualifier-Agent booking 100 meetings/month with 90% qualification accuracy → upgrade to LeadStrategist-Agent to optimize targeting</li>
+</ul>
+<hr/>
+<h2 id="step-6-align-compensation-with-role-level">Step 6: Align Compensation with Role Level<a class="headerlink" href="#step-6-align-compensation-with-role-level" title="Permanent link">¶</a></h2>
+<h3 id="set-compensation-bands"><strong>Set Compensation Bands</strong><a class="headerlink" href="#set-compensation-bands" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Define salary ranges per level:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Human Salary Range</th>
+<th>AI Agent Cost Range</th>
+<th>Compensation Philosophy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-Level</td>
+<td>$40K-$60K/year</td>
+<td>$200-$500/month</td>
+<td>Execute structured tasks, minimal discretion</td>
+</tr>
+<tr>
+<td>Intermediate-Level</td>
+<td>$70K-$120K/year</td>
+<td>$1K-$3K/month</td>
+<td>Judgment calls, cross-functional coordination</td>
+</tr>
+<tr>
+<td>High-Level</td>
+<td>$150K-$250K/year</td>
+<td>$5K-$10K/month (rare)</td>
+<td>Strategic decisions, deep expertise</td>
+</tr>
+<tr>
+<td>Executive</td>
+<td>$200K+ (+ equity)</td>
+<td>N/A (AI can't be CEO)</td>
+<td>Vision-setting, fiduciary duty</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Audit current salaries:</strong> Are people compensated appropriately for their level?</li>
+<li>Example: If Senior Accountant (Intermediate) earning $50K → underpaid, risk losing talent</li>
+<li>Example: If Junior Accountant (Low-Level) earning $80K → overpaid, or they should be reclassified as Intermediate</li>
+</ul>
+<hr/>
+<h3 id="fair-compensation-for-ai-augmented-roles"><strong>Fair Compensation for AI-Augmented Roles</strong><a class="headerlink" href="#fair-compensation-for-ai-augmented-roles" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>If AI automates part of a human's role, do they get a raise?</strong></li>
+<li><strong>Yes, if</strong> they move to higher-level work (Low → Intermediate → High)</li>
+<li>
+<p>Example: Junior Accountant (Low-Level, $50K) → AI handles data entry → Human becomes Financial Analyst (Intermediate, $75K) focusing on budget analysis</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Track career growth:</strong></p>
+</li>
+<li>Baseline: % of employees promoted year-over-year</li>
+<li>Target: &gt;20% annual promotions (AI frees people to upskill)</li>
+</ul>
+<hr/>
+<h2 id="step-7-implement-communicate">Step 7: Implement &amp; Communicate<a class="headerlink" href="#step-7-implement-communicate" title="Permanent link">¶</a></h2>
+<h3 id="rollout-plan"><strong>Rollout Plan</strong><a class="headerlink" href="#rollout-plan" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Week 1: Leadership Alignment</strong></li>
+<li>Present Role Hierarchy framework to executive team</li>
+<li>
+<p>Get buy-in: "This will create clarity, career paths, and fair compensation"</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Week 2-3: Map All Roles</strong></p>
+</li>
+<li>Work with HR + function leaders to map all roles (humans + AI) to 4 levels</li>
+<li>
+<p>Create <code>ROLE-MAPPING.md</code>, <code>DECISION-AUTHORITY-MATRIX.md</code>, career path documents</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Week 4: All-Hands Communication</strong></p>
+</li>
+<li>Share Role Hierarchy framework with all employees</li>
+<li>Explain: "Why we're doing this, what changes, what stays the same"</li>
+<li>
+<p>FAQ: "Will I be demoted? Will AI take my job? How do I get promoted?"</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Week 5-6: 1:1 Conversations</strong></p>
+</li>
+<li>Every manager meets with direct reports to:<ul>
+<li>Share their mapped level</li>
+<li>Discuss career path to next level</li>
+<li>Address concerns</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h3 id="communication-templates"><strong>Communication Templates</strong><a class="headerlink" href="#communication-templates" title="Permanent link">¶</a></h3>
+<p><strong>Email to All Employees:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Introducing Role Hierarchy — Clear Career Paths for All</p>
+<p>We're implementing a 4-level Role Hierarchy (Low, Intermediate, High, Executive) to create:
+- <strong>Clear career paths</strong> — Know exactly what it takes to get promoted
+- <strong>Fair compensation</strong> — Pay aligned with decision authority + scope
+- <strong>Human + AI collaboration</strong> — Both mapped to same framework, no competition</p>
+<p><strong>What changes:</strong>
+- Your title may change to reflect your level (e.g., "Analyst" → "Low-Level Analyst" or "Intermediate-Level Consultant")
+- Decision authority is now explicit (see attached Decision Matrix)</p>
+<p><strong>What stays the same:</strong>
+- Your salary (unless you're promoted or underpaid — we'll fix that)
+- Your team, manager, responsibilities</p>
+<p><strong>Next steps:</strong>
+- Your manager will share your mapped level in 1:1 this week
+- Career paths published in employee handbook by [date]</p>
+<p>Questions? Email [HR contact] or ask in #role-hierarchy Slack channel.</p>
+</blockquote>
+<hr/>
+<h2 id="step-8-monitor-iterate">Step 8: Monitor &amp; Iterate<a class="headerlink" href="#step-8-monitor-iterate" title="Permanent link">¶</a></h2>
+<h3 id="track-metrics"><strong>Track Metrics</strong><a class="headerlink" href="#track-metrics" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Career Mobility:</strong></li>
+<li>% employees promoted year-over-year (target: &gt;20%)</li>
+<li>
+<p>Average time to promotion (Low→Intermediate, Intermediate→High)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Compensation Equity:</strong></p>
+</li>
+<li>% employees within salary band for their level (target: &gt;90%)</li>
+<li>
+<p>Pay gap audit (gender, race, tenure)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>AI Agent Effectiveness:</strong></p>
+</li>
+<li>% tasks handled by Low-Level AI without escalation (target: &gt;80%)</li>
+<li>% tasks requiring Intermediate-Level AI (target: 15-20%)</li>
+<li>
+<p>% tasks requiring High-Level human (target: &lt;5%)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Employee Satisfaction:</strong></p>
+</li>
+<li>Survey: "Do you understand your career path?" (target: &gt;80% yes)</li>
+<li>Survey: "Do you feel AI is helping your career?" (target: &gt;70% yes)</li>
+<li>Turnover rate (target: &lt;10%)</li>
+</ul>
+<hr/>
+<h3 id="quarterly-reviews"><strong>Quarterly Reviews</strong><a class="headerlink" href="#quarterly-reviews" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> <strong>Every 3 months:</strong></li>
+<li>Review all role levels — any changes needed?</li>
+<li>Promote employees who've met next-level requirements</li>
+<li>Upgrade AI agents that are ready for next level</li>
+<li>Adjust compensation bands based on market data</li>
+</ul>
+<hr/>
+<h2 id="common-pitfalls">🛡️ Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">¶</a></h2>
+<h3 id="pitfall-1-title-inflation"><strong>Pitfall #1: Title Inflation</strong><a class="headerlink" href="#pitfall-1-title-inflation" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Problem:</strong> Everyone wants "Manager" title, even if doing Low-Level work</li>
+<li><strong>Solution:</strong> Be honest — "Your work is valuable, but it's Low-Level (structured tasks). Here's how to get to Intermediate."</li>
+</ul>
+<h3 id="pitfall-2-ai-will-take-my-job"><strong>Pitfall #2: "AI Will Take My Job"</strong><a class="headerlink" href="#pitfall-2-ai-will-take-my-job" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Problem:</strong> Employees fear Low-Level AI agents will replace them</li>
+<li><strong>Solution:</strong> Reframe — "AI handles Low-Level tasks → you upskill to Intermediate → higher pay, more interesting work"</li>
+</ul>
+<h3 id="pitfall-3-no-career-path-for-low-level"><strong>Pitfall #3: No Career Path for Low-Level</strong><a class="headerlink" href="#pitfall-3-no-career-path-for-low-level" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Problem:</strong> If Low-Level roles are all AI, where do junior humans start?</li>
+<li><strong>Solution:</strong> Create "AI Trainer" or "AI Supervisor" roles (Intermediate-Level) — humans who configure/monitor Low-Level AI agents</li>
+</ul>
+<h3 id="pitfall-4-compensation-gaps"><strong>Pitfall #4: Compensation Gaps</strong><a class="headerlink" href="#pitfall-4-compensation-gaps" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Problem:</strong> Existing employees underpaid for their level</li>
+<li><strong>Solution:</strong> Budget for salary adjustments — don't implement Role Hierarchy without fixing pay equity</li>
+</ul>
+<hr/>
+<h2 id="resources">📚 Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p><strong>Documentation:</strong>
+- <a href="../DOCS/10-role-hierarchy.md">Role Hierarchy</a>
+- <a href="../DOCS/08-human-ai-collaboration.md">Human-AI Collaboration</a>
+- <a href="../DOCS/03-organizational-model.md">Organizational Model</a></p>
+<p><strong>Templates:</strong>
+- <a href="../ADOPTION/TEMPLATES/role-hierarchy-matrix.yaml">Role Hierarchy Matrix</a>
+- <a href="../ADOPTION/TEMPLATES/agent-definition-template.yaml">Agent Definition Template</a></p>
+<p><strong>Prompts:</strong>
+- <a href="../ADOPTION/PROMPT-TEMPLATES/role-level-definition.md">Role Level Definition Prompt</a>
+- <a href="../ADOPTION/PROMPT-TEMPLATES/human-ai-collaboration-assessment.md">Human-AI Collaboration Assessment</a></p>
+<p><strong>Playbooks:</strong>
+- <a href="../PLAYBOOKS/by-stage/sme-transformation.md#implement-role-hierarchy">SME Transformation — Role Hierarchy Section</a>
+- <a href="../PLAYBOOKS/by-sector/business-functions/hr.md">HR Function Playbook</a></p>
+<hr/>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Framework:</strong> SOLID.AI</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,3297 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/playbooks/implementation/ai-native-kanban/" rel="canonical"/>
+<link href="../data-spine-analytics-insights/" rel="prev"/>
+<link href="../../people-culture/organizational-scalability/" rel="next"/>
+<link href="../../../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>📋 AI-Native Kanban - solid.ai</title>
+<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ai-native-kanban-implementation-playbook">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              📋 AI-Native Kanban
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="solid.ai">
+<img alt="logo" src="../../../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_19">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_1" id="__nav_19_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_2" id="__nav_19_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_3" id="__nav_19_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_4" id="__nav_19_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_5" id="__nav_19_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_2_6" id="__nav_19_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/data-contract-design/">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/prompt-templates/ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_1" id="__nav_19_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_2" id="__nav_19_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_4_3" id="__nav_19_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/checklists/role-hierarchy-implementation/">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5" id="__nav_19_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_19_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_1" id="__nav_19_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_2" id="__nav_19_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_3" id="__nav_19_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_19_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_19_5_4" id="__nav_19_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_19_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_19_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adoption/templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_1" id="__nav_22_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_3" id="__nav_22_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4" id="__nav_22_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_22_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_2" id="__nav_22_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_3" id="__nav_22_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/impact-analysis/">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_22_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_4" id="__nav_22_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_22_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#who-should-use-this-playbook">
+<span class="md-ellipsis">
+      Who Should Use This Playbook?
+    </span>
+</a>
+<nav aria-label="Who Should Use This Playbook?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#good-fit-for-kanban">
+<span class="md-ellipsis">
+      ✅ Good Fit for Kanban
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consider-scrum-instead">
+<span class="md-ellipsis">
+      ⚠️ Consider Scrum Instead
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-scrumban">
+<span class="md-ellipsis">
+      🎯 Hybrid (Scrumban)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-8-week-implementation">
+<span class="md-ellipsis">
+      Overview: 8-Week Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-1-2-foundation-basic-kanban-setup">
+<span class="md-ellipsis">
+      Week 1-2: Foundation — Basic Kanban Setup
+    </span>
+</a>
+<nav aria-label="Week 1-2: Foundation — Basic Kanban Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-operational-kanban-board-with-clear-policies">
+<span class="md-ellipsis">
+      Goal: Operational Kanban board with clear policies
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-design-your-kanban-board-2-hours">
+<span class="md-ellipsis">
+      Step 1: Design Your Kanban Board (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-set-wip-limits-1-hour">
+<span class="md-ellipsis">
+      Step 2: Set WIP Limits (1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-define-policies-2-hours">
+<span class="md-ellipsis">
+      Step 3: Define Policies (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-populate-backlog-1-hour">
+<span class="md-ellipsis">
+      Step 4: Populate Backlog (1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-team-training-2-hours">
+<span class="md-ellipsis">
+      Step 5: Team Training (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-run-1-week-trial-manual-no-ai-yet">
+<span class="md-ellipsis">
+      Step 6: Run 1-Week Trial (Manual, No AI Yet)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-3-4-ai-deployment-flowanalyzer-bottleneckdetector">
+<span class="md-ellipsis">
+      Week 3-4: AI Deployment — FlowAnalyzer + BottleneckDetector
+    </span>
+</a>
+<nav aria-label="Week 3-4: AI Deployment — FlowAnalyzer + BottleneckDetector" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-ai-agents-monitoring-flow-alerting-on-bottlenecks">
+<span class="md-ellipsis">
+      Goal: AI agents monitoring flow, alerting on bottlenecks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-deploy-flowanalyzer-agent-4-hours">
+<span class="md-ellipsis">
+      Step 1: Deploy FlowAnalyzer-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-deploy-bottleneckdetector-agent-4-hours">
+<span class="md-ellipsis">
+      Step 2: Deploy BottleneckDetector-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-team-adoption-week-3-4">
+<span class="md-ellipsis">
+      Step 3: Team Adoption (Week 3-4)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-5-6-optimization-kanbanoptimizer-deployment">
+<span class="md-ellipsis">
+      Week 5-6: Optimization — KanbanOptimizer Deployment
+    </span>
+</a>
+<nav aria-label="Week 5-6: Optimization — KanbanOptimizer Deployment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-ai-driven-board-optimization-wip-limit-tuning">
+<span class="md-ellipsis">
+      Goal: AI-driven board optimization, WIP limit tuning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-deploy-kanbanoptimizer-agent-4-hours">
+<span class="md-ellipsis">
+      Step 1: Deploy KanbanOptimizer-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-review-first-optimization-report-1-hour-team-meeting">
+<span class="md-ellipsis">
+      Step 2: Review First Optimization Report (1 hour team meeting)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-implement-optimizations-week-5-6">
+<span class="md-ellipsis">
+      Step 3: Implement Optimizations (Week 5-6)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-7-8-refinement-measure-iterate">
+<span class="md-ellipsis">
+      Week 7-8: Refinement — Measure &amp; Iterate
+    </span>
+</a>
+<nav aria-label="Week 7-8: Refinement — Measure &amp; Iterate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-validate-optimizations-establish-sustainable-rhythm">
+<span class="md-ellipsis">
+      Goal: Validate optimizations, establish sustainable rhythm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-measure-optimization-impact-week-8-end">
+<span class="md-ellipsis">
+      Step 1: Measure Optimization Impact (Week 8 End)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-team-retrospective-week-8-1-hour">
+<span class="md-ellipsis">
+      Step 2: Team Retrospective (Week 8, 1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-establish-sustainable-rhythm-ongoing">
+<span class="md-ellipsis">
+      Step 3: Establish Sustainable Rhythm (Ongoing)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success-criteria">
+<span class="md-ellipsis">
+      Success Criteria
+    </span>
+</a>
+<nav aria-label="Success Criteria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-8-success-indicators">
+<span class="md-ellipsis">
+      ✅ Week 8 Success Indicators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yellow-flags-need-attention">
+<span class="md-ellipsis">
+      ⚠️ Yellow Flags (Need Attention)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#red-flags-intervention-needed">
+<span class="md-ellipsis">
+      🚨 Red Flags (Intervention Needed)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls-solutions">
+<span class="md-ellipsis">
+      Common Pitfalls &amp; Solutions
+    </span>
+</a>
+<nav aria-label="Common Pitfalls &amp; Solutions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-1-team-ignores-ai-alerts-alert-fatigue">
+<span class="md-ellipsis">
+      Pitfall #1: Team Ignores AI Alerts (Alert Fatigue)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-2-ai-recommendations-not-implemented">
+<span class="md-ellipsis">
+      Pitfall #2: AI Recommendations Not Implemented
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-3-wip-limits-constantly-breached">
+<span class="md-ellipsis">
+      Pitfall #3: WIP Limits Constantly Breached
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-4-bottlenecks-persist-despite-ai-alerts">
+<span class="md-ellipsis">
+      Pitfall #4: Bottlenecks Persist Despite AI Alerts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps-after-week-8">
+<span class="md-ellipsis">
+      Next Steps After Week 8
+    </span>
+</a>
+<nav aria-label="Next Steps After Week 8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-1-scale-ai-native-kanban-team-growing">
+<span class="md-ellipsis">
+      Option 1: Scale AI-Native Kanban (Team Growing)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-adopt-hybrid-scrumban-need-sprint-commitments">
+<span class="md-ellipsis">
+      Option 2: Adopt Hybrid Scrumban (Need Sprint Commitments)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-3-expand-to-multiple-teams-scaled-kanban">
+<span class="md-ellipsis">
+      Option 3: Expand to Multiple Teams (Scaled Kanban)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_5" id="__nav_22_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_6" id="__nav_22_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7" id="__nav_22_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_1" id="__nav_22_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_2" id="__nav_22_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_3" id="__nav_22_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_7_4" id="__nav_22_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_22_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22_4_8" id="__nav_22_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_22_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#who-should-use-this-playbook">
+<span class="md-ellipsis">
+      Who Should Use This Playbook?
+    </span>
+</a>
+<nav aria-label="Who Should Use This Playbook?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#good-fit-for-kanban">
+<span class="md-ellipsis">
+      ✅ Good Fit for Kanban
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consider-scrum-instead">
+<span class="md-ellipsis">
+      ⚠️ Consider Scrum Instead
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-scrumban">
+<span class="md-ellipsis">
+      🎯 Hybrid (Scrumban)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-8-week-implementation">
+<span class="md-ellipsis">
+      Overview: 8-Week Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-1-2-foundation-basic-kanban-setup">
+<span class="md-ellipsis">
+      Week 1-2: Foundation — Basic Kanban Setup
+    </span>
+</a>
+<nav aria-label="Week 1-2: Foundation — Basic Kanban Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-operational-kanban-board-with-clear-policies">
+<span class="md-ellipsis">
+      Goal: Operational Kanban board with clear policies
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-design-your-kanban-board-2-hours">
+<span class="md-ellipsis">
+      Step 1: Design Your Kanban Board (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-set-wip-limits-1-hour">
+<span class="md-ellipsis">
+      Step 2: Set WIP Limits (1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-define-policies-2-hours">
+<span class="md-ellipsis">
+      Step 3: Define Policies (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-populate-backlog-1-hour">
+<span class="md-ellipsis">
+      Step 4: Populate Backlog (1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-team-training-2-hours">
+<span class="md-ellipsis">
+      Step 5: Team Training (2 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-run-1-week-trial-manual-no-ai-yet">
+<span class="md-ellipsis">
+      Step 6: Run 1-Week Trial (Manual, No AI Yet)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-3-4-ai-deployment-flowanalyzer-bottleneckdetector">
+<span class="md-ellipsis">
+      Week 3-4: AI Deployment — FlowAnalyzer + BottleneckDetector
+    </span>
+</a>
+<nav aria-label="Week 3-4: AI Deployment — FlowAnalyzer + BottleneckDetector" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-ai-agents-monitoring-flow-alerting-on-bottlenecks">
+<span class="md-ellipsis">
+      Goal: AI agents monitoring flow, alerting on bottlenecks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-deploy-flowanalyzer-agent-4-hours">
+<span class="md-ellipsis">
+      Step 1: Deploy FlowAnalyzer-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-deploy-bottleneckdetector-agent-4-hours">
+<span class="md-ellipsis">
+      Step 2: Deploy BottleneckDetector-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-team-adoption-week-3-4">
+<span class="md-ellipsis">
+      Step 3: Team Adoption (Week 3-4)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-5-6-optimization-kanbanoptimizer-deployment">
+<span class="md-ellipsis">
+      Week 5-6: Optimization — KanbanOptimizer Deployment
+    </span>
+</a>
+<nav aria-label="Week 5-6: Optimization — KanbanOptimizer Deployment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-ai-driven-board-optimization-wip-limit-tuning">
+<span class="md-ellipsis">
+      Goal: AI-driven board optimization, WIP limit tuning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-deploy-kanbanoptimizer-agent-4-hours">
+<span class="md-ellipsis">
+      Step 1: Deploy KanbanOptimizer-Agent (4 hours)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-review-first-optimization-report-1-hour-team-meeting">
+<span class="md-ellipsis">
+      Step 2: Review First Optimization Report (1 hour team meeting)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-implement-optimizations-week-5-6">
+<span class="md-ellipsis">
+      Step 3: Implement Optimizations (Week 5-6)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-7-8-refinement-measure-iterate">
+<span class="md-ellipsis">
+      Week 7-8: Refinement — Measure &amp; Iterate
+    </span>
+</a>
+<nav aria-label="Week 7-8: Refinement — Measure &amp; Iterate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goal-validate-optimizations-establish-sustainable-rhythm">
+<span class="md-ellipsis">
+      Goal: Validate optimizations, establish sustainable rhythm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-measure-optimization-impact-week-8-end">
+<span class="md-ellipsis">
+      Step 1: Measure Optimization Impact (Week 8 End)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-team-retrospective-week-8-1-hour">
+<span class="md-ellipsis">
+      Step 2: Team Retrospective (Week 8, 1 hour)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-establish-sustainable-rhythm-ongoing">
+<span class="md-ellipsis">
+      Step 3: Establish Sustainable Rhythm (Ongoing)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success-criteria">
+<span class="md-ellipsis">
+      Success Criteria
+    </span>
+</a>
+<nav aria-label="Success Criteria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#week-8-success-indicators">
+<span class="md-ellipsis">
+      ✅ Week 8 Success Indicators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yellow-flags-need-attention">
+<span class="md-ellipsis">
+      ⚠️ Yellow Flags (Need Attention)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#red-flags-intervention-needed">
+<span class="md-ellipsis">
+      🚨 Red Flags (Intervention Needed)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls-solutions">
+<span class="md-ellipsis">
+      Common Pitfalls &amp; Solutions
+    </span>
+</a>
+<nav aria-label="Common Pitfalls &amp; Solutions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-1-team-ignores-ai-alerts-alert-fatigue">
+<span class="md-ellipsis">
+      Pitfall #1: Team Ignores AI Alerts (Alert Fatigue)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-2-ai-recommendations-not-implemented">
+<span class="md-ellipsis">
+      Pitfall #2: AI Recommendations Not Implemented
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-3-wip-limits-constantly-breached">
+<span class="md-ellipsis">
+      Pitfall #3: WIP Limits Constantly Breached
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pitfall-4-bottlenecks-persist-despite-ai-alerts">
+<span class="md-ellipsis">
+      Pitfall #4: Bottlenecks Persist Despite AI Alerts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps-after-week-8">
+<span class="md-ellipsis">
+      Next Steps After Week 8
+    </span>
+</a>
+<nav aria-label="Next Steps After Week 8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-1-scale-ai-native-kanban-team-growing">
+<span class="md-ellipsis">
+      Option 1: Scale AI-Native Kanban (Team Growing)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-adopt-hybrid-scrumban-need-sprint-commitments">
+<span class="md-ellipsis">
+      Option 2: Adopt Hybrid Scrumban (Need Sprint Commitments)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-3-expand-to-multiple-teams-scaled-kanban">
+<span class="md-ellipsis">
+      Option 3: Expand to Multiple Teams (Scaled Kanban)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="ai-native-kanban-implementation-playbook">AI-Native Kanban Implementation Playbook<a class="headerlink" href="#ai-native-kanban-implementation-playbook" title="Permanent link">¶</a></h1>
+<p><strong>For:</strong> Teams adopting continuous flow methodology with AI optimization</p>
+<p><strong>Timeline:</strong> 8 weeks (basic setup → AI agent deployment → optimization)</p>
+<p><strong>Outcome:</strong> 15-25% throughput increase, 10-20% cycle time reduction, real-time bottleneck detection</p>
+<hr/>
+<h2 id="who-should-use-this-playbook">Who Should Use This Playbook?<a class="headerlink" href="#who-should-use-this-playbook" title="Permanent link">¶</a></h2>
+<h3 id="good-fit-for-kanban">✅ Good Fit for Kanban<a class="headerlink" href="#good-fit-for-kanban" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Support/operations teams</strong> (unpredictable work arrival)</li>
+<li><strong>Maintenance teams</strong> (mix of planned + unplanned work)</li>
+<li><strong>Platform/infrastructure teams</strong> (reactive work like deploy requests, incident response)</li>
+<li><strong>Early-stage startups</strong> (priorities change weekly, sprints feel too rigid)</li>
+<li><strong>Continuous delivery teams</strong> (ship multiple times per day)</li>
+</ul>
+<h3 id="consider-scrum-instead">⚠️ Consider Scrum Instead<a class="headerlink" href="#consider-scrum-instead" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>New product development</strong> with predictable scope (use Scrum for time-boxed iterations)</li>
+<li><strong>Teams requiring strict sprint commitments</strong> (regulatory compliance, contract deliverables)</li>
+<li><strong>Teams new to Agile</strong> (Scrum's structure easier to learn first)</li>
+</ul>
+<h3 id="hybrid-scrumban">🎯 Hybrid (Scrumban)<a class="headerlink" href="#hybrid-scrumban" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Product teams with support duties</strong> (planned features + urgent bugs)</li>
+<li><strong>Teams transitioning from Scrum to Kanban</strong> (gradual change)</li>
+</ul>
+<p><strong>See:</strong> <a href="../../DOCS/11-ai-native-agile.md">AI-Native Agile (Scrum)</a> for sprint-based approach</p>
+<hr/>
+<h2 id="overview-8-week-implementation">Overview: 8-Week Implementation<a class="headerlink" href="#overview-8-week-implementation" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Phase</th>
+<th>Focus</th>
+<th>Key Deliverable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td><strong>Foundation</strong></td>
+<td>Design board, define policies, train team</td>
+<td>Basic Kanban board operational</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td><strong>AI Deployment</strong></td>
+<td>Deploy FlowAnalyzer + BottleneckDetector agents</td>
+<td>Daily AI-powered flow reports</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td><strong>Optimization</strong></td>
+<td>Deploy KanbanOptimizer, adjust WIP limits</td>
+<td>First round of optimizations</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td><strong>Refinement</strong></td>
+<td>Measure improvements, iterate on policies</td>
+<td>Sustainable continuous flow</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Expected Outcomes:</strong>
+- Throughput: +15-25% (e.g., 10 items/week → 12-13 items/week)
+- Cycle time: -10-20% (e.g., 5 days → 4-4.5 days)
+- Bottleneck detection: Real-time alerts (vs. discovering in retrospectives)
+- Team satisfaction: Improved (less manual tracking, more time for meaningful work)</p>
+<hr/>
+<h2 id="week-1-2-foundation-basic-kanban-setup">Week 1-2: Foundation — Basic Kanban Setup<a class="headerlink" href="#week-1-2-foundation-basic-kanban-setup" title="Permanent link">¶</a></h2>
+<h3 id="goal-operational-kanban-board-with-clear-policies">Goal: Operational Kanban board with clear policies<a class="headerlink" href="#goal-operational-kanban-board-with-clear-policies" title="Permanent link">¶</a></h3>
+<h3 id="step-1-design-your-kanban-board-2-hours">Step 1: Design Your Kanban Board (2 hours)<a class="headerlink" href="#step-1-design-your-kanban-board-2-hours" title="Permanent link">¶</a></h3>
+<p><strong>Choose Column Structure:</strong></p>
+<p><strong>Option A: Simple Flow (3-5 person team, single-function)</strong></p>
+<div class="highlight"><pre><span></span><code>┌──────────┬──────────┬──────────┬──────────┐
+│ Backlog  │   Todo   │  Doing   │   Done   │
+│ (No WIP) │ WIP: 5   │ WIP: 3   │ (No WIP) │
+└──────────┴──────────┴──────────┴──────────┘
+</code></pre></div>
+<p><strong>Option B: Standard Software Team (5-10 people, Dev + QA)</strong></p>
+<div class="highlight"><pre><span></span><code>┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│ Backlog  │  Ready   │   Dev    │   QA     │ Deploy   │   Done   │
+│ (No WIP) │ WIP: 5   │ WIP: 3   │ WIP: 2   │ WIP: 1   │ (No WIP) │
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+</code></pre></div>
+<p><strong>Option C: Complex Flow (10+ people, multiple review stages)</strong></p>
+<div class="highlight"><pre><span></span><code>┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│ Backlog  │  Ready   │Dev:Coding│Dev:Review│   QA     │Staging   │ Deploy   │   Done   │
+│ (No WIP) │ WIP: 8   │ WIP: 4   │ WIP: 3   │ WIP: 3   │ WIP: 2   │ WIP: 1   │ (No WIP) │
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+</code></pre></div>
+<p><strong>Decision Criteria:</strong></p>
+<ul>
+<li><strong>Simple Flow:</strong> Use if team &lt;5 people OR work is simple (no review/QA stages)</li>
+<li><strong>Standard:</strong> Use if team 5-10 people with Dev + QA separation</li>
+<li><strong>Complex:</strong> Use if team &gt;10 people OR work has multiple handoffs (design → dev → review → QA → deploy)</li>
+</ul>
+<p><strong>Recommended Starting Point:</strong> Option B (Standard Software Team)</p>
+<hr/>
+<h3 id="step-2-set-wip-limits-1-hour">Step 2: Set WIP Limits (1 hour)<a class="headerlink" href="#step-2-set-wip-limits-1-hour" title="Permanent link">¶</a></h3>
+<p><strong>Formula for WIP Limits:</strong></p>
+<div class="highlight"><pre><span></span><code>WIP Limit per Column = (Team Size × 0.5) + 1
+
+Example: 6-person team → WIP limit = (6 × 0.5) + 1 = 4 items per column
+</code></pre></div>
+<p><strong>Why Start Conservative?</strong></p>
+<ul>
+<li>Easier to increase WIP limits later (if team consistently hitting limits)</li>
+<li>Harder to decrease (team feels restricted after higher limits)</li>
+<li>Low WIP forces focus on finishing work vs. starting new work</li>
+</ul>
+<p><strong>Recommended Starting WIP Limits (Standard Board):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>WIP Limit</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backlog</td>
+<td>None</td>
+<td>Future work, not started</td>
+</tr>
+<tr>
+<td>Ready</td>
+<td>5</td>
+<td>~1 week of work buffered</td>
+</tr>
+<tr>
+<td>Dev</td>
+<td>3</td>
+<td>~1 item per 2 developers (allows pairing)</td>
+</tr>
+<tr>
+<td>QA</td>
+<td>2</td>
+<td>Typically 1 QA person, allows 1 in progress + 1 waiting</td>
+</tr>
+<tr>
+<td>Deploy</td>
+<td>1</td>
+<td>Only 1 deployment at a time (reduces risk)</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>None</td>
+<td>Completed work, unlimited</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="step-3-define-policies-2-hours">Step 3: Define Policies (2 hours)<a class="headerlink" href="#step-3-define-policies-2-hours" title="Permanent link">¶</a></h3>
+<p><strong>Definition of Ready (What must be true before item enters "Ready"?):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Requirements clearly documented (user story, acceptance criteria)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Designs approved (if applicable — UI mockups, API contracts, architecture diagrams)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Dependencies resolved (no blockers from external teams)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Estimated (story points or t-shirt sizing)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Prioritized by Product Owner</li>
+</ul>
+<p><strong>Definition of Done (What must be true before item moves to "Done"?):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Code implemented and committed to version control</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Code reviewed by peer (at least 1 approval)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Automated tests written and passing (unit + integration)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Deployed to production (or staging if deployment is separate step)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Product Owner accepted (meets acceptance criteria)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Documentation updated (if public API or user-facing feature)</li>
+</ul>
+<p><strong>Blocked Item Policy:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Mark item with "🚫 Blocked" label</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Add comment: What's the blocker? Who can unblock? ETA?</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Move to "Blocked" swim lane (optional — some boards add a horizontal "Blocked" section)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Daily check-in: Scrum Master follows up on blocked items</li>
+</ul>
+<p><strong>Expedite Policy (Urgent work like P0 bugs):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Mark item with "🔥 Expedite" label</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Expedite items bypass WIP limits (can exceed limit temporarily)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Team prioritizes expedite items above all other work</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Limit: Max 1 expedite item at a time (prevents everything becoming "urgent")</li>
+</ul>
+<hr/>
+<h3 id="step-4-populate-backlog-1-hour">Step 4: Populate Backlog (1 hour)<a class="headerlink" href="#step-4-populate-backlog-1-hour" title="Permanent link">¶</a></h3>
+<p><strong>Add 20-30 items to Backlog:</strong></p>
+<ul>
+<li>Mix of features, bugs, tech debt, improvements</li>
+<li>Ensure each item has clear title, description, acceptance criteria</li>
+<li>Prioritize top 10 items (Product Owner)</li>
+</ul>
+<p><strong>Example Backlog Items:</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Type</th>
+<th>Priority</th>
+<th>Story Points</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ITEM-101</td>
+<td>Add OAuth login (Google)</td>
+<td>Feature</td>
+<td>High</td>
+<td>8</td>
+<td>Backlog</td>
+</tr>
+<tr>
+<td>ITEM-102</td>
+<td>Fix checkout bug (payment failing)</td>
+<td>Bug</td>
+<td>High</td>
+<td>3</td>
+<td>Backlog</td>
+</tr>
+<tr>
+<td>ITEM-103</td>
+<td>Export data to CSV</td>
+<td>Feature</td>
+<td>Medium</td>
+<td>5</td>
+<td>Backlog</td>
+</tr>
+<tr>
+<td>ITEM-104</td>
+<td>Refactor authentication logic</td>
+<td>Tech Debt</td>
+<td>Low</td>
+<td>8</td>
+<td>Backlog</td>
+</tr>
+<tr>
+<td>ITEM-105</td>
+<td>Add notification preferences</td>
+<td>Feature</td>
+<td>Medium</td>
+<td>5</td>
+<td>Backlog</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="step-5-team-training-2-hours">Step 5: Team Training (2 hours)<a class="headerlink" href="#step-5-team-training-2-hours" title="Permanent link">¶</a></h3>
+<p><strong>Kanban Principles Workshop (1 hour):</strong></p>
+<ul>
+<li><strong>Principle 1: Visualize Work</strong> — Show team the board, explain columns</li>
+<li><strong>Principle 2: Limit WIP</strong> — Explain why WIP limits matter (focus, flow, bottleneck prevention)</li>
+<li><strong>Principle 3: Manage Flow</strong> — Goal is to move items smoothly through board (not start as much work as possible)</li>
+<li><strong>Principle 4: Make Policies Explicit</strong> — Review Definition of Ready, Definition of Done</li>
+<li><strong>Principle 5: Feedback Loops</strong> — Weekly retrospectives to improve</li>
+<li><strong>Principle 6: Improve Collaboratively</strong> — Team owns board design, can change it</li>
+</ul>
+<p><strong>Board Walkthrough (30 minutes):</strong></p>
+<ul>
+<li>Pull 5 items from Backlog → Ready</li>
+<li>Team pulls 1 item from Ready → Dev (whoever has capacity)</li>
+<li>Simulate item moving through Dev → QA → Deploy → Done</li>
+<li>Practice: What happens when WIP limit hit? (Cannot pull new work until something completes)</li>
+</ul>
+<p><strong>Q&amp;A (30 minutes):</strong></p>
+<ul>
+<li>Answer team questions</li>
+<li>Common questions:</li>
+<li>"What if I have capacity but WIP limit is hit?" → Help teammates finish work vs. starting new work</li>
+<li>"What if urgent bug comes in?" → Use Expedite policy (bypass WIP limit temporarily)</li>
+<li>"How do we decide what to work on next?" → Pull from top of Ready column (Product Owner prioritizes)</li>
+</ul>
+<hr/>
+<h3 id="step-6-run-1-week-trial-manual-no-ai-yet">Step 6: Run 1-Week Trial (Manual, No AI Yet)<a class="headerlink" href="#step-6-run-1-week-trial-manual-no-ai-yet" title="Permanent link">¶</a></h3>
+<p><strong>Daily Routine (Week 1):</strong></p>
+<ul>
+<li><strong>9am Daily Standup (15 min):</strong></li>
+<li>Each person: What am I working on? Any blockers?</li>
+<li>Team: Check WIP limits (any columns over limit?)</li>
+<li>
+<p>Scrum Master: Follow up on blocked items</p>
+</li>
+<li>
+<p><strong>Throughout Day:</strong></p>
+</li>
+<li>Move items through board (update status in Jira/Linear)</li>
+<li>
+<p>Add comments when item blocked or needs help</p>
+</li>
+<li>
+<p><strong>Friday Retrospective (30 min):</strong></p>
+</li>
+<li>What went well? (e.g., "We shipped 8 items this week!")</li>
+<li>What didn't go well? (e.g., "QA was bottleneck 3 days — items piled up")</li>
+<li>What to change next week? (e.g., "Increase QA WIP limit from 2→3?")</li>
+</ul>
+<p><strong>Measure Baseline Metrics (Week 1 End):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Week 1 Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throughput</td>
+<td>___ items completed</td>
+<td>Example: 8 items</td>
+</tr>
+<tr>
+<td>Average Cycle Time</td>
+<td>___ days</td>
+<td>Example: 5.2 days</td>
+</tr>
+<tr>
+<td>WIP (avg items in flow)</td>
+<td>___ items</td>
+<td>Example: 7 items</td>
+</tr>
+<tr>
+<td>Bottleneck column</td>
+<td>___</td>
+<td>Example: QA (items aged 4+ days)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Save these metrics as baseline for AI optimization later</strong></p>
+<hr/>
+<h2 id="week-3-4-ai-deployment-flowanalyzer-bottleneckdetector">Week 3-4: AI Deployment — FlowAnalyzer + BottleneckDetector<a class="headerlink" href="#week-3-4-ai-deployment-flowanalyzer-bottleneckdetector" title="Permanent link">¶</a></h2>
+<h3 id="goal-ai-agents-monitoring-flow-alerting-on-bottlenecks">Goal: AI agents monitoring flow, alerting on bottlenecks<a class="headerlink" href="#goal-ai-agents-monitoring-flow-alerting-on-bottlenecks" title="Permanent link">¶</a></h3>
+<h3 id="step-1-deploy-flowanalyzer-agent-4-hours">Step 1: Deploy FlowAnalyzer-Agent (4 hours)<a class="headerlink" href="#step-1-deploy-flowanalyzer-agent-4-hours" title="Permanent link">¶</a></h3>
+<p><strong>Pre-requisites:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Jira or Linear API access (read-only, for board state)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Slack workspace (for posting daily reports)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> AI provider account (ChatGPT API, Claude API, or self-hosted LLM)</li>
+</ul>
+<p><strong>Agent Configuration:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FlowAnalyzer-Agent</span>
+<span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intermediate (Analyst)</span>
+
+<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Jira API</span>
+<span class="w">      </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/rest/agile/1.0/board/{boardId}/issue</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">summary</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">status</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">created</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">updated</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">story_points</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">daily_report</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Every day at 9am</span>
+<span class="w">    </span><span class="nt">weekly_summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Every Friday at 5pm</span>
+
+<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Slack</span><span class="w"> </span><span class="c1">#kanban-flow channel</span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Markdown</span>
+
+<span class="w">  </span><span class="nt">thresholds</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">aging_item_alert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Item age &gt; 1.5x average for column</span>
+<span class="w">    </span><span class="nt">cycle_time_target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5 days</span>
+<span class="w">    </span><span class="nt">wip_target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10 items</span>
+</code></pre></div>
+<p><strong>Implementation Options:</strong></p>
+<p><strong>Option A: Low-Code (Zapier/Make.com) — $50-100/month</strong></p>
+<ol>
+<li>Create Zap: "Every day at 9am"</li>
+<li>Step 1: Fetch board data (Jira API)</li>
+<li>Step 2: Send to ChatGPT API (prompt: "Analyze this Kanban data, generate flow report")</li>
+<li>Step 3: Post to Slack #kanban-flow</li>
+</ol>
+<p><strong>Option B: Custom Script (Python) — $20-50/month (AI API costs only)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># flow_analyzer.py (simplified example)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_board_data</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">JIRA_URL</span><span class="si">}</span><span class="s2">/rest/agile/1.0/board/</span><span class="si">{</span><span class="n">BOARD_ID</span><span class="si">}</span><span class="s2">/issue"</span><span class="p">,</span>
+        <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">JIRA_EMAIL</span><span class="p">,</span> <span class="n">JIRA_API_TOKEN</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_flow</span><span class="p">(</span><span class="n">board_data</span><span class="p">):</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">OPENAI_API_KEY</span><span class="p">)</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    Analyze this Kanban board data and generate a daily flow report:</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">board_data</span><span class="si">}</span>
+
+<span class="s2">    Include:</span>
+<span class="s2">    - Total items in flow</span>
+<span class="s2">    - Average cycle time</span>
+<span class="s2">    - Aging items (&gt;1.5x average age for column)</span>
+<span class="s2">    - Throughput this week</span>
+<span class="s2">    - Trend vs. last week</span>
+<span class="s2">    """</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4"</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">post_to_slack</span><span class="p">(</span><span class="n">report</span><span class="p">):</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+        <span class="n">SLACK_WEBHOOK_URL</span><span class="p">,</span>
+        <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">"text"</span><span class="p">:</span> <span class="n">report</span><span class="p">}</span>
+    <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">board_data</span> <span class="o">=</span> <span class="n">fetch_board_data</span><span class="p">()</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="n">analyze_flow</span><span class="p">(</span><span class="n">board_data</span><span class="p">)</span>
+    <span class="n">post_to_slack</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Deploy:</strong> Run as cron job (every day at 9am) on AWS Lambda, Google Cloud Functions, or local server</p>
+<hr/>
+<p><strong>Example Output (Daily Flow Report):</strong></p>
+<div class="highlight"><pre><span></span><code>🤖 FlowAnalyzer-Agent — Daily Flow Report (Nov 6, 2025)
+
+📊 Current Flow Metrics:
+- Total items in flow: 9 items (within WIP target of 10 ✅)
+- Average cycle time: 4.8 days (target: &lt;5 days ✅)
+- Throughput this week: 11 items completed (up from 8 last week 📈 +38%)
+
+⚠️ Aging Items (Need Attention):
+- [ITEM-112] in QA for 6 days (expected 3 days) — ⚠️ Bottleneck
+  - Assignee: @QA-Engineer
+  - Prediction: Will complete in 1 more day (7 days total)
+  - Recommendation: Escalate to QA Lead if not done by EOD
+
+✅ On-Track Items:
+- [ITEM-115] in Dev for 2 days (expected 3 days) — On track
+- [ITEM-118] in Ready for 1 day (expected &lt;5 days) — On track
+
+📈 Trend Analysis:
+- Throughput: +38% vs. last week (8 → 11 items)
+- Cycle time: Stable (4.9 days last week → 4.8 days this week)
+- Bottleneck column: QA (40% of items aged &gt;3 days in QA)
+
+💡 Recommendation: Monitor QA column closely — may need WIP limit increase if bottleneck persists
+</code></pre></div>
+<hr/>
+<h3 id="step-2-deploy-bottleneckdetector-agent-4-hours">Step 2: Deploy BottleneckDetector-Agent (4 hours)<a class="headerlink" href="#step-2-deploy-bottleneckdetector-agent-4-hours" title="Permanent link">¶</a></h3>
+<p><strong>Agent Configuration:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BottleneckDetector-Agent</span>
+<span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intermediate (Coordinator)</span>
+
+<span class="w">  </span><span class="nt">monitoring</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Every 1 hour (check WIP limits, bottlenecks)</span>
+
+<span class="w">  </span><span class="nt">alerts</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Column WIP exceeds limit</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Post to Slack (immediate alert)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Column avg age &gt; 2x target</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Post to Slack (bottleneck alert)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bottleneck persists &gt;3 days</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Escalate to Team Lead (DM in Slack)</span>
+
+<span class="w">  </span><span class="nt">recommendations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true (AI suggests solutions to bottlenecks)</span>
+</code></pre></div>
+<p><strong>Implementation:</strong> Similar to FlowAnalyzer (Zapier or Python script)</p>
+<p><strong>Example Output (Bottleneck Alert):</strong></p>
+<div class="highlight"><pre><span></span><code>⚠️ BottleneckDetector-Agent — Bottleneck Alert (Nov 6, 2025)
+
+🚨 BOTTLENECK DETECTED
+- Column: QA
+- Current WIP: 3/2 (150% of limit — over by 1 item)
+- Average age: 5.8 days (target: 3 days, 193% over)
+- Severity: 4/5 (High — intervention needed within 24 hours)
+
+📊 Root Cause:
+- QA throughput: 2 items/week (down from 4 items/week last month)
+- Dev throughput: 5 items/week (stable)
+- Gap: Dev shipping 2.5x faster than QA can test → pileup
+
+💡 Recommended Solutions:
+1. **Increase QA WIP limit from 2→3** (allows parallel testing)
+   - Impact: +50% QA capacity
+   - Effort: 5 minutes (update board)
+
+2. **Automate regression tests** (reduce manual QA time)
+   - Impact: +30% QA throughput
+   - Effort: 2 weeks to implement
+
+3. **Hire QA contractor (part-time)**
+   - Impact: +100% QA throughput
+   - Effort: 2 weeks to hire, $3K/month
+
+🎯 Recommended Action: Implement Solution 1 TODAY (increase WIP limit), evaluate if bottleneck persists after 3 days
+
+📅 Escalation: If bottleneck not resolved in 3 days, auto-escalating to @TeamLead
+</code></pre></div>
+<hr/>
+<h3 id="step-3-team-adoption-week-3-4">Step 3: Team Adoption (Week 3-4)<a class="headerlink" href="#step-3-team-adoption-week-3-4" title="Permanent link">¶</a></h3>
+<p><strong>Daily Routine (Now AI-Powered):</strong></p>
+<ul>
+<li><strong>9am: Review AI Report (10 min):</strong></li>
+<li>Team reads FlowAnalyzer daily report in Slack</li>
+<li>Focus on: Aging items, bottlenecks (not status updates — AI already provided)</li>
+<li>
+<p>Action: Address blockers flagged by AI</p>
+</li>
+<li>
+<p><strong>Live Standup (Optional, only if blockers):</strong></p>
+</li>
+<li>If FlowAnalyzer flags 0 blockers → skip standup, keep working</li>
+<li>
+<p>If blockers flagged → 10-minute discussion to unblock</p>
+</li>
+<li>
+<p><strong>Throughout Day:</strong></p>
+</li>
+<li>Continue moving items through board</li>
+<li>
+<p>BottleneckDetector monitors in background (alerts if WIP limit breached)</p>
+</li>
+<li>
+<p><strong>Friday Retrospective (30 min):</strong></p>
+</li>
+<li>Review AI's weekly summary</li>
+<li>Discuss: Did AI recommendations make sense? Did we act on them?</li>
+<li>Decide: Any board changes needed? (WIP limits, column structure, policies)</li>
+</ul>
+<p><strong>Measure Improvement (Week 4 End vs. Week 1 Baseline):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Week 1 (Baseline)</th>
+<th>Week 4 (AI-Powered)</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throughput</td>
+<td>8 items/week</td>
+<td>___ items/week</td>
+<td>___%</td>
+</tr>
+<tr>
+<td>Avg Cycle Time</td>
+<td>5.2 days</td>
+<td>___ days</td>
+<td>___%</td>
+</tr>
+<tr>
+<td>Bottleneck Detection Time</td>
+<td>3-5 days (found in retro)</td>
+<td>Real-time (&lt;1 hour)</td>
+<td>95% faster</td>
+</tr>
+<tr>
+<td>Team Meeting Time</td>
+<td>90 min/week (standup + retro)</td>
+<td>___ min/week</td>
+<td>___%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Expected:</strong> Throughput +10-15%, cycle time -10-15%, bottleneck detection 95% faster</p>
+<hr/>
+<h2 id="week-5-6-optimization-kanbanoptimizer-deployment">Week 5-6: Optimization — KanbanOptimizer Deployment<a class="headerlink" href="#week-5-6-optimization-kanbanoptimizer-deployment" title="Permanent link">¶</a></h2>
+<h3 id="goal-ai-driven-board-optimization-wip-limit-tuning">Goal: AI-driven board optimization, WIP limit tuning<a class="headerlink" href="#goal-ai-driven-board-optimization-wip-limit-tuning" title="Permanent link">¶</a></h3>
+<h3 id="step-1-deploy-kanbanoptimizer-agent-4-hours">Step 1: Deploy KanbanOptimizer-Agent (4 hours)<a class="headerlink" href="#step-1-deploy-kanbanoptimizer-agent-4-hours" title="Permanent link">¶</a></h3>
+<p><strong>Agent Configuration:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KanbanOptimizer-Agent</span>
+<span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">High (Specialist)</span>
+
+<span class="w">  </span><span class="nt">analysis_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Last 30 days</span>
+
+<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recommend WIP limit adjustments (based on throughput, bottleneck data)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Suggest column redesigns (if handoffs causing delays)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identify policy gaps (if rework rate high)</span>
+
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">monthly_report</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First Friday of each month</span>
+
+<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Slack</span><span class="w"> </span><span class="c1">#kanban-optimization</span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed Markdown report with recommendations</span>
+</code></pre></div>
+<p><strong>Implementation:</strong> Python script (more complex than FlowAnalyzer — needs historical data analysis)</p>
+<hr/>
+<h3 id="step-2-review-first-optimization-report-1-hour-team-meeting">Step 2: Review First Optimization Report (1 hour team meeting)<a class="headerlink" href="#step-2-review-first-optimization-report-1-hour-team-meeting" title="Permanent link">¶</a></h3>
+<p><strong>Example Monthly Report (Generated by KanbanOptimizer-Agent):</strong></p>
+<div class="highlight"><pre><span></span><code>💡 KanbanOptimizer-Agent — Monthly Optimization Report (November 2025)
+
+📊 System Performance (Last 30 Days):
+- Throughput: 48 items/month (avg 12 items/week)
+- Cycle time: 4.6 days (target: &lt;5 days ✅)
+- WIP limit adherence: 92% (8% of time over limit)
+- Bottleneck frequency: QA bottlenecked 35% of days
+
+📈 Trends (Last 3 Months):
+- Throughput: 40 → 44 → 48 items/month (+20% improvement)
+- Cycle time: 5.8 → 5.1 → 4.6 days (-21% improvement)
+- Bottleneck: Was Dev (Sept) → now QA (Nov)
+
+---
+
+🎯 Recommended Optimizations:
+
+**1. Increase QA WIP Limit from 2→3** ⭐ HIGH IMPACT
+- Rationale: QA bottlenecked 35% of November (10 days) — capacity insufficient
+- Impact: +33% QA throughput (allows parallel testing)
+- Risk: May increase context switching for QA engineer
+- **Vote:** Implement? (Team decides in retrospective)
+
+**2. Split "Dev" Column into "Dev: Coding" + "Dev: Code Review"** ⭐ MEDIUM IMPACT
+- Rationale: 30% of Dev cycle time spent in code review (invisible on current board)
+- Impact: Better visibility into code review delays → faster interventions
+- Effort: 1 hour to restructure board
+- **Vote:** Implement? (Team decides)
+
+**3. Add "Definition of Ready" Policy for Dev Column** ⭐ HIGH IMPACT
+- Rationale: 20% of items returned from Dev to Ready due to incomplete requirements
+- Proposed policy: "Item cannot enter Dev unless acceptance criteria documented + designs approved"
+- Impact: -20% rework rate, -10% cycle time
+- **Vote:** Implement? (Product Owner approves)
+
+**4. Automate Regression Tests** ⭐ HIGH IMPACT (Long-term)
+- Rationale: QA spends 60% of time on manual regression testing
+- Impact: -60% manual QA time → +60% capacity for new feature testing
+- Effort: 2-3 weeks to implement (Engineer time)
+- **Vote:** Prioritize in backlog? (Product Owner decides)
+
+---
+
+📅 Implementation Plan (if all approved):
+- **Week 1 (Nov 4-8):** Implement Optimization 1 (QA WIP limit) + Optimization 3 (Definition of Ready)
+- **Week 2 (Nov 11-15):** Monitor impact, measure QA throughput
+- **Week 3 (Nov 18-22):** Implement Optimization 2 (split Dev column) in retrospective
+- **Week 4 (Nov 25-29):** Start Optimization 4 (automate regression tests)
+
+🎯 Expected Outcome (After 4 weeks):
+- Throughput: 48 → 56 items/month (+17%)
+- Cycle time: 4.6 → 4.0 days (-13%)
+- Bottleneck frequency: 35% → &lt;10% of days
+</code></pre></div>
+<hr/>
+<h3 id="step-3-implement-optimizations-week-5-6">Step 3: Implement Optimizations (Week 5-6)<a class="headerlink" href="#step-3-implement-optimizations-week-5-6" title="Permanent link">¶</a></h3>
+<p><strong>Team Retrospective (Friday Week 5, 1 hour):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Review KanbanOptimizer report</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Vote on each recommendation:</li>
+<li>✅ Approve: Implement immediately</li>
+<li>⏸️ Defer: Good idea, but not now (prioritize later)</li>
+<li>❌ Reject: Not applicable to our team</li>
+</ul>
+<p><strong>Example Voting:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Optimization</th>
+<th>Vote</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increase QA WIP 2→3</td>
+<td>✅ Approve (5/5 votes)</td>
+<td>Implement Monday Week 6</td>
+</tr>
+<tr>
+<td>Split Dev column</td>
+<td>✅ Approve (4/5 votes, 1 abstain)</td>
+<td>Implement Monday Week 6</td>
+</tr>
+<tr>
+<td>Add Definition of Ready</td>
+<td>✅ Approve (5/5 votes)</td>
+<td>Product Owner updates policy</td>
+</tr>
+<tr>
+<td>Automate regression tests</td>
+<td>⏸️ Defer (3/5 votes)</td>
+<td>Add to backlog, prioritize next month</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implement Changes (Week 6):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Update board structure (WIP limits, columns)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Update policies (Definition of Ready, Definition of Done)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Communicate changes to team (Slack announcement + standup discussion)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Monitor for 2 weeks, measure impact</li>
+</ul>
+<hr/>
+<h2 id="week-7-8-refinement-measure-iterate">Week 7-8: Refinement — Measure &amp; Iterate<a class="headerlink" href="#week-7-8-refinement-measure-iterate" title="Permanent link">¶</a></h2>
+<h3 id="goal-validate-optimizations-establish-sustainable-rhythm">Goal: Validate optimizations, establish sustainable rhythm<a class="headerlink" href="#goal-validate-optimizations-establish-sustainable-rhythm" title="Permanent link">¶</a></h3>
+<h3 id="step-1-measure-optimization-impact-week-8-end">Step 1: Measure Optimization Impact (Week 8 End)<a class="headerlink" href="#step-1-measure-optimization-impact-week-8-end" title="Permanent link">¶</a></h3>
+<p><strong>Compare Week 8 vs. Week 1 (Baseline):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Week 1 (Baseline)</th>
+<th>Week 8 (Optimized)</th>
+<th>Change</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throughput</td>
+<td>8 items/week</td>
+<td>___ items/week</td>
+<td>___%</td>
+<td>✅ Target: +15%</td>
+</tr>
+<tr>
+<td>Avg Cycle Time</td>
+<td>5.2 days</td>
+<td>___ days</td>
+<td>___%</td>
+<td>✅ Target: -15%</td>
+</tr>
+<tr>
+<td>Bottleneck Detection</td>
+<td>3-5 days (manual)</td>
+<td>&lt;1 hour (AI)</td>
+<td>95% faster</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>WIP Limit Adherence</td>
+<td>___%</td>
+<td>___%</td>
+<td>___%</td>
+<td>✅ Target: &gt;90%</td>
+</tr>
+<tr>
+<td>Rework Rate</td>
+<td>___%</td>
+<td>___%</td>
+<td>___%</td>
+<td>✅ Target: &lt;10%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Expected Results:</strong></p>
+<ul>
+<li>✅ Throughput: +15-25% (e.g., 8 → 10-11 items/week)</li>
+<li>✅ Cycle time: -10-20% (e.g., 5.2 → 4.2-4.7 days)</li>
+<li>✅ Bottleneck detection: Real-time (vs. 3-5 days manual)</li>
+</ul>
+<hr/>
+<h3 id="step-2-team-retrospective-week-8-1-hour">Step 2: Team Retrospective (Week 8, 1 hour)<a class="headerlink" href="#step-2-team-retrospective-week-8-1-hour" title="Permanent link">¶</a></h3>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li><strong>What's working well with AI-Native Kanban?</strong></li>
+<li>
+<p>Example answers: "AI alerts saved us 2 days on bottleneck detection", "Daily reports reduce standup time 50%"</p>
+</li>
+<li>
+<p><strong>What's not working?</strong></p>
+</li>
+<li>
+<p>Example answers: "AI over-alerts (too many notifications)", "Predictions sometimes inaccurate"</p>
+</li>
+<li>
+<p><strong>How to improve AI agents?</strong></p>
+</li>
+<li>
+<p>Example actions: "Tune FlowAnalyzer thresholds (reduce alerts)", "Train KanbanOptimizer on our team's data (improve accuracy)"</p>
+</li>
+<li>
+<p><strong>Next optimizations?</strong></p>
+</li>
+<li>Example: "Automate regression tests (from deferred list)", "Add DeploymentOptimizer-Agent to speed up deploy column"</li>
+</ol>
+<hr/>
+<h3 id="step-3-establish-sustainable-rhythm-ongoing">Step 3: Establish Sustainable Rhythm (Ongoing)<a class="headerlink" href="#step-3-establish-sustainable-rhythm-ongoing" title="Permanent link">¶</a></h3>
+<p><strong>Daily:</strong>
+- [ ] 9am: AI posts FlowAnalyzer daily report
+- [ ] Team reviews report (5-10 minutes)
+- [ ] Address blockers/aging items</p>
+<p><strong>Weekly:</strong>
+- [ ] Friday: FlowAnalyzer posts weekly summary
+- [ ] (Optional) Friday retrospective (30 min every 2 weeks)</p>
+<p><strong>Monthly:</strong>
+- [ ] First Friday: KanbanOptimizer posts monthly optimization report
+- [ ] Team retrospective: Vote on optimizations, implement approved changes</p>
+<p><strong>Quarterly:</strong>
+- [ ] Review long-term trends (throughput, cycle time, team satisfaction)
+- [ ] Upgrade AI agents (if accuracy &gt;90% → consider High-Level agents)
+- [ ] Adjust board structure (if team grows/shrinks or work changes)</p>
+<hr/>
+<h2 id="success-criteria">Success Criteria<a class="headerlink" href="#success-criteria" title="Permanent link">¶</a></h2>
+<h3 id="week-8-success-indicators">✅ Week 8 Success Indicators<a class="headerlink" href="#week-8-success-indicators" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Throughput increased 15-25% (vs. Week 1 baseline)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Cycle time decreased 10-20% (vs. Week 1 baseline)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Bottleneck detection is real-time (&lt;1 hour vs. 3-5 days)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Team satisfaction improved (survey: 4+/5 rating)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> AI agents operating autonomously (minimal manual intervention)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> WIP limit adherence &gt;90% (team respects limits)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Rework rate &lt;10% (Definition of Ready/Done effective)</li>
+</ul>
+<h3 id="yellow-flags-need-attention">⚠️ Yellow Flags (Need Attention)<a class="headerlink" href="#yellow-flags-need-attention" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Throughput increased &lt;10% (optimizations not effective)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Cycle time unchanged or increased (process issues)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Team ignoring AI alerts (alert fatigue)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> WIP limit adherence &lt;80% (limits set wrong or team not bought in)</li>
+</ul>
+<h3 id="red-flags-intervention-needed">🚨 Red Flags (Intervention Needed)<a class="headerlink" href="#red-flags-intervention-needed" title="Permanent link">¶</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Throughput decreased (AI agents adding overhead, not value)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Cycle time increased &gt;10% (board design wrong for team)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Team actively disabling AI agents (not seeing value)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Bottlenecks persisting &gt;5 days despite AI alerts (structural issues)</li>
+</ul>
+<p><strong>If Red Flags → Escalate to Tech Lead + Product Owner for root cause analysis</strong></p>
+<hr/>
+<h2 id="common-pitfalls-solutions">Common Pitfalls &amp; Solutions<a class="headerlink" href="#common-pitfalls-solutions" title="Permanent link">¶</a></h2>
+<h3 id="pitfall-1-team-ignores-ai-alerts-alert-fatigue">Pitfall #1: Team Ignores AI Alerts (Alert Fatigue)<a class="headerlink" href="#pitfall-1-team-ignores-ai-alerts-alert-fatigue" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> FlowAnalyzer posts daily reports, but team stops reading after Week 2</p>
+<p><strong>Solutions:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Reduce alert frequency (daily → 3x/week)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Tune thresholds (only alert on high-severity issues)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Change format (move from Slack to dashboard, check on-demand)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Add human review (Scrum Master highlights top 2-3 insights in standup)</li>
+</ul>
+<hr/>
+<h3 id="pitfall-2-ai-recommendations-not-implemented">Pitfall #2: AI Recommendations Not Implemented<a class="headerlink" href="#pitfall-2-ai-recommendations-not-implemented" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> KanbanOptimizer suggests WIP limit changes, but team votes "defer" every month</p>
+<p><strong>Solutions:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Make recommendations more actionable (provide step-by-step implementation)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Start small (trial 1 optimization for 2 weeks, measure impact)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Get Product Owner buy-in (if team lacks decision authority)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Review in retrospective: Why are we deferring? (lack of time? fear of change?)</li>
+</ul>
+<hr/>
+<h3 id="pitfall-3-wip-limits-constantly-breached">Pitfall #3: WIP Limits Constantly Breached<a class="headerlink" href="#pitfall-3-wip-limits-constantly-breached" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> Team pulls new work even when column at WIP limit</p>
+<p><strong>Solutions:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Automated enforcement (BottleneckDetector blocks new work if WIP limit hit)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Visualize WIP limits clearly (highlight red when over limit)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Retrospective discussion: Why are we breaching? (WIP limits too low? Team not respecting limits?)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Adjust WIP limits if team consistently at capacity (e.g., increase Dev WIP 3→4)</li>
+</ul>
+<hr/>
+<h3 id="pitfall-4-bottlenecks-persist-despite-ai-alerts">Pitfall #4: Bottlenecks Persist Despite AI Alerts<a class="headerlink" href="#pitfall-4-bottlenecks-persist-despite-ai-alerts" title="Permanent link">¶</a></h3>
+<p><strong>Problem:</strong> BottleneckDetector flags QA bottleneck for 3 weeks, but nothing changes</p>
+<p><strong>Solutions:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Escalation policy: If bottleneck &gt;5 days → auto-escalate to Team Lead</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Action required: Product Owner must approve one of AI's recommendations (increase WIP, hire, automate)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Root cause analysis: Is bottleneck structural? (e.g., QA capacity 50% of Dev → need to hire)</li>
+</ul>
+<hr/>
+<h2 id="next-steps-after-week-8">Next Steps After Week 8<a class="headerlink" href="#next-steps-after-week-8" title="Permanent link">¶</a></h2>
+<h3 id="option-1-scale-ai-native-kanban-team-growing">Option 1: Scale AI-Native Kanban (Team Growing)<a class="headerlink" href="#option-1-scale-ai-native-kanban-team-growing" title="Permanent link">¶</a></h3>
+<p><strong>If team grows from 5→10 people:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Add more specialized AI agents:</li>
+<li>DeploymentOptimizer-Agent (optimize deploy frequency, reduce deploy time)</li>
+<li>CodeReviewOptimizer-Agent (reduce code review cycle time)</li>
+<li>
+<p>CustomerSupportPrioritizer-Agent (auto-triage support tickets)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Split board into swim lanes (by team, product area, or priority)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="option-2-adopt-hybrid-scrumban-need-sprint-commitments">Option 2: Adopt Hybrid Scrumban (Need Sprint Commitments)<a class="headerlink" href="#option-2-adopt-hybrid-scrumban-need-sprint-commitments" title="Permanent link">¶</a></h3>
+<p><strong>If stakeholders require predictable delivery (e.g., quarterly roadmap):</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Add 2-week sprint rhythm (sprint planning + retrospective)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Keep Kanban board (continuous flow within sprint)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Deploy SprintPlanner-Agent (from AI-Native Scrum playbook)</li>
+</ul>
+<p><strong>See:</strong> <a href="scrumban.md">Scrumban Implementation Guide</a></p>
+<hr/>
+<h3 id="option-3-expand-to-multiple-teams-scaled-kanban">Option 3: Expand to Multiple Teams (Scaled Kanban)<a class="headerlink" href="#option-3-expand-to-multiple-teams-scaled-kanban" title="Permanent link">¶</a></h3>
+<p><strong>If organization has 3+ teams using Kanban:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Add portfolio-level Kanban board (track epics across teams)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Deploy PortfolioOptimizer-Agent (identify cross-team dependencies, optimize resource allocation)</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Standardize metrics (all teams report throughput, cycle time, bottlenecks)</li>
+</ul>
+<p><strong>See:</strong> <a href="scaled-ai-native-kanban.md">Scaled AI-Native Kanban</a> (future playbook)</p>
+<hr/>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p><strong>Framework Documentation:</strong>
+- <a href="../../DOCS/12-ai-native-kanban.md">AI-Native Kanban</a> — Conceptual overview
+- <a href="../../DOCS/11-ai-native-agile.md">AI-Native Agile (Scrum)</a> — Sprint-based alternative
+- <a href="../../DOCS/05-ai-agents.md">AI Agents</a> — Agent architecture</p>
+<p><strong>Templates:</strong>
+- <a href="../../ADOPTION/TEMPLATES/kanban-board-template.md">Kanban Board Template</a> — Jira/Linear setup
+- <a href="../../ADOPTION/TEMPLATES/agent-definition-template.yaml">Agent Definition Template</a> — Configure AI agents
+- <a href="../../ADOPTION/TEMPLATES/kanban-metrics-dashboard.md">Kanban Metrics Dashboard</a> — Track cycle time, throughput</p>
+<p><strong>Checklists:</strong>
+- <a href="../../ADOPTION/CHECKLISTS/kanban-setup.md">Kanban Setup Checklist</a> — Step-by-step implementation
+- <a href="../../ADOPTION/CHECKLISTS/ai-agent-integration.md">AI Agent Integration</a> — Deploy FlowAnalyzer, BottleneckDetector</p>
+<p><strong>Other Playbooks:</strong>
+- <a href="scrumban.md">Scrumban Implementation</a> — Hybrid Scrum + Kanban
+- <a href="../by-stage/startup-ai-native-kanban.md">Startup AI-Native (Kanban)</a> — Kanban for early-stage startups</p>
+<hr/>
+<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Framework:</strong> SOLID.AI</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>

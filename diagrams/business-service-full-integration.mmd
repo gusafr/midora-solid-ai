@@ -1,0 +1,152 @@
+---
+title: "Business Service Integration with Data Spine & Automation Mesh"
+description: "Shows how each business service integrates with Data Spine (contracts, events, observability) and Automation Mesh (workflows, event-driven architecture)"
+category: architecture
+framework: SOLID.AI
+version: 1.0
+created: 2025-11-05
+---
+
+graph TB
+    subgraph "🛒 Example: Order Fulfillment Business Service"
+        Squad[Order Fulfillment Squad<br/>Cross-functional Team<br/>PO + Architect + Devs + QA]
+        
+        subgraph "Service Boundary"
+            Process[SIPOC Workflow:<br/>1. Receive OrderPlaced<br/>2. Check Inventory AI<br/>3. Allocate Stock AUTO<br/>4. Generate Shipping AUTO<br/>5. Publish OrderFulfilled]
+        end
+        
+        Squad --> Process
+    end
+    
+    subgraph "🧬 Data Spine Integration REQUIRED"
+        direction TB
+        
+        subgraph Contracts["📋 Data Contracts"]
+            InputC[Input Contracts:<br/>• OrderPlaced event<br/>• InventoryLevels data<br/>Schema: order_v2.avro<br/>SLA: <500ms]
+            OutputC[Output Contracts:<br/>• OrderFulfilled event<br/>• InventoryUpdated event<br/>Schema: fulfillment_v1<br/>Consumers: 4 services]
+        end
+        
+        subgraph Events["📡 Business Events"]
+            EventCatalog[Event Catalog:<br/>• OrderFulfilled<br/>• OrderShipped<br/>• FulfillmentFailed<br/>Owner: This Squad]
+            Stakeholders[Stakeholders:<br/>• Customer Notifications<br/>• Analytics<br/>• Returns Service<br/>• Billing]
+        end
+        
+        subgraph Observability["📊 Observability"]
+            Metrics[Service Metrics:<br/>• Latency p95: 150ms<br/>• Throughput: 500 req/s<br/>• Error rate: 0.1%]
+            Lineage[Data Lineage:<br/>OrderPlaced → Inventory<br/>→ Shipping → Fulfilled]
+            Quality[Data Quality SLAs:<br/>• 99.9% accuracy<br/>• <1s timeliness<br/>• 100% completeness]
+        end
+        
+        InputC --> Process
+        Process --> OutputC
+        Process --> EventCatalog
+        EventCatalog --> Stakeholders
+        Process --> Metrics
+        Process --> Lineage
+        OutputC --> Quality
+    end
+    
+    subgraph "⚙️ Automation Mesh Integration REQUIRED"
+        direction TB
+        
+        subgraph Workflow["🔄 Automated Workflow"]
+            SIPOC[SIPOC Mapping:<br/>S: Shopping Cart<br/>I: OrderPlaced event<br/>P: 5-step process<br/>O: OrderFulfilled<br/>C: 4 consumers]
+            Automation[Automation Level:<br/>Step 1: 100% event-driven<br/>Step 2: 95% AI automated<br/>Step 3: 100% rule-based<br/>Step 4: 100% integrated<br/>Step 5: 100% event publish]
+        end
+        
+        subgraph EventDriven["📨 Event-Driven Architecture"]
+            Subscribe[Events Subscribed:<br/>• OrderPlaced<br/>• PaymentConfirmed<br/>• InventoryRestocked]
+            Publish[Events Published:<br/>• OrderFulfilled<br/>• FulfillmentFailed<br/>• InventoryUpdated]
+        end
+        
+        subgraph ErrorHandling["🛡️ Error Handling"]
+            Retry[Retry Policy:<br/>Exponential backoff<br/>Max 3 attempts]
+            DLQ[Dead Letter Queue:<br/>Failed events for<br/>manual review]
+            Circuit[Circuit Breaker:<br/>Fallback when<br/>inventory unavailable]
+        end
+        
+        Process --> SIPOC
+        Process --> Automation
+        Subscribe --> Process
+        Process --> Publish
+        Process --> Retry
+        Retry --> DLQ
+        Process --> Circuit
+    end
+    
+    subgraph "🎯 OKRs & KPIs REQUIRED"
+        direction TB
+        
+        OKRs[Service-Level OKRs:<br/>O: Faster fulfillment<br/>KR1: <4h avg time 95→98%<br/>KR2: 99.5% on-time ship<br/>KR3: $3 cost per order]
+        
+        KPIs[Real-Time KPI Dashboard:<br/>Business: 10K orders/day<br/>Efficiency: $3.20 cost<br/>Quality: 99.2% accuracy<br/>Speed: 3.8h avg<br/>AI: 92% automated<br/>Uptime: 99.95%]
+        
+        Value[Business Value:<br/>Revenue: +$2M from speed<br/>Cost: -40% ops cost<br/>NPS: +15 points<br/>Capacity: 2x volume]
+        
+        Process --> OKRs
+        Metrics --> KPIs
+        KPIs --> Value
+    end
+    
+    subgraph "🔒 Data Governance REQUIRED"
+        direction TB
+        
+        Ownership[Event Ownership:<br/>Squad owns:<br/>• OrderFulfilled<br/>• FulfillmentFailed<br/>Authoritative source]
+        
+        ChangePolicy[Breaking Change Policy:<br/>Additive: Deploy now<br/>Breaking: RFC + 90 days<br/>Deprecation: Notify all]
+        
+        Compliance[Compliance:<br/>Data: Customer PII<br/>Retention: 7 years<br/>Access: RBAC enforced<br/>Audit: All logged<br/>Standards: GDPR, SOX]
+        
+        EventCatalog --> Ownership
+        Stakeholders --> ChangePolicy
+        OutputC --> Compliance
+    end
+    
+    subgraph "🔄 Cross-Service Event Flow"
+        direction LR
+        
+        ShoppingCart[🛒 Shopping Cart<br/>Service]
+        Payment[💰 Payment<br/>Service]
+        OrderFulfill[📦 Order Fulfillment<br/>Service THIS]
+        CustomerNotif[📧 Customer<br/>Notifications]
+        Analytics[📊 Analytics<br/>Service]
+        Returns[↩️ Returns<br/>Service]
+        
+        ShoppingCart -->|OrderPlaced| OrderFulfill
+        Payment -->|PaymentConfirmed| OrderFulfill
+        OrderFulfill -->|OrderFulfilled| CustomerNotif
+        OrderFulfill -->|OrderFulfilled| Analytics
+        OrderFulfill -->|OrderFulfilled| Returns
+    end
+    
+    subgraph "📋 Integration Checklist ALL REQUIRED"
+        Check1[✅ Input/Output contracts defined]
+        Check2[✅ Business events cataloged]
+        Check3[✅ Observability dashboards configured]
+        Check4[✅ SIPOC workflow documented]
+        Check5[✅ Event subscriptions/publications registered]
+        Check6[✅ Error handling & circuit breakers]
+        Check7[✅ Service-level OKRs defined]
+        Check8[✅ KPI dashboard with real-time metrics]
+        Check9[✅ Event ownership documented]
+        Check10[✅ Compliance requirements validated]
+        
+        Check1 --> Check2 --> Check3 --> Check4 --> Check5
+        Check5 --> Check6 --> Check7 --> Check8 --> Check9 --> Check10
+    end
+    
+    style Squad fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Process fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Contracts fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Events fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Observability fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Workflow fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style EventDriven fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style ErrorHandling fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style OKRs fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style KPIs fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style Value fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style Ownership fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style ChangePolicy fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style Compliance fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style OrderFulfill fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
