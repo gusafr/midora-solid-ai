@@ -1,18 +1,16 @@
-version: '3.8'
-
 services:
   # Development service with live reload
   mkdocs-dev:
-    image: python:3.11-slim
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     container_name: solid-ai-dev
     working_dir: /docs
     volumes:
       - .:/docs
     ports:
       - "8000:8000"
-    command: >
-      sh -c "pip install --no-cache-dir -r requirements.txt &&
-             mkdocs serve --dev-addr=0.0.0.0:8000"
+    command: mkdocs serve --dev-addr=0.0.0.0:8000
     profiles:
       - dev
 

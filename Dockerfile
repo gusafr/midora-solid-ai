@@ -4,20 +4,29 @@ FROM python:3.11-slim AS builder
 
 WORKDIR /docs
 
+# Install build dependencies for pycairo (required by svglib)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    python3-dev \
+    libcairo2-dev \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source files
 COPY mkdocs.yml .
+COPY *.md ./
 COPY DOCS/ ./DOCS/
 COPY DIAGRAMS/ ./DIAGRAMS/
 COPY RFC/ ./RFC/
 COPY ADR/ ./ADR/
 COPY MANIFESTO/ ./MANIFESTO/
 COPY PLAYBOOKS/ ./PLAYBOOKS/
+COPY ADOPTION/ ./ADOPTION/
 COPY docs_site/ ./docs_site/
-COPY README.md .
 COPY LICENSE .
 
 # Build the static site
