@@ -91,18 +91,19 @@ Midora's 10+ repositories map to specific layers, clarifying ownership and integ
 | **Google Workspace (PAID)** | External collaboration, investor-friendly, automation APIs | Microsoft 365, NextCloud (self-hosted) | NextCloud unreliable mobile experience; investors expect Google Docs/Sheets | **Worth $720/year** |
 | **Trello Premium (PAID)** | Butler automation, calendar view, unlimited power-ups, team collaboration | Jira, Asana, Linear, Wekan (self-hosted) | Jira overkill for 3-5 person team; self-hosted Kanban lacks polish/mobile; Butler automation = $5K+ time savings | **Worth $600/year** |
 | **GitHub Team (PAID)** | 3000 Actions minutes/month, advanced code review, team permissions | GitLab (self-hosted), Bitbucket, Gitea | GitLab self-hosted maintenance not worth $240/year savings; GitHub Actions ecosystem unmatched | **Worth $240/year** |
-| **OpenAI API (Usage-Based)** | GPT-4 quality, extensive tooling, proven reliability | Google Gemini, Anthropic Claude, open-source LLMs | Best-in-class for production AI agents; usage-based pricing scales with revenue | **$400/month** |
-| **Google Gemini API (Usage-Based)** | Fallback LLM for redundancy, good for multimodal | N/A | Vendor diversification; if OpenAI down, Gemini ensures continuity | **$50/month** |
+| **ChatGPT Teams (PAID)** | Secure workspace, admin controls, unlimited GPT-4 | Open-source LLMs (Llama, Mistral), self-hosted | Employee productivity tool, not infrastructure; admin controls + data privacy worth premium | **Worth $1,440/year** |
+| **OpenAI API (Usage-Based)** | GPT-4 quality, extensive tooling, proven reliability | Google Gemini, Anthropic Claude, open-source LLMs | Best-in-class for production AI agents; usage-based pricing scales with revenue; **not locked in** (LangGraph abstraction) | **$400/month** |
+| **Google Gemini API (Usage-Based)** | Fallback LLM for redundancy, good for multimodal | N/A | Vendor diversification; if OpenAI down, Gemini ensures continuity; 8x cheaper for high-volume tasks | **$50/month** |
 | **Vercel (Free Tier)** | Next.js optimized, instant deployments, CDN | AWS Amplify, Netlify, self-hosted | Free tier sufficient for <1000 users; upgrade only when needed | **Saves $600/year** |
 | **Supabase (Free Tier)** | Postgres + auth + storage + real-time | AWS RDS + Cognito, Firebase, self-hosted Postgres | Free tier (2 projects, 500MB) sufficient for MVP; simpler than AWS setup | **Saves $300/year** |
 
 **Total Annual Savings from Self-Hosting: ~$16,260/year**  
-**Total Annual Cost for Paid Tools: ~$2,040/year** (Slack + Google Workspace + Trello + GitHub)  
-**Net Infrastructure Cost: ~$11,940/year** (vs $28,200 fully managed)
+**Total Annual Cost for Paid Tools: ~$3,480/year** (Slack + Google Workspace + Trello + GitHub + ChatGPT Teams)  
+**Net Infrastructure Cost: ~$13,380/year** (vs $28,200 fully managed)
 
 **Cost-Conscious Decisions:**
 - ✅ **Self-host where team has expertise:** Temporal, Kafka, Grafana, OpenMetadata, Backstage (DevOps background)
-- ✅ **Pay for collaboration tools:** Slack, Google Workspace, Trello Premium, GitHub Team (team productivity non-negotiable)
+- ✅ **Pay for collaboration & productivity tools:** Slack, Google Workspace, Trello Premium, GitHub Team, ChatGPT Teams (team productivity non-negotiable)
 - ✅ **Usage-based for AI:** OpenAI, Gemini (cost scales with revenue, not fixed overhead)
 - ✅ **Free tiers for ancillary services:** Vercel, Supabase (upgrade only when validated)
 - ❌ **Avoid vendor lock-in:** Open-source self-hosted > proprietary managed (retain control, no pricing surprises)
@@ -150,22 +151,23 @@ Midora optimizes costs by self-hosting all technical infrastructure (where team 
 | **Data & Catalog** | OpenMetadata (self-hosted) | $20 | Yes | EC2 t3.small, lightweight catalog |
 | | Backstage (self-hosted) | $15 | Yes | EC2 t3.small, developer portal |
 | | Apicurio Registry (self-hosted) | $10 | Yes | Shared EC2, schema registry |
-| **AI & Cognitive** | OpenAI API (GPT-4, embeddings) | $400 | No | Usage-based, scales with users (primary LLM) |
-| | Google Gemini API (fallback) | $50 | No | Backup LLM for redundancy |
+| **AI & Cognitive (Agents)** | OpenAI API (GPT-4, embeddings) | $400 | No | Usage-based, scales with users (primary LLM for AI agents) |
+| | Google Gemini API (fallback) | $50 | No | Backup LLM for redundancy (no vendor lock-in) |
 | | LangGraph (self-hosted) | $0 | Yes | Open-source, runs on AWS compute |
+| **AI & Cognitive (Humans)** | ChatGPT Teams | $120 | No | 5 users × $25/user = employee productivity tool |
 | **Collaboration (PAID)** | Slack Standard | $40 | No | 5 users × $8/user = critical for team productivity |
 | | Google Workspace Business Standard | $60 | No | 5 users × $12/user = external collaboration + docs |
 | | Trello Premium | $50 | No | 5 users × $10/user = OKR tracking + portfolio management |
 | | GitHub Team | $20 | No | 5 users × $4/user = code collaboration + CI/CD |
 | **Portfolio & OKRs** | Trello Premium | $0 | - | (Included in Collaboration above) |
-| **Total Infrastructure** | | **$995/month** | | **$11,940/year** |
+| **Total Infrastructure** | | **$1,115/month** | | **$13,380/year** |
 
 **Cost Breakdown by Philosophy:**
 
 | Philosophy | Annual Cost | Examples |
 |------------|-------------|----------|
 | **Self-Hosted (Team Expertise)** | ~$3,600/year | Temporal, Kafka, OpenMetadata, Backstage, Grafana, Prometheus |
-| **Paid SaaS (Team Productivity)** | ~$2,040/year | Slack, Google Workspace, Trello Premium, GitHub Team |
+| **Paid SaaS (Team Productivity)** | ~$3,480/year | Slack, Google Workspace, Trello Premium, GitHub Team, ChatGPT Teams |
 | **Usage-Based (Scales with Revenue)** | ~$5,400/year | OpenAI API, Gemini API (grows with customers) |
 | **Free Tier (Sufficient for Now)** | $0/year | Vercel, Supabase (upgrade when >1000 users) |
 
@@ -184,7 +186,7 @@ Midora optimizes costs by self-hosting all technical infrastructure (where team 
 
 **Total AWS Self-Hosted: ~$225/month** (vs $800+/month fully managed SaaS equivalent)
 
-**Why Keep Slack, Google Workspace, Trello & GitHub Paid?**
+**Why Keep Slack, Google Workspace, Trello, GitHub & ChatGPT Paid?**
 
 | Tool | Annual Cost | Why Not Self-Host? | ROI |
 |------|-------------|-------------------|-----|
@@ -192,8 +194,9 @@ Midora optimizes costs by self-hosting all technical infrastructure (where team 
 | **Google Workspace** | $720/year (5 users) | Self-hosted alternatives (NextCloud) unreliable, poor mobile experience | External collaboration with investors/board essential, saves $10K+ in manual work |
 | **Trello Premium** | $600/year (5 users) | Self-hosted Kanban (Wekan, Taiga) lack polish, no mobile apps | Advanced features (Butler automation, calendar view, unlimited power-ups) = $5K+ time savings |
 | **GitHub Team** | $240/year (5 users) | GitLab self-hosted requires maintenance, lacks GitHub Actions ecosystem | CI/CD integrations, code reviews, 3000 Actions minutes/month = $8K+ DevOps time |
+| **ChatGPT Teams** | $1,440/year (5 users) | N/A (unique product) | Employees use ChatGPT for ad-hoc tasks, brainstorming, research = $15K+ productivity gain |
 
-**Total Paid Collaboration: $2,040/year** — Non-negotiable for team productivity
+**Total Paid Collaboration & Productivity: $3,480/year** — Non-negotiable for team productivity
 
 **Compare to Traditional Startup Costs (same 1,000 users):**
 
@@ -208,10 +211,10 @@ Midora optimizes costs by self-hosting all technical infrastructure (where team 
 | **Total Salaries** | | **6.5 FTE** | **$675K/year** |
 
 **Midora's Advantage (Cost-Optimized Strategy):**
-- **Infrastructure (self-hosted + SaaS):** $11,940/year
+- **Infrastructure (self-hosted + SaaS):** $13,380/year
 - **Salaries (3-5 strategic hires):** $300K-$400K/year
-- **Total:** $312K-$412K/year vs $675K+ traditional
-- **Savings:** $263K-$363K/year (39-54% cost reduction)
+- **Total:** $313K-$413K/year vs $675K+ traditional
+- **Savings:** $262K-$362K/year (39-54% cost reduction)
 
 **Capital Efficiency Multiplier:**
 - Traditional startup: 6.5 people = ~6.5 person-equivalents of output
@@ -247,6 +250,33 @@ Midora uses Google Workspace as a **complementary layer** for external collabora
 | **L6 (Observability)** | Sheets for investor dashboards, Looker Studio for business metrics | Grafana = technical (team), Sheets = business (investors/board) |
 | **L7 (Human-AI)** | Gmail for external approvals, Meet for investor calls | Slack = internal, Gmail/Meet = external stakeholders |
 | **L8 (Learning)** | Forms for customer feedback, Sheets for A/B test tracking | Prometheus = technical metrics, Forms/Sheets = qualitative feedback |
+
+**Multi-LLM Strategy: OpenAI as Preference, Not Lock-In**
+
+Midora uses a **diversified AI stack** to avoid vendor lock-in while optimizing for quality and team productivity:
+
+| Use Case | Primary Tool | Secondary Tool | Rationale |
+|----------|--------------|----------------|-----------|
+| **Human Productivity** | ChatGPT Teams ($25/user) | Google Gemini (free tier) | Employees use ChatGPT for daily tasks; Gemini for multimodal/long-context needs |
+| **AI Agent Inference** | OpenAI API (GPT-4) | Google Gemini API | LangGraph abstracts LLM calls; swap providers without code changes |
+| **Embeddings** | OpenAI API (text-embedding-3) | Sentence Transformers (open-source) | OpenAI primary for consistency; open-source for cost-sensitive use cases |
+| **Code Generation** | GitHub Copilot (included in GitHub Team) | Cursor/Cody (team preference) | GitHub integration built-in; other tools for specific workflows |
+
+**Vendor Lock-In Mitigation:**
+- ✅ **LangGraph Abstraction:** All agent code uses LangGraph's LLM interface, not OpenAI SDK directly
+- ✅ **Multi-Provider Fallback:** If OpenAI API fails/throttles, Gemini API automatically used (Temporal + LangGraph retry logic)
+- ✅ **Cost Monitoring:** OpenTelemetry tracks per-request costs; automatic switch to cheaper model if costs exceed budget
+- ✅ **Human Tools Separate:** ChatGPT Teams for employees is distinct from OpenAI API for agents (no cross-dependency)
+
+**Cost Efficiency Example:**
+- OpenAI GPT-4 Turbo: $0.01/1K input tokens → High quality for customer-facing features
+- Google Gemini 1.5 Pro: $0.00125/1K input tokens → 8x cheaper for internal automation
+- Sentence Transformers (open-source): $0/inference → Free for embeddings if self-hosting viable
+
+**When to Switch Providers:**
+- ✅ OpenAI API cost >$1K/month → Migrate high-volume, low-risk workflows to Gemini
+- ✅ Gemini quality improves → Gradually shift workloads from OpenAI to Gemini
+- ❌ Never switch ChatGPT Teams → Employee productivity tool, not infrastructure dependency
 
 **Example: Invoice Processing with Gmail + Temporal**
 

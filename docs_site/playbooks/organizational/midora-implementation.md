@@ -40,14 +40,248 @@ Midora implements the SOLID.AI framework through a carefully selected technology
 - 🟡 **Yellow (Partial):** Core components live, advanced features planned
 - 🔴 **Red (Planned):** Roadmap for 12-24 months
 
-**See the complete technical stack documentation below for:**
-- Squad category → Layer ownership mapping
-- Repository → Layer mapping
-- Tool selection rationale
-- Implementation timeline & costs
-- Human-in-the-loop approval patterns
-- Governance integration with OPA
-- Continuous learning mechanisms
+#### Squad Category → Layer Ownership
+
+Understanding which squad categories own which layers helps clarify responsibilities:
+
+| Squad Category | Primary Layers | Responsibilities | Example Squads |
+|----------------|----------------|------------------|----------------|
+| **🔧 Tech Core** | L3, L4, L6 | Data Spine catalog, Automation Mesh orchestration, Observability infrastructure | Platform Squad, Data Engineering Squad, DevOps Squad |
+| **💼 Business Core** | L5, L7 | AI agents for customer-facing features, Human-AI collaboration interfaces | Assessment Engine Squad, Student Experience Squad |
+| **🏢 Operations Core** | L2, L4, L8 | Governance automation, Operational workflows, Learning/optimization | Finance Ops Squad, HR Ops Squad, Compliance Squad |
+| **🔬 Innovation** | L5, L9 | Experimental AI agents, Ethical AI research, New capability prototypes | R&D Squad, AI Safety Squad |
+
+**Cross-Layer Collaboration Example:**
+- **Assessment Engine Squad** (Business Core) builds AI tutoring agent in L5 (Cognitive Layer)
+- Depends on **Platform Squad** (Tech Core) for L3 (Data Spine contracts) and L6 (Observability dashboards)
+- **Compliance Squad** (Operations Core) reviews via L2 (Governance) and L9 (Ethics monitoring)
+- **R&D Squad** (Innovation) provides validated algorithm from L5 experimentation
+
+#### Repository → Layer Mapping
+
+Midora's 10+ repositories map to specific layers, clarifying ownership and integration points:
+
+| Layer | Repositories | Purpose | Squad Ownership |
+|-------|-------------|---------|-----------------|
+| **L1 (Purpose)** | `midora-idp-backstage` | OKR dashboards, strategic metrics | Portfolio/Leadership |
+| **L2 (Governance)** | All repos | GitHub Actions governance pipelines | Platform Squad (Tech Core) |
+| **L3 (Data Spine)** | `midora-back-end-py`, `midora-api-openapi`, OpenMetadata catalog | Data contracts, API schemas, event catalog | Data Engineering Squad (Tech Core) |
+| **L4 (Automation)** | `midora-magi-py`, Temporal Cloud, Kafka | Workflow orchestration, event-driven automation | Platform Squad (Tech Core) |
+| **L5 (Cognitive)** | `midora-ml-service`, `midora-magi-py`, `midora-course-generator-py` | ML models, LangGraph agents, content generation | AI/ML Squad (Business Core + Innovation) |
+| **L6 (Observability)** | All repos | OpenTelemetry instrumentation, Prometheus exporters | DevOps Squad (Tech Core) |
+| **L7 (Human-AI)** | Slack integrations in all repos | Approval workflows, alerts, collaboration | All squads (cross-functional) |
+| **L8 (Learning)** | Grafana dashboards, feedback loops | KPI tracking, continuous improvement | Agile Coaching Pool + PMO |
+
+#### Tool Selection Rationale
+
+**Why These Technologies? (vs Alternatives)**
+
+**Strategy: Self-Host Where We Have Expertise, Pay for Team Productivity**
+
+| Tool | Why Chosen | Alternative Considered | Decision Rationale | Cost Impact |
+|------|------------|------------------------|-------------------|-------------|
+| **Temporal.io (Self-Hosted)** | Human-in-the-loop signals, durable execution, native retry | Apache Airflow, Prefect, Temporal Cloud | Airflow requires manual state management; self-hosting saves $200/month | **Saves $2,400/year** |
+| **LangGraph (Self-Hosted)** | Multi-agent state management, built for cognitive workflows | LangChain, CrewAI, LangGraph Cloud | LangChain too low-level; self-hosting on AWS Lambda/ECS = $0 extra cost | **Saves $1,200/year** |
+| **OpenMetadata (Self-Hosted)** | Unified data/API/event catalog, lineage tracking | Amundsen, DataHub, managed options | Better API/event support; self-hosting on t3.small = $20/month vs $200+ managed | **Saves $2,160/year** |
+| **Backstage (Self-Hosted)** | Developer portal + internal tool aggregation | Custom portal, Confluence, managed Backstage | Spotify's proven solution; self-hosting on t3.small = $15/month vs $100+ managed | **Saves $1,020/year** |
+| **Apicurio Registry (Self-Hosted)** | Contract-first API governance, schema validation | Confluent Schema Registry, AWS Glue | Supports OpenAPI + AsyncAPI (not just Kafka); self-hosting = $10/month vs $50+ managed | **Saves $480/year** |
+| **Kafka (Self-Hosted)** | Event-driven architecture, high-throughput async | RabbitMQ, AWS SQS, AWS MSK | Better for event sourcing; self-hosting on spot instances = $20/month vs $300 MSK | **Saves $3,360/year** |
+| **Prometheus + Grafana (Self-Hosted)** | Industry standard, extensive integrations | Datadog, New Relic, CloudWatch | Self-hosting on t3.medium = $30/month vs $500+ SaaS; team knows it well | **Saves $5,640/year** |
+| **Slack Standard (PAID)** | Team already uses it, rich API, workflow builder | Microsoft Teams, Discord, Mattermost | Mattermost maintenance burden not worth savings; Slack integrations superior | **Worth $480/year** |
+| **Google Workspace (PAID)** | External collaboration, investor-friendly, automation APIs | Microsoft 365, NextCloud (self-hosted) | NextCloud unreliable mobile experience; investors expect Google Docs/Sheets | **Worth $720/year** |
+| **Trello Premium (PAID)** | Butler automation, calendar view, unlimited power-ups, team collaboration | Jira, Asana, Linear, Wekan (self-hosted) | Jira overkill for 3-5 person team; self-hosted Kanban lacks polish/mobile; Butler automation = $5K+ time savings | **Worth $600/year** |
+| **GitHub Team (PAID)** | 3000 Actions minutes/month, advanced code review, team permissions | GitLab (self-hosted), Bitbucket, Gitea | GitLab self-hosted maintenance not worth $240/year savings; GitHub Actions ecosystem unmatched | **Worth $240/year** |
+| **ChatGPT Teams (PAID)** | Secure workspace, admin controls, unlimited GPT-4 | Open-source LLMs (Llama, Mistral), self-hosted | Employee productivity tool, not infrastructure; admin controls + data privacy worth premium | **Worth $1,440/year** |
+| **OpenAI API (Usage-Based)** | GPT-4 quality, extensive tooling, proven reliability | Google Gemini, Anthropic Claude, open-source LLMs | Best-in-class for production AI agents; usage-based pricing scales with revenue; **not locked in** (LangGraph abstraction) | **$400/month** |
+| **Google Gemini API (Usage-Based)** | Fallback LLM for redundancy, good for multimodal | N/A | Vendor diversification; if OpenAI down, Gemini ensures continuity; 8x cheaper for high-volume tasks | **$50/month** |
+| **Vercel (Free Tier)** | Next.js optimized, instant deployments, CDN | AWS Amplify, Netlify, self-hosted | Free tier sufficient for <1000 users; upgrade only when needed | **Saves $600/year** |
+| **Supabase (Free Tier)** | Postgres + auth + storage + real-time | AWS RDS + Cognito, Firebase, self-hosted Postgres | Free tier (2 projects, 500MB) sufficient for MVP; simpler than AWS setup | **Saves $300/year** |
+
+**Total Annual Savings from Self-Hosting: ~$16,260/year**  
+**Total Annual Cost for Paid Tools: ~$3,480/year** (Slack + Google Workspace + Trello + GitHub + ChatGPT Teams)  
+**Net Infrastructure Cost: ~$13,380/year** (vs $28,200 fully managed)
+
+**Cost-Conscious Decisions:**
+- ✅ **Self-host where team has expertise:** Temporal, Kafka, Grafana, OpenMetadata, Backstage (DevOps background)
+- ✅ **Pay for collaboration & productivity tools:** Slack, Google Workspace, Trello Premium, GitHub Team, ChatGPT Teams (team productivity non-negotiable)
+- ✅ **Usage-based for AI:** OpenAI, Gemini (cost scales with revenue, not fixed overhead)
+- ✅ **Free tiers for ancillary services:** Vercel, Supabase (upgrade only when validated)
+- ❌ **Avoid vendor lock-in:** Open-source self-hosted > proprietary managed (retain control, no pricing surprises)
+
+#### Implementation Timeline & Status
+
+**Phase 1: Foundation (Months 0-3) — ✅ COMPLETE**
+- ✅ L3: OpenMetadata catalog operational, Backstage developer portal live
+- ✅ L4: Temporal workflows for finance automation, Kafka for async events
+- ✅ L5: LangGraph agents for content generation and assessment
+- ✅ L6: OpenTelemetry + Prometheus + Grafana full observability
+- ✅ L7: Slack integrations for human approvals and alerts
+- ✅ L8: KPI dashboards tracking automation efficiency
+
+**Phase 2: Governance & Scale (Months 3-6) — 🟡 IN PROGRESS**
+- 🟡 L2: GitHub Actions governance pipelines (basic policies live, OPA planned)
+- 🟡 L3: Apicurio Registry for contract validation (schema registry live, AsyncAPI in progress)
+- ⏳ L4: Expand Temporal workflows to HR and compliance operations
+- ⏳ L5: Advanced multi-agent coordination patterns with LangGraph
+- ⏳ L8: Feature flagging with Unleash for controlled rollouts
+
+**Phase 3: Advanced Capabilities (Months 6-12) — 🔴 PLANNED**
+- 🔴 L2: ArgoCD for GitOps-based deployments
+- 🔴 L2: Open Policy Agent for automated policy enforcement
+- 🔴 L9: EvidentlyAI for AI bias and drift monitoring
+- 🔴 L9: Formal ethics review board integration with Slack workflows
+
+#### Cost Analysis: Automation Investment vs Human Salaries
+
+**Current Monthly Costs (1,000 users, 3-5 person team):**
+
+**Strategy: Self-Hosted Infrastructure + Paid Collaboration Tools**
+
+Midora optimizes costs by self-hosting all technical infrastructure (where team has expertise) while paying for collaboration tools (where time-to-value and team productivity matter most).
+
+| Category | Tool/Service | Monthly Cost | Self-Hosted? | Notes |
+|----------|-------------|--------------|--------------|-------|
+| **Infrastructure** | AWS (compute, storage, networking) | $250 | Partial | Rightsized EC2 instances, spot instances where possible |
+| | Vercel (frontend hosting) | $0 | No | Free tier (hobby plan sufficient for <1000 users) |
+| | Supabase (database, auth, storage) | $0 | No | Free tier (2 projects, 500MB DB, upgrades only when needed) |
+| **Observability** | Prometheus + Grafana (self-hosted) | $30 | Yes | EC2 t3.medium, cost amortized across services |
+| | OpenTelemetry (self-hosted) | $0 | Yes | Open-source, no licensing |
+| **Automation** | Temporal (self-hosted) | $0 | Yes | Docker Compose on AWS, avoids $200/month Cloud cost |
+| | Kafka (self-hosted) | $0 | Yes | Docker on AWS, avoids $300/month MSK cost |
+| **Data & Catalog** | OpenMetadata (self-hosted) | $20 | Yes | EC2 t3.small, lightweight catalog |
+| | Backstage (self-hosted) | $15 | Yes | EC2 t3.small, developer portal |
+| | Apicurio Registry (self-hosted) | $10 | Yes | Shared EC2, schema registry |
+| **AI & Cognitive (Agents)** | OpenAI API (GPT-4, embeddings) | $400 | No | Usage-based, scales with users (primary LLM for AI agents) |
+| | Google Gemini API (fallback) | $50 | No | Backup LLM for redundancy (no vendor lock-in) |
+| | LangGraph (self-hosted) | $0 | Yes | Open-source, runs on AWS compute |
+| **AI & Cognitive (Humans)** | ChatGPT Teams | $120 | No | 5 users × $25/user = employee productivity tool |
+| **Collaboration (PAID)** | Slack Standard | $40 | No | 5 users × $8/user = critical for team productivity |
+| | Google Workspace Business Standard | $60 | No | 5 users × $12/user = external collaboration + docs |
+| | Trello Premium | $50 | No | 5 users × $10/user = OKR tracking + portfolio management |
+| | GitHub Team | $20 | No | 5 users × $4/user = code collaboration + CI/CD |
+| **Portfolio & OKRs** | Trello Premium | $0 | - | (Included in Collaboration above) |
+| **Total Infrastructure** | | **$1,115/month** | | **$13,380/year** |
+
+**Cost Breakdown by Philosophy:**
+
+| Philosophy | Annual Cost | Examples |
+|------------|-------------|----------|
+| **Self-Hosted (Team Expertise)** | ~$3,600/year | Temporal, Kafka, OpenMetadata, Backstage, Grafana, Prometheus |
+| **Paid SaaS (Team Productivity)** | ~$3,480/year | Slack, Google Workspace, Trello Premium, GitHub Team, ChatGPT Teams |
+| **Usage-Based (Scales with Revenue)** | ~$5,400/year | OpenAI API, Gemini API (grows with customers) |
+| **Free Tier (Sufficient for Now)** | $0/year | Vercel, Supabase (upgrade when >1000 users) |
+
+**Self-Hosted Infrastructure Details:**
+
+| Service | Instance Type | Monthly Cost | Why Self-Hosted |
+|---------|--------------|--------------|-----------------|
+| **Temporal Server** | t3.medium (2 vCPU, 4GB RAM) | $30 | Team has workflow expertise, avoids $200/month Cloud cost |
+| **Kafka Cluster** | 3× t3.small (spot instances) | $20 | Simple event bus needs, avoids $300/month MSK cost |
+| **Prometheus + Grafana** | t3.medium (shared) | $30 | Standard metrics stack, team knows it well |
+| **OpenMetadata** | t3.small | $20 | Data catalog, low resource needs |
+| **Backstage** | t3.small | $15 | Developer portal, static site + API |
+| **Apicurio Registry** | t3.micro (shared) | $10 | Schema registry, minimal overhead |
+| **LangGraph Agents** | Shared compute | $0 | Runs on existing Lambda/ECS, no dedicated instance |
+| **Base AWS (networking, S3, etc.)** | - | $100 | CloudFront CDN, S3 storage, VPC, etc. |
+
+**Total AWS Self-Hosted: ~$225/month** (vs $800+/month fully managed SaaS equivalent)
+
+**Why Keep Slack, Google Workspace, Trello, GitHub & ChatGPT Paid?**
+
+| Tool | Annual Cost | Why Not Self-Host? | ROI |
+|------|-------------|-------------------|-----|
+| **Slack Standard** | $480/year (5 users) | Mattermost/Rocket.Chat require maintenance, inferior integrations | Saves 5+ hours/week in communication efficiency = $12K+ founder time |
+| **Google Workspace** | $720/year (5 users) | Self-hosted alternatives (NextCloud) unreliable, poor mobile experience | External collaboration with investors/board essential, saves $10K+ in manual work |
+| **Trello Premium** | $600/year (5 users) | Self-hosted Kanban (Wekan, Taiga) lack polish, no mobile apps | Advanced features (Butler automation, calendar view, unlimited power-ups) = $5K+ time savings |
+| **GitHub Team** | $240/year (5 users) | GitLab self-hosted requires maintenance, lacks GitHub Actions ecosystem | CI/CD integrations, code reviews, 3000 Actions minutes/month = $8K+ DevOps time |
+| **ChatGPT Teams** | $1,440/year (5 users) | N/A (unique product) | Employees use ChatGPT for ad-hoc tasks, brainstorming, research = $15K+ productivity gain |
+
+**Total Paid Collaboration & Productivity: $3,480/year** — Non-negotiable for team productivity
+
+**Compare to Traditional Startup Costs (same 1,000 users):**
+
+| Role | Salary | Headcount | Annual Cost |
+|------|--------|-----------|-------------|
+| DevOps Engineer | $120K | 1 | $120K |
+| Backend Engineers | $110K | 2 | $220K |
+| Frontend Engineer | $105K | 1 | $105K |
+| QA Engineer | $90K | 1 | $90K |
+| Finance Manager | $80K | 0.5 | $40K |
+| Customer Support | $50K | 2 | $100K |
+| **Total Salaries** | | **6.5 FTE** | **$675K/year** |
+
+**Midora's Advantage (Cost-Optimized Strategy):**
+- **Infrastructure (self-hosted + SaaS):** $13,380/year
+- **Salaries (3-5 strategic hires):** $300K-$400K/year
+- **Total:** $313K-$413K/year vs $675K+ traditional
+- **Savings:** $262K-$362K/year (39-54% cost reduction)
+
+**Capital Efficiency Multiplier:**
+- Traditional startup: 6.5 people = ~6.5 person-equivalents of output
+- Midora: 3-5 people + AI agents = ~20-30 person-equivalents of output (due to 24/7 automation)
+- **Effective cost per person-equivalent:** $16K/year (Midora) vs $104K/year (traditional)
+
+**Self-Hosting Trade-Offs (Acknowledged):**
+
+| Aspect | Self-Hosted | Managed SaaS |
+|--------|-------------|--------------|
+| **Initial Setup** | 2-3 days (one-time) | <1 hour |
+| **Monthly Maintenance** | 2-4 hours (monitoring, updates) | 0 hours |
+| **Cost** | ~$225/month | ~$800/month |
+| **Control** | Full (customize, no vendor limits) | Limited (vendor roadmap) |
+| **Expertise Required** | DevOps background essential | None |
+| **Risk** | Operational burden if team leaves | Pricing changes, service shutdown |
+
+**When to Migrate to Managed Services?**
+- ❌ **Don't migrate** if team has DevOps expertise and values cost control
+- ✅ **Do migrate** when maintenance time >10 hours/month (team too busy scaling business)
+- ✅ **Trigger:** Raised Series A ($2M+), revenue >$100K MRR, team >15 people
+
+**Multi-LLM Strategy: OpenAI as Preference, Not Lock-In**
+
+Midora uses a **diversified AI stack** to avoid vendor lock-in while optimizing for quality and team productivity:
+
+| Use Case | Primary Tool | Secondary Tool | Rationale |
+|----------|--------------|----------------|-----------|
+| **Human Productivity** | ChatGPT Teams ($25/user) | Google Gemini (free tier) | Employees use ChatGPT for daily tasks; Gemini for multimodal/long-context needs |
+| **AI Agent Inference** | OpenAI API (GPT-4) | Google Gemini API | LangGraph abstracts LLM calls; swap providers without code changes |
+| **Embeddings** | OpenAI API (text-embedding-3) | Sentence Transformers (open-source) | OpenAI primary for consistency; open-source for cost-sensitive use cases |
+| **Code Generation** | GitHub Copilot (included in GitHub Team) | Cursor/Cody (team preference) | GitHub integration built-in; other tools for specific workflows |
+
+**Vendor Lock-In Mitigation:**
+- ✅ **LangGraph Abstraction:** All agent code uses LangGraph's LLM interface, not OpenAI SDK directly
+- ✅ **Multi-Provider Fallback:** If OpenAI API fails/throttles, Gemini API automatically used (Temporal + LangGraph retry logic)
+- ✅ **Cost Monitoring:** OpenTelemetry tracks per-request costs; automatic switch to cheaper model if costs exceed budget
+- ✅ **Human Tools Separate:** ChatGPT Teams for employees is distinct from OpenAI API for agents (no cross-dependency)
+
+**Cost Efficiency Example:**
+- OpenAI GPT-4 Turbo: $0.01/1K input tokens → High quality for customer-facing features
+- Google Gemini 1.5 Pro: $0.00125/1K input tokens → 8x cheaper for internal automation
+- Sentence Transformers (open-source): $0/inference → Free for embeddings if self-hosting viable
+
+**When to Switch Providers:**
+- ✅ OpenAI API cost >$1K/month → Migrate high-volume, low-risk workflows to Gemini
+- ✅ Gemini quality improves → Gradually shift workloads from OpenAI to Gemini
+- ❌ Never switch ChatGPT Teams → Employee productivity tool, not infrastructure dependency
+
+**Google Workspace Integration:**
+
+Midora uses Google Workspace as a **complementary layer** for external collaboration and non-technical stakeholder interfaces:
+
+| SOLID.AI Layer | Google Workspace Role | Why It Complements Existing Stack |
+|----------------|----------------------|-----------------------------------|
+| **L1 (Purpose)** | Google Sheets for OKR exports, Slides for board presentations | Trello = primary (team), Sheets = investor-friendly format |
+| **L3 (Data Spine)** | Google Drive for business documents, Forms for data collection | OpenMetadata = technical catalog, Drive = business documents |
+| **L4 (Automation)** | Gmail API for invoice processing, Sheets for human approvals | Temporal orchestrates, Sheets = approval interface (simpler than Slack for accountants) |
+| **L5 (Cognitive)** | Gemini API as fallback LLM, Sheets as human-AI interface | OpenAI = primary, Gemini = redundancy, Sheets = review surface |
+| **L6 (Observability)** | Sheets for investor dashboards, Looker Studio for business metrics | Grafana = technical (team), Sheets = business (investors/board) |
+| **L7 (Human-AI)** | Gmail for external approvals, Meet for investor calls | Slack = internal, Gmail/Meet = external stakeholders |
+| **L8 (Learning)** | Forms for customer feedback, Sheets for A/B test tracking | Prometheus = technical metrics, Forms/Sheets = qualitative feedback |
+
+**When to Add Human Headcount:**
+- ❌ **Don't hire** to do work AI agents can automate (finance ops, tier-1 support, deployment)
+- ✅ **Do hire** for strategic decisions, creative innovation, customer relationships requiring empathy
+- ✅ **Trigger:** Revenue validates business model ($10K+ MRR = product-market fit confirmed)
 
 ## Organizational Structure
 
