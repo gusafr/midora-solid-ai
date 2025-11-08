@@ -418,6 +418,35 @@ This directory contains **Mermaid diagram source files** that visualize the soli
 
 ---
 
+### 23. **midora-technology-stack.mmd** ✨ NEW
+**Purpose:** Complete technology stack mapping to SOLID.AI's 9 framework layers showing Midora's real implementation
+
+**Key Elements:**
+- **Layer-by-layer technology choices:**
+  - L1 (Purpose): Trello, Grafana dashboards
+  - L2 (Governance): GitHub Actions, OPA (planned), LangGraph audit logs
+  - L3 (Data Spine): OpenMetadata, Backstage, Apicurio Registry
+  - L4 (Automation): Temporal.io, Apache Kafka, contract validation
+  - L5 (Cognitive): LangGraph agents, feedback loops
+  - L6 (Observability): OpenTelemetry, Prometheus, Grafana
+  - L7 (Human-AI Collaboration): Slack integrations, Temporal signals
+  - L8 (Learning): KPIs, feedback loops, Unleash (planned)
+  - L9 (Ethics): EvidentlyAI, OPA policies (planned)
+  
+- **Implementation status:** Color-coded (Green=Live, Yellow=Partial, Red=Planned)
+- **Cross-layer feedback loops:** L5→L3 (AI learns), L6→L2 (metrics→policy), L8→L1 (KPIs→strategy)
+- **Tool selection rationale:** Why each technology was chosen over alternatives
+
+**Use Cases:** Technology selection, architecture planning, AI-native startup reference, vendor evaluation
+
+**Related Docs:**
+- PLAYBOOKS/organizational/midora-implementation.md (Complete technical stack section)
+- Includes: Squad category mapping, repository mapping, cost analysis, approval patterns
+
+**Created:** 2025-11-07
+
+---
+
 ## Additional Resources
 
 ### 14. **bipolar-vs-ai-native.md**
@@ -490,7 +519,7 @@ When updating diagrams:
 
 **Versioning:** Track major changes in git history; consider version tags for breaking changes
 
-**Diagram Count:** 24 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
+**Diagram Count:** 25 Mermaid diagrams (.mmd) + 1 markdown visual (bipolar-vs-ai-native.md)
 
 ---
 

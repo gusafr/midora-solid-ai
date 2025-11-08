@@ -25,6 +25,30 @@ Midora implements solid.ai through:
 - **100% operational automation** via SIPOC-governed processes from launch
 - **Strategic human oversight** at executive and governance layers only
 
+## Technical Stack Architecture
+
+### SOLID.AI Layer Implementation
+
+Midora implements the SOLID.AI framework through a carefully selected technology stack that balances automation capabilities with operational simplicity. This architecture demonstrates how an AI-native startup can achieve enterprise-grade capabilities with minimal initial investment.
+
+#### Layer-by-Layer Technology Mapping
+
+--8<-- "DIAGRAMS/midora-technology-stack.mmd"
+
+**Legend:**
+- 🟢 **Green (Implemented):** Live in production, operational
+- 🟡 **Yellow (Partial):** Core components live, advanced features planned
+- 🔴 **Red (Planned):** Roadmap for 12-24 months
+
+**See the complete technical stack documentation below for:**
+- Squad category → Layer ownership mapping
+- Repository → Layer mapping
+- Tool selection rationale
+- Implementation timeline & costs
+- Human-in-the-loop approval patterns
+- Governance integration with OPA
+- Continuous learning mechanisms
+
 ## Organizational Structure
 
 ### Midora's Technical Systems
