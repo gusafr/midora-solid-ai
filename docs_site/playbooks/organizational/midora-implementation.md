@@ -2,7 +2,319 @@
 
 This playbook documents Midora Education Labs' specific implementation of the solid.ai framework, providing concrete patterns for **AI-native organizational design from day one**.
 
-## Overview
+---
+
+## Part 1: Organization at a Glance
+
+### Executive Overview
+
+**Solid.ai** defines an **AI-Native Organization** as a living system where humans, data, and automation operate in cognitive symbiosis.  
+Midora embodies this principle by structuring itself into three interdependent pillars:
+
+- **🧠 Tech Core** — builds the neural and cognitive infrastructure of the organization (data, automation, AI, and observability).  
+- **💼 Business Core** — delivers value through education, growth, customer experience, and operations.  
+- **🧩 Cross-Functional Pools** — act as transversal centers of excellence ensuring ethics, quality, governance, and strategic alignment across all squads.
+
+Each squad operates as a semi-autonomous **micro-organization**, exposing APIs and events to the **Data Spine (L3)** and orchestrating actions through the **Automation Mesh (L4)**.  
+Together, they form a distributed, observable, and self-improving enterprise aligned with the **Solid.ai Framework Layers (L1–L7)**.
+
+---
+
+### Organizational Structure
+
+#### 🧠 Tech Core — Platform & Intelligence
+
+**Community Leadership:** Gustavo (CTO) — Technical strategy, platform evolution, AI/ML roadmap
+
+| Community | Squad | Purpose | Key Repositories | Owner | Solid.ai Layer(s) | Hire Human When... |
+|------------|--------|----------|------------------|--------|-------------------|-------------------|
+| **Platform & Enablement** | **Platform** | Core infrastructure, APIs, developer portal | `midora-back-end-py`, `midora-api-openapi`, `midora-idp-backstage` | Gustavo | L2–L3 | Revenue >$50K MRR, API request volume >1M/month |
+|  | **Automation** | Distributed workflows, process orchestration | `midora-automation-mesh`, `midora-automation-service` | Gustavo | L4 | Workflow complexity requires dedicated engineer |
+|  | **Data & Analytics** | Data backbone, lineage, insights | `midora-data-spine`, `midora-analytics-service` | Gustavo | L3 | Data quality issues >5%, governance violations detected |
+|  | **Observability** | Metrics, tracing, transparency | `midora-observability-stack`, `midora-observability-service` | Gustavo | L6 | >5 production incidents/month requiring deep analysis |
+| **AI & Cognitive Systems** | **Cognitive AI** | Agent reasoning and AI orchestration | `midora-cognitive-ai`, `midora-intelligence-service` | Gustavo | L5 | AI agent accuracy <90%, ethical concerns escalate >10/month |
+|  | **MAGI Core** | Adaptive learning and coaching intelligence | `midora-magi-py` | Gustavo | L5b | Advanced research requires dedicated AI scientist |
+|  | **ML Service** | Statistical models and continuous learning | `midora-ml-service` | Gustavo | L3–L5 | Model retraining cadence <weekly, drift detection alerts |
+
+**Community Budget Authority:** Tech Core community approves infrastructure spend <$5K/month, escalates to Business Performance Pool for >$5K
+
+---
+
+#### 💼 Business Core — Growth, Learning & Operations
+
+**Community Leadership:** Gustavo (CEO/Product) + Sibeli (COO) — Business strategy, revenue operations, customer experience
+
+| Community | Squad | Purpose | Key Repositories | Owner | Solid.ai Layer(s) | Hire Human When... |
+|------------|--------|----------|------------------|--------|-------------------|-------------------|
+| **Learning & Content** | **Content** | AI-assisted lesson and course generation | `midora-course-generator-py`, `midora-content-service` | Gustavo | L3 | Content quality issues >10%, human curation required |
+|  | **Learning Experience** | Learner UX, adaptive journeys | `midora-front-end-fl-v2`, `midora-front-end-ts`, `midora-portal-ph`, `midora-learning-service` | Gustavo | L7 | UX redesign needed, user engagement <70% |
+| **Operations & Governance** | **Operations** | Organizational routines and automation | `midora-ops-service` | Sibeli | L1–L2 | Manual operational interventions >10/week |
+|  | **Finance & Compliance** | Financial control and compliance | `midora-finance-service` | Sibeli | L2 | Revenue >$100K MRR, audit requirements mandate CFO |
+|  | **People & Culture** | Culture, engagement, human development | `midora-people-service` | Sibeli | L2–L7 | Team size >15 people, HR specialist needed |
+| **Growth & Customer** | **Partnerships & Growth** | Strategic alliances and expansion | `midora-growth-service` | Gustavo | L1 | Partnership pipeline >5 active negotiations |
+|  | **Commercial & Sales** | Direct sales and revenue management | `midora-sales-service` | Gustavo | L1–L2 | Revenue >$50K MRR, B2B deals require sales expertise |
+|  | **Customer Success** | Support, retention, client satisfaction | `midora-success-service` | Sibeli | L7 | Paid customer count >100, churn rate >5% |
+
+**Community Budget Authority:** Business Core community approves customer-facing spend <$3K/month, escalates to Business Performance Pool for >$3K
+
+---
+
+#### 🧩 Cross-Functional Pools — Solid.ai Support Mesh
+
+**Pool Leadership Structure:** Each pool operates as an **executive advisory board** with rotating chairs from relevant communities. Pools do not execute work — they govern, guide, and ensure cross-cutting concerns are addressed.
+
+| Pool | Mission | Solid.ai Layer(s) | Core Focus / KPI | Budget Authority | Decision-Making Model |
+|------|----------|-------------------|------------------|------------------|----------------------|
+| **🏛 Enterprise Architecture** | Ensure modularity, interoperability, and coherence across all systems | L2–L4 | % of reusable components; architecture compliance | Advises on tech stack decisions; no direct budget | Democratic vote (Tech Core + Business Core representatives) |
+| **📦 Portfolio Management** | Orchestrate initiatives, capacity, and business alignment | L1–L2 | Delivery predictability; OKR alignment | N/A (reviews all budget requests) | ROI-based prioritization, consensus required for >$10K initiatives |
+| **💻 Software Engineering** | Maintain code quality, DevSecOps standards, and automation pipelines | L3–L4 | Test coverage; code quality metrics | Tooling budget <$1K/month | Technical standards approved by Tech Core community |
+| **🧮 Data Governance** | Guarantee data integrity, lineage, and privacy | L3 | % of cataloged datasets; data trust score | N/A (enforces policies only) | Data access policies require unanimous approval from affected squads |
+| **🧱 Infrastructure** | Sustain cloud and hybrid environments with reliability and cost efficiency | L3–L6 | Uptime; cost efficiency ratio | Infrastructure spend reviewed monthly | Cost optimization recommendations; Tech Core approves changes |
+| **🧪 Quality Assurance** | Validate functionality and reliability across all services | L4–L7 | Bug rate per release; test automation coverage | Testing tools budget <$500/month | Quality gates enforced by automation; manual override requires justification |
+| **⚖️ Ethics & Compliance** | Preserve ethical, transparent, and fair AI usage | L2–L5 | 0 AI ethical incidents; policy adherence | N/A (veto authority only) | **Veto power** on AI deployments; escalation to external ethics advisor if deadlock |
+| **📈 Business Performance & Strategy** | Monitor impact, growth, and competitiveness | L1–L3 | Revenue margin; ROI per initiative | **Primary budget authority** (approves all >$10K requests) | ROI-driven; requires financial model + impact projection |
+| **⚙️ Processes & Operations** | Optimize human and automated workflows | L1–L4 | Process efficiency; % automation coverage | Process improvement budget <$2K/quarter | Continuous improvement suggestions; Operations squad implements |
+| **🧠 People-AI & Culture** | Integrate human learning with organizational AI intelligence | L2–L7 | Engagement score; AI adoption index | Learning & development budget <$1K/person/year | Human-AI collaboration policies require People squad approval |
+
+**Pool Health Dashboard (Real-Time Metrics):**
+
+```yaml
+Cross-Functional Pool Status (Live View):
+
+🏛 Enterprise Architecture:
+  - Reusable Components: 68% (⚠️ target 75%)
+  - Architecture Compliance: 92% (✅ >90%)
+  - ADR Review Backlog: 3 pending (✅ <5)
+
+📦 Portfolio Management:
+  - OKR Alignment: 87% (✅ >85%)
+  - Delivery Predictability: 78% (⚠️ target 80%)
+  - Active Initiatives: 8 (✅ capacity healthy)
+
+💻 Software Engineering:
+  - Test Coverage: 87% (⚠️ target 90%)
+  - Code Quality: A- (✅ target B+ or higher)
+  - CI/CD Success Rate: 94% (✅ >90%)
+
+🧮 Data Governance:
+  - Cataloged Datasets: 82% (✅ >80%)
+  - Data Trust Score: 91% (✅ >90%)
+  - Privacy Policy Adherence: 100% (✅ target 100%)
+
+🧱 Infrastructure:
+  - System Uptime: 99.7% (✅ >99.5%)
+  - Cost Efficiency: $0.08/request (✅ <$0.10)
+  - Auto-Scaling Events: 147 this month (✅ automation working)
+
+🧪 Quality Assurance:
+  - Bug Rate: 2.1 per release (✅ <3)
+  - Test Automation: 89% (⚠️ target 90%)
+  - Production Incidents: 1 this month (✅ <3)
+
+⚖️ Ethics & Compliance:
+  - AI Ethical Incidents: 0 (✅ target 0)
+  - Policy Adherence: 98% (✅ >95%)
+  - Bias Detection Alerts: 2 (✅ investigated, resolved)
+
+📈 Business Performance & Strategy:
+  - Revenue Growth: +12% MoM (✅ >10%)
+  - Initiative ROI: 3.2x average (✅ >2x)
+  - Budget Variance: -3% (✅ within ±5%)
+
+⚙️ Processes & Operations:
+  - Process Efficiency: 84% (✅ >80%)
+  - Automation Coverage: 91% (✅ >90%)
+  - Manual Interventions: 7/week (✅ <10/week)
+
+🧠 People-AI & Culture:
+  - Engagement Score: 8.2/10 (✅ >8)
+  - AI Adoption Index: 76% (⚠️ target 80%)
+  - Learning Hours/Person: 4.2h/month (✅ >4h)
+```
+
+---
+
+### Decision Rights Matrix
+
+**Authority Levels:**
+
+| Decision Type | Authority | Escalation Path | Veto Power | Approval SLA |
+|---------------|-----------|-----------------|------------|--------------|
+| **Strategic Direction** | CEO + Community Leaders | Board of Directors | Ethics Pool (if ethical concerns) | Quarterly planning cycles |
+| **Budget <$1K** | Squad Lead | N/A | None | Immediate (pre-approved) |
+| **Budget $1K-$10K** | Community Leader | Business Performance Pool | None | 48 hours |
+| **Budget >$10K** | Business Performance Pool | Board of Directors | Ethics Pool (if AI-related) | 1 week |
+| **Tech Stack Choice** | Tech Core Community | Enterprise Architecture Pool review | None | 1 week (with ADR) |
+| **Data Access Policy** | Data Governance Pool | Affected squads must approve | Ethics Pool (if PII/sensitive) | Unanimous approval required |
+| **AI Agent Deployment** | Cognitive AI Squad + Ethics Pool | External Ethics Advisor | Ethics Pool veto if risk score >7/10 | 2 weeks (includes testing) |
+| **Architecture Change (breaking)** | Enterprise Architecture Pool | Tech Core + Business Core communities | Quality Pool (if test coverage <90%) | 2 weeks (with migration plan) |
+| **Hiring Decision** | Community Leader + People Pool | CEO | None | 2 weeks (interview + offer) |
+| **Customer Contract >$10K** | CEO + Commercial Squad | N/A | Legal review required | 1 week |
+| **Process Change (cross-squad)** | Processes Pool + Affected Squads | Community Leaders | None | Consensus required |
+| **Quality Gate Override** | Quality Pool | CTO | None | Requires written justification + risk assessment |
+
+**Democratic Decision-Making Process:**
+
+1. **Proposal:** Squad/community submits RFC or decision document with:
+   - Business impact analysis
+   - ROI projection (if budget involved)
+   - Risk assessment
+   - Affected stakeholders
+
+2. **Review:** Relevant pools and communities evaluate proposal (48-hour async review)
+
+3. **Vote:** Democratic vote among affected parties:
+   - Simple majority for <$10K decisions
+   - 2/3 majority for >$10K decisions
+   - Unanimous approval for data access/privacy changes
+
+4. **Veto Check:** Ethics Pool reviews for ethical concerns (AI deployments only)
+
+5. **Execution:** Approved decisions logged in ADR/RFC repository with decision rationale
+
+**Example Decision Flow:**
+
+```mermaid
+graph TB
+    START[Squad Proposes: Deploy New AI Agent] --> IMPACT{Budget Impact?}
+    IMPACT -->|<$10K| ETHICS[Ethics Pool Review]
+    IMPACT -->|>$10K| BIZ[Business Performance Pool]
+    
+    BIZ --> ETHICS
+    ETHICS -->|Pass| VOTE[Democratic Vote: Tech Core + Business Core]
+    ETHICS -->|Veto| REJECT[Decision Rejected - Escalate to External Advisor]
+    
+    VOTE -->|Approved| EXEC[Squad Executes]
+    VOTE -->|Rejected| RESUBMIT[Revise Proposal]
+    
+    EXEC --> ADR[Document in ADR Repository]
+```
+
+---
+
+### Solid.ai Alignment Map
+
+| Layer | Core Focus | Linked Domains / Communities | Primary Metrics |
+|--------|-------------|------------------------------|-----------------|
+| **L1 – Purpose & Alignment** | Mission, goals, and strategic OKRs | Growth, Sales, Operations, Portfolio Pool | OKR completion rate, strategic initiative ROI |
+| **L2 – Governance & Ethics** | Policies, compliance, and culture | Platform, People, Finance, Ethics Pool | Policy adherence, 0 ethical incidents |
+| **L3 – Knowledge & Data Spine** | Data backbone and semantic context | Data & Analytics, Content, ML, Data Governance Pool | Data cataloging %, trust score |
+| **L4 – Automation Mesh** | Distributed execution and workflows | Automation, Software Engineering Pool | Automation coverage %, manual intervention rate |
+| **L5 – Cognitive & AI Layer** | Intelligent agents and reasoning systems | Cognitive AI, MAGI, Ethics Pool | AI accuracy %, escalation rate |
+| **L6 – Observability & Telemetry** | Transparency, metrics, and reliability | Observability, QA, Infrastructure Pool | System uptime, incident response time |
+| **L7 – Learning Experience** | Human learning and feedback loops | Learning Experience, Customer Success, People-AI Pool | User engagement %, satisfaction score |
+
+---
+
+### Community Governance Model
+
+**Executive Board Structure:**
+
+Each community operates as an **executive advisory board** with:
+
+- **Chair:** Rotates quarterly among community members
+- **Members:** All squad leads within community + relevant pool representatives
+- **Cadence:** Weekly tactical (30 min), monthly strategic (2 hours)
+- **Authority:** Budget approval, hiring decisions, technical standards, strategic direction
+
+**Community Budget Process:**
+
+1. **Quarterly Allocation:** Business Performance Pool allocates budget to each community based on:
+   - Strategic priority (OKR alignment)
+   - Historical spend efficiency
+   - Revenue impact projections
+
+2. **Monthly Review:** Communities report spend vs budget to Business Performance Pool
+
+3. **Dynamic Reallocation:** Unused budget can be reallocated to other communities mid-quarter
+
+**Example Budget Allocation (Monthly):**
+
+| Community | Allocated Budget | Current Spend | Variance | Notes |
+|-----------|------------------|---------------|----------|-------|
+| Tech Core | $8,000 | $7,200 | -10% | Infrastructure optimization saved $800 |
+| Business Core | $5,000 | $5,400 | +8% | Customer success tooling over budget |
+| Cross-Functional Pools | $2,000 | $1,600 | -20% | Process automation reduced manual work |
+
+---
+
+### Service Dependencies Visualization
+
+**System Interconnections (Repository Level):**
+
+```mermaid
+graph TB
+    subgraph Frontend["🖥️ User-Facing"]
+        FE[Learning Experience<br/>Flutter + TypeScript]
+    end
+    
+    subgraph Backend["⚙️ Platform Layer"]
+        API[Platform API<br/>midora-back-end-py]
+        IDP[Developer Portal<br/>Backstage]
+    end
+    
+    subgraph Intelligence["🧠 Cognitive Layer"]
+        MAGI[MAGI Core<br/>Agent Orchestration]
+        ML[ML Service<br/>Model Inference]
+        COG[Cognitive AI<br/>Reasoning]
+    end
+    
+    subgraph Data["💾 Data Layer"]
+        SPINE[Data Spine<br/>Catalog + Lineage]
+        ANALYTICS[Analytics Service]
+    end
+    
+    subgraph Automation["🔄 Orchestration"]
+        AUTO[Automation Mesh<br/>Temporal Workflows]
+    end
+    
+    subgraph Observability["📊 Monitoring"]
+        OBS[Observability Stack<br/>Prometheus + Grafana]
+    end
+    
+    FE --> API
+    API --> SPINE
+    API --> MAGI
+    API --> AUTO
+    
+    MAGI --> ML
+    MAGI --> COG
+    MAGI --> SPINE
+    
+    ML --> SPINE
+    COG --> SPINE
+    
+    AUTO --> API
+    AUTO --> MAGI
+    
+    ANALYTICS --> SPINE
+    
+    OBS --> API
+    OBS --> MAGI
+    OBS --> ML
+    OBS --> AUTO
+    
+    IDP -.Catalogs.-> API
+    IDP -.Catalogs.-> MAGI
+    IDP -.Catalogs.-> SPINE
+```
+
+**Critical Path Analysis:**
+
+| Service | If Down, What Breaks? | Mitigation | Recovery Time |
+|---------|----------------------|------------|---------------|
+| **Platform API** | All user-facing features | Cache layer, graceful degradation | <15 min |
+| **Data Spine** | No new data writes, analytics stale | Event queue buffers writes | <30 min |
+| **MAGI Core** | AI features unavailable, fallback to static content | Manual approval workflows activated | <1 hour |
+| **Automation Mesh** | Background jobs pause, manual intervention required | Queue persists, auto-resume on recovery | <5 min |
+| **ML Service** | Cognitive features degrade to rule-based | Cached predictions served | <30 min |
+| **Observability** | Blind to metrics, alerts disabled | External monitoring (CloudWatch) | <10 min |
+
+---
+
+## Part 2: Automation-First Strategy
+
+### Overview
 
 **Context: The Inverse Startup Strategy**
 
