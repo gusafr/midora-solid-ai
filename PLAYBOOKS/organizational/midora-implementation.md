@@ -773,6 +773,585 @@ require_ethics_review {
 
 ---
 
+## Part 5: Process Architecture & SIPOC Patterns
+
+### Executive Overview: Process-Driven Automation
+
+Midora's operational excellence derives from **systematic process mapping** using SIPOC (Supplier-Input-Process-Output-Customer) methodology. This framework ensures:
+
+- **Clear Ownership:** Every process stage has explicit squad/pool accountability
+- **Automation Opportunities:** AI agent capabilities mapped to specific SIPOC stages
+- **Human-AI Handoffs:** Explicit escalation triggers and decision gates
+- **Quality Governance:** Observability and compliance checkpoints at each stage
+- **Continuous Learning:** Feedback loops from Customer back to Supplier
+
+**SIPOC Philosophy at Midora:**
+> "Every process is a contract: inputs have guarantees, outputs have SLAs, and automation fills the gap between human judgment calls."
+
+---
+
+### Core Process Domains
+
+Midora operates through six integrated process domains, each with specific SIPOC patterns optimized for AI-native execution:
+
+---
+
+#### 1. Product Development Lifecycle
+
+**Process Goal:** Transform ideas into production-deployed features with maximum automation and minimum human bottlenecks.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Product Owner<br/>Customer Feedback] --> I[Input:<br/>Feature Spec<br/>User Stories]
+    I --> P1[Design:<br/>Architecture<br/>🤖 40% / 👤 60%]
+    P1 --> P2[Build:<br/>Code Generation<br/>🤖 70% / 👤 30%]
+    P2 --> P3[Test:<br/>Quality Validation<br/>🤖 95% / 👤 5%]
+    P3 --> P4[Deploy:<br/>CI/CD Pipeline<br/>🤖 100%]
+    P4 --> O[Output:<br/>Live Feature<br/>Metrics Instrumented]
+    O --> C[Customer:<br/>End Users<br/>Internal Teams]
+    
+    P1 -.Human Approval.-> H1[Architect Review]
+    P3 -.Escalation.-> H2[Manual QA if Coverage <90%]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Ideation** | Product Owner, Users | Feature requests, analytics insights | Prioritization (Trello + AI scoring) | Approved backlog items | Development teams | 60% | Strategic prioritization, ethical review | Product Owner + Portfolio Pool |
+| **Design** | System Architect | Technical requirements, API contracts | Architecture design, data modeling | Approved design docs, ADRs | Developers, QA | 40% | Novel architecture patterns, security reviews | Platform Squad + Enterprise Architecture Pool |
+| **Build** | Developers | Design specs, code standards | AI-assisted coding (GitHub Copilot), pair programming | Tested code, PR reviews | QA, DevOps | 70% | Complex logic, algorithm design, code reviews | Tech Core squads (per repo) |
+| **Test** | QA Engineers, AI Agents | Code commits, test scenarios | Automated testing (unit, integration, E2E) | Test reports, coverage metrics | DevOps, Product Owner | 95% | Exploratory testing, UX validation | Quality Pool + Software Engineering Pool |
+| **Deploy** | DevOps, AI Agents | Merged PRs, release tags | CI/CD automation (GitHub Actions, ArgoCD) | Deployed services, rollback plans | End users, stakeholders | 100% | Emergency rollback decisions (if incidents) | Platform Squad + Infrastructure Pool |
+| **Monitor** | Observability Stack | Telemetry data, user feedback | Real-time dashboards, alerting | SLA reports, incident tickets | All squads, leadership | 90% | Incident response strategy, postmortems | Observability Squad + Quality Pool |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+Product Development Process Status:
+
+Design Phase:
+  - AI-Generated Architecture Proposals: 40% (Mermaid diagrams, OpenAPI specs)
+  - Human Strategic Decisions: 60% (Security, scalability trade-offs)
+  - Approval SLA: 48 hours (Architect review required)
+
+Build Phase:
+  - AI Pair Programming (GitHub Copilot): 70% of code lines
+  - Human Creative Coding: 30% (Novel algorithms, complex business logic)
+  - Code Review: 100% automated linting + human approval
+
+Test Phase:
+  - Automated Test Generation: 95% (AI-generated unit/integration tests)
+  - Manual Exploratory Testing: 5% (UX edge cases)
+  - Coverage Requirement: >90% or deployment blocked
+
+Deploy Phase:
+  - CI/CD Automation: 100% (GitHub Actions → ArgoCD → Production)
+  - Human Intervention: 0% (unless incident triggers rollback)
+  - Deployment Frequency: 15-20 per week
+
+Monitor Phase:
+  - Automated Alerting: 90% (Prometheus + Grafana rules)
+  - Human Incident Response: 10% (Strategy decisions, customer comms)
+  - MTTR Target: <1 hour for P1 incidents
+```
+
+**Human-AI Handoff Matrix:**
+
+| SIPOC Stage | AI Agent Handles | Human Handles | Escalation Trigger |
+|-------------|------------------|---------------|-------------------|
+| **Design** | Generate architecture diagrams, suggest patterns | Security reviews, ethical implications | Breaking changes to public APIs |
+| **Build** | Code completion, boilerplate generation, refactoring | Complex algorithms, strategic technical debt | Test coverage drops <85% |
+| **Test** | Unit/integration/E2E test generation, execution | UX validation, accessibility testing | Bug severity P0/P1 |
+| **Deploy** | Build, test, deploy pipeline execution | Emergency rollback decisions | Error rate >5%, latency >2x baseline |
+| **Monitor** | Log aggregation, metric visualization, anomaly detection | Incident coordination, customer communication | SLA breach (uptime <99.5%) |
+
+---
+
+#### 2. Customer Acquisition & Success
+
+**Process Goal:** Convert leads to paying customers, onboard seamlessly, and retain through proactive support—all with minimal human intervention.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Marketing Campaigns<br/>Partnerships] --> I[Input:<br/>Leads<br/>Trial Signups]
+    I --> P1[Qualify:<br/>Lead Scoring<br/>🤖 85% / 👤 15%]
+    P1 --> P2[Convert:<br/>Sales Automation<br/>🤖 70% / 👤 30%]
+    P2 --> P3[Onboard:<br/>Product Tour<br/>🤖 95% / 👤 5%]
+    P3 --> P4[Retain:<br/>Success Monitoring<br/>🤖 80% / 👤 20%]
+    P4 --> O[Output:<br/>Retained Customers<br/>NPS Scores]
+    O --> C[Customer:<br/>Long-term Users<br/>Referrals]
+    
+    P2 -.Enterprise Deals.-> H1[Human Sales Rep]
+    P4 -.Churn Risk.-> H2[CSM Intervention]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Lead Generation** | Marketing, Partnerships | Website traffic, referrals | AI chatbot qualification, form automation | Qualified leads (scored 0-100) | Sales team, AI agents | 85% | Strategic partnerships, brand positioning | Partnerships & Growth Squad |
+| **Lead Qualification** | AI Agents, Sales Reps | Lead data, firmographic info | Predictive scoring (ML model), auto-outreach | Hot leads (score >70), nurture campaigns | Sales team | 85% | Manual qualification for enterprise (>$10K deals) | Commercial Squad + AI Agents |
+| **Sales Conversion** | Sales Reps, AI Agents | Qualified leads, demo requests | Automated email sequences, AI demo bots | Signed contracts, payment setup | Onboarding team | 70% | Complex negotiations, custom pricing | Commercial Squad |
+| **Onboarding** | Customer Success, AI | New customer data, product access | Automated onboarding flows, in-app tutorials | Activated users, feature adoption metrics | End users | 95% | High-touch enterprise onboarding | Customer Success Squad |
+| **Retention** | AI Agents, CSMs | Usage analytics, NPS scores | Proactive health checks, churn prediction | Renewed subscriptions, upsells | Existing customers | 80% | Strategic account reviews, escalations | Customer Success Squad |
+| **Expansion** | Account Managers | Customer usage patterns | Upsell automation, feature recommendations | Expanded contracts, referrals | Finance, marketing | 60% | Enterprise expansions, custom solutions | Commercial Squad + Customer Success |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+Customer Lifecycle Process Status:
+
+Lead Qualification:
+  - AI Lead Scoring Accuracy: 87% (ML model validated monthly)
+  - Auto-Disqualified Leads: 40% (saves 8 hours/week)
+  - Human Review Required: Enterprise leads (>$10K annual value)
+
+Sales Conversion:
+  - Automated Email Sequences: 70% of outreach
+  - AI Demo Scheduling: 100% (Calendly integration)
+  - Human Involvement: Enterprise deals, custom contracts
+
+Onboarding:
+  - Self-Service Activation: 95% of users
+  - AI Product Tours: 100% (in-app guidance)
+  - Human Touchpoint: Enterprise kickoff calls only
+
+Retention:
+  - Churn Prediction Model: 82% accuracy (retraining quarterly)
+  - Automated Health Checks: Weekly for all accounts
+  - CSM Intervention: Triggered at 70%+ churn risk score
+```
+
+---
+
+#### 3. Content Generation & Quality Assurance
+
+**Process Goal:** Produce high-quality educational content at scale using AI generation with human curation guardrails.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Curriculum Team<br/>Subject Matter Experts] --> I[Input:<br/>Learning Objectives<br/>Topic Outlines]
+    I --> P1[Generate:<br/>AI Content Creation<br/>🤖 90% / 👤 10%]
+    P1 --> P2[Curate:<br/>Quality Review<br/>🤖 40% / 👤 60%]
+    P2 --> P3[Validate:<br/>Pedagogical Check<br/>🤖 30% / 👤 70%]
+    P3 --> P4[Publish:<br/>CMS Automation<br/>🤖 100%]
+    P4 --> O[Output:<br/>Live Lessons<br/>Analytics Instrumented]
+    O --> C[Customer:<br/>Students<br/>Educators]
+    
+    P2 -.Quality Fails.-> H1[Human Re-Curation]
+    P3 -.Ethical Concerns.-> H2[Ethics Pool Review]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Curriculum Design** | Educators, Product | Learning goals, standards | Syllabus structuring, learning path mapping | Approved curriculum blueprints | Content generation team | 30% | Pedagogical strategy, learning outcomes definition | Content Squad + Learning Experience Squad |
+| **Content Generation** | AI Agents (GPT-4, MAGI) | Curriculum blueprints, reference materials | AI text generation, diagram creation, exercise generation | Draft lessons, assessments, multimedia | Quality review team | 90% | Novel content formats, complex explanations | Content Squad (AI-driven) |
+| **Quality Review** | QA, Educators | Draft content, quality rubrics | Automated checks (grammar, plagiarism, bias), human review | Approved content, revision notes | Publishing team | 40% | Pedagogical accuracy, cultural sensitivity | Quality Pool + Ethics Pool |
+| **Pedagogical Validation** | Subject Matter Experts | Reviewed content | Learning effectiveness assessment, accessibility check | Certified learning materials | Publishing team | 30% | Expert validation, ethical review | Content Squad + Ethics Pool |
+| **Publishing** | CMS Automation | Approved content, metadata | Automated CMS ingestion, versioning, CDN distribution | Live content, analytics tracking | Students, educators | 100% | Manual republishing only if urgent corrections | Content Squad + Platform Squad |
+| **Iteration** | Analytics, Students | Usage data, feedback scores | A/B testing, content effectiveness analysis | Updated content, retirement of low-performing materials | Content generation team | 70% | Strategic content pivots, curriculum redesigns | Content Squad + Learning Experience Squad |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+Content Pipeline Process Status:
+
+Content Generation:
+  - AI-Generated Draft Content: 90% of lessons
+  - Human Creative Input: 10% (novel formats, complex topics)
+  - Generation Speed: 10 lessons/hour (AI) vs 1 lesson/day (human)
+
+Quality Review:
+  - Automated Grammar/Plagiarism: 100% coverage
+  - AI Bias Detection: 95% accuracy (EvidentlyAI planned)
+  - Human Review Required: >10% quality score issues
+
+Pedagogical Validation:
+  - Automated Learning Objective Alignment: 30%
+  - Expert Validation: 70% (cannot be fully automated)
+  - Approval SLA: 48 hours for standard content
+
+Publishing:
+  - Automated CMS Workflow: 100%
+  - CDN Distribution: 100% automated (Vercel/CloudFront)
+  - Manual Intervention: 0% (unless emergency content correction)
+```
+
+---
+
+#### 4. Financial Operations
+
+**Process Goal:** Achieve 100% automated financial operations from invoice to reporting with human oversight only for strategic decisions.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Customers<br/>Vendors<br/>Banks] --> I[Input:<br/>Invoices<br/>Receipts<br/>Payments]
+    I --> P1[Validate:<br/>Data Extraction<br/>🤖 100%]
+    P1 --> P2[Approve:<br/>Policy Check<br/>🤖 95% / 👤 5%]
+    P2 --> P3[Execute:<br/>Payment Processing<br/>🤖 100%]
+    P3 --> P4[Reconcile:<br/>Book Balancing<br/>🤖 100%]
+    P4 --> P5[Report:<br/>Financial Dashboards<br/>🤖 100%]
+    P5 --> O[Output:<br/>P&L, Cash Flow<br/>Tax Reports]
+    O --> C[Customer:<br/>Leadership<br/>Investors<br/>Accountants]
+    
+    P2 -.Amount >$1K.-> H1[Founder Approval]
+    P4 -.Discrepancy.-> H2[Manual Investigation]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Invoice Reception** | Customers, Vendors | Email invoices, Stripe webhooks | Automated inbox monitoring, OCR extraction | Structured invoice data | Approval workflow | 100% | None (fully automated) | Finance Squad + Automation Squad |
+| **Data Validation** | AI Agents | Invoice data, vendor database | Field validation, duplicate detection, fraud check | Validated invoices, exception alerts | Approval queue | 100% | Investigation only if fraud alert >80% confidence | Finance Squad |
+| **Approval Workflow** | AI Agents, Founder | Validated invoices | Policy-based auto-approval (<$1K), Slack approval request (>$1K) | Approved transactions | Payment execution | 95% | Manual approval for >$1K expenses | Finance Squad + Founder |
+| **Payment Execution** | Payment Gateway (Stripe) | Approved invoices | Automated payment initiation, confirmation tracking | Payment receipts, bank records | Reconciliation | 100% | None (fully automated) | Finance Squad |
+| **Reconciliation** | Banking APIs, QuickBooks | Bank statements, internal ledger | Automated matching, discrepancy detection | Balanced books, exception reports | Reporting | 100% | Manual investigation if >$100 discrepancy | Finance Squad |
+| **Reporting** | Accounting System | Reconciled transactions, P&L templates | Automated report generation, investor dashboard updates | Monthly financials, tax reports | Leadership, investors, accountants | 100% | Strategic financial analysis, investor calls | Finance Squad + CEO |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+Financial Operations Process Status:
+
+Invoice Processing:
+  - Automated Inbox Monitoring: 100% (Gmail API + Temporal)
+  - OCR Accuracy: 98% (Google Document AI)
+  - Manual Data Entry: 0%
+
+Approval Workflow:
+  - Auto-Approved (<$1K): 95% of transactions
+  - Human Approval Required: 5% (>$1K expenses)
+  - Approval SLA: 24 hours (or auto-approved if timeout)
+
+Payment Execution:
+  - Automated Payments: 100% (Stripe API integration)
+  - Failed Payment Rate: 0.3% (retry logic handles transient failures)
+  - Manual Intervention: Only if repeated failures (3+ retries)
+
+Reconciliation:
+  - Automated Matching: 100% (bank feeds + QuickBooks sync)
+  - Discrepancy Detection: >$10 triggers alert
+  - Manual Investigation: <1% of transactions
+
+Reporting:
+  - Automated P&L Generation: 100% (monthly, delivered via Slack)
+  - Investor Dashboard: Real-time (Grafana + Google Sheets export)
+  - Tax Reporting: Quarterly automation (TurboTax integration planned)
+```
+
+---
+
+#### 5. Infrastructure Operations & Observability
+
+**Process Goal:** Maintain 99.9% uptime with zero manual infrastructure provisioning through self-healing automation.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Cloud Providers<br/>Developers] --> I[Input:<br/>Code Commits<br/>Traffic Patterns<br/>Cost Alerts]
+    I --> P1[Monitor:<br/>Telemetry Collection<br/>🤖 100%]
+    P1 --> P2[Detect:<br/>Anomaly Detection<br/>🤖 95% / 👤 5%]
+    P2 --> P3[Diagnose:<br/>Root Cause Analysis<br/>🤖 70% / 👤 30%]
+    P3 --> P4[Remediate:<br/>Auto-Healing<br/>🤖 80% / 👤 20%]
+    P4 --> P5[Learn:<br/>Incident Review<br/>🤖 50% / 👤 50%]
+    P5 --> O[Output:<br/>SLA Reports<br/>Runbooks<br/>Cost Optimization]
+    O --> C[Customer:<br/>All Squads<br/>Leadership]
+    
+    P2 -.Critical Alert.-> H1[On-Call Engineer]
+    P4 -.Manual Fix.-> H2[Human Remediation]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Monitoring** | All Services, AWS CloudWatch | Metrics, logs, traces | Real-time telemetry aggregation (Prometheus, Grafana) | Unified observability dashboard | Alert manager | 100% | Dashboard design, metric definitions | Observability Squad |
+| **Anomaly Detection** | Prometheus, ML Models | Time-series metrics, baseline patterns | Statistical anomaly detection, ML-based prediction | Alerts (P0/P1/P2), incident tickets | On-call rotation | 95% | False positive tuning, alert rule creation | Observability Squad + Infrastructure Pool |
+| **Root Cause Diagnosis** | AI Agents, Runbooks | Alert context, historical data | Automated log correlation, trace analysis | Diagnosis reports, suggested fixes | Remediation team | 70% | Novel incident investigation, complex debugging | Infrastructure Pool + Platform Squad |
+| **Auto-Remediation** | Automation Scripts, Terraform | Diagnosis outputs, remediation playbooks | Self-healing scripts (restart services, scale resources, rollback) | Resolved incidents, stability restored | All users | 80% | Manual fixes for novel issues, breaking changes | Platform Squad + Infrastructure Pool |
+| **Incident Review** | Engineers, AI Agents | Incident data, timeline logs | Automated postmortem generation, RCA documentation | Published postmortems, updated runbooks | All squads, leadership | 50% | Strategic improvements, architectural changes | Observability Squad + CTO |
+| **Cost Optimization** | Cloud Cost Tools (AWS Cost Explorer) | Billing data, usage patterns | Automated rightsizing, spot instance migration, unused resource cleanup | Monthly cost reports, savings recommendations | Finance, leadership | 85% | Strategic infrastructure decisions (region choice, vendor selection) | Infrastructure Pool + Finance Squad |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+Infrastructure Operations Process Status:
+
+Monitoring:
+  - Service Instrumentation: 100% (OpenTelemetry across all repos)
+  - Real-Time Dashboards: 100% (Grafana + Prometheus)
+  - Alert Rules: 47 active rules (P0: 5, P1: 12, P2: 30)
+
+Anomaly Detection:
+  - Automated Alerts: 95% (statistical + ML-based)
+  - False Positive Rate: 8% (continuously tuning)
+  - Mean Time to Detect (MTTD): 90 seconds
+
+Root Cause Diagnosis:
+  - Automated Log Correlation: 70% success rate
+  - AI-Suggested Fixes: 60% accuracy (improving with learning)
+  - Mean Time to Diagnose (MTTI): 5 minutes (P1 incidents)
+
+Auto-Remediation:
+  - Self-Healing Success: 80% of incidents
+  - Human Intervention Required: 20% (novel issues, breaking changes)
+  - Mean Time to Repair (MTTR): 15 minutes automated, 60 minutes manual
+
+Cost Optimization:
+  - Automated Rightsizing: 85% of recommendations applied
+  - Monthly Cost Savings: $800/month average (via spot instances, unused resource cleanup)
+  - Human Strategic Decisions: Vendor selection, major architecture changes
+```
+
+---
+
+#### 6. Human Resources & People Operations
+
+**Process Goal:** Automate routine HR workflows while preserving human empathy for culture, engagement, and talent development.
+
+**SIPOC Mapping:**
+
+```mermaid
+graph LR
+    S[Supplier:<br/>Job Boards<br/>Referrals<br/>Employees] --> I[Input:<br/>Applicants<br/>Employee Data<br/>Feedback]
+    I --> P1[Recruit:<br/>Screening<br/>🤖 90% / 👤 10%]
+    P1 --> P2[Hire:<br/>Decision & Onboard<br/>🤖 60% / 👤 40%]
+    P2 --> P3[Develop:<br/>Growth & Training<br/>🤖 70% / 👤 30%]
+    P3 --> P4[Engage:<br/>Culture & Retention<br/>🤖 40% / 👤 60%]
+    P4 --> P5[Offboard:<br/>Exit Management<br/>🤖 80% / 👤 20%]
+    P5 --> O[Output:<br/>Talent Pool<br/>Culture Metrics<br/>Exit Insights]
+    O --> C[Customer:<br/>Employees<br/>Leadership<br/>Teams]
+    
+    P2 -.Final Decision.-> H1[Hiring Manager]
+    P4 -.1-on-1s.-> H2[People Leader]
+    O -.Feedback Loop.-> S
+```
+
+**Detailed SIPOC Stages:**
+
+| Stage | Supplier | Input | Process | Output | Customer | Automation % | Human Role | Squad Owner |
+|-------|----------|-------|---------|--------|----------|--------------|------------|-------------|
+| **Recruiting** | Job Boards, LinkedIn | Applicant resumes, cover letters | AI resume screening, automated scheduling | Qualified candidates (interviews scheduled) | Hiring managers | 90% | Final interview, culture fit assessment | People & Culture Squad + AI Agents |
+| **Hiring** | Hiring Managers | Interview feedback, references | Offer generation, background checks, onboarding automation | Signed contracts, provisioned accounts | New hires | 60% | Hiring decision, salary negotiation, culture pitch | People & Culture Squad + Community Leaders |
+| **Onboarding** | HR, IT | New hire data, equipment requests | Automated account provisioning, onboarding checklists, buddy pairing | Productive new employees (week 1) | New hires, teams | 70% | Welcome calls, team introductions, culture immersion | People & Culture Squad |
+| **Development** | Employees, Managers | Performance data, learning goals | Automated learning recommendations, skill gap analysis | Training plans, certifications | Employees | 70% | Career coaching, mentorship, strategic skill development | People & Culture Squad + People-AI Pool |
+| **Engagement** | Employees, Leadership | Engagement surveys, 1-on-1 notes | Automated sentiment analysis, retention risk scoring | Engagement reports, retention interventions | Leadership, managers | 40% | 1-on-1 conversations, culture building, conflict resolution | People & Culture Squad + All Leaders |
+| **Offboarding** | Departing Employees | Resignation notices, exit interviews | Automated account deprovisioning, knowledge transfer workflows | Exit reports, offboarding checklists | Leadership, IT | 80% | Exit interviews, transition planning, relationship preservation | People & Culture Squad |
+
+**Automation Coverage Dashboard:**
+
+```yaml
+People Operations Process Status:
+
+Recruiting:
+  - AI Resume Screening: 90% of applicants (filters 70% out automatically)
+  - Interview Scheduling: 100% automated (Calendly + AI coordination)
+  - Human Involvement: Final interviews, culture fit assessment
+
+Hiring:
+  - Automated Offer Letters: 100% (DocuSign integration)
+  - Background Checks: 100% automated (Checkr API)
+  - Human Decision: Hiring yes/no, salary negotiation
+
+Onboarding:
+  - Account Provisioning: 100% automated (Google Workspace, GitHub, Slack)
+  - Onboarding Checklist: 100% (automated tracking in Trello)
+  - Human Touchpoint: Welcome call, buddy pairing, team intros
+
+Development:
+  - Learning Path Recommendations: 70% automated (AI-based skill gap analysis)
+  - Training Enrollment: 100% automated (Udemy/Coursera integration)
+  - Human Coaching: Career development conversations, mentorship
+
+Engagement:
+  - Sentiment Analysis: 95% automated (NLP on Slack messages, surveys)
+  - Retention Risk Scoring: 85% accuracy (ML model, retraining quarterly)
+  - Human Empathy: 1-on-1 conversations, conflict resolution, culture building
+```
+
+---
+
+### Process Ownership Map
+
+**Cross-Reference: SIPOC Domains → Organizational Structure**
+
+| Process Domain | Primary Squad(s) | Supporting Pools | SIPOC Coverage | Automation % | Human Escalation Rate |
+|----------------|------------------|------------------|----------------|--------------|----------------------|
+| **Product Development** | Platform, Learning Experience, ML Service | Software Engineering, Quality, Enterprise Architecture | 95% | 78% | 12% (architecture reviews, manual QA) |
+| **Customer Lifecycle** | Commercial, Customer Success, Partnerships & Growth | Processes, People-AI, Ethics | 90% | 75% | 15% (enterprise deals, high-touch accounts) |
+| **Content Pipeline** | Content, Learning Experience | Quality, Ethics, Data Governance | 92% | 68% | 22% (pedagogical validation, ethical review) |
+| **Financial Ops** | Finance & Compliance | Processes, Data Governance | 98% | 98% | 2% (>$1K approvals, discrepancy investigations) |
+| **Infrastructure Ops** | Platform, Observability | Infrastructure, Software Engineering | 97% | 87% | 13% (novel incidents, strategic infra changes) |
+| **People Ops** | People & Culture | People-AI, Processes | 85% | 68% | 32% (hiring decisions, 1-on-1s, culture building) |
+
+**Key Insights:**
+
+- **Highest Automation:** Financial Operations (98%) — transactional, rule-based, no human judgment required
+- **Lowest Automation:** People Operations (68%) — empathy, culture, and strategic talent decisions resist automation
+- **Balanced Approach:** Product Development (78%) — technical tasks automated, strategic design requires human expertise
+- **Ethical Guardrails:** Content Pipeline (68%) — pedagogical accuracy and ethical review mandate human oversight
+
+---
+
+### Human-AI Collaboration Patterns
+
+**Escalation Triggers Across All Processes:**
+
+| Trigger Type | Example | Auto-Escalation Logic | Human Response SLA | Resolution Authority |
+|--------------|---------|----------------------|-------------------|---------------------|
+| **High-Value Decision** | Budget >$1K, Enterprise deal >$10K | Workflow pauses, Slack notification sent | 24 hours (business days) | Community Leader or Founder |
+| **Quality Threshold Breach** | Test coverage <90%, Content quality <80% | Deployment blocked, QA alert triggered | 4 hours (business hours) | Quality Pool or Squad Lead |
+| **Ethical Concern** | Bias detection alert, PII access request | Workflow pauses, Ethics Pool notified | 48 hours | Ethics Pool (veto authority) |
+| **Novel Scenario** | Unrecognized incident pattern, unprecedented customer request | AI flags as "no matching playbook" | 2 hours (P1), 8 hours (P2) | Subject Matter Expert from relevant pool |
+| **SLA Breach** | Uptime <99.5%, Customer response >4 hours | Incident declared, on-call paged | 15 minutes (P0), 1 hour (P1) | On-Call Engineer or CTO |
+| **Cost Anomaly** | Daily spend >$200, 20%+ cost increase | Alert to Finance + Infrastructure teams | 4 hours | Finance Squad + Infrastructure Pool |
+
+**AI Augmentation Patterns:**
+
+| Human Task | AI Augmentation | Productivity Gain | Example |
+|------------|-----------------|-------------------|---------|
+| **Code Development** | GitHub Copilot suggests completions, generates boilerplate | 40% faster coding | Developer writes function signature, AI generates implementation |
+| **Content Creation** | GPT-4 generates draft lessons, exercises, assessments | 10x content throughput | Educator defines learning objectives, AI generates 10 lessons/hour |
+| **Customer Support** | AI chatbot handles tier-1, surfaces knowledge base | 80% ticket deflection | Customer asks question, AI resolves or escalates to human |
+| **Financial Analysis** | AI generates monthly P&L, forecasts, variance reports | 95% time savings | CFO reviews 5-minute AI report instead of 2-hour manual analysis |
+| **Infrastructure Monitoring** | AI correlates logs, suggests root cause, auto-heals | 70% MTTR reduction | Engineer receives diagnosis + fix recommendation, not raw logs |
+| **Recruiting** | AI screens resumes, schedules interviews, checks references | 90% time savings | Hiring manager only interviews pre-qualified candidates |
+
+---
+
+### Process Metrics & Observability
+
+**Real-Time SIPOC Performance Dashboard:**
+
+```yaml
+Process Health Status (Live Metrics):
+
+Product Development:
+  - Cycle Time (Idea → Production): 18 days (✅ target <21 days)
+  - Deployment Frequency: 17 deployments/week (✅ target >15/week)
+  - Test Coverage: 89% (⚠️ target >90%)
+  - Post-Deploy Incident Rate: 2.1% (✅ target <3%)
+
+Customer Lifecycle:
+  - Lead Response Time: 4.2 minutes (✅ target <5 min)
+  - Trial-to-Paid Conversion: 18% (⚠️ target >20%)
+  - Customer Onboarding Time: 14 minutes (✅ target <15 min)
+  - Churn Rate: 4.2% monthly (✅ target <5%)
+
+Content Pipeline:
+  - Content Generation Speed: 9.8 lessons/hour (✅ target >8/hour)
+  - Quality Review Pass Rate: 78% (⚠️ target >80%)
+  - Pedagogical Validation SLA: 52 hours (⚠️ target <48 hours)
+  - Student Engagement: 76% completion rate (✅ target >75%)
+
+Financial Operations:
+  - Invoice Processing Time: 12 minutes (✅ target <15 min)
+  - Payment Failure Rate: 0.3% (✅ target <1%)
+  - Reconciliation Accuracy: 99.7% (✅ target >99%)
+  - Financial Reporting SLA: 100% on-time (✅ target 100%)
+
+Infrastructure Operations:
+  - System Uptime: 99.8% (✅ target >99.5%)
+  - Mean Time to Detect (MTTD): 90 seconds (✅ target <2 min)
+  - Mean Time to Repair (MTTR): 18 minutes (✅ target <30 min)
+  - Cost Efficiency: $0.07/request (✅ target <$0.10)
+
+People Operations:
+  - Time to Hire: 21 days (✅ target <30 days)
+  - Onboarding Time to Productivity: 6.5 days (✅ target <7 days)
+  - Employee Engagement Score: 8.3/10 (✅ target >8)
+  - Turnover Rate: 8% annually (✅ target <10%)
+```
+
+---
+
+### Continuous Improvement Framework
+
+**Learning Loops: From SIPOC Execution Back to Design**
+
+Every process domain follows a continuous improvement cycle:
+
+1. **Execute:** Run automated workflows, collect telemetry
+2. **Measure:** Track SIPOC metrics in real-time dashboards
+3. **Analyze:** AI identifies bottlenecks, inefficiencies, anomalies
+4. **Improve:** Update automation rules, retrain ML models, refine playbooks
+5. **Validate:** A/B test changes, measure impact, roll out winners
+
+**Example: Product Development Improvement Loop**
+
+```yaml
+Improvement Cycle (Q4 2025):
+
+Problem Identified:
+  - Test coverage dropped from 92% → 87% over 3 months
+  - Root Cause: Developers skipping tests due to time pressure
+
+AI-Suggested Fix:
+  - Auto-generate unit tests from code commits (GitHub Copilot)
+  - Block PR merges if coverage drops >2%
+
+Human Validation:
+  - Quality Pool approves test automation enhancement
+  - Software Engineering Pool updates CI/CD pipeline
+
+Implementation:
+  - Rollout: 2 weeks (phased across repos)
+  - A/B Test: 50% of PRs use new automation
+
+Results (After 1 Month):
+  - Test coverage increased 87% → 91%
+  - Developer velocity unchanged (no time burden)
+  - False positive test failures: 3% (acceptable)
+
+Decision:
+  - Roll out to 100% of repos
+  - Document as best practice in Software Engineering playbook
+```
+
+---
+
+### SIPOC Integration with Solid.ai Layers
+
+**Mapping Process Stages to Framework Layers:**
+
+| SIPOC Stage | Primary Solid.ai Layer | Supporting Layers | Example |
+|-------------|------------------------|-------------------|---------|
+| **Supplier** | L1 (Purpose & Alignment) | L7 (Learning Experience) | Product Owner prioritizes features based on OKRs (L1) and user feedback (L7) |
+| **Input** | L3 (Data Spine) | L2 (Governance) | Customer data ingested via APIs, validated by data contracts (L3) and privacy policies (L2) |
+| **Process** | L4 (Automation Mesh) | L5 (Cognitive Layer) | Temporal orchestrates workflows (L4), AI agents handle decision logic (L5) |
+| **Output** | L6 (Observability) | L3 (Data Spine) | Metrics instrumented (L6), output data cataloged (L3) for downstream consumers |
+| **Customer** | L7 (Learning Experience) | L1 (Purpose) | End users receive value (L7), feedback loops inform strategic alignment (L1) |
+
+**Layer-SIPOC Cross-Reference:**
+
+- **L1 (Purpose):** Defines which processes exist and why (strategic alignment)
+- **L2 (Governance):** Enforces compliance checkpoints within process stages
+- **L3 (Data Spine):** Provides input data contracts and catalogs output artifacts
+- **L4 (Automation Mesh):** Executes process orchestration (Temporal workflows)
+- **L5 (Cognitive):** Injects AI decision-making into process stages
+- **L6 (Observability):** Instruments processes with telemetry for monitoring
+- **L7 (Learning Experience):** Captures customer feedback to improve processes
+
+---
+
 ## Part 4: Legacy Organizational Structure (Pre-Consolidation Reference)
 
 *Note: The following sections document Midora's original organizational model. See Part 1 for the current consolidated structure.*
