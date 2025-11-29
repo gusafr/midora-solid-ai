@@ -1,5 +1,18 @@
 # Specification
 
+**Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
+
+---
+
+### Component Status
+
+- **Automation Mesh Spec** — ![Candidate](https://img.shields.io/badge/Status-Candidate-yellow) v1.0
+- **Data Spine Spec** — ![Stable](https://img.shields.io/badge/Status-Stable-green) v1.0
+- **Cognitive Layer Spec** — ![Stable](https://img.shields.io/badge/Status-Stable-green) v1.0
+- **Human-AI Loop Spec** — ![Stable](https://img.shields.io/badge/Status-Stable-green) v1.0
+
+---
+
 This section provides detailed technical specifications for each layer of the SOLID.AI architecture.
 
 ---
@@ -8,7 +21,7 @@ This section provides detailed technical specifications for each layer of the SO
 
 ### Overview
 
-The Data Spine serves as the organization's unified, real-time data infrastructure—a single source of truth accessible to all humans and AI agents.
+As shown in Figure 3 (see [Diagrams](diagrams.md#3-solidai-data-spine-topology)), the Data Spine serves as the organization's unified, real-time data infrastructure—a single source of truth accessible to all humans and AI agents.
 
 ### Design Principles
 

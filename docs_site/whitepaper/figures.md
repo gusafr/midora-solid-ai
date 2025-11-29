@@ -1,17 +1,16 @@
-# Whitepaper Diagrams
+# Architecture Overview
 
 **Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
 
 ---
 
-This page contains the core architectural diagrams for the SOLID.AI framework.
-
-!!! note "Layer Nomenclature"
-    The **six-layer architecture** shown here is the operational stack of SOLID.AI — the layers that directly execute work. In some governance contexts, you may see reference to an "8-layer model" that separates Governance into sub-layers (e.g., RFC Process, Compliance, Audit) or splits Purpose into Strategy and Ethics. For this whitepaper, we use the six-layer operational view for clarity and practical implementation.
+This page presents the complete SOLID.AI architecture through four integrated diagrams. Each figure builds upon the previous, creating a comprehensive view of how AI-native organizations operate.
 
 ---
 
-## 1. SOLID.AI Architecture Layer Model
+## Figure 1 — SOLID.AI Six-Layer Architecture
+
+Overview of the structural layers from alignment to governance, establishing the foundation for hybrid intelligent organizations.
 
 ```mermaid
 graph TB
@@ -78,14 +77,16 @@ graph TB
 
 <figure markdown>
   <figcaption><strong>Figure 1 — SOLID.AI Six-Layer Architecture</strong><br/>
-  Overview of the structural layers from alignment to governance, establishing the foundation for hybrid intelligent organizations. The six-layer architecture creates an organizational nervous system where the Purpose Layer (DNA) defines immutable identity, the Data Spine (sensory nerves) provides real-time information, the Cognitive Layer (brain) generates insights, the Automation Mesh (motor neurons) executes processes, the Organizational Layer (motor cortex) coordinates human teams, and the Governance Layer (prefrontal cortex) ensures ethical oversight.</figcaption>
+  The six-layer architecture creates an organizational nervous system where the Purpose Layer (DNA) defines immutable identity, the Data Spine (sensory nerves) provides real-time information, the Cognitive Layer (brain) generates insights, the Automation Mesh (motor neurons) executes processes, the Organizational Layer (motor cortex) coordinates human teams, and the Governance Layer (prefrontal cortex) ensures ethical oversight.</figcaption>
 </figure>
 
-**Reference Implementation:** See [Midora Topology (ADR-0003)](../../ADR/adr-0003-data-spine-automation-mesh-integration.md) for a concrete mapping of this diagram into a real AI-native education platform.
+**Key Insight:** Each layer serves a distinct biological function, creating a self-regulating system where strategy flows downward (command) and information flows upward (feedback).
 
 ---
 
-## 2. SOLID.AI Automation Mesh
+## Figure 2 — Automation Mesh Reference Model
+
+Event-driven orchestration fabric connecting AI agents, business services, rule engines, and external systems under compliance boundaries.
 
 ```mermaid
 graph LR
@@ -149,14 +150,16 @@ graph LR
 
 <figure markdown>
   <figcaption><strong>Figure 2 — Automation Mesh Reference Model</strong><br/>
-  Event-driven orchestration fabric connecting AI agents, business services, rule engines, and external systems under compliance boundaries. The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</figcaption>
+  The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</figcaption>
 </figure>
 
-**Reference Implementation:** See [Midora Topology (ADR-0003)](../../ADR/adr-0003-data-spine-automation-mesh-integration.md) for a concrete mapping of this diagram into a real AI-native education platform.
+**Key Insight:** The Automation Mesh acts as the organization's motor nervous system, translating cognitive decisions into coordinated multi-system actions with full auditability.
 
 ---
 
-## 3. SOLID.AI Data Spine Topology
+## Figure 3 — Data Spine Domain Model
+
+Unified data backbone enabling clean, derived, and real-time data flows across the organization.
 
 ```mermaid
 graph TB
@@ -221,14 +224,16 @@ graph TB
 
 <figure markdown>
   <figcaption><strong>Figure 3 — Data Spine Domain Model</strong><br/>
-  Unified data backbone enabling clean, derived, and real-time data flows across the organization. The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
+  The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
 </figure>
 
-**Reference Implementation:** See [Midora Topology (ADR-0003)](../../ADR/adr-0003-data-spine-automation-mesh-integration.md) for a concrete mapping of this diagram into a real AI-native education platform.
+**Key Insight:** The Data Spine eliminates data silos by providing a single, real-time, canonical view of organizational truth, accessible to both humans and AI agents through unified interfaces.
 
 ---
 
-## 4. SOLID.AI Human-AI Collaboration Loop
+## Figure 4 — Human-AI Collaboration Loop
+
+End-to-end sequence of analysis, recommendation, decision, execution, and learning in hybrid intelligent teams.
 
 ```mermaid
 sequenceDiagram
@@ -277,38 +282,73 @@ sequenceDiagram
 
 <figure markdown>
   <figcaption><strong>Figure 4 — Human-AI Collaboration Loop</strong><br/>
-  End-to-end sequence of analysis, recommendation, decision, execution, and learning in hybrid intelligent teams. The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes: <strong>Human-in-the-loop</strong> (Phases 1-2) where humans define problems and validate AI analysis in real-time; <strong>Human-on-the-loop</strong> (Phases 3, 5) where humans provide oversight and approval gates for AI recommendations and monitoring; and <strong>Human-outside-the-loop</strong> (Phase 4) where AI executes approved workflows autonomously with audit trails. This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</figcaption>
+  The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes: <strong>Human-in-the-loop</strong> (Phases 1-2) where humans define problems and validate AI analysis in real-time; <strong>Human-on-the-loop</strong> (Phases 3, 5) where humans provide oversight and approval gates for AI recommendations and monitoring; and <strong>Human-outside-the-loop</strong> (Phase 4) where AI executes approved workflows autonomously with audit trails. This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</figcaption>
 </figure>
 
-**Reference Implementation:** See [Midora Topology (ADR-0003)](../../ADR/adr-0003-data-spine-automation-mesh-integration.md) for a concrete mapping of this diagram into a real AI-native education platform.
+**Key Insight:** The collaboration loop embeds humans at strategic control points while allowing AI to operate autonomously within approved boundaries, creating both speed and safety.
 
 ---
 
-## Diagram Usage Guidelines
+## System Integration
 
-### In Academic Citations
+These four figures form an integrated architectural view:
 
-When referencing these diagrams in papers:
+1. **Figure 1** establishes the **structural foundation** — six layers creating an organizational nervous system
+2. **Figure 2** details the **execution layer** — how workflows orchestrate across systems
+3. **Figure 3** reveals the **information backbone** — canonical data flowing in real-time
+4. **Figure 4** demonstrates the **operational cycle** — humans and AI collaborating through defined control modes
 
-> "Figure 1 shows the SOLID.AI six-layer architecture (Freitas, 2025), where each layer serves a distinct biological function in the organizational nervous system."
+**Together**, they specify a complete AI-native organization where:
 
-### In Implementation
-
-These diagrams should be used during:
-- **Executive presentations** - Use Layer Model to explain transformation scope
-- **Technical architecture reviews** - Reference Data Spine and Automation Mesh for infrastructure design
-- **Team onboarding** - Show Human-AI Collaboration Loop to clarify roles
-- **Vendor evaluations** - Map vendor capabilities to specific layers
-
-### Diagram Formats
-
-All diagrams are available in multiple formats:
-
-- **Mermaid (source)** - Editable, version-controlled `.mmd` files
-- **SVG (web)** - Rendered automatically in browser, scalable for presentations
-- **PNG (print)** - High-resolution exports for documentation and papers
-- **PDF (publication)** - Vector format for academic submissions
+- **Strategy flows down** (Purpose → Data → Cognitive → Automation → Organization → Governance)
+- **Feedback flows up** (Execution results inform strategic adjustments)
+- **Humans and AI collaborate** at appropriate control points (in-the-loop, on-the-loop, outside-the-loop)
+- **All actions are auditable** through immutable event logs and decision trails
 
 ---
 
-**Navigation:** [← Governance](governance.md) | [Abstract →](abstract.md)
+## Reference Implementation
+
+The [Midora Platform](https://midora.ai) provides a concrete implementation of this architecture in the education technology domain, demonstrating:
+
+- **Data Spine:** Unified student, course, and engagement data across LMS, CRM, and content systems
+- **Cognitive Layer:** AI tutors, curriculum designers, and administrative assistants
+- **Automation Mesh:** Enrollment workflows, content generation pipelines, assessment orchestration
+- **Governance:** Ethical AI review for student-facing agents, FERPA compliance monitoring
+
+**See:** [ADR-0003: Data Spine & Automation Mesh Integration](../adr/adr-0003-data-spine-automation-mesh-integration.md) for detailed technical specifications.
+
+---
+
+## Use Cases
+
+This architecture overview is designed for:
+
+| Audience | Use Case | Focus Figures |
+|----------|----------|---------------|
+| **Executives** | Business transformation roadmap | Figure 1, 4 |
+| **Architects** | System design and integration | Figure 2, 3 |
+| **Data Engineers** | Data infrastructure planning | Figure 3 |
+| **AI Engineers** | Agent deployment and orchestration | Figure 2, 4 |
+| **Product Managers** | Feature prioritization and workflows | Figure 1, 2, 4 |
+| **Compliance Officers** | Governance and audit requirements | Figure 1, 4 |
+
+---
+
+## PDF Export
+
+For high-resolution PDF exports suitable for presentations and publications:
+
+1. Use browser print function (Ctrl/Cmd + P)
+2. Select "Save as PDF"
+3. Enable "Background graphics"
+4. Set scale to 100%
+5. Margins: Minimum
+
+Alternatively, use specialized Mermaid PDF exporters:
+- [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli)
+- [mmdc command-line tool](https://www.npmjs.com/package/@mermaid-js/mermaid-cli)
+
+---
+
+**Navigation:** [← Diagrams](diagrams.md) | [Abstract →](abstract.md) | [Index](index.md)

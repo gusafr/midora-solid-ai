@@ -1,5 +1,9 @@
 # Abstract
 
+**Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
+
+---
+
 **SOLID.AI** (Strategic Organization Leveraging Intelligent Design for Artificial Intelligence) is a comprehensive, open-source framework for designing intelligent, ethical, and adaptive organizations where humans and AI agents collaborate as peers.
 
 ## Problem Statement

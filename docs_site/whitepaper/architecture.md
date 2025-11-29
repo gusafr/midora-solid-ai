@@ -1,5 +1,9 @@
 # Architecture
 
+**Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
+
+---
+
 This section presents the architectural design of SOLID.AI, including the six-layer system architecture, nine core principles, and organizational patterns.
 
 ---
@@ -109,6 +113,8 @@ As shown in Figure 3 (see [Diagrams](diagrams.md#3-solidai-data-spine-topology))
 **Biological Analogy:** Motor nervous system executing coordinated movements
 
 **Function:** Process execution layer translating decisions into actions
+
+As shown in Figure 2 (see [Diagrams](diagrams.md#2-solidai-automation-mesh)), the Automation Mesh coordinates all AI-driven actions through event-driven orchestration connecting agents, business services, and external systems.
 
 **Components:**
 - SIPOC process definitions

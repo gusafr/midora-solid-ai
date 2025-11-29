@@ -1,12 +1,16 @@
 # Governance
 
+**Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
+
+---
+
 This section describes the implementation methodology, ethical frameworks, and compliance management for SOLID.AI adoption.
 
 ---
 
 ## Implementation Methodology
 
-SOLID.AI transformation follows a phased approach balancing speed with organizational change management. The complete architecture (Figure 1) is built incrementally, starting with the Data Spine (Figure 3) and Cognitive Layer (Figure 4), then scaling the Automation Mesh (Figure 2) across the organization.
+SOLID.AI transformation follows a phased approach balancing speed with organizational change management. As shown in Figure 1 (see [Diagrams](diagrams.md#1-solidai-architecture-layer-model)), the complete architecture is built incrementally, starting with the Data Spine (Figure 3) and Cognitive Layer (Figure 4), then scaling the Automation Mesh (Figure 2) across the organization.
 
 ### Three-Phase Roadmap
 

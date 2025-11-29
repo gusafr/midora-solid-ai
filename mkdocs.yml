@@ -8,11 +8,13 @@ docs_dir: docs_site
 nav:
   - Home: index.md
   - Whitepaper:
-    - Abstract: whitepaper/abstract.md
-    - Architecture: whitepaper/architecture.md
-    - Specification: whitepaper/specification.md
-    - Governance: whitepaper/governance.md
+    - 📄 Abstract: whitepaper/abstract.md
+    - 🏗️ Architecture: whitepaper/architecture.md
+    - 📋 Specification: whitepaper/specification.md
+    - 📐 Specification v1: whitepaper/specification-v1.md
+    - ⚖️ Governance: whitepaper/governance.md
     - 📊 Diagrams: whitepaper/diagrams.md
+    - 🎯 Architecture Overview: whitepaper/figures.md
   - Getting Started:
     - 🚀 Quick Start: quick-start.md
     - 📚 Reading Paths: README.md

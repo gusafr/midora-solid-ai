@@ -1,5 +1,7 @@
 # SOLID.AI Framework Whitepaper
 
+**Status:** ![Stable](https://img.shields.io/badge/Status-Stable-green) **Version:** 1.0
+
 **A Biologically-Inspired Architecture for AI-Native Organizations**
 
 ---
@@ -37,6 +39,14 @@ This whitepaper is organized into five integrated sections:
 - Code examples and patterns
 - Agent definitions and data contracts
 
+### [📐 Specification v1](specification-v1.md)
+**Formal Framework Specification**
+
+- Core entities (Actor, AI Agent, Event, Action, Policy, Boundary, Data Domain, Governance Rule)
+- System behaviors (Event propagation, Action orchestration, Human override, Context alignment, Audit trail)
+- Guarantees (Deterministic edges, Traceability, Compliance invariants, Observability coverage)
+- Conformance testing requirements
+
 ### [📊 Diagrams](diagrams.md)
 **Visual Architecture Reference**
 
@@ -44,6 +54,14 @@ This whitepaper is organized into five integrated sections:
 - Figure 2: SOLID.AI Automation Mesh
 - Figure 3: SOLID.AI Data Spine Topology
 - Figure 4: SOLID.AI Human-AI Collaboration Loop
+
+### [🎯 Architecture Overview](figures.md)
+**Integrated System View**
+
+- All four figures in sequence
+- System integration explanation
+- Use case matrix by audience
+- Google Vertex AI-style presentation
 
 ### [🛡️ Governance](governance.md)
 **Implementation Methodology & Ethics**
@@ -80,11 +98,11 @@ This whitepaper is organized into five integrated sections:
 
 - **💻 Implementation Details?**
 
-    Consult the [Specification](specification.md) for code examples
+    Consult the [Specification](specification.md) for code examples or [Specification v1](specification-v1.md) for formal entity definitions
 
 - **📊 Visual Learner?**
 
-    Explore the [Diagrams](diagrams.md) for architectural visualizations
+    Explore the [Diagrams](diagrams.md) for individual architectural visualizations or view the [Architecture Overview](figures.md) for all four figures in sequence
 
 - **🛡️ Governance & Ethics?**
 
