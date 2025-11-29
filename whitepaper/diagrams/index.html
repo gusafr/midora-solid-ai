@@ -1936,7 +1936,6 @@
 </div>
 <hr/>
 <h2 id="1-solidai-architecture-layer-model">1. SOLID.AI Architecture Layer Model<a class="headerlink" href="#1-solidai-architecture-layer-model" title="Permanent link">¶</a></h2>
-<p>The six-layer architecture forms the organizational nervous system:</p>
 <pre class="mermaid"><code>graph TB
     subgraph L6["Layer 6: Governance &amp; Ethics"]
         G1[RFC Process]
@@ -1997,11 +1996,13 @@
     style L3 fill:#ede9fe,stroke:#8b5cf6,stroke-width:2px
     style L2 fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
     style L1 fill:#fee2e2,stroke:#ef4444,stroke-width:2px</code></pre>
-<p><strong>Description:</strong> The six-layer architecture creates an organizational nervous system. The Purpose Layer (DNA) defines immutable identity. The Data Spine (sensory nerves) provides real-time information. The Cognitive Layer (brain) generates insights. The Automation Mesh (motor neurons) executes processes. The Organizational Layer (motor cortex) coordinates human teams. The Governance Layer (prefrontal cortex) ensures ethical oversight.</p>
+<figure>
+<figcaption><strong>Figure 1 — SOLID.AI Six-Layer Architecture</strong><br/>
+  Overview of the structural layers from alignment to governance, establishing the foundation for hybrid intelligent organizations. The six-layer architecture creates an organizational nervous system where the Purpose Layer (DNA) defines immutable identity, the Data Spine (sensory nerves) provides real-time information, the Cognitive Layer (brain) generates insights, the Automation Mesh (motor neurons) executes processes, the Organizational Layer (motor cortex) coordinates human teams, and the Governance Layer (prefrontal cortex) ensures ethical oversight.</figcaption>
+</figure>
 <p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="2-solidai-automation-mesh">2. SOLID.AI Automation Mesh<a class="headerlink" href="#2-solidai-automation-mesh" title="Permanent link">¶</a></h2>
-<p>Process execution layer translating decisions into coordinated actions:</p>
 <pre class="mermaid"><code>graph LR
     subgraph External["External Systems"]
         CRM[CRM&lt;br/&gt;Salesforce]
@@ -2059,11 +2060,13 @@
     style Mesh fill:#fef3c7,stroke:#f59e0b,stroke-width:3px
     style DataSpine fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
     style Cognitive fill:#ede9fe,stroke:#8b5cf6,stroke-width:2px</code></pre>
-<p><strong>Description:</strong> The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</p>
+<figure>
+<figcaption><strong>Figure 2 — Automation Mesh Reference Model</strong><br/>
+  Event-driven orchestration fabric connecting AI agents, business services, rule engines, and external systems under compliance boundaries. The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</figcaption>
+</figure>
 <p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="3-solidai-data-spine-topology">3. SOLID.AI Data Spine Topology<a class="headerlink" href="#3-solidai-data-spine-topology" title="Permanent link">¶</a></h2>
-<p>Single source of truth connecting all systems in real-time:</p>
 <pre class="mermaid"><code>graph TB
     subgraph Sources["Data Sources"]
         S1[CRM&lt;br/&gt;Customers]
@@ -2122,12 +2125,13 @@
     style Spine fill:#dbeafe,stroke:#3b82f6,stroke-width:3px
     style Stream fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
     style Models fill:#ddd6fe,stroke:#7c3aed,stroke-width:2px</code></pre>
-<p><strong>Description:</strong> The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA.</p>
-<p><strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</p>
+<figure>
+<figcaption><strong>Figure 3 — Data Spine Domain Model</strong><br/>
+  Unified data backbone enabling clean, derived, and real-time data flows across the organization. The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
+</figure>
 <p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="4-solidai-human-ai-collaboration-loop">4. SOLID.AI Human-AI Collaboration Loop<a class="headerlink" href="#4-solidai-human-ai-collaboration-loop" title="Permanent link">¶</a></h2>
-<p>Continuous feedback loop between humans and AI agents:</p>
 <pre class="mermaid"><code>sequenceDiagram
     participant H as Human (Product Manager)
     participant P as Purpose Layer (Strategic Context)
@@ -2170,13 +2174,10 @@
     rect rgb(240, 253, 244)
         Note over H,G: Outcome: Continuous Improvement Loop
     end</code></pre>
-<p><strong>Description:</strong> The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes:</p>
-<ul>
-<li><strong>Human-in-the-loop</strong> (Phases 1-2): Human defines problems and validates AI analysis in real-time</li>
-<li><strong>Human-on-the-loop</strong> (Phases 3, 5): Human provides oversight and approval gates for AI recommendations and monitoring</li>
-<li><strong>Human-outside-the-loop</strong> (Phase 4): AI executes approved workflows autonomously with audit trails</li>
-</ul>
-<p>This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</p>
+<figure>
+<figcaption><strong>Figure 4 — Human-AI Collaboration Loop</strong><br/>
+  End-to-end sequence of analysis, recommendation, decision, execution, and learning in hybrid intelligent teams. The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes: <strong>Human-in-the-loop</strong> (Phases 1-2) where humans define problems and validate AI analysis in real-time; <strong>Human-on-the-loop</strong> (Phases 3, 5) where humans provide oversight and approval gates for AI recommendations and monitoring; and <strong>Human-outside-the-loop</strong> (Phase 4) where AI executes approved workflows autonomously with audit trails. This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</figcaption>
+</figure>
 <p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="diagram-usage-guidelines">Diagram Usage Guidelines<a class="headerlink" href="#diagram-usage-guidelines" title="Permanent link">¶</a></h2>
