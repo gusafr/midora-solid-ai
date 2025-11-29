@@ -7,6 +7,7 @@ edit_uri: edit/main/
 docs_dir: docs_site
 nav:
   - Home: index.md
+  - 📘 Technical Reference: technical-reference.md
   - 🆕 v1.0 Release Notes: v1-release-notes.md
   - 🚀 Quick Start: quick-start.md
   - 📚 Reading Paths: README.md
