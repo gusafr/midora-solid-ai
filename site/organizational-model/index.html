@@ -227,6 +227,45 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-categories">
+<span class="md-ellipsis">
+      Squad Categories
+    </span>
+</a>
+<nav aria-label="Squad Categories" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-tech-core-platform-enablement">
+<span class="md-ellipsis">
+      1. Tech Core (Platform &amp; Enablement)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-business-core-customer-revenue">
+<span class="md-ellipsis">
+      2. Business Core (Customer &amp; Revenue)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operations-core-enterprise-functions">
+<span class="md-ellipsis">
+      3. Operations Core (Enterprise Functions)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-innovation-intelligence-experimental-strategic">
+<span class="md-ellipsis">
+      4. Innovation &amp; Intelligence (Experimental &amp; Strategic)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1816,6 +1855,45 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-categories">
+<span class="md-ellipsis">
+      Squad Categories
+    </span>
+</a>
+<nav aria-label="Squad Categories" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-tech-core-platform-enablement">
+<span class="md-ellipsis">
+      1. Tech Core (Platform &amp; Enablement)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-business-core-customer-revenue">
+<span class="md-ellipsis">
+      2. Business Core (Customer &amp; Revenue)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-operations-core-enterprise-functions">
+<span class="md-ellipsis">
+      3. Operations Core (Enterprise Functions)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-innovation-intelligence-experimental-strategic">
+<span class="md-ellipsis">
+      4. Innovation &amp; Intelligence (Experimental &amp; Strategic)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1912,7 +1990,7 @@
 <p><strong>Vision:</strong> Build the <strong>Intelligent Hybrid Organization</strong> through sustainable, scalable structures that balance human creativity with AI automation, all governed by unwavering ethical principles.</p>
 <hr/>
 <h2 id="structural-elements">Structural Elements<a class="headerlink" href="#structural-elements" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>graph TB
+<pre class="mermaid"><code>graph TB
     subgraph Portfolio["📊 Portfolio Management"]
         Outcomes[Strategic Outcomes]
         Priorities[Prioritization]
@@ -1998,8 +2076,7 @@
     style Pools fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
     style Cognitive fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
     style Governance fill:#ffebee,stroke:#d32f2f,stroke-width:2px
-    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
-</code></pre></div>
+    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px</code></pre>
 <ul>
 <li><strong>Squads:</strong> Cross-functional units focused on delivering customer or stakeholder outcomes. <strong>Organized around business services</strong> (bounded contexts) to ensure clear ownership, minimize dependencies, and avoid duplication. <strong>In Scaled Scrum models, squads are grouped into Communities</strong> (Communities of Practice or technical domains) for knowledge sharing and coordination.</li>
 <li><strong>Communities:</strong> Groups of related squads organized around shared domains, technologies, or business capabilities (e.g., Customer Experience Community, Data Platform Community, AI/ML Community). Communities facilitate knowledge transfer, technical standards, and cross-squad collaboration while maintaining squad autonomy.</li>
@@ -2349,6 +2426,41 @@ style OrderFulfill fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
 - <strong>Compliance:</strong> Data governance enforced automatically
 - <strong>AI-Native:</strong> Automation opportunities explicit in SIPOC mapping</p>
 <p>See <a href="../PLAYBOOKS/organizational/squads.md">Squad Playbook</a> for detailed integration requirements.</p>
+<h3 id="squad-categories">Squad Categories<a class="headerlink" href="#squad-categories" title="Permanent link">¶</a></h3>
+<p>Squads are organized into four strategic categories to clarify their primary function and stakeholder focus:</p>
+<h4 id="1-tech-core-platform-enablement">1. Tech Core (Platform &amp; Enablement)<a class="headerlink" href="#1-tech-core-platform-enablement" title="Permanent link">¶</a></h4>
+<p>Build and maintain technical infrastructure that enables other squads:
+- Platform Services (Infrastructure, DevOps, API Gateway)
+- Data Platform (Data Engineering, Warehousing, Governance)
+- AI/ML Platform (MLOps, Model Serving, Agent Infrastructure)
+- Security &amp; Compliance Platform
+- Developer Experience (Internal tools, SDKs, documentation)</p>
+<p><strong>Focus:</strong> Platform reliability, developer productivity, technical excellence</p>
+<h4 id="2-business-core-customer-revenue">2. Business Core (Customer &amp; Revenue)<a class="headerlink" href="#2-business-core-customer-revenue" title="Permanent link">¶</a></h4>
+<p>Deliver direct customer value or generate revenue:
+- E-Commerce (Product Catalog, Checkout, Order Fulfillment)
+- SaaS (Onboarding, Subscription Management, Integrations)
+- Financial Services (Payments, Fraud Detection, Risk Assessment)
+- Healthcare (Patient Care, Clinical Documentation, Telemedicine)
+- Marketing &amp; Growth (Acquisition, Retention, Personalization)</p>
+<p><strong>Focus:</strong> Customer satisfaction, revenue growth, product innovation</p>
+<h4 id="3-operations-core-enterprise-functions">3. Operations Core (Enterprise Functions)<a class="headerlink" href="#3-operations-core-enterprise-functions" title="Permanent link">¶</a></h4>
+<p>Enable internal operations and administrative functions:
+- Finance Operations (AP/AR, Reconciliation, FP&amp;A, Procurement)
+- HR Operations (Recruiting, Payroll, Performance Management)
+- Legal &amp; Compliance (Contracts, Regulatory Reporting, Risk)
+- Supply Chain &amp; Logistics (Inventory, Warehousing, Distribution)
+- Facilities &amp; Administration (Workplace, Assets, Travel)</p>
+<p><strong>Focus:</strong> Operational efficiency, cost reduction, regulatory compliance</p>
+<h4 id="4-innovation-intelligence-experimental-strategic">4. Innovation &amp; Intelligence (Experimental &amp; Strategic)<a class="headerlink" href="#4-innovation-intelligence-experimental-strategic" title="Permanent link">¶</a></h4>
+<p>Explore new capabilities and drive strategic initiatives:
+- Research &amp; Development (Emerging tech, POCs, innovation labs)
+- Advanced Analytics &amp; BI (Predictive analytics, data science)
+- Strategic Initiatives (Transformation programs, new markets, M&amp;A)</p>
+<p><strong>Focus:</strong> Learning, experimentation, future readiness</p>
+<p><strong>Cross-Category Collaboration Example:</strong>
+A Fraud Detection service (Business Core) depends on ML Platform (Tech Core), feeds Compliance Reporting (Operations Core), and uses algorithms validated by R&amp;D (Innovation). Categories clarify ownership while enabling seamless collaboration.</p>
+<p>See <a href="../PLAYBOOKS/organizational/squads.md">Squad Playbook</a> for complete category characteristics and examples.</p>
 <h2 id="operating-rhythm">Operating Rhythm<a class="headerlink" href="#operating-rhythm" title="Permanent link">¶</a></h2>
 <table>
 <thead>
