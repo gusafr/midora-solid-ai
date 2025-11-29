@@ -1930,6 +1930,10 @@
 <article class="md-content__inner md-typeset">
 <h1 id="whitepaper-diagrams">Whitepaper Diagrams<a class="headerlink" href="#whitepaper-diagrams" title="Permanent link">¶</a></h1>
 <p>This page contains the core architectural diagrams for the SOLID.AI framework.</p>
+<div class="admonition note">
+<p class="admonition-title">Layer Nomenclature</p>
+<p>The <strong>six-layer architecture</strong> shown here is the operational stack of SOLID.AI — the layers that directly execute work. In some governance contexts, you may see reference to an "8-layer model" that separates Governance into sub-layers (e.g., RFC Process, Compliance, Audit) or splits Purpose into Strategy and Ethics. For this whitepaper, we use the six-layer operational view for clarity and practical implementation.</p>
+</div>
 <hr/>
 <h2 id="1-solidai-architecture-layer-model">1. SOLID.AI Architecture Layer Model<a class="headerlink" href="#1-solidai-architecture-layer-model" title="Permanent link">¶</a></h2>
 <p>The six-layer architecture forms the organizational nervous system:</p>
@@ -1994,6 +1998,7 @@
     style L2 fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
     style L1 fill:#fee2e2,stroke:#ef4444,stroke-width:2px</code></pre>
 <p><strong>Description:</strong> The six-layer architecture creates an organizational nervous system. The Purpose Layer (DNA) defines immutable identity. The Data Spine (sensory nerves) provides real-time information. The Cognitive Layer (brain) generates insights. The Automation Mesh (motor neurons) executes processes. The Organizational Layer (motor cortex) coordinates human teams. The Governance Layer (prefrontal cortex) ensures ethical oversight.</p>
+<p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="2-solidai-automation-mesh">2. SOLID.AI Automation Mesh<a class="headerlink" href="#2-solidai-automation-mesh" title="Permanent link">¶</a></h2>
 <p>Process execution layer translating decisions into coordinated actions:</p>
@@ -2003,6 +2008,7 @@
         ERP[ERP&lt;br/&gt;NetSuite]
         EMAIL[Email&lt;br/&gt;Gmail]
         SLACK[Slack]
+        MIDORA[Midora Platform&lt;br/&gt;LMS/CRM]
     end
 
     subgraph Mesh["Automation Mesh"]
@@ -2053,7 +2059,8 @@
     style Mesh fill:#fef3c7,stroke:#f59e0b,stroke-width:3px
     style DataSpine fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
     style Cognitive fill:#ede9fe,stroke:#8b5cf6,stroke-width:2px</code></pre>
-<p><strong>Description:</strong> The Automation Mesh connects external systems (CRM, ERP, Email, Slack) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</p>
+<p><strong>Description:</strong> The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</p>
+<p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="3-solidai-data-spine-topology">3. SOLID.AI Data Spine Topology<a class="headerlink" href="#3-solidai-data-spine-topology" title="Permanent link">¶</a></h2>
 <p>Single source of truth connecting all systems in real-time:</p>
@@ -2116,6 +2123,8 @@
     style Stream fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
     style Models fill:#ddd6fe,stroke:#7c3aed,stroke-width:2px</code></pre>
 <p><strong>Description:</strong> The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA.</p>
+<p><strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</p>
+<p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="4-solidai-human-ai-collaboration-loop">4. SOLID.AI Human-AI Collaboration Loop<a class="headerlink" href="#4-solidai-human-ai-collaboration-loop" title="Permanent link">¶</a></h2>
 <p>Continuous feedback loop between humans and AI agents:</p>
@@ -2127,31 +2136,31 @@
     participant M as Automation Mesh&lt;br/&gt;(Execution)
     participant G as Governance&lt;br/&gt;(Oversight)
 
-    Note over H,G: Phase 1: Problem Definition
+    Note over H,G: Phase 1: Problem Definition (Human-in-the-loop)
     H-&gt;&gt;P: Define objective&lt;br/&gt;"Increase Q4 sales"
     P-&gt;&gt;D: Retrieve strategic OKRs
     D--&gt;&gt;H: Current metrics&lt;br/&gt;Q4 forecast: $2M (target: $2.5M)
 
-    Note over H,G: Phase 2: AI Analysis
+    Note over H,G: Phase 2: AI Analysis (Human-in-the-loop)
     H-&gt;&gt;A: Request analysis&lt;br/&gt;"Why are we missing target?"
     A-&gt;&gt;D: Query pipeline data&lt;br/&gt;opportunities, deals, trends
     D--&gt;&gt;A: 847 records returned
     A-&gt;&gt;A: Analyze patterns&lt;br/&gt;Chain-of-thought reasoning
     A--&gt;&gt;H: Insights:&lt;br/&gt;1) 3 large deals slipped to Q1&lt;br/&gt;2) New pipeline down 20%&lt;br/&gt;3) Conversion rate dropped 5%
 
-    Note over H,G: Phase 3: Decision &amp; Approval
+    Note over H,G: Phase 3: Decision &amp; Approval (Human-on-the-loop)
     H-&gt;&gt;A: Generate recommendations
     A--&gt;&gt;H: Proposed actions:&lt;br/&gt;1) Launch demand gen campaign&lt;br/&gt;2) Accelerate mid-stage deals&lt;br/&gt;3) Add 2 sales reps
     H-&gt;&gt;G: Submit for approval&lt;br/&gt;(budget impact: $150K)
     G-&gt;&gt;G: Risk assessment&lt;br/&gt;Impact: Medium, Likelihood: Low
     G--&gt;&gt;H: Approved with conditions&lt;br/&gt;(executive review in 2 weeks)
 
-    Note over H,G: Phase 4: Execution
+    Note over H,G: Phase 4: Execution (Human-outside-the-loop)
     H-&gt;&gt;M: Execute action plan
     M-&gt;&gt;M: Orchestrate workflows:&lt;br/&gt;- Marketing campaign&lt;br/&gt;- Sales coaching&lt;br/&gt;- Recruiting pipeline
     M--&gt;&gt;D: Write execution events
 
-    Note over H,G: Phase 5: Monitoring &amp; Learning
+    Note over H,G: Phase 5: Monitoring &amp; Learning (Human-on-the-loop)
     D-&gt;&gt;A: Stream real-time updates
     A-&gt;&gt;A: Track KPIs:&lt;br/&gt;- New pipeline: +15%&lt;br/&gt;- Conversion: +3%
     A--&gt;&gt;H: Weekly progress report&lt;br/&gt;"On track to close gap"
@@ -2161,7 +2170,14 @@
     rect rgb(240, 253, 244)
         Note over H,G: Outcome: Continuous Improvement Loop
     end</code></pre>
-<p><strong>Description:</strong> The Human-AI Collaboration Loop demonstrates the complete decision cycle: (1) Human defines objective using Purpose Layer context, (2) AI Agent analyzes Data Spine to generate insights, (3) Human and AI co-create solutions with Governance approval, (4) Automation Mesh executes the plan, (5) Continuous monitoring feeds learning back to Purpose Layer. This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale.</p>
+<p><strong>Description:</strong> The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes:</p>
+<ul>
+<li><strong>Human-in-the-loop</strong> (Phases 1-2): Human defines problems and validates AI analysis in real-time</li>
+<li><strong>Human-on-the-loop</strong> (Phases 3, 5): Human provides oversight and approval gates for AI recommendations and monitoring</li>
+<li><strong>Human-outside-the-loop</strong> (Phase 4): AI executes approved workflows autonomously with audit trails</li>
+</ul>
+<p>This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</p>
+<p><strong>Reference Implementation:</strong> See <a href="../../ADR/adr-0003-data-spine-automation-mesh-integration.md">Midora Topology (ADR-0003)</a> for a concrete mapping of this diagram into a real AI-native education platform.</p>
 <hr/>
 <h2 id="diagram-usage-guidelines">Diagram Usage Guidelines<a class="headerlink" href="#diagram-usage-guidelines" title="Permanent link">¶</a></h2>
 <h3 id="in-academic-citations">In Academic Citations<a class="headerlink" href="#in-academic-citations" title="Permanent link">¶</a></h3>
