@@ -2272,7 +2272,7 @@
 <hr/>
 <h2 id="visual-ai-native-sprint-flow">Visual: AI-Native Sprint Flow<a class="headerlink" href="#visual-ai-native-sprint-flow" title="Permanent link">¶</a></h2>
 <p>The following diagram shows a complete week-long sprint (Monday→Friday) with all 6 AI agents participating in ceremonies:</p>
-<div class="highlight"><pre><span></span><code>```mermaid
+<pre class="mermaid"><code>```mermaid
 sequenceDiagram
     participant Squad as 👥 Product Squad
     participant SprintPlanner as 🤖 SprintPlanner-Agent
@@ -2375,8 +2375,7 @@ sequenceDiagram
     Squad-&gt;&gt;DataSpine: Mark sprint complete
     DataSpine-&gt;&gt;DataSpine: Calculate sprint metrics for next cycle
 
-    Note over Squad,Governance: ✅ Sprint Complete | 18/20 stories delivered | Ready for next Monday
-</code></pre></div>
+    Note over Squad,Governance: ✅ Sprint Complete | 18/20 stories delivered | Ready for next Monday</code></pre>
 <div class="highlight"><pre><span></span><code>💡 **Tip:** This sequence diagram shows how AI agents (SprintPlanner, StandupFacilitator, BacklogRefiner, DemoCoordinator, RetroAnalyzer, CIAgent) integrate with the product squad throughout the sprint cycle.
 
 ---
