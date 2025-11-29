@@ -13,6 +13,8 @@ SOLID.AI is an open-source framework for designing intelligent, ethical, and ada
 **License:** [MIT](https://opensource.org/licenses/MIT)  
 **Repository:** [github.com/gusafr/midora-solid-ai](https://github.com/gusafr/midora-solid-ai)
 
+📥 **[Download PDF Documentation](downloads.md)** — Whitepaper & Complete Framework
+
 ---
 
 ## Whitepaper

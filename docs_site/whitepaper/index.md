@@ -32,20 +32,22 @@ This whitepaper is organized into five integrated sections:
 - Layer-by-layer technical details
 - Organizational patterns (Squads, Pools)
 
-### [⚙️ Specification](specification.md)
-**Technical Implementation Details**
-
-- Layer-specific technical requirements
-- Code examples and patterns
-- Agent definitions and data contracts
-
-### [📐 Specification v1](specification-v1.md)
+### [📐 Specification](specification.md)
 **Formal Framework Specification**
 
 - Core entities (Actor, AI Agent, Event, Action, Policy, Boundary, Data Domain, Governance Rule)
 - System behaviors (Event propagation, Action orchestration, Human override, Context alignment, Audit trail)
 - Guarantees (Deterministic edges, Traceability, Compliance invariants, Observability coverage)
 - Conformance testing requirements
+
+### [🔧 Implementation Guide](implementation.md)
+**Layer-by-Layer Technical Details**
+
+- Data Spine implementation (Layer 2)
+- Cognitive Layer specifications (Layer 3)
+- Automation Mesh patterns (Layer 4)
+- Organizational structures (Layer 5)
+- Governance implementation (Layer 6)
 
 ### [📊 Diagrams](diagrams.md)
 **Visual Architecture Reference**
@@ -82,6 +84,8 @@ This whitepaper is organized into five integrated sections:
 | **Last Updated** | November 2025 |
 | **Authors** | SOLID.AI Framework Contributors |
 
+📥 **[Download as PDF](../downloads.md)** — Academic whitepaper (75 KB) or complete framework (1.4 MB)
+
 ---
 
 ## Quick Navigation
@@ -98,7 +102,7 @@ This whitepaper is organized into five integrated sections:
 
 - **💻 Implementation Details?**
 
-    Consult the [Specification](specification.md) for code examples or [Specification v1](specification-v1.md) for formal entity definitions
+    Consult the [Specification](specification.md) for formal entity definitions or [Implementation Guide](implementation.md) for layer-by-layer technical details
 
 - **📊 Visual Learner?**
 

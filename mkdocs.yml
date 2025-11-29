@@ -7,11 +7,12 @@ edit_uri: edit/main/
 docs_dir: docs_site
 nav:
   - Home: index.md
+  - 📥 Downloads: downloads.md
   - Whitepaper:
     - 📄 Abstract: whitepaper/abstract.md
     - 🏗️ Architecture: whitepaper/architecture.md
-    - 📋 Specification: whitepaper/specification.md
-    - 📐 Specification v1: whitepaper/specification-v1.md
+    - 📐 Specification: whitepaper/specification.md
+    - 🔧 Implementation Guide: whitepaper/implementation.md
     - ⚖️ Governance: whitepaper/governance.md
     - 📊 Diagrams: whitepaper/diagrams.md
     - 🎯 Architecture Overview: whitepaper/figures.md
