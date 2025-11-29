@@ -1,0 +1,3872 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The organizational nervous system for AI-Native companies." name="description"/>
+<link href="https://gusafr.github.io/solid.ai/technical-reference/" rel="canonical"/>
+<link href=".." rel="prev"/>
+<link href="../v1-release-notes/" rel="next"/>
+<link href="../assets/images/solid-ai-logo.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>📘 Technical Reference - solid.ai</title>
+<link href="../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#solidai-technical-reference">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href=".." title="solid.ai">
+<img alt="logo" src="../assets/images/solid-ai-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            solid.ai
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              📘 Technical Reference
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href=".." title="solid.ai">
+<img alt="logo" src="../assets/images/solid-ai-logo.png"/>
+</a>
+    solid.ai
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/gusafr/solid.ai" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    gusafr/solid.ai
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    📘 Technical Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    📘 Technical Reference
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#document-information">
+<span class="md-ellipsis">
+      Document Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract">
+<span class="md-ellipsis">
+      Abstract
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vision">
+<span class="md-ellipsis">
+      Vision
+    </span>
+</a>
+<nav aria-label="Vision" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-intelligent-hybrid-organization">
+<span class="md-ellipsis">
+      The Intelligent Hybrid Organization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-transformation-imperative">
+<span class="md-ellipsis">
+      The Transformation Imperative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-economic-case-for-transformation">
+<span class="md-ellipsis">
+      The Economic Case for Transformation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#principles">
+<span class="md-ellipsis">
+      Principles
+    </span>
+</a>
+<nav aria-label="Principles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-whole-organization-coherence">
+<span class="md-ellipsis">
+      1. Whole-Organization Coherence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-purpose-led-decisions">
+<span class="md-ellipsis">
+      2. Purpose-Led Decisions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-living-architecture">
+<span class="md-ellipsis">
+      3. Living Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-continuous-learning">
+<span class="md-ellipsis">
+      4. Continuous Learning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-intelligent-decentralization">
+<span class="md-ellipsis">
+      5. Intelligent Decentralization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-cognitive-workforce">
+<span class="md-ellipsis">
+      6. Cognitive Workforce
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-ethical-automation">
+<span class="md-ellipsis">
+      7. Ethical Automation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-scalable-simplicity">
+<span class="md-ellipsis">
+      8. Scalable Simplicity
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-humanmachine-symbiosis">
+<span class="md-ellipsis">
+      9. Human–Machine Symbiosis
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture">
+<span class="md-ellipsis">
+      Architecture
+    </span>
+</a>
+<nav aria-label="Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architectural-overview">
+<span class="md-ellipsis">
+      Architectural Overview
+    </span>
+</a>
+<nav aria-label="Architectural Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cognitive-layer-ai-agent-specifications">
+<span class="md-ellipsis">
+      Cognitive Layer: AI Agent Specifications
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-mesh-workflow-orchestration">
+<span class="md-ellipsis">
+      Automation Mesh: Workflow Orchestration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organizational-layer-team-topology">
+<span class="md-ellipsis">
+      Organizational Layer: Team Topology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-ethics-layer-accountability-framework">
+<span class="md-ellipsis">
+      Governance &amp; Ethics Layer: Accountability Framework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methodology">
+<span class="md-ellipsis">
+      Methodology
+    </span>
+</a>
+<nav aria-label="Methodology" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-approach">
+<span class="md-ellipsis">
+      Implementation Approach
+    </span>
+</a>
+<nav aria-label="Implementation Approach" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-1-foundation-weeks-1-4">
+<span class="md-ellipsis">
+      Phase 1: Foundation (Weeks 1-4)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-2-pilot-learn-weeks-5-12">
+<span class="md-ellipsis">
+      Phase 2: Pilot &amp; Learn (Weeks 5-12)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-3-scale-months-4-12">
+<span class="md-ellipsis">
+      Phase 3: Scale (Months 4-12)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sipoc-automation-methodology">
+<span class="md-ellipsis">
+      SIPOC Automation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agile-integration-methodology">
+<span class="md-ellipsis">
+      Agile Integration Methodology
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance">
+<span class="md-ellipsis">
+      Governance
+    </span>
+</a>
+<nav aria-label="Governance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-framework">
+<span class="md-ellipsis">
+      Governance Framework
+    </span>
+</a>
+<nav aria-label="Governance Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decision-making-authority">
+<span class="md-ellipsis">
+      Decision-Making Authority
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfc-request-for-comments-process">
+<span class="md-ellipsis">
+      RFC (Request for Comments) Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adr-architecture-decision-record-process">
+<span class="md-ellipsis">
+      ADR (Architecture Decision Record) Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ethical-review-checklist">
+<span class="md-ellipsis">
+      Ethical Review Checklist
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-management">
+<span class="md-ellipsis">
+      Compliance Management
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-cases">
+<span class="md-ellipsis">
+      Use Cases
+    </span>
+</a>
+<nav aria-label="Use Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cross-industry-examples">
+<span class="md-ellipsis">
+      Cross-Industry Examples
+    </span>
+</a>
+<nav aria-label="Cross-Industry Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#healthcare-clinical-documentation-automation">
+<span class="md-ellipsis">
+      Healthcare: Clinical Documentation Automation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-services-fraud-detection">
+<span class="md-ellipsis">
+      Financial Services: Fraud Detection
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manufacturing-supply-chain-optimization">
+<span class="md-ellipsis">
+      Manufacturing: Supply Chain Optimization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#e-commerce-personalized-recommendations">
+<span class="md-ellipsis">
+      E-Commerce: Personalized Recommendations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sector-specific-playbooks">
+<span class="md-ellipsis">
+      Sector-Specific Playbooks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossary">
+<span class="md-ellipsis">
+      Glossary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+<nav aria-label="References" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-documentation">
+<span class="md-ellipsis">
+      Core Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfcs-request-for-comments">
+<span class="md-ellipsis">
+      RFCs (Request for Comments)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adrs-architecture-decision-records">
+<span class="md-ellipsis">
+      ADRs (Architecture Decision Records)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#playbooks-implementation-guides">
+<span class="md-ellipsis">
+      Playbooks (Implementation Guides)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adoption-pack-ready-to-use-resources">
+<span class="md-ellipsis">
+      Adoption Pack (Ready-to-Use Resources)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+<span class="md-ellipsis">
+      Diagrams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#external-resources">
+<span class="md-ellipsis">
+      External Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#versioning-updates">
+<span class="md-ellipsis">
+      Versioning &amp; Updates
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contributing">
+<span class="md-ellipsis">
+      Contributing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+<span class="md-ellipsis">
+      License
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contact-community">
+<span class="md-ellipsis">
+      Contact &amp; Community
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acknowledgments">
+<span class="md-ellipsis">
+      Acknowledgments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../v1-release-notes/">
+<span class="md-ellipsis">
+    🆕 v1.0 Release Notes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quick-start/">
+<span class="md-ellipsis">
+    🚀 Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../README.md">
+<span class="md-ellipsis">
+    📚 Reading Paths
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../principles/">
+<span class="md-ellipsis">
+    Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../organizational-model/">
+<span class="md-ellipsis">
+    Organizational Model
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automation-sipoc/">
+<span class="md-ellipsis">
+    Automation SIPOC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-agents/">
+<span class="md-ellipsis">
+    AI Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../governance-ethics/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../observability/">
+<span class="md-ellipsis">
+    Observability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../human-ai-collaboration/">
+<span class="md-ellipsis">
+    Human-AI Collaboration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../role-hierarchy-human-ai/">
+<span class="md-ellipsis">
+    Role Hierarchy (Human &amp; AI)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+<span class="md-ellipsis">
+    AI-Native Agile
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_16_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
+<span class="md-nav__icon md-icon"></span>
+            AI-Native Agile
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-native-agile/">
+<span class="md-ellipsis">
+    AI-Native Agile &amp; SAFe (Scrum)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-native-kanban/">
+<span class="md-ellipsis">
+    AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../whole-organization-transformation/">
+<span class="md-ellipsis">
+    Whole-Org Transformation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glossary/">
+<span class="md-ellipsis">
+    Glossary
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../diagrams/">
+<span class="md-ellipsis">
+    📊 Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="">
+<span class="md-ellipsis">
+    Adoption Pack
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_20">
+<span class="md-nav__icon md-icon"></span>
+            Adoption Pack
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2" id="__nav_20_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference Cards
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_20_2">
+<span class="md-nav__icon md-icon"></span>
+            Reference Cards
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_1" id="__nav_20_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/squad-organization-quick-ref/">
+<span class="md-ellipsis">
+    Squad Organization
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_2" id="__nav_20_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/developer/">
+<span class="md-ellipsis">
+    Developer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/product-manager/">
+<span class="md-ellipsis">
+    Product Manager
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/leadership/">
+<span class="md-ellipsis">
+    Leadership
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_3" id="__nav_20_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/administration/">
+<span class="md-ellipsis">
+    Administration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_4" id="__nav_20_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_5" id="__nav_20_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Highly Regulated
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Highly Regulated
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_2_6" id="__nav_20_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Sectors
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Service Sectors
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/reference-cards/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_3" id="__nav_20_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Prompt Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_20_3">
+<span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/purpose-driven-feature/">
+<span class="md-ellipsis">
+    Purpose-Driven Feature
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/ai-agent-definition/">
+<span class="md-ellipsis">
+    AI Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/data-contract-design/">
+<span class="md-ellipsis">
+    Data Contract Design
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/retrospective-facilitation/">
+<span class="md-ellipsis">
+    Retrospective Facilitation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/ethical-decision-making/">
+<span class="md-ellipsis">
+    Ethical Decision-Making
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/prompt-templates/ai-native-sprint-planning/">
+<span class="md-ellipsis">
+    AI-Native Sprint Planning
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_4" id="__nav_20_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Checklists
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_20_4">
+<span class="md-nav__icon md-icon"></span>
+            Checklists
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_4_1" id="__nav_20_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    By Assessment &amp; Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_4_1">
+<span class="md-nav__icon md-icon"></span>
+            By Assessment &amp; Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/ai-maturity-assessment/">
+<span class="md-ellipsis">
+    AI Maturity Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/organizational-scalability-assessment/">
+<span class="md-ellipsis">
+    Organizational Scalability Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/learning-development-rollout/">
+<span class="md-ellipsis">
+    Learning &amp; Development Rollout
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/okr-kpi-setup/">
+<span class="md-ellipsis">
+    OKR &amp; KPI Setup
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_4_2" id="__nav_20_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    By Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_4_2">
+<span class="md-nav__icon md-icon"></span>
+            By Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/ai-agent-integration/">
+<span class="md-ellipsis">
+    AI Agent Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/squad-formation/">
+<span class="md-ellipsis">
+    Squad Formation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/data-spine-implementation/">
+<span class="md-ellipsis">
+    Data Spine Implementation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/governance-ethics-review/">
+<span class="md-ellipsis">
+    Governance &amp; Ethics Review
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_4_3" id="__nav_20_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    By Journey
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_4_3">
+<span class="md-nav__icon md-icon"></span>
+            By Journey
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/sme-transformation-roadmap/">
+<span class="md-ellipsis">
+    SME Transformation Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/startup-launch/">
+<span class="md-ellipsis">
+    Startup Launch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/ai-native-sprint/">
+<span class="md-ellipsis">
+    AI-Native Sprint
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/kanban-setup/">
+<span class="md-ellipsis">
+    Kanban Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/checklists/role-hierarchy-implementation/">
+<span class="md-ellipsis">
+    Role Hierarchy Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_5" id="__nav_20_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Templates
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_20_5">
+<span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_5_1" id="__nav_20_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Organizational
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/agent-definition/">
+<span class="md-ellipsis">
+    Agent Definition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/squad-charter/">
+<span class="md-ellipsis">
+    Squad Charter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/data-contract/">
+<span class="md-ellipsis">
+    Data Contract
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_5_2" id="__nav_20_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Planning &amp; Metrics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Planning &amp; Metrics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/risk-assessment-template/">
+<span class="md-ellipsis">
+    Risk Assessment Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/learning-path-template/">
+<span class="md-ellipsis">
+    Learning Path Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/okr-template/">
+<span class="md-ellipsis">
+    OKR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/90-day-transformation-plan/">
+<span class="md-ellipsis">
+    90-Day Transformation Plan
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/role-hierarchy-matrix.md">
+<span class="md-ellipsis">
+    Role Hierarchy Matrix
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_5_3" id="__nav_20_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/rfc-template/">
+<span class="md-ellipsis">
+    RFC Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/adr-template/">
+<span class="md-ellipsis">
+    ADR Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/impact-analysis-template/">
+<span class="md-ellipsis">
+    Impact Analysis Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_20_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_20_5_4" id="__nav_20_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_20_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_20_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/ai-native-sprint-template/">
+<span class="md-ellipsis">
+    AI-Native Sprint Template
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adoption/templates/kanban-board-template/">
+<span class="md-ellipsis">
+    Kanban Board Template
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="">
+<span class="md-ellipsis">
+    Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_21_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_21">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/">
+<span class="md-ellipsis">
+    Docker Setup
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cleanup/">
+<span class="md-ellipsis">
+    Cleanup &amp; Optimization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../backstage/">
+<span class="md-ellipsis">
+    Backstage Integration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="">
+<span class="md-ellipsis">
+    Manifesto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_22_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_22">
+<span class="md-nav__icon md-icon"></span>
+            Manifesto
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../manifesto/solid-ai-manifesto-v1/">
+<span class="md-ellipsis">
+    solid.ai Manifesto v1.0
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_23">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_1" id="__nav_23_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Diagrams
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_23_1">
+<span class="md-nav__icon md-icon"></span>
+            Diagrams
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../diagrams/README.md">
+<span class="md-ellipsis">
+    📊 Diagram Gallery
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../diagrams/images/">
+<span class="md-ellipsis">
+    🖼️ Generated Images
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_2" id="__nav_23_2_label" tabindex="0">
+<span class="md-ellipsis">
+    RFCs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_23_2">
+<span class="md-nav__icon md-icon"></span>
+            RFCs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfc/rfc-0001-foundations/">
+<span class="md-ellipsis">
+    RFC 0001 – Foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfc/rfc-0002-data-layer/">
+<span class="md-ellipsis">
+    RFC 0002 – Data Spine
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfc/rfc-0003-midora-organizational-topology/">
+<span class="md-ellipsis">
+    RFC 0003 – Midora Topology
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_3" id="__nav_23_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ADRs
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_23_3">
+<span class="md-nav__icon md-icon"></span>
+            ADRs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adr/">
+<span class="md-ellipsis">
+    📋 ADR Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adr/adr-0001-mermaid-choice/">
+<span class="md-ellipsis">
+    ADR 0001 – Mermaid for Diagrams
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adr/adr-0002-business-service-organization/">
+<span class="md-ellipsis">
+    ADR 0002 – Business Service Organization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adr/adr-0003-data-spine-automation-mesh-integration/">
+<span class="md-ellipsis">
+    ADR 0003 – Data Spine &amp; Automation Mesh Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adr/adr-0004-reportlab-pdf-generation/">
+<span class="md-ellipsis">
+    ADR 0004 – ReportLab PDF Generation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4" id="__nav_23_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Playbooks
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_23_4">
+<span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/">
+<span class="md-ellipsis">
+    📖 Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_2" id="__nav_23_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Foundation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Foundation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/foundation/solid-ai-maturity-model/">
+<span class="md-ellipsis">
+    🎯 SOLID.AI Maturity Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_3" id="__nav_23_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Governance
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/governance/ai-governance-risk-assessment/">
+<span class="md-ellipsis">
+    🛡️ AI Governance &amp; Risk Assessment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/governance/impact-analysis/">
+<span class="md-ellipsis">
+    📊 Impact Analysis
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_4" id="__nav_23_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Implementation
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/implementation/process-mapping-sipoc-integration/">
+<span class="md-ellipsis">
+    🔄 Process Mapping &amp; SIPOC Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/implementation/data-spine-analytics-insights/">
+<span class="md-ellipsis">
+    📊 Data Spine Analytics &amp; Insights
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/implementation/ai-native-kanban/">
+<span class="md-ellipsis">
+    📋 AI-Native Kanban
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_5" id="__nav_23_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    People &amp; Culture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_5">
+<span class="md-nav__icon md-icon"></span>
+            People &amp; Culture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/people-culture/organizational-scalability/">
+<span class="md-ellipsis">
+    📈 Organizational Scalability
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/people-culture/ai-learning-development/">
+<span class="md-ellipsis">
+    🎓 AI Learning &amp; Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/people-culture/ai-native-okrs-kpis/">
+<span class="md-ellipsis">
+    🎯 AI-Native OKRs &amp; KPIs
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_6" id="__nav_23_4_6_label" tabindex="0">
+<span class="md-ellipsis">
+    By Company Stage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_6">
+<span class="md-nav__icon md-icon"></span>
+            By Company Stage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-stage/startup-ai-native/">
+<span class="md-ellipsis">
+    🚀 Startup (AI-Native)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-stage/sme-transformation/">
+<span class="md-ellipsis">
+    📈 SME Transformation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_7" id="__nav_23_4_7_label" tabindex="0">
+<span class="md-ellipsis">
+    By Sector
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_7">
+<span class="md-nav__icon md-icon"></span>
+            By Sector
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_7_1" id="__nav_23_4_7_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Functions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_7_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_23_4_7_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Functions
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/business-functions/sales/">
+<span class="md-ellipsis">
+    Sales
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/business-functions/administration/">
+<span class="md-ellipsis">
+    Administration &amp; Finance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/business-functions/marketing/">
+<span class="md-ellipsis">
+    Marketing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_7_2" id="__nav_23_4_7_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Production &amp; Commerce
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_7_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_23_4_7_2">
+<span class="md-nav__icon md-icon"></span>
+            Production &amp; Commerce
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/production-commerce/commerce/">
+<span class="md-ellipsis">
+    Commerce &amp; Retail
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/production-commerce/manufacturing/">
+<span class="md-ellipsis">
+    Manufacturing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_7_3" id="__nav_23_4_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Regulated Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_7_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_23_4_7_3">
+<span class="md-nav__icon md-icon"></span>
+            Regulated Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/regulated/healthcare/">
+<span class="md-ellipsis">
+    Healthcare
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/regulated/financial-services/">
+<span class="md-ellipsis">
+    Financial Services
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_7_4" id="__nav_23_4_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Service Industries
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_7_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_23_4_7_4">
+<span class="md-nav__icon md-icon"></span>
+            Service Industries
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/services/professional-services/">
+<span class="md-ellipsis">
+    Professional Services
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/services/logistics/">
+<span class="md-ellipsis">
+    Logistics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/by-sector/services/human-resources/">
+<span class="md-ellipsis">
+    Human Resources
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_23_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_23_4_8" id="__nav_23_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Organizational Patterns
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_23_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_23_4_8">
+<span class="md-nav__icon md-icon"></span>
+            Organizational Patterns
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/organizational/squads/">
+<span class="md-ellipsis">
+    Squads
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/organizational/pools/">
+<span class="md-ellipsis">
+    Pools
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/organizational/operations/">
+<span class="md-ellipsis">
+    Operations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/organizational/ai-integration/">
+<span class="md-ellipsis">
+    AI Integration
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../playbooks/organizational/midora-implementation/">
+<span class="md-ellipsis">
+    MIDORA Implementation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#document-information">
+<span class="md-ellipsis">
+      Document Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract">
+<span class="md-ellipsis">
+      Abstract
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vision">
+<span class="md-ellipsis">
+      Vision
+    </span>
+</a>
+<nav aria-label="Vision" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-intelligent-hybrid-organization">
+<span class="md-ellipsis">
+      The Intelligent Hybrid Organization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-transformation-imperative">
+<span class="md-ellipsis">
+      The Transformation Imperative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-economic-case-for-transformation">
+<span class="md-ellipsis">
+      The Economic Case for Transformation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#principles">
+<span class="md-ellipsis">
+      Principles
+    </span>
+</a>
+<nav aria-label="Principles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-whole-organization-coherence">
+<span class="md-ellipsis">
+      1. Whole-Organization Coherence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-purpose-led-decisions">
+<span class="md-ellipsis">
+      2. Purpose-Led Decisions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-living-architecture">
+<span class="md-ellipsis">
+      3. Living Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-continuous-learning">
+<span class="md-ellipsis">
+      4. Continuous Learning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-intelligent-decentralization">
+<span class="md-ellipsis">
+      5. Intelligent Decentralization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-cognitive-workforce">
+<span class="md-ellipsis">
+      6. Cognitive Workforce
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-ethical-automation">
+<span class="md-ellipsis">
+      7. Ethical Automation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-scalable-simplicity">
+<span class="md-ellipsis">
+      8. Scalable Simplicity
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-humanmachine-symbiosis">
+<span class="md-ellipsis">
+      9. Human–Machine Symbiosis
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture">
+<span class="md-ellipsis">
+      Architecture
+    </span>
+</a>
+<nav aria-label="Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architectural-overview">
+<span class="md-ellipsis">
+      Architectural Overview
+    </span>
+</a>
+<nav aria-label="Architectural Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cognitive-layer-ai-agent-specifications">
+<span class="md-ellipsis">
+      Cognitive Layer: AI Agent Specifications
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-mesh-workflow-orchestration">
+<span class="md-ellipsis">
+      Automation Mesh: Workflow Orchestration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organizational-layer-team-topology">
+<span class="md-ellipsis">
+      Organizational Layer: Team Topology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-ethics-layer-accountability-framework">
+<span class="md-ellipsis">
+      Governance &amp; Ethics Layer: Accountability Framework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methodology">
+<span class="md-ellipsis">
+      Methodology
+    </span>
+</a>
+<nav aria-label="Methodology" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-approach">
+<span class="md-ellipsis">
+      Implementation Approach
+    </span>
+</a>
+<nav aria-label="Implementation Approach" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-1-foundation-weeks-1-4">
+<span class="md-ellipsis">
+      Phase 1: Foundation (Weeks 1-4)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-2-pilot-learn-weeks-5-12">
+<span class="md-ellipsis">
+      Phase 2: Pilot &amp; Learn (Weeks 5-12)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-3-scale-months-4-12">
+<span class="md-ellipsis">
+      Phase 3: Scale (Months 4-12)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sipoc-automation-methodology">
+<span class="md-ellipsis">
+      SIPOC Automation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agile-integration-methodology">
+<span class="md-ellipsis">
+      Agile Integration Methodology
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance">
+<span class="md-ellipsis">
+      Governance
+    </span>
+</a>
+<nav aria-label="Governance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-framework">
+<span class="md-ellipsis">
+      Governance Framework
+    </span>
+</a>
+<nav aria-label="Governance Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decision-making-authority">
+<span class="md-ellipsis">
+      Decision-Making Authority
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfc-request-for-comments-process">
+<span class="md-ellipsis">
+      RFC (Request for Comments) Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adr-architecture-decision-record-process">
+<span class="md-ellipsis">
+      ADR (Architecture Decision Record) Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ethical-review-checklist">
+<span class="md-ellipsis">
+      Ethical Review Checklist
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-management">
+<span class="md-ellipsis">
+      Compliance Management
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-cases">
+<span class="md-ellipsis">
+      Use Cases
+    </span>
+</a>
+<nav aria-label="Use Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cross-industry-examples">
+<span class="md-ellipsis">
+      Cross-Industry Examples
+    </span>
+</a>
+<nav aria-label="Cross-Industry Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#healthcare-clinical-documentation-automation">
+<span class="md-ellipsis">
+      Healthcare: Clinical Documentation Automation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-services-fraud-detection">
+<span class="md-ellipsis">
+      Financial Services: Fraud Detection
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manufacturing-supply-chain-optimization">
+<span class="md-ellipsis">
+      Manufacturing: Supply Chain Optimization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#e-commerce-personalized-recommendations">
+<span class="md-ellipsis">
+      E-Commerce: Personalized Recommendations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sector-specific-playbooks">
+<span class="md-ellipsis">
+      Sector-Specific Playbooks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossary">
+<span class="md-ellipsis">
+      Glossary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+<nav aria-label="References" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-documentation">
+<span class="md-ellipsis">
+      Core Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfcs-request-for-comments">
+<span class="md-ellipsis">
+      RFCs (Request for Comments)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adrs-architecture-decision-records">
+<span class="md-ellipsis">
+      ADRs (Architecture Decision Records)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#playbooks-implementation-guides">
+<span class="md-ellipsis">
+      Playbooks (Implementation Guides)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adoption-pack-ready-to-use-resources">
+<span class="md-ellipsis">
+      Adoption Pack (Ready-to-Use Resources)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+<span class="md-ellipsis">
+      Diagrams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#external-resources">
+<span class="md-ellipsis">
+      External Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#versioning-updates">
+<span class="md-ellipsis">
+      Versioning &amp; Updates
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contributing">
+<span class="md-ellipsis">
+      Contributing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+<span class="md-ellipsis">
+      License
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contact-community">
+<span class="md-ellipsis">
+      Contact &amp; Community
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acknowledgments">
+<span class="md-ellipsis">
+      Acknowledgments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="solidai-technical-reference">SOLID.AI Technical Reference<a class="headerlink" href="#solidai-technical-reference" title="Permanent link">¶</a></h1>
+<p><strong>Strategic Organization Leveraging Intelligent Design for Artificial Intelligence</strong></p>
+<hr/>
+<h2 id="document-information">Document Information<a class="headerlink" href="#document-information" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Version</strong></td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>November 2025</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Published</td>
+</tr>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Gustavo Freitas, Midora Education Labs</td>
+</tr>
+<tr>
+<td><strong>License</strong></td>
+<td>MIT License</td>
+</tr>
+<tr>
+<td><strong>Framework</strong></td>
+<td>SOLID.AI</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">¶</a></h2>
+<p><strong>SOLID.AI</strong> is a comprehensive, open-source framework for designing intelligent, ethical, and adaptive organizations where humans and AI agents collaborate as peers. This technical reference provides a formal specification of the framework's architecture, principles, methodology, and governance structures.</p>
+<p>The framework addresses the critical challenge facing modern organizations: the "bipolar organization" syndrome where IT operates at digital speed (agile, AI-assisted, continuous delivery) while business functions remain analog (manual processes, hierarchical approvals, monthly cycles). SOLID.AI provides the blueprint for <strong>whole-organization transformation</strong> where ALL functions—Sales, Finance, HR, Marketing, Operations, Legal—operate at AI-native speed.</p>
+<p><strong>Ultimate Goal:</strong> Enable the creation of <strong>Intelligent Hybrid Organizations</strong>—sustainable, scalable enterprises where humans and AI agents work as peers under unwavering ethical governance, achieving:</p>
+<ul>
+<li>⚡ <strong>10x Speed:</strong> Time-to-market from months → weeks</li>
+<li>📈 <strong>Exponential Scalability:</strong> Revenue growth without proportional headcount</li>
+<li>🎯 <strong>Reliability:</strong> Error rates from 5-10% → &lt;1%</li>
+<li>💰 <strong>Efficiency:</strong> Overhead from 80% busywork → 20% busywork</li>
+<li>🛡️ <strong>Trust:</strong> Transparent, accountable, auditable AI operations</li>
+</ul>
+<p><strong>Target Audience:</strong> Enterprise architects, CTOs, transformation leaders, researchers, and practitioners implementing AI-native organizational models across industries including technology, healthcare, finance, manufacturing, retail, professional services, logistics, and human resources.</p>
+<hr/>
+<h2 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">¶</a></h2>
+<h3 id="the-intelligent-hybrid-organization">The Intelligent Hybrid Organization<a class="headerlink" href="#the-intelligent-hybrid-organization" title="Permanent link">¶</a></h3>
+<p>The future of competitive advantage lies in the <strong>Intelligent Hybrid Organization</strong>—an enterprise where:</p>
+<ol>
+<li>
+<p><strong>Hybrid Workforce:</strong> Humans and AI agents collaborate as peers with defined roles, responsibilities, and accountability (not humans using AI tools)</p>
+</li>
+<li>
+<p><strong>Intelligent Operations:</strong> Every decision powered by AI insights combined with human judgment, context, and ethical reasoning</p>
+</li>
+<li>
+<p><strong>Sustainable Scalability:</strong> Organizational growth through AI multiplication while maintaining quality, culture, and employee wellbeing</p>
+</li>
+<li>
+<p><strong>Ethical Governance:</strong> Transparent, accountable, auditable processes ensuring trust from employees, customers, and regulators</p>
+</li>
+<li>
+<p><strong>Adaptive Evolution:</strong> Continuous learning embedded in organizational DNA through feedback loops, retrospectives, and iterative improvement</p>
+</li>
+</ol>
+<h3 id="the-transformation-imperative">The Transformation Imperative<a class="headerlink" href="#the-transformation-imperative" title="Permanent link">¶</a></h3>
+<p>Modern organizations face an existential challenge: <strong>You cannot be "agile" or "AI-Native" when only IT operates in this paradigm.</strong></p>
+<p>The typical enterprise exhibits <strong>organizational schizophrenia</strong>:</p>
+<ul>
+<li>✅ <strong>IT Department:</strong> Agile squads, CI/CD pipelines, AI-assisted development, daily deployments, automated testing</li>
+<li>❌ <strong>Business Functions:</strong> Manual data entry, email-driven workflows, hierarchical approvals (CFO signs every invoice &gt;$5K), monthly planning cycles, spreadsheet reconciliation</li>
+</ul>
+<p><strong>The Result:</strong> The slowest process sets the tempo for the entire organization. IT ships features in 2 weeks, but Marketing takes 6 weeks to approve messaging, Sales takes months to learn new pitches, Finance can't report on new revenue streams, and Legal reviews stall every contract.</p>
+<h3 id="the-economic-case-for-transformation">The Economic Case for Transformation<a class="headerlink" href="#the-economic-case-for-transformation" title="Permanent link">¶</a></h3>
+<p>Organizations that transform coherently across all functions achieve:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before (Bipolar)</th>
+<th>After (AI-Native)</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time-to-Market</strong></td>
+<td>Months</td>
+<td>Weeks</td>
+<td>10x faster</td>
+</tr>
+<tr>
+<td><strong>Error Rates</strong></td>
+<td>5-10% (human)</td>
+<td>&lt;1% (AI-enforced)</td>
+<td>10x improvement</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>80% busywork</td>
+<td>20% busywork</td>
+<td>4x reduction</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Linear (hire more)</td>
+<td>Exponential (deploy AI)</td>
+<td>Marginal cost growth</td>
+</tr>
+<tr>
+<td><strong>Employee Productivity</strong></td>
+<td>40% value creation</td>
+<td>80% value creation</td>
+<td>2x output</td>
+</tr>
+<tr>
+<td><strong>Competitive Advantage</strong></td>
+<td>Feature parity</td>
+<td>Sustainable moats</td>
+<td>Compounding returns</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conservative Scenario (500-person company):</strong>
+- <strong>Before:</strong> 400 employees in manual busywork, 100 in value creation
+- <strong>After:</strong> 100 employees in strategic work, 80 in value creation, 20 in AI oversight—supported by 300+ AI agents
+- <strong>Outcome:</strong> 2x revenue, 50% headcount, 4x profit margin</p>
+<p>This is not science fiction—it is the competitive imperative for organizations that will thrive in the next decade.</p>
+<hr/>
+<h2 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">¶</a></h2>
+<p>SOLID.AI principles encode the behaviors required to build responsible, adaptive, AI-native organizations. They apply across strategy, design, and operations.</p>
+<h3 id="1-whole-organization-coherence">1. Whole-Organization Coherence<a class="headerlink" href="#1-whole-organization-coherence" title="Permanent link">¶</a></h3>
+<p><strong>Transform ALL functions, not just IT.</strong> The slowest process sets the tempo for the entire organization.</p>
+<ul>
+<li>Avoid the "bipolar organization" trap where digital IT coexists with analog business</li>
+<li>When Sales, Finance, HR, Marketing, and Operations all operate at AI-native speed, competitive advantage compounds exponentially</li>
+<li>Economic benefit: Overhead reduction (80% → 20%), reliability (&lt;1% errors), exponential scalability</li>
+</ul>
+<p><strong>See:</strong> <a href="../whole-organization-transformation/">Whole-Organization Transformation</a></p>
+<h3 id="2-purpose-led-decisions">2. Purpose-Led Decisions<a class="headerlink" href="#2-purpose-led-decisions" title="Permanent link">¶</a></h3>
+<p><strong>Anchor every automation or AI implementation in a human-centered purpose.</strong></p>
+<ul>
+<li>Technology is the medium, not the meaning</li>
+<li>Resist optimizing for efficiency at the expense of values or trust</li>
+<li>Every AI agent and automation must trace back to strategic intent defined in the Purpose Layer</li>
+</ul>
+<h3 id="3-living-architecture">3. Living Architecture<a class="headerlink" href="#3-living-architecture" title="Permanent link">¶</a></h3>
+<p><strong>Treat the organization as a living organism that learns and evolves.</strong></p>
+<ul>
+<li>Prefer modular designs that can adapt without systemic collapse</li>
+<li>Components evolve through feedback loops and continuous learning</li>
+<li>Architecture is never "finished"—it adapts to changing environments</li>
+</ul>
+<h3 id="4-continuous-learning">4. Continuous Learning<a class="headerlink" href="#4-continuous-learning" title="Permanent link">¶</a></h3>
+<p><strong>Capture feedback from every interaction—human or machine.</strong></p>
+<ul>
+<li>Use data, retrospectives, and telemetry to drive iterative improvements</li>
+<li>Learning is collective (organizational knowledge), not hierarchical (individual expertise)</li>
+<li>Every success and failure contributes to the organizational knowledge base</li>
+</ul>
+<h3 id="5-intelligent-decentralization">5. Intelligent Decentralization<a class="headerlink" href="#5-intelligent-decentralization" title="Permanent link">¶</a></h3>
+<p><strong>Empower teams at the edge with decision-making authority and transparent data.</strong></p>
+<ul>
+<li>Maintain coherence through shared principles, playbooks, and guardrails</li>
+<li>Local autonomy under global governance</li>
+<li>Squads operate independently but align to shared data contracts and ethical standards</li>
+</ul>
+<h3 id="6-cognitive-workforce">6. Cognitive Workforce<a class="headerlink" href="#6-cognitive-workforce" title="Permanent link">¶</a></h3>
+<p><strong>Define explicit roles, responsibilities, and metrics for AI agents.</strong></p>
+<ul>
+<li>AI is not a tool but an active, accountable agent with defined identity and capabilities</li>
+<li>Ensure accountability and traceability for automated decisions</li>
+<li>AI agents have career progression paths (Assistant → Consultant → Specialist → Director)</li>
+</ul>
+<h3 id="7-ethical-automation">7. Ethical Automation<a class="headerlink" href="#7-ethical-automation" title="Permanent link">¶</a></h3>
+<p><strong>Make automations explainable, auditable, and observable by design.</strong></p>
+<ul>
+<li>Balance automation throughput with human oversight and consent</li>
+<li>Transparency by default: All AI decisions must be explainable</li>
+<li>Trust is the first principle of scalability</li>
+</ul>
+<h3 id="8-scalable-simplicity">8. Scalable Simplicity<a class="headerlink" href="#8-scalable-simplicity" title="Permanent link">¶</a></h3>
+<p><strong>Strive for solutions that are simple to understand, extend, and govern.</strong></p>
+<ul>
+<li>Complexity should emerge from interaction, not upfront design</li>
+<li>Simplicity is the highest form of sophistication</li>
+<li>Prefer modular components over monolithic systems</li>
+</ul>
+<h3 id="9-humanmachine-symbiosis">9. Human–Machine Symbiosis<a class="headerlink" href="#9-humanmachine-symbiosis" title="Permanent link">¶</a></h3>
+<p><strong>Combine human empathy, creativity, and purpose with AI scale and precision.</strong></p>
+<ul>
+<li>Foster collaboration rituals where humans and AI agents co-create value</li>
+<li>Humans bring judgment, ethics, creativity; AI brings automation, consistency, scale</li>
+<li>Together they create <em>collective intelligence</em></li>
+</ul>
+<hr/>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">¶</a></h2>
+<p>The SOLID.AI architecture connects six interdependent layers. Each layer is modular yet synchronized through shared contracts, data flows, and governance policies.</p>
+<h3 id="architectural-overview">Architectural Overview<a class="headerlink" href="#architectural-overview" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>```mermaid
+graph TB
+    subgraph Purpose["🎯 Purpose Layer"]
+        Mission[Mission &amp; Strategy]
+        Values[Values &amp; Ethics]
+        Outcomes[Outcome Definitions]
+    end
+
+    subgraph DataSpine["🧬 Data Spine (Central Nervous System)"]
+        Contracts[Data Contracts &amp; APIs]
+        Products[Data Products]
+        Lineage[Lineage &amp; Catalog]
+        Observability[Observability Signals]
+    end
+
+    subgraph Cognitive["🧠 Cognitive Layer"]
+        Agents[AI Agents]
+        Orchestration[Agent Orchestration]
+        Learning[Learning Systems]
+    end
+
+    subgraph Automation["⚙️ Automation Mesh"]
+        Workflows[Event-Driven Workflows]
+        SIPOC[SIPOC Processes]
+        RPA[Process Automation]
+    end
+
+    subgraph Org["👥 Organizational Layer"]
+        Squads[Squads&lt;br/&gt;Outcome Delivery]
+        Pools[Pools&lt;br/&gt;Capability Hubs]
+        Roles[Human-AI Roles]
+    end
+
+    subgraph Governance["🛡️ Governance &amp; Ethics Layer"]
+        Policies[Policies &amp; Guardrails]
+        Compliance[Compliance &amp; Audit]
+        Circle[Governance Circle]
+    end
+
+    %% Forward flows
+    Mission --&gt; Outcomes
+    Outcomes --&gt; Squads
+    Values --&gt; Policies
+
+    Squads --&gt; Contracts
+    Pools --&gt; Contracts
+    Contracts --&gt; Products
+    Products --&gt; Agents
+    Products --&gt; Workflows
+
+    Agents --&gt; Orchestration
+    Orchestration --&gt; Workflows
+    Workflows --&gt; SIPOC
+    SIPOC --&gt; Roles
+
+    Policies --&gt; Agents
+    Policies --&gt; Workflows
+    Circle --&gt; Policies
+
+    %% Feedback loops (dashed)
+    Observability -.-&gt;|Telemetry| Circle
+    Observability -.-&gt;|Metrics| Learning
+    Roles -.-&gt;|Outcomes| Observability
+    Workflows -.-&gt;|Audit Logs| Compliance
+    Compliance -.-&gt;|Recommendations| Mission
+    Learning -.-&gt;|Improvements| Orchestration
+
+    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
+    style Purpose fill:#fff4e6,stroke:#ff9800
+    style Cognitive fill:#f3e5f5,stroke:#9c27b0
+    style Automation fill:#e8f5e9,stroke:#4caf50
+    style Org fill:#fff9c4,stroke:#fbc02d
+    style Governance fill:#ffebee,stroke:#d32f2f</code></pre>
+<div class="highlight"><pre><span></span><code>### Layer 1: Purpose Layer
+
+**Function:** Strategic intent, values, and human oversight  
+**Biological Analogy:** Brain / Consciousness
+
+**Components:**
+- **Strategic Intent:** Mission, vision, OKRs defining organizational direction
+- **Ethical Guardrails:** Non-negotiable principles governing AI behavior
+- **Human Oversight:** Executive governance, ethical review boards, escalation paths
+- **Stakeholder Alignment:** Transparent communication of purpose to all stakeholders
+
+**Outputs:**
+- Strategy documents, OKRs, ethical policies
+- Approved RFCs and ADRs defining architectural direction
+- Human-in-the-loop checkpoints for critical decisions
+
+### Layer 2: Data Spine
+
+**Function:** Connects and governs information flow across systems  
+**Biological Analogy:** Circulatory System
+
+**Components:**
+- **Data Contracts:** Versioned schemas defining data exchanges between services
+- **Data Catalog:** Searchable registry of all data products with ownership, lineage, quality metrics
+- **Event Streams:** Asynchronous event bus enabling loose coupling between services
+- **Observability:** Real-time metrics, lineage tracking, quality monitoring
+- **Governance:** Data classification (PII, sensitive), retention policies, access controls
+
+**Integration Patterns:**
+- Services publish domain events (e.g., "OrderPlaced", "FraudDetected")
+- Consumers subscribe to events via data contracts
+- Breaking changes require RFC process + 90-day migration period
+- All data access logged for audit trails
+
+**See:** [Data Spine Implementation Checklist](adoption/checklists/data-spine-implementation.md)
+
+### Layer 3: Cognitive Layer
+
+**Function:** AI agents, learning models, and orchestration engines  
+**Biological Analogy:** Nervous System
+
+**Components:**
+- **AI Agents:** Autonomous software entities with identity, role, capabilities, guardrails
+- **Orchestration Engines:** Coordinate multi-agent workflows (e.g., MAGI pattern)
+- **Learning Systems:** Continuous model retraining, drift detection, performance monitoring
+- **Agent Registry:** Catalog of all deployed agents with metadata, ownership, oversight
+
+**Agent Lifecycle:**
+1. **Purpose Definition:** Document mission, constraints, success metrics
+2. **Design &amp; Training:** Configure prompts, skill plugins, safety filters
+3. **Deployment:** Register in Cognitive Layer registry
+4. **Observation:** Monitor performance, drift, incidents
+5. **Iteration:** Adjust capabilities, retrain, or retire via ADRs
+
+**See:** [AI Agents](ai-agents.md), [Role Hierarchy](role-hierarchy-human-ai.md)
+
+### Layer 4: Automation Mesh
+
+**Function:** End-to-end execution of processes via AI and event-driven flows  
+**Biological Analogy:** Motor System
+
+**Components:**
+- **Workflow Orchestration:** SIPOC patterns mapping suppliers → inputs → process → outputs → customers
+- **Event-Driven Execution:** Services react to domain events asynchronously
+- **Human-in-the-Loop Checkpoints:** Critical decisions escalate to humans
+- **Error Handling:** Circuit breakers, retry policies, dead letter queues
+- **Rollback Mechanisms:** Ability to revert automations if quality degrades
+
+**Automation Guardrails:**
+- Every automation mapped to explicit purpose statement (Purpose Layer)
+- Cognitive Layer validation before production promotion
+- Instrumented with telemetry (success rate, latency, exceptions)
+- Manual override capabilities for all critical processes
+
+**See:** [Automation SIPOC](automation-sipoc.md)
+
+### Layer 5: Organizational Layer
+
+**Function:** Defines human and AI team topology, roles, and rituals  
+**Biological Analogy:** Skeleton &amp; Muscles
+
+**Components:**
+- **Squads:** Cross-functional teams (3-7 humans + AI agents) organized around **business services**
+- **Communities:** Groups of squads sharing domains/technologies (Scaled Scrum model)
+- **Pools:** Shared capability hubs (Data, AI Ops, Design) providing on-demand expertise
+- **Governance Circle:** Multi-disciplinary group reviewing ethics, compliance, observability
+
+**Squad Organization Principle:**
+Squads are **anchored to business services** (bounded contexts), not technical layers or features. This ensures:
+- No duplication (each service has one owning squad)
+- Clear boundaries (services have well-defined inputs/outputs via data contracts)
+- Autonomous operation (squads deliver end-to-end without constant handoffs)
+- Scalable growth (new squads = new services, not reorganizing existing ones)
+
+**Example Business Services:**
+- Customer Onboarding (not "Frontend Squad")
+- Fraud Detection (not "ML Platform Team")
+- Invoice Processing (not "Finance Automation")
+
+**See:** [Organizational Model](organizational-model.md), [Squad Playbook](playbooks/organizational/squads.md)
+
+### Layer 6: Governance &amp; Ethics Layer
+
+**Function:** Ensures compliance, accountability, transparency, and trust  
+**Biological Analogy:** Immune System
+
+**Governance Pillars:**
+1. **Cognitive Transparency:** All AI-driven decisions must be explainable
+2. **Human Curatorship:** Human oversight remains the moral compass
+3. **System Observability:** Everything measurable should be observable
+4. **Continuous Feedback:** Learning is the only KPI that never expires
+5. **Modular Independence:** Every layer can evolve without systemic collapse
+
+**Oversight Structures:**
+- **Governance Circle:** Multi-disciplinary board evaluating RFCs touching ethics/compliance
+- **Ethics Review:** Lightweight checklist embedded in PR templates
+- **Incident Response:** Runbooks for AI/automation incidents with notification protocols
+
+**Ethical Risk Assessment:**
+- Evaluate bias, drift, harm potential before deployment
+- Rate impact severity and required mitigation steps
+- Reassess regularly or after material changes
+
+**See:** [Governance &amp; Ethics](governance-ethics.md)
+
+---
+
+## Layers
+
+### Detailed Layer Specifications
+
+#### Purpose Layer: Strategic Intent
+
+**Objective:** Ensure all organizational activities trace back to human-centered purpose.
+
+**Key Artifacts:**
+- **Manifesto:** Philosophical foundation and roadmap ([solid.ai Manifesto v1.0](manifesto/solid-ai-manifesto-v1.md))
+- **OKRs (Objectives &amp; Key Results):** Quarterly strategic goals cascading from executive to squad level
+- **Ethical Policies:** Non-negotiable principles (e.g., "No automated layoffs", "Transparency by default")
+- **RFCs (Request for Comments):** Proposals for material changes to architecture or governance
+
+**Implementation:**
+- Every AI agent must cite purpose statement from Purpose Layer
+- Every automation must map to OKR or strategic objective
+- Governance Circle reviews all High/Executive-Level AI agents quarterly
+
+#### Data Spine: Unified Data Foundation
+
+**Objective:** Provide unified, governed, observable data access across the organization.
+
+**Required Components:**
+1. **Data Contracts:** Schema + SLA + versioning + ownership
+2. **Data Catalog:** Searchable metadata registry (tools: Amundsen, DataHub, Collibra)
+3. **Event Bus:** Asynchronous event streaming (tools: Kafka, AWS EventBridge, Azure Event Grid)
+4. **Lineage Tracking:** Where data originates, how it transforms, where it flows
+5. **Quality Monitoring:** Automated validation, anomaly detection, SLA alerts
+6. **Governance Layer:** Classification (PII, sensitive), retention, access controls, audit logging
+
+**Business Service Integration:**
+Every squad must:
+- Publish domain events with data contracts
+- Document event ownership and stakeholders (consumers)
+- Enforce breaking change policy (RFC + 90-day migration)
+- Classify data (PII, sensitive, public)
+- Define retention policies (GDPR, SOX, HIPAA)
+- Enable access controls (RBAC)
+- Configure audit logging
+
+**Example Data Contract:**
+```yaml
+contract:
+  name: OrderPlaced
+  version: v2.1.0
+  owner: Order Fulfillment Squad
+  schema:
+    order_id: string (UUID)
+    customer_id: string (UUID)
+    items: array[OrderItem]
+    total_amount: decimal(10,2)
+    currency: string (ISO 4217)
+    timestamp: datetime (ISO 8601)
+  sla:
+    latency: &lt;500ms (p95)
+    availability: 99.9%
+    freshness: real-time
+  classification: PII (customer_id)
+  retention: 7 years (financial compliance)
+  consumers:
+    - Inventory Management Squad
+    - Payment Processing Squad
+    - Analytics Squad
+</code></pre></div>
+<h4 id="cognitive-layer-ai-agent-specifications">Cognitive Layer: AI Agent Specifications<a class="headerlink" href="#cognitive-layer-ai-agent-specifications" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Deploy AI agents as accountable organizational members with defined roles and oversight.</p>
+<p><strong>Agent Identity Template:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FraudDetector-Agent</span>
+<span class="w">  </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specialist (High-Level)</span>
+<span class="w">  </span><span class="nt">mission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detect fraudulent transactions in real-time</span>
+<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze 10,000 transactions/minute</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Score risk 0-100 based on 50+ signals</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Auto-block transactions &gt;95 risk score</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Escalate 80-95 scores to human review</span>
+<span class="w">  </span><span class="nt">guardrails</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Do not block transactions &lt;$50 (low fraud risk)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Do not override human approval decisions</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Require human review for VIP customers</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Escalate if false positive rate &gt;2%</span>
+<span class="w">  </span><span class="nt">oversight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">human_steward</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk Manager (Jane Doe)</span>
+<span class="w">    </span><span class="nt">review_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Quarterly</span>
+<span class="w">    </span><span class="nt">autonomy_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Automated (95% autonomous)</span>
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">detection_rate</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span><span class="err">98%</span>
+<span class="w">    </span><span class="nt">false_positive_rate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;2%</span>
+<span class="w">    </span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;200ms (p95)</span>
+</code></pre></div></p>
+<p><strong>Role Hierarchy (Humans &amp; AI):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Focus</th>
+<th>Scalability</th>
+<th>Autonomy</th>
+<th>Oversight</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assistant/Analyst (Low)</strong></td>
+<td>Tactical asset delivery</td>
+<td>Linear</td>
+<td>Supervised</td>
+<td>100%</td>
+<td>SDR, InvoiceProcessor-Agent</td>
+</tr>
+<tr>
+<td><strong>Consultant/Coordinator (Mid)</strong></td>
+<td>Coordination &amp; expertise</td>
+<td>Process efficiency</td>
+<td>Co-Pilot</td>
+<td>20-50%</td>
+<td>Sales Engineer, DemoPersonalizer-Agent</td>
+</tr>
+<tr>
+<td><strong>Specialist/Manager (High)</strong></td>
+<td>Scalable solutions</td>
+<td>Exponential</td>
+<td>Automated</td>
+<td>5-10%</td>
+<td>Principal Engineer, SupplyChainOptimizer-Agent</td>
+</tr>
+<tr>
+<td><strong>Director (Executive)</strong></td>
+<td>Strategic vision</td>
+<td>Organizational</td>
+<td>Advisory-Only</td>
+<td>100% human decision</td>
+<td>VP Engineering, StrategicPlanning-Agent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See:</strong> <a href="../role-hierarchy-human-ai/">Role Hierarchy</a></p>
+<h4 id="automation-mesh-workflow-orchestration">Automation Mesh: Workflow Orchestration<a class="headerlink" href="#automation-mesh-workflow-orchestration" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Execute cross-domain workflows through event-driven automation with human oversight.</p>
+<p><strong>SIPOC Pattern:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Description</th>
+<th>AI/Human Split</th>
+<th>Observability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suppliers</strong></td>
+<td>Data sources, teams, agents feeding process</td>
+<td>Document provenance, consent</td>
+<td>Track SLA compliance</td>
+</tr>
+<tr>
+<td><strong>Inputs</strong></td>
+<td>Data artifacts, triggers, context</td>
+<td>Validate via data contracts</td>
+<td>Monitor freshness, quality</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>Orchestrated steps (AI + human)</td>
+<td>Map AI-automated vs. human-in-loop</td>
+<td>Instrument decision points</td>
+</tr>
+<tr>
+<td><strong>Outputs</strong></td>
+<td>Deliverables, events, decisions</td>
+<td>Measure quality, latency, impact</td>
+<td>Track downstream consumers</td>
+</tr>
+<tr>
+<td><strong>Customers</strong></td>
+<td>Stakeholders, systems, feedback loops</td>
+<td>Capture satisfaction, learning signals</td>
+<td>Close feedback loops</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automation Decision Framework:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>AI-Automated</th>
+<th>Human-in-Loop</th>
+<th>Fully Manual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volume</strong></td>
+<td>&gt;1000/day</td>
+<td>10-1000/day</td>
+<td>&lt;10/day</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Rule-based, precedent exists</td>
+<td>Gray zones, exceptions</td>
+<td>Strategic, unprecedented</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>Low (reversible)</td>
+<td>Medium (financial/reputation)</td>
+<td>High (safety/legal)</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>&lt;1 second</td>
+<td>&lt;1 hour</td>
+<td>&lt;1 day</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: Invoice Processing Automation</strong>
+- <strong>Suppliers:</strong> Vendors, email system, OCR-Agent
+- <strong>Inputs:</strong> PDF invoices, vendor master data, approval rules
+- <strong>Process:</strong>
+  - Step 1: OCR-Agent extracts data (AI, 95% accuracy)
+  - Step 2: ValidationAgent checks against PO (AI, auto-resolve if match)
+  - Step 3: Human reviews mismatches (Human, escalated items only)
+  - Step 4: ApprovalAgent routes to manager if &gt;$5K (AI workflow)
+  - Step 5: PaymentAgent schedules payment (AI, auto-execute)
+- <strong>Outputs:</strong> Approved invoices, payment schedules, audit logs
+- <strong>Customers:</strong> Finance team (dashboard), vendors (payment confirmation)</p>
+<h4 id="organizational-layer-team-topology">Organizational Layer: Team Topology<a class="headerlink" href="#organizational-layer-team-topology" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Structure humans and AI agents for sustainable, scalable collaboration.</p>
+<p><strong>Squad Categories:</strong></p>
+<ol>
+<li><strong>Tech Core (Platform &amp; Enablement):</strong> Build technical infrastructure enabling other squads</li>
+<li>
+<p>Example: Data Platform Squad, AI/ML Platform Squad, DevOps Squad</p>
+</li>
+<li>
+<p><strong>Business Core (Customer &amp; Revenue):</strong> Deliver direct customer value or generate revenue</p>
+</li>
+<li>
+<p>Example: E-Commerce Squad, SaaS Onboarding Squad, Fraud Detection Squad</p>
+</li>
+<li>
+<p><strong>Operations Core (Enterprise Functions):</strong> Enable internal operations and administration</p>
+</li>
+<li>
+<p>Example: Finance Operations Squad, HR Operations Squad, Procurement Squad</p>
+</li>
+<li>
+<p><strong>Innovation &amp; Intelligence (Experimental &amp; Strategic):</strong> Explore new capabilities and drive strategic initiatives</p>
+</li>
+<li>Example: R&amp;D Squad, Advanced Analytics Squad, Transformation Squad</li>
+</ol>
+<p><strong>Operating Rhythm:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cadence</th>
+<th>Activity</th>
+<th>Participants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daily</strong></td>
+<td>Standup (async or sync)</td>
+<td>Squad members (humans + AI agents)</td>
+</tr>
+<tr>
+<td><strong>Weekly</strong></td>
+<td>Outcome review &amp; adaptive planning</td>
+<td>Squad leads, embedded agents</td>
+</tr>
+<tr>
+<td><strong>Biweekly</strong></td>
+<td>Governance sync</td>
+<td>Governance Circle, compliance officers</td>
+</tr>
+<tr>
+<td><strong>Monthly</strong></td>
+<td>Portfolio alignment</td>
+<td>Executive sponsors, pool leads</td>
+</tr>
+<tr>
+<td><strong>Quarterly</strong></td>
+<td>Strategy iteration &amp; OKR review</td>
+<td>Leadership council</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sustainable Scalability Principles:</strong></p>
+<ol>
+<li><strong>Gradual AI Integration:</strong> Pilot with 1-2 squads → validate → scale (not "big bang")</li>
+<li><strong>Quality Over Speed:</strong> Every AI agent must meet governance standards before deployment</li>
+<li><strong>Culture Preservation:</strong> Maintain human connection through rituals, storytelling, leadership visibility</li>
+<li><strong>Technical Debt Management:</strong> Allocate 20% capacity to refactoring, documentation, platform improvements</li>
+<li><strong>Burnout Prevention:</strong> Monitor squad workload, rotate high-stress assignments, sustainable pace</li>
+</ol>
+<h4 id="governance-ethics-layer-accountability-framework">Governance &amp; Ethics Layer: Accountability Framework<a class="headerlink" href="#governance-ethics-layer-accountability-framework" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Ensure intelligence scales responsibly with transparent, auditable processes.</p>
+<p><strong>Three-Dimensional Governance:</strong></p>
+<p><strong>1. Sustainable Scalability</strong>
+- <strong>Metrics:</strong> Employee satisfaction &gt;70%, technical debt &lt;20%, time-to-onboard decreasing
+- <strong>Practices:</strong> Pilot → validate → scale; quality over speed; allocate 20% to platform improvements</p>
+<p><strong>2. Scalable Governance</strong>
+- <strong>Metrics:</strong> 100% AI agents documented; zero critical incidents from ungoverned AI; audit findings remediated within 30 days
+- <strong>Practices:</strong> Governance-first design; automated compliance monitoring; progressive oversight (Low-Level = 100% audit, Executive = quarterly review)</p>
+<p><strong>3. Unwavering Ethics</strong>
+- <strong>Metrics:</strong> Zero ethics violations; 100% pass bias audits; transparency requests fulfilled within 48 hours
+- <strong>Practices:</strong> Human dignity first; transparency by default; quarterly bias audits; consent &amp; agency for users; whistleblower protection</p>
+<p><strong>Red Lines (Non-Negotiable):</strong>
+- ❌ AI agents cannot override human safety decisions
+- ❌ AI agents cannot make irreversible decisions without human approval (e.g., delete data, terminate employment)
+- ❌ AI agents cannot operate without audit trails
+- ❌ AI agents cannot bypass governance reviews for "urgent" business needs</p>
+<p><strong>Compliance Frameworks:</strong>
+- GDPR (EU data protection)
+- LGPD (Brazil data protection)
+- HIPAA (US healthcare)
+- SOX (US financial)
+- PCI-DSS (payment cards)
+- Industry-specific regulations</p>
+<hr/>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">¶</a></h2>
+<h3 id="implementation-approach">Implementation Approach<a class="headerlink" href="#implementation-approach" title="Permanent link">¶</a></h3>
+<h4 id="phase-1-foundation-weeks-1-4">Phase 1: Foundation (Weeks 1-4)<a class="headerlink" href="#phase-1-foundation-weeks-1-4" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Establish governance, architecture, and pilot squad</p>
+<p><strong>Activities:</strong>
+1. <strong>Week 1:</strong> Adopt SOLID.AI manifesto; form Governance Circle; define OKRs
+2. <strong>Week 2:</strong> Select pilot squad (high-impact, low-complexity business service)
+3. <strong>Week 3:</strong> Implement Data Spine foundation (data catalog, 3-5 pilot data contracts)
+4. <strong>Week 4:</strong> Deploy first AI agent (Low-Level, supervised autonomy)</p>
+<p><strong>Success Criteria:</strong>
+- Governance Circle established with meeting cadence
+- Pilot squad formed with business service ownership
+- 3-5 data contracts published and consumed
+- First AI agent operational with audit logging</p>
+<h4 id="phase-2-pilot-learn-weeks-5-12">Phase 2: Pilot &amp; Learn (Weeks 5-12)<a class="headerlink" href="#phase-2-pilot-learn-weeks-5-12" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Validate patterns, gather feedback, iterate</p>
+<p><strong>Activities:</strong>
+1. <strong>Weeks 5-8:</strong> Pilot squad delivers first outcome using AI agent + data contracts
+2. <strong>Weeks 9-10:</strong> Retrospective; document learnings; refine templates
+3. <strong>Weeks 11-12:</strong> Deploy 2-3 additional AI agents (mix of Low/Mid-Level)</p>
+<p><strong>Success Criteria:</strong>
+- Pilot squad delivers measurable business value (e.g., 50% faster invoice processing)
+- Retrospective captured with quantitative metrics (time saved, error reduction)
+- Templates refined based on real-world learnings
+- 3-5 AI agents operational across squad</p>
+<h4 id="phase-3-scale-months-4-12">Phase 3: Scale (Months 4-12)<a class="headerlink" href="#phase-3-scale-months-4-12" title="Permanent link">¶</a></h4>
+<p><strong>Objective:</strong> Expand to multiple squads, establish self-service patterns</p>
+<p><strong>Activities:</strong>
+1. <strong>Months 4-6:</strong> Onboard 3-5 additional squads (stagger by 2 weeks each)
+2. <strong>Months 7-9:</strong> Enable self-service (data catalog UX, AI agent templates, playbooks)
+3. <strong>Months 10-12:</strong> Achieve organization-wide adoption (all functions AI-native)</p>
+<p><strong>Success Criteria:</strong>
+- 5-10 squads operational with business service ownership
+- 20-50 AI agents deployed across organization
+- Self-service adoption rate &gt;70% (squads onboard without bottlenecks)
+- Measurable business impact (10x speed, &lt;1% errors, exponential scalability)</p>
+<h3 id="sipoc-automation-methodology">SIPOC Automation Methodology<a class="headerlink" href="#sipoc-automation-methodology" title="Permanent link">¶</a></h3>
+<p><strong>Step 1: Map Current State</strong>
+- Document existing workflow: Suppliers → Inputs → Process → Outputs → Customers
+- Identify manual steps, handoffs, bottlenecks, error-prone tasks
+- Measure baseline metrics (cycle time, error rate, cost per transaction)</p>
+<p><strong>Step 2: Design Target State</strong>
+- Define automation strategy per step (AI-automated, human-in-loop, manual)
+- Specify AI agents required (identity, capabilities, guardrails, oversight)
+- Design data contracts for inputs/outputs
+- Establish observability metrics</p>
+<p><strong>Step 3: Implement &amp; Pilot</strong>
+- Build AI agents with governance checks (ethics review, bias audit)
+- Integrate with Data Spine (publish events, consume contracts)
+- Deploy to pilot squad with human oversight
+- Monitor telemetry (success rate, latency, exceptions)</p>
+<p><strong>Step 4: Iterate &amp; Scale</strong>
+- Retrospective with quantitative analysis (time saved, error reduction)
+- Refine AI agent capabilities based on exceptions
+- Reduce human oversight as trust builds (Supervised → Co-Pilot → Automated)
+- Document learnings in playbooks
+- Scale to additional squads</p>
+<p><strong>Example: Customer Onboarding SIPOC</strong>
+<div class="highlight"><pre><span></span><code>Current State (Manual):
+- Suppliers: Sales team, new customers
+- Inputs: Signup form, payment info, ID verification
+- Process: 
+  1. Sales manually enters data (2 hours, 10% error rate)
+  2. Finance manually verifies payment (1 hour)
+  3. Compliance manually checks ID (30 min)
+  4. IT manually provisions account (1 hour)
+- Outputs: Active customer account (4.5 hours total)
+- Customers: New customers, support team
+
+Target State (AI-Native):
+- Suppliers: Sales team, OnboardingAgent, VerificationAgent
+- Inputs: Signup form, payment info, ID verification
+- Process:
+  1. OnboardingAgent extracts/validates data (AI, 2 min, &lt;1% error)
+  2. PaymentAgent verifies payment (AI, 30 sec)
+  3. ComplianceAgent checks ID via API (AI, 1 min)
+  4. ProvisioningAgent creates account (AI, 30 sec)
+  5. Human reviews flagged accounts only (5% need review)
+- Outputs: Active customer account (4 min automated, 15 min if flagged)
+- Customers: New customers, support team
+
+Impact:
+- Cycle time: 4.5 hours → 4 minutes (67x faster)
+- Error rate: 10% → &lt;1% (10x improvement)
+- Cost per onboarding: $50 → $2 (25x reduction)
+- Human effort: 100% → 5% (20x scalability)
+</code></pre></div></p>
+<h3 id="agile-integration-methodology">Agile Integration Methodology<a class="headerlink" href="#agile-integration-methodology" title="Permanent link">¶</a></h3>
+<p><strong>AI-Native Scrum/SAFe:</strong>
+- <strong>Sprint Planning:</strong> AI agents estimate story points, identify dependencies, suggest prioritization
+- <strong>Daily Standups:</strong> AI agents report progress, blockers (async updates)
+- <strong>Sprint Review:</strong> AI agents demo completed work, generate release notes
+- <strong>Retrospective:</strong> AI agents analyze sprint metrics, suggest improvements
+- <strong>Backlog Refinement:</strong> AI agents decompose epics → features → stories → tasks</p>
+<p><strong>Result:</strong> 64% faster delivery (17 weeks → 6 weeks from concept to production)</p>
+<p><strong>See:</strong> <a href="../ai-native-agile/">AI-Native Agile</a>, <a href="../ai-native-kanban/">AI-Native Kanban</a></p>
+<hr/>
+<h2 id="governance">Governance<a class="headerlink" href="#governance" title="Permanent link">¶</a></h2>
+<h3 id="governance-framework">Governance Framework<a class="headerlink" href="#governance-framework" title="Permanent link">¶</a></h3>
+<h4 id="decision-making-authority">Decision-Making Authority<a class="headerlink" href="#decision-making-authority" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Decision Type</th>
+<th>Authority</th>
+<th>Approval Process</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Squad Lead</td>
+<td>No approval needed</td>
+<td>Bug fixes, minor features, config changes</td>
+</tr>
+<tr>
+<td><strong>Tactical</strong></td>
+<td>Pool Lead</td>
+<td>Squad RFC review</td>
+<td>New AI agent (Low-Level), data contract changes</td>
+</tr>
+<tr>
+<td><strong>Strategic</strong></td>
+<td>Governance Circle</td>
+<td>RFC + ADR</td>
+<td>Architecture changes, new layers, ethical policies</td>
+</tr>
+<tr>
+<td><strong>Transformational</strong></td>
+<td>Executive Sponsors</td>
+<td>Multi-phase RFC + pilot</td>
+<td>Whole-organization transformation, M&amp;A integration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rfc-request-for-comments-process">RFC (Request for Comments) Process<a class="headerlink" href="#rfc-request-for-comments-process" title="Permanent link">¶</a></h4>
+<p><strong>Purpose:</strong> Propose material changes to architecture, governance, or organizational design</p>
+<p><strong>Template:</strong>
+<div class="highlight"><pre><span></span><code><span class="gh"># RFC-NNNN: [Title]</span>
+
+<span class="gu">## Metadata</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Author:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Status:**</span> Draft | Review | Accepted | Rejected
+<span class="k">-</span><span class="w"> </span><span class="gs">**Decision Makers:**</span> [Governance Circle | Executive Sponsors]
+
+<span class="gu">## Problem Statement</span>
+What problem are we solving? Why now?
+
+<span class="gu">## Proposed Solution</span>
+Detailed design with architecture diagrams, data flows, AI agent specifications
+
+<span class="gu">## Alternatives Considered</span>
+What other approaches did we evaluate? Why did we reject them?
+
+<span class="gu">## Impact Assessment</span>
+<span class="k">-</span><span class="w"> </span>Technical: Systems affected, migration effort
+<span class="k">-</span><span class="w"> </span>Organizational: Teams affected, training needed
+<span class="k">-</span><span class="w"> </span>Operational: Runtime impact, observability requirements
+<span class="k">-</span><span class="w"> </span>Ethical: Risks, mitigation strategies
+
+<span class="gu">## Success Criteria</span>
+How will we measure success? What metrics matter?
+
+<span class="gu">## Implementation Plan</span>
+Phased rollout with milestones, checkpoints, rollback plans
+
+<span class="gu">## Open Questions</span>
+What remains unresolved? What needs further research?
+</code></pre></div></p>
+<p><strong>Workflow:</strong>
+1. Author drafts RFC, shares with stakeholders
+2. Community review (2 weeks), incorporates feedback
+3. Governance Circle decision (Accepted | Rejected | Needs Revision)
+4. If accepted, author creates ADR documenting decision
+5. Implementation tracked via roadmap</p>
+<h4 id="adr-architecture-decision-record-process">ADR (Architecture Decision Record) Process<a class="headerlink" href="#adr-architecture-decision-record-process" title="Permanent link">¶</a></h4>
+<p><strong>Purpose:</strong> Document significant technical decisions for future reference</p>
+<p><strong>Template:</strong>
+<div class="highlight"><pre><span></span><code><span class="gh"># ADR-NNNN: [Title]</span>
+
+<span class="gu">## Status</span>
+Accepted | Superseded | Deprecated
+
+<span class="gu">## Context</span>
+What is the issue we're trying to solve? What constraints do we face?
+
+<span class="gu">## Decision</span>
+What did we decide? What's the architecture/approach?
+
+<span class="gu">## Consequences</span>
+What becomes easier/harder? What are the tradeoffs?
+
+<span class="gu">## Related</span>
+<span class="k">-</span><span class="w"> </span>RFC-NNNN (proposal)
+<span class="k">-</span><span class="w"> </span>ADR-MMMM (superseded by this)
+</code></pre></div></p>
+<p><strong>Example:</strong> <a href="../adr/adr-0002-business-service-organization/">ADR-0002: Business Service Organization</a></p>
+<h4 id="ethical-review-checklist">Ethical Review Checklist<a class="headerlink" href="#ethical-review-checklist" title="Permanent link">¶</a></h4>
+<p><strong>Embedded in Pull Request Templates:</strong>
+- [ ] <strong>Bias Check:</strong> Has this change been tested for demographic/geographic bias?
+- [ ] <strong>Explainability:</strong> Can we explain this AI decision to affected stakeholders?
+- [ ] <strong>Consent:</strong> Do users have agency to opt out or request human review?
+- [ ] <strong>Transparency:</strong> Are decision criteria documented and accessible?
+- [ ] <strong>Reversibility:</strong> Can we undo this action if we discover harm?
+- [ ] <strong>Audit Trail:</strong> Are all data accesses and decisions logged?</p>
+<p><strong>Quarterly Ethics Audit:</strong>
+- Governance Circle reviews all High/Executive-Level AI agents
+- Analyze bias metrics (demographic, geographic, socioeconomic)
+- Review incident reports and user complaints
+- Update ethical policies based on learnings</p>
+<h4 id="compliance-management">Compliance Management<a class="headerlink" href="#compliance-management" title="Permanent link">¶</a></h4>
+<p><strong>Approach:</strong> Embed compliance into architecture, not bolt-on audits</p>
+<p><strong>Data Classification:</strong>
+- <strong>Public:</strong> No restrictions (marketing content, blog posts)
+- <strong>Internal:</strong> Company confidential (financial reports, strategy docs)
+- <strong>Sensitive:</strong> Regulated data (PII, PHI, PCI) with access controls
+- <strong>Highly Sensitive:</strong> Executive-only (M&amp;A, personnel, legal)</p>
+<p><strong>Retention Policies:</strong>
+- GDPR: 7 years (financial), "right to be forgotten" for PII
+- HIPAA: 6 years (medical records)
+- SOX: 7 years (financial statements, audit trails)
+- Industry-specific: Varies by sector</p>
+<p><strong>Access Controls:</strong>
+- RBAC (Role-Based Access Control) enforced at Data Spine
+- Principle of least privilege (users/agents access only what they need)
+- Audit logging for all data access (who, what, when, why)
+- Quarterly access reviews (revoke unused permissions)</p>
+<p><strong>Incident Response:</strong>
+- <strong>P0 (Critical):</strong> Data breach, safety incident, regulatory violation → Immediate escalation to exec team
+- <strong>P1 (High):</strong> AI agent failure affecting customers → 1-hour response, human takeover
+- <strong>P2 (Medium):</strong> Performance degradation, quality issues → 4-hour response, investigation
+- <strong>P3 (Low):</strong> Minor bugs, cosmetic issues → 24-hour response, scheduled fix</p>
+<p><strong>See:</strong> <a href="../governance-ethics/">Governance &amp; Ethics</a>, <a href="playbooks/#governance">Governance Playbooks</a></p>
+<hr/>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">¶</a></h2>
+<h3 id="cross-industry-examples">Cross-Industry Examples<a class="headerlink" href="#cross-industry-examples" title="Permanent link">¶</a></h3>
+<h4 id="healthcare-clinical-documentation-automation">Healthcare: Clinical Documentation Automation<a class="headerlink" href="#healthcare-clinical-documentation-automation" title="Permanent link">¶</a></h4>
+<p><strong>Business Service:</strong> Clinical Documentation<br/>
+<strong>Squad Composition:</strong> 2 physicians, 1 clinical analyst, 1 AI engineer, 3 AI agents</p>
+<p><strong>Scenario:</strong>
+- <strong>Current State:</strong> Physicians spend 4 hours/day on documentation (dictation → transcription → EHR entry)
+- <strong>Target State:</strong> AI agents handle 90% of documentation, physicians review exceptions</p>
+<p><strong>AI Agents:</strong>
+1. <strong>TranscriptionAgent (Low-Level):</strong> Converts voice → text (95% accuracy, HIPAA-compliant)
+2. <strong>ClinicalCodingAgent (Mid-Level):</strong> Maps diagnoses → ICD-10 codes (automated, escalates ambiguous cases)
+3. <strong>EHRIntegrationAgent (Low-Level):</strong> Writes structured data to Epic/Cerner</p>
+<p><strong>Data Spine Integration:</strong>
+- Input contracts: Voice recordings, patient context, past medical history
+- Output events: DocumentationCompleted, CodingErrorDetected
+- Consumers: Billing Squad, Quality Assurance Squad, Analytics Team</p>
+<p><strong>Results:</strong>
+- Documentation time: 4 hours/day → 30 minutes/day (8x reduction)
+- Physician productivity: +3.5 hours/day for patient care
+- Coding accuracy: 85% → 98% (AI-enforced consistency)
+- Patient satisfaction: +15% (more face-to-face time)</p>
+<p><strong>Governance:</strong>
+- HIPAA compliance: All data encrypted, access logged, retention = 6 years
+- Human oversight: Physicians review 10% of notes daily (spot checks)
+- Ethics: Patients can request human-only documentation (opt-out)</p>
+<h4 id="financial-services-fraud-detection">Financial Services: Fraud Detection<a class="headerlink" href="#financial-services-fraud-detection" title="Permanent link">¶</a></h4>
+<p><strong>Business Service:</strong> Fraud Detection<br/>
+<strong>Squad Composition:</strong> 2 data scientists, 1 risk analyst, 1 ML engineer, 2 AI agents</p>
+<p><strong>Scenario:</strong>
+- <strong>Current State:</strong> Rule-based system flags 10% of transactions (90% false positives)
+- <strong>Target State:</strong> AI agents detect fraud in real-time with &lt;2% false positives</p>
+<p><strong>AI Agents:</strong>
+1. <strong>FraudDetectorAgent (High-Level):</strong> Analyzes 10,000 transactions/min, scores risk 0-100
+2. <strong>InvestigationAgent (Mid-Level):</strong> Aggregates evidence for human review (80-95 risk scores)</p>
+<p><strong>Data Spine Integration:</strong>
+- Input contracts: Transaction data, customer profiles, historical patterns
+- Output events: FraudDetected, FraudCleared, PatternAnomaly
+- Consumers: Order Fulfillment (blocks high-risk), Customer Support (flags accounts), Compliance (reporting)</p>
+<p><strong>Results:</strong>
+- Detection rate: 65% → 98% (AI catches subtle patterns)
+- False positive rate: 90% → &lt;2% (AI learns from feedback)
+- Manual review workload: 10% → 0.5% (20x reduction)
+- Fraud losses: $2M/year → $200K/year (10x improvement)</p>
+<p><strong>Governance:</strong>
+- PCI-DSS compliance: Encrypted storage, access controls, audit trails
+- Human oversight: Risk analysts review 5% of flagged transactions daily
+- Ethics: VIP customers always reviewed by humans (high-touch service)</p>
+<h4 id="manufacturing-supply-chain-optimization">Manufacturing: Supply Chain Optimization<a class="headerlink" href="#manufacturing-supply-chain-optimization" title="Permanent link">¶</a></h4>
+<p><strong>Business Service:</strong> Supply Chain Optimization<br/>
+<strong>Squad Composition:</strong> 2 supply chain analysts, 1 operations manager, 1 data engineer, 3 AI agents</p>
+<p><strong>Scenario:</strong>
+- <strong>Current State:</strong> Manual demand forecasting, reactive procurement, frequent stockouts
+- <strong>Target State:</strong> AI-driven predictive demand, automated procurement, 99% in-stock rate</p>
+<p><strong>AI Agents:</strong>
+1. <strong>DemandForecastAgent (High-Level):</strong> Predicts demand 12 weeks ahead (90% accuracy)
+2. <strong>ProcurementAgent (Mid-Level):</strong> Auto-generates purchase orders based on forecasts
+3. <strong>SupplierNegotiatorAgent (Mid-Level):</strong> Optimizes pricing via API integrations</p>
+<p><strong>Data Spine Integration:</strong>
+- Input contracts: Sales data, seasonal trends, supplier lead times, inventory levels
+- Output events: ReorderTriggered, StockoutPredicted, SupplierDelayed
+- Consumers: Warehouse Management (adjusts inventory), Finance (cash flow planning)</p>
+<p><strong>Results:</strong>
+- In-stock rate: 85% → 99% (AI anticipates demand)
+- Inventory holding costs: $5M → $3M (40% reduction via optimized orders)
+- Procurement cycle time: 5 days → 1 day (AI automates approvals)
+- Supplier negotiations: 10% cost savings (AI finds better pricing)</p>
+<p><strong>Governance:</strong>
+- SOX compliance: Audit trails for all purchase orders &gt;$10K
+- Human oversight: Ops manager approves POs &gt;$50K (10% of volume)
+- Ethics: Supplier relationships preserved (AI negotiates fairly, no predatory pricing)</p>
+<h4 id="e-commerce-personalized-recommendations">E-Commerce: Personalized Recommendations<a class="headerlink" href="#e-commerce-personalized-recommendations" title="Permanent link">¶</a></h4>
+<p><strong>Business Service:</strong> Recommendation Engine<br/>
+<strong>Squad Composition:</strong> 2 data scientists, 1 product manager, 1 ML engineer, 2 AI agents</p>
+<p><strong>Scenario:</strong>
+- <strong>Current State:</strong> Generic product recommendations (5% conversion rate)
+- <strong>Target State:</strong> AI-powered personalization (15% conversion rate)</p>
+<p><strong>AI Agents:</strong>
+1. <strong>RecommendationAgent (High-Level):</strong> Real-time personalization based on 100+ signals
+2. <strong>ABTestAgent (Mid-Level):</strong> Automatically runs A/B tests, optimizes algorithms</p>
+<p><strong>Data Spine Integration:</strong>
+- Input contracts: User behavior, purchase history, browsing patterns, inventory availability
+- Output events: RecommendationShown, ProductClicked, PurchaseCompleted
+- Consumers: Analytics (measure impact), Inventory (demand signals), Marketing (campaign optimization)</p>
+<p><strong>Results:</strong>
+- Conversion rate: 5% → 15% (3x improvement)
+- Average order value: $50 → $75 (+50%, cross-sell/upsell)
+- Customer satisfaction: +20% (more relevant products)
+- Revenue impact: +$10M/year (personalization ROI)</p>
+<p><strong>Governance:</strong>
+- GDPR compliance: Users can opt out, request data deletion
+- Human oversight: Product manager reviews algorithm changes monthly
+- Ethics: No discriminatory pricing (same product = same price for all users)</p>
+<h3 id="sector-specific-playbooks">Sector-Specific Playbooks<a class="headerlink" href="#sector-specific-playbooks" title="Permanent link">¶</a></h3>
+<p><strong>Available Playbooks:</strong></p>
+<ul>
+<li><strong>Business Functions:</strong> <a href="../playbooks/by-sector/business-functions/sales/">Sales</a>, <a href="../playbooks/by-sector/business-functions/administration/">Administration</a>, <a href="../playbooks/by-sector/business-functions/marketing/">Marketing</a></li>
+<li><strong>Production &amp; Commerce:</strong> <a href="../playbooks/by-sector/production-commerce/commerce/">E-Commerce</a>, <a href="../playbooks/by-sector/production-commerce/manufacturing/">Manufacturing</a></li>
+<li><strong>Regulated Industries:</strong> <a href="../playbooks/by-sector/regulated/healthcare/">Healthcare</a>, <a href="../playbooks/by-sector/regulated/financial-services/">Financial Services</a></li>
+<li><strong>Service Industries:</strong> <a href="../playbooks/by-sector/services/professional-services/">Professional Services</a>, <a href="../playbooks/by-sector/services/logistics/">Logistics</a>, <a href="../playbooks/by-sector/services/human-resources/">Human Resources</a></li>
+<li><strong>By Company Stage:</strong> <a href="../playbooks/by-stage/startup-ai-native/">Startup (AI-Native)</a>, <a href="../playbooks/by-stage/sme-transformation/">SME Transformation</a></li>
+</ul>
+<hr/>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">¶</a></h2>
+<p>Comprehensive terminology reference available at: <a href="../glossary/">Glossary</a></p>
+<p><strong>Key Terms:</strong></p>
+<ul>
+<li><strong>SOLID.AI:</strong> Strategic Organization Leveraging Intelligent Design for AI</li>
+<li><strong>Intelligent Hybrid Organization:</strong> Enterprise where humans and AI agents work as peers under ethical governance</li>
+<li><strong>AI-Native Organization:</strong> All functions operate at AI speed through human-AI collaboration</li>
+<li><strong>Bipolar Organization:</strong> Anti-pattern where IT is digital but business functions remain analog</li>
+<li><strong>Business Service:</strong> Self-contained capability delivering stakeholder value (e.g., Customer Onboarding, Fraud Detection)</li>
+<li><strong>Squad:</strong> Cross-functional team (3-7 humans + AI agents) organized around a business service</li>
+<li><strong>Pool:</strong> Shared capability hub providing specialized expertise on demand</li>
+<li><strong>AI Agent:</strong> Autonomous software entity with defined identity, role, capabilities, guardrails, accountability</li>
+<li><strong>Data Spine:</strong> Unified data foundation governing access, quality, observability, contracts</li>
+<li><strong>SIPOC:</strong> Supplier-Input-Process-Output-Customer workflow mapping pattern</li>
+<li><strong>RFC:</strong> Request for Comments (proposal document)</li>
+<li><strong>ADR:</strong> Architecture Decision Record (decision documentation)</li>
+<li><strong>OKR:</strong> Objectives &amp; Key Results (goal-setting framework)</li>
+</ul>
+<hr/>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<h3 id="core-documentation">Core Documentation<a class="headerlink" href="#core-documentation" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Manifesto:</strong> <a href="../manifesto/solid-ai-manifesto-v1/">solid.ai Manifesto v1.0</a></li>
+<li><strong>Quick Start:</strong> <a href="../quick-start/">Quick Start Guide</a></li>
+<li><strong>Overview:</strong> <a href="../overview/">Framework Overview</a></li>
+<li><strong>Principles:</strong> <a href="../principles/">8 Core Principles</a></li>
+<li><strong>Architecture:</strong> <a href="../architecture/">6-Layer Architecture</a></li>
+<li><strong>Organizational Model:</strong> <a href="../organizational-model/">Squads, Pools, Governance</a></li>
+<li><strong>AI Agents:</strong> <a href="../ai-agents/">Agent Specifications</a></li>
+<li><strong>Governance &amp; Ethics:</strong> <a href="../governance-ethics/">Ethical Framework</a></li>
+<li><strong>Human-AI Collaboration:</strong> <a href="../human-ai-collaboration/">Where Humans Lead</a></li>
+<li><strong>Whole-Organization Transformation:</strong> <a href="../whole-organization-transformation/">Economic Case</a></li>
+</ol>
+<h3 id="rfcs-request-for-comments">RFCs (Request for Comments)<a class="headerlink" href="#rfcs-request-for-comments" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>RFC-0001:</strong> <a href="../rfc/rfc-0001-foundations/">Foundations</a></li>
+<li><strong>RFC-0002:</strong> <a href="../rfc/rfc-0002-data-layer/">Data Spine</a></li>
+<li><strong>RFC-0003:</strong> <a href="../rfc/rfc-0003-midora-organizational-topology/">Midora Organizational Topology</a></li>
+</ol>
+<h3 id="adrs-architecture-decision-records">ADRs (Architecture Decision Records)<a class="headerlink" href="#adrs-architecture-decision-records" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>ADR-0001:</strong> <a href="../adr/adr-0001-mermaid-choice/">Mermaid for Diagrams</a></li>
+<li><strong>ADR-0002:</strong> <a href="../adr/adr-0002-business-service-organization/">Business Service Organization</a></li>
+<li><strong>ADR-0003:</strong> <a href="../adr/adr-0003-data-spine-automation-mesh-integration/">Data Spine &amp; Automation Mesh Integration</a></li>
+<li><strong>ADR-0004:</strong> <a href="../adr/adr-0004-reportlab-pdf-generation/">ReportLab PDF Generation</a></li>
+</ol>
+<h3 id="playbooks-implementation-guides">Playbooks (Implementation Guides)<a class="headerlink" href="#playbooks-implementation-guides" title="Permanent link">¶</a></h3>
+<p><strong>Foundation:</strong>
+- <a href="../playbooks/foundation/solid-ai-maturity-model/">SOLID.AI Maturity Model</a></p>
+<p><strong>Governance:</strong>
+- <a href="../playbooks/governance/ai-governance-risk-assessment/">AI Governance &amp; Risk Assessment</a>
+- <a href="../playbooks/governance/impact-analysis/">Impact Analysis</a></p>
+<p><strong>Implementation:</strong>
+- <a href="../playbooks/implementation/process-mapping-sipoc-integration/">Process Mapping &amp; SIPOC Integration</a>
+- <a href="../playbooks/implementation/data-spine-analytics-insights/">Data Spine Analytics &amp; Insights</a>
+- <a href="../playbooks/implementation/ai-native-kanban/">AI-Native Kanban</a></p>
+<p><strong>People &amp; Culture:</strong>
+- <a href="../playbooks/people-culture/organizational-scalability/">Organizational Scalability</a>
+- <a href="../playbooks/people-culture/ai-learning-development/">AI Learning &amp; Development</a>
+- <a href="../playbooks/people-culture/ai-native-okrs-kpis/">AI-Native OKRs &amp; KPIs</a></p>
+<p><strong>Organizational Patterns:</strong>
+- <a href="../playbooks/organizational/squads/">Squads</a>
+- <a href="../playbooks/organizational/pools/">Pools</a>
+- <a href="../playbooks/organizational/ai-integration/">AI Integration</a>
+- <a href="../playbooks/organizational/midora-implementation/">MIDORA Implementation</a></p>
+<h3 id="adoption-pack-ready-to-use-resources">Adoption Pack (Ready-to-Use Resources)<a class="headerlink" href="#adoption-pack-ready-to-use-resources" title="Permanent link">¶</a></h3>
+<p><strong>Reference Cards:</strong>
+- <a href="../adoption/reference-cards/developer/">Software Development</a>, <a href="../adoption/reference-cards/product-manager/">Product Manager</a>, <a href="../adoption/reference-cards/operations/">Operations</a>, <a href="../adoption/reference-cards/leadership/">Leadership</a>
+- <a href="../adoption/reference-cards/sales/">Business Functions</a>, <a href="../adoption/reference-cards/healthcare/">Healthcare</a>, <a href="../adoption/reference-cards/financial-services/">Financial Services</a></p>
+<p><strong>Prompt Templates:</strong>
+- <a href="../adoption/prompt-templates/purpose-driven-feature/">Purpose-Driven Feature</a>
+- <a href="../adoption/prompt-templates/ai-agent-definition/">AI Agent Definition</a>
+- <a href="../adoption/prompt-templates/data-contract-design/">Data Contract Design</a>
+- <a href="../adoption/prompt-templates/retrospective-facilitation/">Retrospective Facilitation</a>
+- <a href="../adoption/prompt-templates/ethical-decision-making/">Ethical Decision-Making</a></p>
+<p><strong>Checklists:</strong>
+- <a href="../adoption/checklists/ai-maturity-assessment/">AI Maturity Assessment</a>
+- <a href="../adoption/checklists/ai-agent-integration/">AI Agent Integration</a>
+- <a href="../adoption/checklists/squad-formation/">Squad Formation</a>
+- <a href="../adoption/checklists/data-spine-implementation/">Data Spine Implementation</a>
+- <a href="../adoption/checklists/governance-ethics-review/">Governance &amp; Ethics Review</a></p>
+<p><strong>Templates:</strong>
+- <a href="../adoption/templates/agent-definition/">Agent Definition</a>
+- <a href="../adoption/templates/squad-charter/">Squad Charter</a>
+- <a href="../adoption/templates/data-contract/">Data Contract</a>
+- <a href="../adoption/templates/risk-assessment-template/">Risk Assessment</a>
+- <a href="../adoption/templates/rfc-template/">RFC Template</a>
+- <a href="../adoption/templates/adr-template/">ADR Template</a></p>
+<h3 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h3>
+<p><strong>Architecture Diagrams:</strong>
+- <a href="../diagrams/#1-solidai-architecture">SOLID.AI Architecture (6 Layers)</a>
+- <a href="../diagrams/#5-data-spine-architecture">Data Spine Architecture</a>
+- <a href="../diagrams/#6-business-service-full-integration">Business Service Full Integration</a></p>
+<p><strong>Organizational Diagrams:</strong>
+- <a href="../diagrams/#2-organizational-flow">Organizational Flow</a>
+- <a href="../diagrams/#3-squad-business-service-organization">Squad Business Service Organization</a>
+- <a href="../diagrams/#4-squad-lifecycle">Squad Lifecycle</a></p>
+<p><strong>Process &amp; Workflow Diagrams:</strong>
+- <a href="../diagrams/#7-sipoc-automation-pattern">SIPOC Automation Pattern</a>
+- <a href="../diagrams/#8-process-sipoc-example">Process SIPOC Example</a>
+- <a href="../diagrams/#9-cognitive-decision-flow">Cognitive Decision Flow</a></p>
+<p><strong>Analytics &amp; Intelligence:</strong>
+- <a href="../diagrams/#10-data-analytics-patterns">Data Analytics Patterns</a>
+- <a href="../diagrams/#11-ai-maturity-model-progression">AI Maturity Model Progression</a>
+- <a href="../diagrams/#12-human-ai-evolution-timeline">Human-AI Evolution Timeline</a></p>
+<p><strong>Role &amp; Hierarchy:</strong>
+- <a href="../diagrams/#14-role-hierarchy-framework">Role Hierarchy Framework</a>
+- <a href="../diagrams/#15-collaboration-models-matrix">Collaboration Models Matrix</a>
+- <a href="../diagrams/#16-pool-engagement-patterns">Pool Engagement Patterns</a></p>
+<p><strong>Agile Integration:</strong>
+- <a href="../diagrams/#17-ai-native-safe-model">AI-Native SAFe Model</a>
+- <a href="../diagrams/#18-ai-native-sprint-flow">AI-Native Sprint Flow</a></p>
+<p><strong>Implementation:</strong>
+- <a href="../diagrams/#22-midora-implementation">Midora Implementation</a>
+- <a href="../diagrams/#23-midora-technology-stack">Midora Technology Stack</a></p>
+<h3 id="external-resources">External Resources<a class="headerlink" href="#external-resources" title="Permanent link">¶</a></h3>
+<p><strong>Standards:</strong>
+- OpenAPI Specification (REST APIs): <a href="https://spec.openapis.org/oas/latest.html">https://spec.openapis.org/oas/latest.html</a>
+- AsyncAPI Specification (Event-Driven): <a href="https://www.asyncapi.com/docs/reference/specification/latest">https://www.asyncapi.com/docs/reference/specification/latest</a>
+- JSON Schema: <a href="https://json-schema.org/">https://json-schema.org/</a>
+- OpenTelemetry (Observability): <a href="https://opentelemetry.io/">https://opentelemetry.io/</a></p>
+<p><strong>Compliance:</strong>
+- GDPR (EU Data Protection): <a href="https://gdpr-info.eu/">https://gdpr-info.eu/</a>
+- HIPAA (US Healthcare): <a href="https://www.hhs.gov/hipaa/">https://www.hhs.gov/hipaa/</a>
+- SOX (US Financial): <a href="https://www.sec.gov/">https://www.sec.gov/</a>
+- PCI-DSS (Payment Cards): <a href="https://www.pcisecuritystandards.org/">https://www.pcisecuritystandards.org/</a></p>
+<p><strong>Agile Frameworks:</strong>
+- Scrum Guide: <a href="https://scrumguides.org/">https://scrumguides.org/</a>
+- SAFe (Scaled Agile): <a href="https://scaledagileframework.com/">https://scaledagileframework.com/</a>
+- Kanban Guide: <a href="https://kanbanguides.org/">https://kanbanguides.org/</a></p>
+<hr/>
+<h2 id="versioning-updates">Versioning &amp; Updates<a class="headerlink" href="#versioning-updates" title="Permanent link">¶</a></h2>
+<p>This document follows semantic versioning (MAJOR.MINOR.PATCH):</p>
+<ul>
+<li><strong>MAJOR:</strong> Breaking changes to architecture or governance</li>
+<li><strong>MINOR:</strong> New layers, capabilities, or playbooks</li>
+<li><strong>PATCH:</strong> Clarifications, examples, or corrections</li>
+</ul>
+<p><strong>Current Version:</strong> 1.0.0<br/>
+<strong>Last Updated:</strong> November 2025<br/>
+<strong>Next Review:</strong> Q1 2026</p>
+<p><strong>Change Log:</strong>
+- <strong>v1.0.0 (2025-11-29):</strong> Initial technical reference published</p>
+<hr/>
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">¶</a></h2>
+<p>We welcome contributions to SOLID.AI! Please see <a href="../CONTRIBUTING.md">CONTRIBUTING.md</a> for:
+- RFC process (proposing architectural changes)
+- ADR process (documenting decisions)
+- Playbook contributions (sector-specific guides)
+- Code of Conduct</p>
+<hr/>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">¶</a></h2>
+<p>SOLID.AI is licensed under the MIT License. See <a href="../LICENSE">LICENSE</a> for details.</p>
+<hr/>
+<h2 id="contact-community">Contact &amp; Community<a class="headerlink" href="#contact-community" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Repository:</strong> <a href="https://github.com/gusafr/midora-solid-ai">https://github.com/gusafr/midora-solid-ai</a></li>
+<li><strong>Documentation:</strong> <a href="https://gusafr.github.io/midora-solid-ai/">https://gusafr.github.io/midora-solid-ai/</a></li>
+<li><strong>Discussions:</strong> GitHub Discussions (coming soon)</li>
+<li><strong>Author:</strong> Gustavo Freitas (<a href="https://github.com/gusafr">@gusafr</a>)</li>
+</ul>
+<hr/>
+<p><strong>© 2025 Midora Education Labs. Licensed under the MIT License.</strong></p>
+<hr/>
+<h2 id="acknowledgments">Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">¶</a></h2>
+<p>SOLID.AI builds upon decades of research and practice in:
+- Domain-Driven Design (Eric Evans)
+- Team Topologies (Matthew Skelton, Manuel Pais)
+- Agile/Scrum/SAFe methodologies
+- Data Mesh architecture (Zhamak Dehghani)
+- Event-Driven Architecture patterns
+- AI safety and ethics frameworks</p>
+<p>We are grateful to the open-source community and practitioners worldwide who continue to advance the state of the art in organizational design, AI governance, and human-machine collaboration.</p>
+<hr/>
+<p><em>This document is the formal technical specification of SOLID.AI. For practical implementation guides, see the <a href="../quick-start/">Quick Start Guide</a> and <a href="adoption/">Adoption Pack</a>.</em></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gusafr" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/gusafr" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>
