@@ -6,26 +6,26 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="The organizational nervous system for AI-Native companies." name="description"/>
-<link href="https://gusafr.github.io/solid.ai/playbooks/" rel="canonical"/>
-<link href="../adr/adr-0004-reportlab-pdf-generation/" rel="prev"/>
-<link href="foundation/solid-ai-maturity-model/" rel="next"/>
-<link href="../assets/images/solid-ai-logo.png" rel="icon"/>
+<link href="https://gusafr.github.io/solid.ai/whitepaper/figures/" rel="canonical"/>
+<link href="../diagrams/" rel="prev"/>
+<link href="../../quick-start/" rel="next"/>
+<link href="../../assets/images/solid-ai-logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>📖 Overview - solid.ai</title>
-<link href="../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>🎯 Architecture Overview - solid.ai</title>
+<link href="../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="teal" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#solidai-playbooks-navigation-guide">
+<a class="md-skip" href="#architecture-overview">
           Skip to content
         </a>
 </div>
@@ -33,8 +33,8 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href=".." title="solid.ai">
-<img alt="logo" src="../assets/images/solid-ai-logo.png"/>
+<a aria-label="solid.ai" class="md-header__button md-logo" data-md-component="logo" href="../.." title="solid.ai">
+<img alt="logo" src="../../assets/images/solid-ai-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              📖 Overview
+              🎯 Architecture Overview
             
           </span>
 </div>
@@ -113,8 +113,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href=".." title="solid.ai">
-<img alt="logo" src="../assets/images/solid-ai-logo.png"/>
+<a aria-label="solid.ai" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="solid.ai">
+<img alt="logo" src="../../assets/images/solid-ai-logo.png"/>
 </a>
     solid.ai
   </label>
@@ -130,15 +130,15 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     Home
     
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
     Whitepaper
@@ -146,14 +146,14 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Whitepaper
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/abstract/">
+<a class="md-nav__link" href="../abstract/">
 <span class="md-ellipsis">
     Abstract
     
@@ -161,7 +161,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/architecture/">
+<a class="md-nav__link" href="../architecture/">
 <span class="md-ellipsis">
     Architecture
     
@@ -169,7 +169,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/specification/">
+<a class="md-nav__link" href="../specification/">
 <span class="md-ellipsis">
     Specification
     
@@ -177,7 +177,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/governance/">
+<a class="md-nav__link" href="../governance/">
 <span class="md-ellipsis">
     Governance
     
@@ -185,20 +185,92 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/diagrams/">
+<a class="md-nav__link" href="../diagrams/">
 <span class="md-ellipsis">
     📊 Diagrams
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../whitepaper/figures/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    🎯 Architecture Overview
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     🎯 Architecture Overview
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#figure-1-solidai-six-layer-architecture">
+<span class="md-ellipsis">
+      Figure 1 — SOLID.AI Six-Layer Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#figure-2-automation-mesh-reference-model">
+<span class="md-ellipsis">
+      Figure 2 — Automation Mesh Reference Model
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#figure-3-data-spine-domain-model">
+<span class="md-ellipsis">
+      Figure 3 — Data Spine Domain Model
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#figure-4-human-ai-collaboration-loop">
+<span class="md-ellipsis">
+      Figure 4 — Human-AI Collaboration Loop
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-integration">
+<span class="md-ellipsis">
+      System Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-implementation">
+<span class="md-ellipsis">
+      Reference Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-cases">
+<span class="md-ellipsis">
+      Use Cases
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pdf-export">
+<span class="md-ellipsis">
+      PDF Export
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -219,7 +291,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../quick-start/">
+<a class="md-nav__link" href="../../quick-start/">
 <span class="md-ellipsis">
     🚀 Quick Start
     
@@ -227,7 +299,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../README.md">
+<a class="md-nav__link" href="../../README.md">
 <span class="md-ellipsis">
     📚 Reading Paths
     
@@ -235,7 +307,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../diagrams/">
+<a class="md-nav__link" href="../../diagrams/">
 <span class="md-ellipsis">
     📊 All Diagrams
     
@@ -261,7 +333,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../overview/">
+<a class="md-nav__link" href="../../overview/">
 <span class="md-ellipsis">
     Overview
     
@@ -269,7 +341,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../principles/">
+<a class="md-nav__link" href="../../principles/">
 <span class="md-ellipsis">
     Principles
     
@@ -277,7 +349,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../architecture/">
+<a class="md-nav__link" href="../../architecture/">
 <span class="md-ellipsis">
     Architecture
     
@@ -285,7 +357,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../organizational-model/">
+<a class="md-nav__link" href="../../organizational-model/">
 <span class="md-ellipsis">
     Organizational Model
     
@@ -293,7 +365,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../automation-sipoc/">
+<a class="md-nav__link" href="../../automation-sipoc/">
 <span class="md-ellipsis">
     Automation SIPOC
     
@@ -301,7 +373,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai-agents/">
+<a class="md-nav__link" href="../../ai-agents/">
 <span class="md-ellipsis">
     AI Agents
     
@@ -309,7 +381,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../governance-ethics/">
+<a class="md-nav__link" href="../../governance-ethics/">
 <span class="md-ellipsis">
     Governance &amp; Ethics
     
@@ -317,7 +389,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../observability/">
+<a class="md-nav__link" href="../../observability/">
 <span class="md-ellipsis">
     Observability
     
@@ -325,7 +397,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../human-ai-collaboration/">
+<a class="md-nav__link" href="../../human-ai-collaboration/">
 <span class="md-ellipsis">
     Human-AI Collaboration
     
@@ -333,7 +405,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../role-hierarchy-human-ai/">
+<a class="md-nav__link" href="../../role-hierarchy-human-ai/">
 <span class="md-ellipsis">
     Role Hierarchy (Human &amp; AI)
     
@@ -359,7 +431,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai-native-agile/">
+<a class="md-nav__link" href="../../ai-native-agile/">
 <span class="md-ellipsis">
     AI-Native Agile &amp; SAFe (Scrum)
     
@@ -367,7 +439,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai-native-kanban/">
+<a class="md-nav__link" href="../../ai-native-kanban/">
 <span class="md-ellipsis">
     AI-Native Kanban
     
@@ -393,7 +465,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../whole-organization-transformation/">
+<a class="md-nav__link" href="../../whole-organization-transformation/">
 <span class="md-ellipsis">
     Whole-Org Transformation
     
@@ -401,7 +473,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../glossary/">
+<a class="md-nav__link" href="../../glossary/">
 <span class="md-ellipsis">
     Glossary
     
@@ -412,7 +484,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../diagrams/">
+<a class="md-nav__link" href="../../diagrams/">
 <span class="md-ellipsis">
     📊 All Diagrams
     
@@ -435,7 +507,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/">
+<a class="md-nav__link" href="../../adoption/">
 <span class="md-ellipsis">
     Overview
     
@@ -473,7 +545,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/squad-organization-quick-ref/">
+<a class="md-nav__link" href="../../adoption/reference-cards/squad-organization-quick-ref/">
 <span class="md-ellipsis">
     Squad Organization
     
@@ -499,7 +571,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/developer/">
+<a class="md-nav__link" href="../../adoption/reference-cards/developer/">
 <span class="md-ellipsis">
     Developer
     
@@ -507,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/product-manager/">
+<a class="md-nav__link" href="../../adoption/reference-cards/product-manager/">
 <span class="md-ellipsis">
     Product Manager
     
@@ -515,7 +587,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/operations/">
+<a class="md-nav__link" href="../../adoption/reference-cards/operations/">
 <span class="md-ellipsis">
     Operations
     
@@ -523,7 +595,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/leadership/">
+<a class="md-nav__link" href="../../adoption/reference-cards/leadership/">
 <span class="md-ellipsis">
     Leadership
     
@@ -549,7 +621,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/sales/">
+<a class="md-nav__link" href="../../adoption/reference-cards/sales/">
 <span class="md-ellipsis">
     Sales
     
@@ -557,7 +629,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/administration/">
+<a class="md-nav__link" href="../../adoption/reference-cards/administration/">
 <span class="md-ellipsis">
     Administration
     
@@ -565,7 +637,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/marketing/">
+<a class="md-nav__link" href="../../adoption/reference-cards/marketing/">
 <span class="md-ellipsis">
     Marketing
     
@@ -591,7 +663,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/commerce/">
+<a class="md-nav__link" href="../../adoption/reference-cards/commerce/">
 <span class="md-ellipsis">
     Commerce &amp; Retail
     
@@ -599,7 +671,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/manufacturing/">
+<a class="md-nav__link" href="../../adoption/reference-cards/manufacturing/">
 <span class="md-ellipsis">
     Manufacturing
     
@@ -625,7 +697,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/healthcare/">
+<a class="md-nav__link" href="../../adoption/reference-cards/healthcare/">
 <span class="md-ellipsis">
     Healthcare
     
@@ -633,7 +705,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/financial-services/">
+<a class="md-nav__link" href="../../adoption/reference-cards/financial-services/">
 <span class="md-ellipsis">
     Financial Services
     
@@ -659,7 +731,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/professional-services/">
+<a class="md-nav__link" href="../../adoption/reference-cards/professional-services/">
 <span class="md-ellipsis">
     Professional Services
     
@@ -667,7 +739,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/logistics/">
+<a class="md-nav__link" href="../../adoption/reference-cards/logistics/">
 <span class="md-ellipsis">
     Logistics
     
@@ -675,7 +747,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/reference-cards/human-resources/">
+<a class="md-nav__link" href="../../adoption/reference-cards/human-resources/">
 <span class="md-ellipsis">
     Human Resources
     
@@ -704,7 +776,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/purpose-driven-feature/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/purpose-driven-feature/">
 <span class="md-ellipsis">
     Purpose-Driven Feature
     
@@ -712,7 +784,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/ai-agent-definition/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/ai-agent-definition/">
 <span class="md-ellipsis">
     AI Agent Definition
     
@@ -720,7 +792,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/data-contract-design/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/data-contract-design/">
 <span class="md-ellipsis">
     Data Contract Design
     
@@ -728,7 +800,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/retrospective-facilitation/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/retrospective-facilitation/">
 <span class="md-ellipsis">
     Retrospective Facilitation
     
@@ -736,7 +808,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/ethical-decision-making/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/ethical-decision-making/">
 <span class="md-ellipsis">
     Ethical Decision-Making
     
@@ -744,7 +816,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/prompt-templates/ai-native-sprint-planning/">
+<a class="md-nav__link" href="../../adoption/prompt-templates/ai-native-sprint-planning/">
 <span class="md-ellipsis">
     AI-Native Sprint Planning
     
@@ -785,7 +857,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/ai-maturity-assessment/">
+<a class="md-nav__link" href="../../adoption/checklists/ai-maturity-assessment/">
 <span class="md-ellipsis">
     AI Maturity Assessment
     
@@ -793,7 +865,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/organizational-scalability-assessment/">
+<a class="md-nav__link" href="../../adoption/checklists/organizational-scalability-assessment/">
 <span class="md-ellipsis">
     Organizational Scalability Assessment
     
@@ -801,7 +873,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/learning-development-rollout/">
+<a class="md-nav__link" href="../../adoption/checklists/learning-development-rollout/">
 <span class="md-ellipsis">
     Learning &amp; Development Rollout
     
@@ -809,7 +881,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/okr-kpi-setup/">
+<a class="md-nav__link" href="../../adoption/checklists/okr-kpi-setup/">
 <span class="md-ellipsis">
     OKR &amp; KPI Setup
     
@@ -835,7 +907,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/ai-agent-integration/">
+<a class="md-nav__link" href="../../adoption/checklists/ai-agent-integration/">
 <span class="md-ellipsis">
     AI Agent Integration
     
@@ -843,7 +915,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/squad-formation/">
+<a class="md-nav__link" href="../../adoption/checklists/squad-formation/">
 <span class="md-ellipsis">
     Squad Formation
     
@@ -851,7 +923,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/data-spine-implementation/">
+<a class="md-nav__link" href="../../adoption/checklists/data-spine-implementation/">
 <span class="md-ellipsis">
     Data Spine Implementation
     
@@ -859,7 +931,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/governance-ethics-review/">
+<a class="md-nav__link" href="../../adoption/checklists/governance-ethics-review/">
 <span class="md-ellipsis">
     Governance &amp; Ethics Review
     
@@ -885,7 +957,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/sme-transformation-roadmap/">
+<a class="md-nav__link" href="../../adoption/checklists/sme-transformation-roadmap/">
 <span class="md-ellipsis">
     SME Transformation Roadmap
     
@@ -893,7 +965,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/startup-launch/">
+<a class="md-nav__link" href="../../adoption/checklists/startup-launch/">
 <span class="md-ellipsis">
     Startup Launch
     
@@ -901,7 +973,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/ai-native-sprint/">
+<a class="md-nav__link" href="../../adoption/checklists/ai-native-sprint/">
 <span class="md-ellipsis">
     AI-Native Sprint
     
@@ -909,7 +981,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/kanban-setup/">
+<a class="md-nav__link" href="../../adoption/checklists/kanban-setup/">
 <span class="md-ellipsis">
     Kanban Setup
     
@@ -917,7 +989,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/checklists/role-hierarchy-implementation/">
+<a class="md-nav__link" href="../../adoption/checklists/role-hierarchy-implementation/">
 <span class="md-ellipsis">
     Role Hierarchy Implementation
     
@@ -961,7 +1033,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/agent-definition/">
+<a class="md-nav__link" href="../../adoption/templates/agent-definition/">
 <span class="md-ellipsis">
     Agent Definition
     
@@ -969,7 +1041,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/squad-charter/">
+<a class="md-nav__link" href="../../adoption/templates/squad-charter/">
 <span class="md-ellipsis">
     Squad Charter
     
@@ -977,7 +1049,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/data-contract/">
+<a class="md-nav__link" href="../../adoption/templates/data-contract/">
 <span class="md-ellipsis">
     Data Contract
     
@@ -1003,7 +1075,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/risk-assessment-template/">
+<a class="md-nav__link" href="../../adoption/templates/risk-assessment-template/">
 <span class="md-ellipsis">
     Risk Assessment Template
     
@@ -1011,7 +1083,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/learning-path-template/">
+<a class="md-nav__link" href="../../adoption/templates/learning-path-template/">
 <span class="md-ellipsis">
     Learning Path Template
     
@@ -1019,7 +1091,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/okr-template/">
+<a class="md-nav__link" href="../../adoption/templates/okr-template/">
 <span class="md-ellipsis">
     OKR Template
     
@@ -1027,7 +1099,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/90-day-transformation-plan/">
+<a class="md-nav__link" href="../../adoption/templates/90-day-transformation-plan/">
 <span class="md-ellipsis">
     90-Day Transformation Plan
     
@@ -1035,7 +1107,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/role-hierarchy-matrix.md">
+<a class="md-nav__link" href="../../adoption/templates/role-hierarchy-matrix.md">
 <span class="md-ellipsis">
     Role Hierarchy Matrix
     
@@ -1061,7 +1133,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/rfc-template/">
+<a class="md-nav__link" href="../../adoption/templates/rfc-template/">
 <span class="md-ellipsis">
     RFC Template
     
@@ -1069,7 +1141,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/adr-template/">
+<a class="md-nav__link" href="../../adoption/templates/adr-template/">
 <span class="md-ellipsis">
     ADR Template
     
@@ -1077,7 +1149,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/impact-analysis-template/">
+<a class="md-nav__link" href="../../adoption/templates/impact-analysis-template/">
 <span class="md-ellipsis">
     Impact Analysis Template
     
@@ -1103,7 +1175,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/ai-native-sprint-template/">
+<a class="md-nav__link" href="../../adoption/templates/ai-native-sprint-template/">
 <span class="md-ellipsis">
     AI-Native Sprint Template
     
@@ -1111,7 +1183,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adoption/templates/kanban-board-template/">
+<a class="md-nav__link" href="../../adoption/templates/kanban-board-template/">
 <span class="md-ellipsis">
     Kanban Board Template
     
@@ -1143,7 +1215,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../docker/">
+<a class="md-nav__link" href="../../docker/">
 <span class="md-ellipsis">
     Docker Setup
     
@@ -1151,7 +1223,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cleanup/">
+<a class="md-nav__link" href="../../cleanup/">
 <span class="md-ellipsis">
     Cleanup &amp; Optimization
     
@@ -1159,7 +1231,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../backstage/">
+<a class="md-nav__link" href="../../backstage/">
 <span class="md-ellipsis">
     Backstage Integration
     
@@ -1185,7 +1257,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../manifesto/solid-ai-manifesto-v1/">
+<a class="md-nav__link" href="../../manifesto/solid-ai-manifesto-v1/">
 <span class="md-ellipsis">
     solid.ai Manifesto v1.0
     
@@ -1195,8 +1267,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
 <span class="md-ellipsis">
     Reference
@@ -1204,7 +1276,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
             Reference
@@ -1226,7 +1298,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../diagrams/README.md">
+<a class="md-nav__link" href="../../diagrams/README.md">
 <span class="md-ellipsis">
     📊 Diagram Gallery
     
@@ -1234,7 +1306,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../diagrams/images/">
+<a class="md-nav__link" href="../../diagrams/images/">
 <span class="md-ellipsis">
     🖼️ Generated Images
     
@@ -1260,7 +1332,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rfc/rfc-0001-foundations/">
+<a class="md-nav__link" href="../../rfc/rfc-0001-foundations/">
 <span class="md-ellipsis">
     RFC 0001 – Foundations
     
@@ -1268,7 +1340,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rfc/rfc-0002-data-layer/">
+<a class="md-nav__link" href="../../rfc/rfc-0002-data-layer/">
 <span class="md-ellipsis">
     RFC 0002 – Data Spine
     
@@ -1276,7 +1348,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rfc/rfc-0003-midora-organizational-topology/">
+<a class="md-nav__link" href="../../rfc/rfc-0003-midora-organizational-topology/">
 <span class="md-ellipsis">
     RFC 0003 – Midora Topology
     
@@ -1302,7 +1374,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr/">
+<a class="md-nav__link" href="../../adr/">
 <span class="md-ellipsis">
     📋 ADR Overview
     
@@ -1310,7 +1382,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr/adr-0001-mermaid-choice/">
+<a class="md-nav__link" href="../../adr/adr-0001-mermaid-choice/">
 <span class="md-ellipsis">
     ADR 0001 – Mermaid for Diagrams
     
@@ -1318,7 +1390,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr/adr-0002-business-service-organization/">
+<a class="md-nav__link" href="../../adr/adr-0002-business-service-organization/">
 <span class="md-ellipsis">
     ADR 0002 – Business Service Organization
     
@@ -1326,7 +1398,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr/adr-0003-data-spine-automation-mesh-integration/">
+<a class="md-nav__link" href="../../adr/adr-0003-data-spine-automation-mesh-integration/">
 <span class="md-ellipsis">
     ADR 0003 – Data Spine &amp; Automation Mesh Integration
     
@@ -1334,7 +1406,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr/adr-0004-reportlab-pdf-generation/">
+<a class="md-nav__link" href="../../adr/adr-0004-reportlab-pdf-generation/">
 <span class="md-ellipsis">
     ADR 0004 – ReportLab PDF Generation
     
@@ -1344,8 +1416,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
 <span class="md-ellipsis">
     Playbooks
@@ -1353,166 +1425,19 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_4">
 <span class="md-nav__icon md-icon"></span>
             Playbooks
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    📖 Overview
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../playbooks/">
 <span class="md-ellipsis">
     📖 Overview
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quick-navigator">
-<span class="md-ellipsis">
-      🎯 Quick Navigator
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#find-your-playbook">
-<span class="md-ellipsis">
-      📍 Find Your Playbook
-    </span>
-</a>
-<nav aria-label="📍 Find Your Playbook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#by-company-stage-where-are-you-in-your-journey">
-<span class="md-ellipsis">
-      By Company Stage — Where are you in your journey?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#by-sector-what-industry-are-you-in">
-<span class="md-ellipsis">
-      By Sector — What industry are you in?
-    </span>
-</a>
-<nav aria-label="By Sector — What industry are you in?" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-functions-universal-across-industries">
-<span class="md-ellipsis">
-      Business Functions (Universal across industries)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#production-commerce-physical-goods-manufacturing-retail">
-<span class="md-ellipsis">
-      Production &amp; Commerce (Physical goods, manufacturing, retail)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#regulated-industries-compliance-heavy-sectors">
-<span class="md-ellipsis">
-      Regulated Industries (Compliance-heavy sectors)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#service-industries-service-delivery-logistics-people-operations">
-<span class="md-ellipsis">
-      Service Industries (Service delivery, logistics, people operations)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#organizational-patterns-how-do-you-structure-teams">
-<span class="md-ellipsis">
-      Organizational Patterns — How do you structure teams?
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recommended-reading-paths">
-<span class="md-ellipsis">
-      🗺️ Recommended Reading Paths
-    </span>
-</a>
-<nav aria-label="🗺️ Recommended Reading Paths" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-1-startup-founder-0-10-people-building-from-scratch">
-<span class="md-ellipsis">
-      Path 1: Startup Founder (0-10 people, building from scratch)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-2-sme-leader-10-250-employees-transforming-existing-org">
-<span class="md-ellipsis">
-      Path 2: SME Leader (10-250 employees, transforming existing org)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-3-department-head-transforming-one-function">
-<span class="md-ellipsis">
-      Path 3: Department Head (Transforming one function)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-4-ctoproduct-leader-implementing-solidai-framework">
-<span class="md-ellipsis">
-      Path 4: CTO/Product Leader (Implementing SOLID.AI framework)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#playbook-maturity-levels">
-<span class="md-ellipsis">
-      📊 Playbook Maturity Levels
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#supporting-resources">
-<span class="md-ellipsis">
-      🛠️ Supporting Resources
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#need-help">
-<span class="md-ellipsis">
-      💬 Need Help?
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_4_2" type="checkbox"/>
@@ -1530,7 +1455,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="foundation/solid-ai-maturity-model/">
+<a class="md-nav__link" href="../../playbooks/foundation/solid-ai-maturity-model/">
 <span class="md-ellipsis">
     🎯 SOLID.AI Maturity Model
     
@@ -1556,7 +1481,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="governance/ai-governance-risk-assessment/">
+<a class="md-nav__link" href="../../playbooks/governance/ai-governance-risk-assessment/">
 <span class="md-ellipsis">
     🛡️ AI Governance &amp; Risk Assessment
     
@@ -1564,7 +1489,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="governance/impact-analysis/">
+<a class="md-nav__link" href="../../playbooks/governance/impact-analysis/">
 <span class="md-ellipsis">
     📊 Impact Analysis
     
@@ -1590,7 +1515,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="implementation/process-mapping-sipoc-integration/">
+<a class="md-nav__link" href="../../playbooks/implementation/process-mapping-sipoc-integration/">
 <span class="md-ellipsis">
     🔄 Process Mapping &amp; SIPOC Integration
     
@@ -1598,7 +1523,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="implementation/data-spine-analytics-insights/">
+<a class="md-nav__link" href="../../playbooks/implementation/data-spine-analytics-insights/">
 <span class="md-ellipsis">
     📊 Data Spine Analytics &amp; Insights
     
@@ -1606,7 +1531,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="implementation/ai-native-kanban/">
+<a class="md-nav__link" href="../../playbooks/implementation/ai-native-kanban/">
 <span class="md-ellipsis">
     📋 AI-Native Kanban
     
@@ -1632,7 +1557,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="people-culture/organizational-scalability/">
+<a class="md-nav__link" href="../../playbooks/people-culture/organizational-scalability/">
 <span class="md-ellipsis">
     📈 Organizational Scalability
     
@@ -1640,7 +1565,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="people-culture/ai-learning-development/">
+<a class="md-nav__link" href="../../playbooks/people-culture/ai-learning-development/">
 <span class="md-ellipsis">
     🎓 AI Learning &amp; Development
     
@@ -1648,7 +1573,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="people-culture/ai-native-okrs-kpis/">
+<a class="md-nav__link" href="../../playbooks/people-culture/ai-native-okrs-kpis/">
 <span class="md-ellipsis">
     🎯 AI-Native OKRs &amp; KPIs
     
@@ -1674,7 +1599,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-stage/startup-ai-native/">
+<a class="md-nav__link" href="../../playbooks/by-stage/startup-ai-native/">
 <span class="md-ellipsis">
     🚀 Startup (AI-Native)
     
@@ -1682,7 +1607,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-stage/sme-transformation/">
+<a class="md-nav__link" href="../../playbooks/by-stage/sme-transformation/">
 <span class="md-ellipsis">
     📈 SME Transformation
     
@@ -1723,7 +1648,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/business-functions/sales/">
+<a class="md-nav__link" href="../../playbooks/by-sector/business-functions/sales/">
 <span class="md-ellipsis">
     Sales
     
@@ -1731,7 +1656,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/business-functions/administration/">
+<a class="md-nav__link" href="../../playbooks/by-sector/business-functions/administration/">
 <span class="md-ellipsis">
     Administration &amp; Finance
     
@@ -1739,7 +1664,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/business-functions/marketing/">
+<a class="md-nav__link" href="../../playbooks/by-sector/business-functions/marketing/">
 <span class="md-ellipsis">
     Marketing
     
@@ -1765,7 +1690,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/production-commerce/commerce/">
+<a class="md-nav__link" href="../../playbooks/by-sector/production-commerce/commerce/">
 <span class="md-ellipsis">
     Commerce &amp; Retail
     
@@ -1773,7 +1698,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/production-commerce/manufacturing/">
+<a class="md-nav__link" href="../../playbooks/by-sector/production-commerce/manufacturing/">
 <span class="md-ellipsis">
     Manufacturing
     
@@ -1799,7 +1724,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/regulated/healthcare/">
+<a class="md-nav__link" href="../../playbooks/by-sector/regulated/healthcare/">
 <span class="md-ellipsis">
     Healthcare
     
@@ -1807,7 +1732,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/regulated/financial-services/">
+<a class="md-nav__link" href="../../playbooks/by-sector/regulated/financial-services/">
 <span class="md-ellipsis">
     Financial Services
     
@@ -1833,7 +1758,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/services/professional-services/">
+<a class="md-nav__link" href="../../playbooks/by-sector/services/professional-services/">
 <span class="md-ellipsis">
     Professional Services
     
@@ -1841,7 +1766,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/services/logistics/">
+<a class="md-nav__link" href="../../playbooks/by-sector/services/logistics/">
 <span class="md-ellipsis">
     Logistics
     
@@ -1849,7 +1774,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="by-sector/services/human-resources/">
+<a class="md-nav__link" href="../../playbooks/by-sector/services/human-resources/">
 <span class="md-ellipsis">
     Human Resources
     
@@ -1878,7 +1803,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="organizational/squads/">
+<a class="md-nav__link" href="../../playbooks/organizational/squads/">
 <span class="md-ellipsis">
     Squads
     
@@ -1886,7 +1811,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="organizational/pools/">
+<a class="md-nav__link" href="../../playbooks/organizational/pools/">
 <span class="md-ellipsis">
     Pools
     
@@ -1894,7 +1819,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="organizational/operations/">
+<a class="md-nav__link" href="../../playbooks/organizational/operations/">
 <span class="md-ellipsis">
     Operations
     
@@ -1902,7 +1827,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="organizational/ai-integration/">
+<a class="md-nav__link" href="../../playbooks/organizational/ai-integration/">
 <span class="md-ellipsis">
     AI Integration
     
@@ -1910,7 +1835,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="organizational/midora-implementation/">
+<a class="md-nav__link" href="../../playbooks/organizational/midora-implementation/">
 <span class="md-ellipsis">
     MIDORA Implementation
     
@@ -1941,133 +1866,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quick-navigator">
+<a class="md-nav__link" href="#figure-1-solidai-six-layer-architecture">
 <span class="md-ellipsis">
-      🎯 Quick Navigator
+      Figure 1 — SOLID.AI Six-Layer Architecture
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#find-your-playbook">
+<a class="md-nav__link" href="#figure-2-automation-mesh-reference-model">
 <span class="md-ellipsis">
-      📍 Find Your Playbook
-    </span>
-</a>
-<nav aria-label="📍 Find Your Playbook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#by-company-stage-where-are-you-in-your-journey">
-<span class="md-ellipsis">
-      By Company Stage — Where are you in your journey?
+      Figure 2 — Automation Mesh Reference Model
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#by-sector-what-industry-are-you-in">
+<a class="md-nav__link" href="#figure-3-data-spine-domain-model">
 <span class="md-ellipsis">
-      By Sector — What industry are you in?
-    </span>
-</a>
-<nav aria-label="By Sector — What industry are you in?" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-functions-universal-across-industries">
-<span class="md-ellipsis">
-      Business Functions (Universal across industries)
+      Figure 3 — Data Spine Domain Model
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#production-commerce-physical-goods-manufacturing-retail">
+<a class="md-nav__link" href="#figure-4-human-ai-collaboration-loop">
 <span class="md-ellipsis">
-      Production &amp; Commerce (Physical goods, manufacturing, retail)
+      Figure 4 — Human-AI Collaboration Loop
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#regulated-industries-compliance-heavy-sectors">
+<a class="md-nav__link" href="#system-integration">
 <span class="md-ellipsis">
-      Regulated Industries (Compliance-heavy sectors)
+      System Integration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#service-industries-service-delivery-logistics-people-operations">
+<a class="md-nav__link" href="#reference-implementation">
 <span class="md-ellipsis">
-      Service Industries (Service delivery, logistics, people operations)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#organizational-patterns-how-do-you-structure-teams">
-<span class="md-ellipsis">
-      Organizational Patterns — How do you structure teams?
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recommended-reading-paths">
-<span class="md-ellipsis">
-      🗺️ Recommended Reading Paths
-    </span>
-</a>
-<nav aria-label="🗺️ Recommended Reading Paths" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-1-startup-founder-0-10-people-building-from-scratch">
-<span class="md-ellipsis">
-      Path 1: Startup Founder (0-10 people, building from scratch)
+      Reference Implementation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#path-2-sme-leader-10-250-employees-transforming-existing-org">
+<a class="md-nav__link" href="#use-cases">
 <span class="md-ellipsis">
-      Path 2: SME Leader (10-250 employees, transforming existing org)
+      Use Cases
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#path-3-department-head-transforming-one-function">
+<a class="md-nav__link" href="#pdf-export">
 <span class="md-ellipsis">
-      Path 3: Department Head (Transforming one function)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#path-4-ctoproduct-leader-implementing-solidai-framework">
-<span class="md-ellipsis">
-      Path 4: CTO/Product Leader (Implementing SOLID.AI framework)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#playbook-maturity-levels">
-<span class="md-ellipsis">
-      📊 Playbook Maturity Levels
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#supporting-resources">
-<span class="md-ellipsis">
-      🛠️ Supporting Resources
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#need-help">
-<span class="md-ellipsis">
-      💬 Need Help?
+      PDF Export
     </span>
 </a>
 </li>
@@ -2078,274 +1928,342 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="solidai-playbooks-navigation-guide">SOLID.AI Playbooks — Navigation Guide<a class="headerlink" href="#solidai-playbooks-navigation-guide" title="Permanent link">¶</a></h1>
-<p>Welcome to the SOLID.AI playbook library! These operational guides help you implement the framework across different company stages, industry sectors, and organizational patterns.</p>
+<h1 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">¶</a></h1>
+<p>This page presents the complete SOLID.AI architecture through four integrated diagrams. Each figure builds upon the previous, creating a comprehensive view of how AI-native organizations operate.</p>
 <hr/>
-<h2 id="quick-navigator">🎯 Quick Navigator<a class="headerlink" href="#quick-navigator" title="Permanent link">¶</a></h2>
-<p><strong>New to SOLID.AI?</strong> Start here:
-1. Read <a href="../QUICK-START-GUIDE.md">Quick Start Guide</a> (5 minutes)
-2. Choose your path below based on your situation
-3. Implement using <a href="../ADOPTION/">Adoption Pack</a> templates and checklists</p>
+<h2 id="figure-1-solidai-six-layer-architecture">Figure 1 — SOLID.AI Six-Layer Architecture<a class="headerlink" href="#figure-1-solidai-six-layer-architecture" title="Permanent link">¶</a></h2>
+<p>Overview of the structural layers from alignment to governance, establishing the foundation for hybrid intelligent organizations.</p>
+<pre class="mermaid"><code>graph TB
+    subgraph L6["Layer 6: Governance &amp; Ethics"]
+        G1[RFC Process]
+        G2[Ethical Review]
+        G3[Compliance Monitoring]
+        G4[Audit Trail]
+    end
+
+    subgraph L5["Layer 5: Organizational Layer"]
+        O1[Squads&lt;br/&gt;5-9 people]
+        O2[Pools&lt;br/&gt;Specialists]
+        O3[Operations&lt;br/&gt;Stable processes]
+    end
+
+    subgraph L4["Layer 4: Automation Mesh"]
+        A1[SIPOC Workflows]
+        A2[Process Orchestration]
+        A3[Integration Adapters]
+        A4[Monitoring]
+    end
+
+    subgraph L3["Layer 3: Cognitive Layer"]
+        C1[AI Agents]
+        C2[Reasoning Engines]
+        C3[Context Management]
+        C4[Decision Logs]
+    end
+
+    subgraph L2["Layer 2: Data Spine"]
+        D1[Canonical Models]
+        D2[Data Contracts]
+        D3[Event Streaming]
+        D4[Quality Framework]
+    end
+
+    subgraph L1["Layer 1: Purpose Layer"]
+        P1[Mission &amp; Vision]
+        P2[Core Values]
+        P3[Strategic OKRs]
+        P4[Ethical Boundaries]
+    end
+
+    L6 --&gt; L5
+    L5 --&gt; L4
+    L4 --&gt; L3
+    L3 --&gt; L2
+    L2 --&gt; L1
+
+    L1 -.-&gt;|Informs| L2
+    L2 -.-&gt;|Powers| L3
+    L3 -.-&gt;|Executes| L4
+    L4 -.-&gt;|Organizes| L5
+    L5 -.-&gt;|Overseen by| L6
+
+    style L6 fill:#e8f4f8,stroke:#0d9488,stroke-width:2px
+    style L5 fill:#f0fdf4,stroke:#10b981,stroke-width:2px
+    style L4 fill:#fef3c7,stroke:#f59e0b,stroke-width:2px
+    style L3 fill:#ede9fe,stroke:#8b5cf6,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    style L1 fill:#fee2e2,stroke:#ef4444,stroke-width:2px</code></pre>
+<figure>
+<figcaption><strong>Figure 1 — SOLID.AI Six-Layer Architecture</strong><br/>
+  The six-layer architecture creates an organizational nervous system where the Purpose Layer (DNA) defines immutable identity, the Data Spine (sensory nerves) provides real-time information, the Cognitive Layer (brain) generates insights, the Automation Mesh (motor neurons) executes processes, the Organizational Layer (motor cortex) coordinates human teams, and the Governance Layer (prefrontal cortex) ensures ethical oversight.</figcaption>
+</figure>
+<p><strong>Key Insight:</strong> Each layer serves a distinct biological function, creating a self-regulating system where strategy flows downward (command) and information flows upward (feedback).</p>
 <hr/>
-<h2 id="find-your-playbook">📍 Find Your Playbook<a class="headerlink" href="#find-your-playbook" title="Permanent link">¶</a></h2>
-<h3 id="by-company-stage-where-are-you-in-your-journey"><strong>By Company Stage</strong> — Where are you in your journey?<a class="headerlink" href="#by-company-stage-where-are-you-in-your-journey" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Stage</th>
-<th>Playbook</th>
-<th>Who It's For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🚀 <strong>Startup (AI-Native)</strong></td>
-<td><a href="by-stage/startup-ai-native/">startup-ai-native.md</a></td>
-<td>Founders building from square one (0-10 people, limited resources)</td>
-</tr>
-<tr>
-<td>📈 <strong>SME Transformation</strong></td>
-<td><a href="by-stage/sme-transformation/">sme-transformation.md</a></td>
-<td>Established businesses transforming to AI-Native (10-250 employees, $1M-$50M revenue)</td>
-</tr>
-</tbody>
-</table>
+<h2 id="figure-2-automation-mesh-reference-model">Figure 2 — Automation Mesh Reference Model<a class="headerlink" href="#figure-2-automation-mesh-reference-model" title="Permanent link">¶</a></h2>
+<p>Event-driven orchestration fabric connecting AI agents, business services, rule engines, and external systems under compliance boundaries.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph External["External Systems"]
+        CRM[CRM&lt;br/&gt;Salesforce]
+        ERP[ERP&lt;br/&gt;NetSuite]
+        EMAIL[Email&lt;br/&gt;Gmail]
+        SLACK[Slack]
+        MIDORA[Midora Platform&lt;br/&gt;LMS/CRM]
+    end
+
+    subgraph Mesh["Automation Mesh"]
+        subgraph Workflows["Workflow Orchestration"]
+            W1[Invoice Processing]
+            W2[Lead Routing]
+            W3[Onboarding]
+            W4[Compliance Check]
+        end
+
+        subgraph Engine["Orchestration Engine"]
+            TEMPORAL[Temporal.io]
+            AIRFLOW[Apache Airflow]
+        end
+
+        subgraph Adapters["Integration Adapters"]
+            API1[REST APIs]
+            API2[Webhooks]
+            API3[Event Listeners]
+        end
+
+        subgraph Monitor["Monitoring"]
+            M1[Execution Logs]
+            M2[Error Tracking]
+            M3[Performance Metrics]
+        end
+    end
+
+    subgraph DataSpine["Data Spine"]
+        DS[Canonical Data Models]
+        EVENTS[Event Stream]
+    end
+
+    subgraph Cognitive["Cognitive Layer"]
+        AGENTS[AI Agents]
+        DECISIONS[Decision Engine]
+    end
+
+    External --&gt;|Trigger| Adapters
+    Adapters --&gt;|Events| Workflows
+    Workflows --&gt;|Orchestrate| Engine
+    Engine --&gt;|Execute| Adapters
+    Adapters --&gt;|Write| DataSpine
+    DataSpine --&gt;|Read| Cognitive
+    Cognitive --&gt;|Commands| Workflows
+    Monitor -.-&gt;|Observe| Engine
+
+    style Mesh fill:#fef3c7,stroke:#f59e0b,stroke-width:3px
+    style DataSpine fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    style Cognitive fill:#ede9fe,stroke:#8b5cf6,stroke-width:2px</code></pre>
+<figure>
+<figcaption><strong>Figure 2 — Automation Mesh Reference Model</strong><br/>
+  The Automation Mesh connects external systems (CRM, ERP, Email, Slack, Midora Platform) through integration adapters, orchestrates workflows using engines like Temporal.io, writes to the Data Spine for single source of truth, receives commands from the Cognitive Layer (AI Agents), and maintains comprehensive monitoring for observability.</figcaption>
+</figure>
+<p><strong>Key Insight:</strong> The Automation Mesh acts as the organization's motor nervous system, translating cognitive decisions into coordinated multi-system actions with full auditability.</p>
 <hr/>
-<h3 id="by-sector-what-industry-are-you-in"><strong>By Sector</strong> — What industry are you in?<a class="headerlink" href="#by-sector-what-industry-are-you-in" title="Permanent link">¶</a></h3>
-<h4 id="business-functions-universal-across-industries"><strong>Business Functions</strong> (Universal across industries)<a class="headerlink" href="#business-functions-universal-across-industries" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Playbook</th>
-<th>Key AI Agents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>💼 <strong>Sales</strong></td>
-<td><a href="by-sector/business-functions/sales/">sales.md</a></td>
-<td>LeadQualifier, OutreachSequencer, DealForecaster</td>
-</tr>
-<tr>
-<td>📊 <strong>Administration &amp; Finance</strong></td>
-<td><a href="by-sector/business-functions/administration/">administration.md</a></td>
-<td>ExpenseCategorizer, InvoiceProcessor, FinancialReporting</td>
-</tr>
-<tr>
-<td>📣 <strong>Marketing</strong></td>
-<td><a href="by-sector/business-functions/marketing/">marketing.md</a></td>
-<td>ContentGenerator, SocialMedia, EmailCampaign</td>
-</tr>
-</tbody>
-</table>
-<h4 id="production-commerce-physical-goods-manufacturing-retail"><strong>Production &amp; Commerce</strong> (Physical goods, manufacturing, retail)<a class="headerlink" href="#production-commerce-physical-goods-manufacturing-retail" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>Sector</th>
-<th>Playbook</th>
-<th>Key AI Agents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🛒 <strong>Commerce &amp; Retail</strong></td>
-<td><a href="by-sector/production-commerce/commerce/">commerce.md</a></td>
-<td>InventoryOptimizer, DemandForecaster, PricingEngine</td>
-</tr>
-<tr>
-<td>🏭 <strong>Manufacturing</strong></td>
-<td><a href="by-sector/production-commerce/manufacturing/">manufacturing.md</a></td>
-<td>ProductionScheduler, QualityInspection, SupplyChainMonitor</td>
-</tr>
-</tbody>
-</table>
-<h4 id="regulated-industries-compliance-heavy-sectors"><strong>Regulated Industries</strong> (Compliance-heavy sectors)<a class="headerlink" href="#regulated-industries-compliance-heavy-sectors" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>Sector</th>
-<th>Playbook</th>
-<th>Key AI Agents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🏥 <strong>Healthcare</strong></td>
-<td><a href="by-sector/regulated/healthcare/">healthcare.md</a></td>
-<td>PatientIntake, DiagnosticAssist, ComplianceMonitor (HIPAA)</td>
-</tr>
-<tr>
-<td>🏦 <strong>Financial Services</strong></td>
-<td><a href="by-sector/regulated/financial-services/">financial-services.md</a></td>
-<td>LoanUnderwriter, FraudDetector, RegulatoryReporting (SOX, AML)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="service-industries-service-delivery-logistics-people-operations"><strong>Service Industries</strong> (Service delivery, logistics, people operations)<a class="headerlink" href="#service-industries-service-delivery-logistics-people-operations" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>Sector</th>
-<th>Playbook</th>
-<th>Key AI Agents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>💼 <strong>Professional Services</strong></td>
-<td><a href="by-sector/services/professional-services/">professional-services.md</a></td>
-<td>ProjectScoper, ResourceAllocator, TimeTracker</td>
-</tr>
-<tr>
-<td>📦 <strong>Logistics</strong></td>
-<td><a href="by-sector/services/logistics/">logistics.md</a></td>
-<td>RouteOptimizer, LoadBalancer, DeliveryPredictor</td>
-</tr>
-<tr>
-<td>👥 <strong>Human Resources</strong></td>
-<td><a href="by-sector/services/human-resources/">human-resources.md</a></td>
-<td>ResumeScreener, OnboardingCoordinator, EmployeeEngagement</td>
-</tr>
-</tbody>
-</table>
+<h2 id="figure-3-data-spine-domain-model">Figure 3 — Data Spine Domain Model<a class="headerlink" href="#figure-3-data-spine-domain-model" title="Permanent link">¶</a></h2>
+<p>Unified data backbone enabling clean, derived, and real-time data flows across the organization.</p>
+<pre class="mermaid"><code>graph TB
+    subgraph Sources["Data Sources"]
+        S1[CRM&lt;br/&gt;Customers]
+        S2[ERP&lt;br/&gt;Finance]
+        S3[Support&lt;br/&gt;Tickets]
+        S4[Product&lt;br/&gt;Usage]
+        S5[HR&lt;br/&gt;Employees]
+    end
+
+    subgraph Spine["Data Spine Core"]
+        subgraph Ingestion["Ingestion Layer"]
+            I1[Change Data Capture]
+            I2[API Polling]
+            I3[Webhook Receivers]
+        end
+
+        subgraph Stream["Event Streaming"]
+            KAFKA[Apache Kafka&lt;br/&gt;Event Bus]
+        end
+
+        subgraph Models["Canonical Models"]
+            M1[Customer Entity]
+            M2[Order Entity]
+            M3[Ticket Entity]
+            M4[Employee Entity]
+        end
+
+        subgraph Storage["Storage"]
+            DB[(PostgreSQL&lt;br/&gt;Canonical Store)]
+            WAREHOUSE[(Data Warehouse&lt;br/&gt;Analytics)]
+        end
+
+        subgraph Quality["Data Quality"]
+            Q1[Schema Validation]
+            Q2[Business Rules]
+            Q3[Completeness Check]
+        end
+    end
+
+    subgraph Consumers["Data Consumers"]
+        C1[AI Agents&lt;br/&gt;Cognitive Layer]
+        C2[Dashboards&lt;br/&gt;Analytics]
+        C3[Workflows&lt;br/&gt;Automation Mesh]
+        C4[APIs&lt;br/&gt;External Access]
+    end
+
+    Sources --&gt;|Raw Data| Ingestion
+    Ingestion --&gt;|Events| KAFKA
+    KAFKA --&gt;|Stream| Models
+    Models --&gt;|Validate| Quality
+    Quality --&gt;|Write| DB
+    DB --&gt;|Replicate| WAREHOUSE
+    DB --&gt;|Read| Consumers
+    WAREHOUSE --&gt;|Query| Consumers
+
+    style Spine fill:#dbeafe,stroke:#3b82f6,stroke-width:3px
+    style Stream fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
+    style Models fill:#ddd6fe,stroke:#7c3aed,stroke-width:2px</code></pre>
+<figure>
+<figcaption><strong>Figure 3 — Data Spine Domain Model</strong><br/>
+  The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
+</figure>
+<p><strong>Key Insight:</strong> The Data Spine eliminates data silos by providing a single, real-time, canonical view of organizational truth, accessible to both humans and AI agents through unified interfaces.</p>
 <hr/>
-<h3 id="organizational-patterns-how-do-you-structure-teams"><strong>Organizational Patterns</strong> — How do you structure teams?<a class="headerlink" href="#organizational-patterns-how-do-you-structure-teams" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Playbook</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>👥 <strong>Squads</strong></td>
-<td><a href="organizational/squads/">squads.md</a></td>
-<td>Cross-functional teams (3-7 humans + AI agents) for outcome-driven work</td>
-</tr>
-<tr>
-<td>🔄 <strong>Pools</strong></td>
-<td><a href="organizational/pools/">pools.md</a></td>
-<td>Shared service model for reusable capabilities (Data, ML, Platform)</td>
-</tr>
-<tr>
-<td>⚙️ <strong>Operations</strong></td>
-<td><a href="organizational/operations/">operations.md</a></td>
-<td>Day-to-day operational patterns and rituals</td>
-</tr>
-<tr>
-<td>🤖 <strong>AI Integration</strong></td>
-<td><a href="organizational/ai-integration/">ai-integration.md</a></td>
-<td>How to integrate AI agents into existing teams and processes</td>
-</tr>
-<tr>
-<td>🏛️ <strong>MIDORA Implementation</strong></td>
-<td><a href="organizational/midora-implementation/">midora-implementation.md</a></td>
-<td>Adaptive organizational topology (Squads + Pools + Leadership)</td>
-</tr>
-</tbody>
-</table>
+<h2 id="figure-4-human-ai-collaboration-loop">Figure 4 — Human-AI Collaboration Loop<a class="headerlink" href="#figure-4-human-ai-collaboration-loop" title="Permanent link">¶</a></h2>
+<p>End-to-end sequence of analysis, recommendation, decision, execution, and learning in hybrid intelligent teams.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant H as Human (Product Manager)
+    participant P as Purpose Layer (Strategic Context)
+    participant D as Data Spine (Real-time Data)
+    participant A as AI Agent (Sales Analyst)
+    participant M as Automation Mesh (Execution)
+    participant G as Governance (Oversight)
+
+    Note over H,G: Phase 1: Problem Definition (Human-in-the-loop)
+    H-&gt;&gt;P: Define objective&lt;br/&gt;"Increase Q4 sales"
+    P-&gt;&gt;D: Retrieve strategic OKRs
+    D--&gt;&gt;H: Current metrics&lt;br/&gt;Q4 forecast: $2M (target: $2.5M)
+
+    Note over H,G: Phase 2: AI Analysis (Human-in-the-loop)
+    H-&gt;&gt;A: Request analysis&lt;br/&gt;"Why are we missing target?"
+    A-&gt;&gt;D: Query pipeline data&lt;br/&gt;opportunities, deals, trends
+    D--&gt;&gt;A: 847 records returned
+    A-&gt;&gt;A: Analyze patterns&lt;br/&gt;Chain-of-thought reasoning
+    A--&gt;&gt;H: Insights:&lt;br/&gt;1) 3 large deals slipped to Q1&lt;br/&gt;2) New pipeline down 20%&lt;br/&gt;3) Conversion rate dropped 5%
+
+    Note over H,G: Phase 3: Decision &amp; Approval (Human-on-the-loop)
+    H-&gt;&gt;A: Generate recommendations
+    A--&gt;&gt;H: Proposed actions:&lt;br/&gt;1) Launch demand gen campaign&lt;br/&gt;2) Accelerate mid-stage deals&lt;br/&gt;3) Add 2 sales reps
+    H-&gt;&gt;G: Submit for approval&lt;br/&gt;(budget impact: $150K)
+    G-&gt;&gt;G: Risk assessment&lt;br/&gt;Impact: Medium, Likelihood: Low
+    G--&gt;&gt;H: Approved with conditions&lt;br/&gt;(executive review in 2 weeks)
+
+    Note over H,G: Phase 4: Execution (Human-outside-the-loop)
+    H-&gt;&gt;M: Execute action plan
+    M-&gt;&gt;M: Orchestrate workflows:&lt;br/&gt;- Marketing campaign&lt;br/&gt;- Sales coaching&lt;br/&gt;- Recruiting pipeline
+    M--&gt;&gt;D: Write execution events
+
+    Note over H,G: Phase 5: Monitoring &amp; Learning (Human-on-the-loop)
+    D-&gt;&gt;A: Stream real-time updates
+    A-&gt;&gt;A: Track KPIs:&lt;br/&gt;- New pipeline: +15%&lt;br/&gt;- Conversion: +3%
+    A--&gt;&gt;H: Weekly progress report&lt;br/&gt;"On track to close gap"
+    H-&gt;&gt;G: Document learnings&lt;br/&gt;Retrospective: What worked?
+    G-&gt;&gt;P: Update strategic playbook&lt;br/&gt;New pattern: "Q4 acceleration"
+
+    rect rgb(240, 253, 244)
+        Note over H,G: Outcome: Continuous Improvement Loop
+    end</code></pre>
+<figure>
+<figcaption><strong>Figure 4 — Human-AI Collaboration Loop</strong><br/>
+  The Human-AI Collaboration Loop demonstrates the complete decision cycle across three responsible AI control modes: <strong>Human-in-the-loop</strong> (Phases 1-2) where humans define problems and validate AI analysis in real-time; <strong>Human-on-the-loop</strong> (Phases 3, 5) where humans provide oversight and approval gates for AI recommendations and monitoring; and <strong>Human-outside-the-loop</strong> (Phase 4) where AI executes approved workflows autonomously with audit trails. This creates a self-improving organizational system where humans provide judgment and AI provides speed/scale, aligned with responsible AI frameworks (IEEE P7001, ISO/IEC 42001).</figcaption>
+</figure>
+<p><strong>Key Insight:</strong> The collaboration loop embeds humans at strategic control points while allowing AI to operate autonomously within approved boundaries, creating both speed and safety.</p>
 <hr/>
-<h2 id="recommended-reading-paths">🗺️ Recommended Reading Paths<a class="headerlink" href="#recommended-reading-paths" title="Permanent link">¶</a></h2>
-<h3 id="path-1-startup-founder-0-10-people-building-from-scratch"><strong>Path 1: Startup Founder</strong> (0-10 people, building from scratch)<a class="headerlink" href="#path-1-startup-founder-0-10-people-building-from-scratch" title="Permanent link">¶</a></h3>
+<h2 id="system-integration">System Integration<a class="headerlink" href="#system-integration" title="Permanent link">¶</a></h2>
+<p>These four figures form an integrated architectural view:</p>
 <ol>
-<li><a href="by-stage/startup-ai-native/">🚀 Startup AI-Native</a> — Your primary guide</li>
-<li><a href="organizational/squads/">👥 Squads</a> — How to structure your team</li>
-<li><a href="organizational/ai-integration/">🤖 AI Integration</a> — Deploy your first AI agents</li>
-<li>Choose 1-2 sector playbooks relevant to your business (e.g., Sales, Marketing)</li>
+<li><strong>Figure 1</strong> establishes the <strong>structural foundation</strong> — six layers creating an organizational nervous system</li>
+<li><strong>Figure 2</strong> details the <strong>execution layer</strong> — how workflows orchestrate across systems</li>
+<li><strong>Figure 3</strong> reveals the <strong>information backbone</strong> — canonical data flowing in real-time</li>
+<li><strong>Figure 4</strong> demonstrates the <strong>operational cycle</strong> — humans and AI collaborating through defined control modes</li>
 </ol>
-<p><strong>Time:</strong> 4-6 hours reading, 1-2 weeks implementation</p>
+<p><strong>Together</strong>, they specify a complete AI-native organization where:</p>
+<ul>
+<li><strong>Strategy flows down</strong> (Purpose → Data → Cognitive → Automation → Organization → Governance)</li>
+<li><strong>Feedback flows up</strong> (Execution results inform strategic adjustments)</li>
+<li><strong>Humans and AI collaborate</strong> at appropriate control points (in-the-loop, on-the-loop, outside-the-loop)</li>
+<li><strong>All actions are auditable</strong> through immutable event logs and decision trails</li>
+</ul>
 <hr/>
-<h3 id="path-2-sme-leader-10-250-employees-transforming-existing-org"><strong>Path 2: SME Leader</strong> (10-250 employees, transforming existing org)<a class="headerlink" href="#path-2-sme-leader-10-250-employees-transforming-existing-org" title="Permanent link">¶</a></h3>
-<ol>
-<li><a href="by-stage/sme-transformation/">📈 SME Transformation</a> — Your primary guide (start with Phase 0: Assessment)</li>
-<li>Choose pilot function playbook (recommended: <a href="by-sector/business-functions/administration/">📊 Administration &amp; Finance</a>)</li>
-<li><a href="organizational/midora-implementation/">🏛️ MIDORA Implementation</a> — Organizational redesign</li>
-<li><a href="organizational/operations/">⚙️ Operations</a> — New operating rhythm</li>
-</ol>
-<p><strong>Time:</strong> 8-12 hours reading, 3-6 months transformation</p>
+<h2 id="reference-implementation">Reference Implementation<a class="headerlink" href="#reference-implementation" title="Permanent link">¶</a></h2>
+<p>The <a href="https://midora.ai">Midora Platform</a> provides a concrete implementation of this architecture in the education technology domain, demonstrating:</p>
+<ul>
+<li><strong>Data Spine:</strong> Unified student, course, and engagement data across LMS, CRM, and content systems</li>
+<li><strong>Cognitive Layer:</strong> AI tutors, curriculum designers, and administrative assistants</li>
+<li><strong>Automation Mesh:</strong> Enrollment workflows, content generation pipelines, assessment orchestration</li>
+<li><strong>Governance:</strong> Ethical AI review for student-facing agents, FERPA compliance monitoring</li>
+</ul>
+<p><strong>See:</strong> <a href="../../adr/adr-0003-data-spine-automation-mesh-integration/">ADR-0003: Data Spine &amp; Automation Mesh Integration</a> for detailed technical specifications.</p>
 <hr/>
-<h3 id="path-3-department-head-transforming-one-function"><strong>Path 3: Department Head</strong> (Transforming one function)<a class="headerlink" href="#path-3-department-head-transforming-one-function" title="Permanent link">¶</a></h3>
-<ol>
-<li>Find your sector playbook (e.g., <a href="by-sector/business-functions/sales/">💼 Sales</a>)</li>
-<li><a href="organizational/squads/">👥 Squads</a> — Restructure your team</li>
-<li><a href="organizational/ai-integration/">🤖 AI Integration</a> — Deploy AI agents for your function</li>
-<li><a href="organizational/operations/">⚙️ Operations</a> — Daily/weekly rituals</li>
-</ol>
-<p><strong>Time:</strong> 2-4 hours reading, 4-8 weeks implementation</p>
-<hr/>
-<h3 id="path-4-ctoproduct-leader-implementing-solidai-framework"><strong>Path 4: CTO/Product Leader</strong> (Implementing SOLID.AI framework)<a class="headerlink" href="#path-4-ctoproduct-leader-implementing-solidai-framework" title="Permanent link">¶</a></h3>
-<ol>
-<li><a href="organizational/midora-implementation/">🏛️ MIDORA Implementation</a> — Full organizational topology</li>
-<li><a href="organizational/squads/">👥 Squads</a> + <a href="organizational/pools/">🔄 Pools</a> — Team structure</li>
-<li><a href="organizational/ai-integration/">🤖 AI Integration</a> — AI agent governance</li>
-<li><a href="organizational/operations/">⚙️ Operations</a> — Operating model</li>
-</ol>
-<p><strong>Time:</strong> 6-8 hours reading, 6-12 months full implementation</p>
-<hr/>
-<h2 id="playbook-maturity-levels">📊 Playbook Maturity Levels<a class="headerlink" href="#playbook-maturity-levels" title="Permanent link">¶</a></h2>
-<p>All playbooks are designed for different levels of AI-Native maturity:</p>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">¶</a></h2>
+<p>This architecture overview is designed for:</p>
 <table>
 <thead>
 <tr>
-<th>Level</th>
-<th>Description</th>
-<th>Start With</th>
+<th>Audience</th>
+<th>Use Case</th>
+<th>Focus Figures</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Level 0: Manual</strong></td>
-<td>Traditional operations, no AI</td>
-<td><a href="by-stage/sme-transformation/">📈 SME Transformation</a></td>
+<td><strong>Executives</strong></td>
+<td>Business transformation roadmap</td>
+<td>Figure 1, 4</td>
 </tr>
 <tr>
-<td><strong>Level 1: AI-Assisted</strong></td>
-<td>AI supports humans (co-pilot mode)</td>
-<td>Sector playbooks (Sales, Finance, etc.)</td>
+<td><strong>Architects</strong></td>
+<td>System design and integration</td>
+<td>Figure 2, 3</td>
 </tr>
 <tr>
-<td><strong>Level 2: AI-Native</strong></td>
-<td>AI handles 70-80% of work, humans focus on high-value</td>
-<td><a href="by-stage/startup-ai-native/">🚀 Startup AI-Native</a></td>
+<td><strong>Data Engineers</strong></td>
+<td>Data infrastructure planning</td>
+<td>Figure 3</td>
 </tr>
 <tr>
-<td><strong>Level 3: AI-Coordinated</strong></td>
-<td>AI agents orchestrate across functions</td>
-<td><a href="organizational/midora-implementation/">🏛️ MIDORA Implementation</a></td>
+<td><strong>AI Engineers</strong></td>
+<td>Agent deployment and orchestration</td>
+<td>Figure 2, 4</td>
+</tr>
+<tr>
+<td><strong>Product Managers</strong></td>
+<td>Feature prioritization and workflows</td>
+<td>Figure 1, 2, 4</td>
+</tr>
+<tr>
+<td><strong>Compliance Officers</strong></td>
+<td>Governance and audit requirements</td>
+<td>Figure 1, 4</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h2 id="supporting-resources">🛠️ Supporting Resources<a class="headerlink" href="#supporting-resources" title="Permanent link">¶</a></h2>
-<p><strong>Templates &amp; Checklists:</strong>
-- <a href="../ADOPTION/">Adoption Pack</a> — Ready-to-use templates, checklists, prompts
-- <a href="../ADOPTION/REFERENCE-CARDS/">Reference Cards</a> — AI prompting patterns by sector
-- <a href="../ADOPTION/TEMPLATES/">Templates</a> — Agent definitions, squad charters, data contracts</p>
-<p><strong>Framework Documentation:</strong>
-- <a href="../DOCS/00-overview.md">SOLID.AI Overview</a> — Framework introduction
-- <a href="../DOCS/02-architecture.md">Architecture</a> — 6-layer architecture
-- <a href="../DOCS/05-ai-agents.md">AI Agents Guide</a> — How to define agents
-- <a href="../DOCS/08-human-ai-collaboration.md">Human-AI Collaboration</a> — Where humans lead
-- <a href="../DOCS/10-role-hierarchy-human-ai.md">Role Hierarchy</a> — Career progression</p>
-<p><strong>Diagrams:</strong>
-- <a href="../DIAGRAMS/">DIAGRAMS/</a> — Mermaid visualizations of architecture, workflows, organizational patterns</p>
+<h2 id="pdf-export">PDF Export<a class="headerlink" href="#pdf-export" title="Permanent link">¶</a></h2>
+<p>For high-resolution PDF exports suitable for presentations and publications:</p>
+<ol>
+<li>Use browser print function (Ctrl/Cmd + P)</li>
+<li>Select "Save as PDF"</li>
+<li>Enable "Background graphics"</li>
+<li>Set scale to 100%</li>
+<li>Margins: Minimum</li>
+</ol>
+<p>Alternatively, use specialized Mermaid PDF exporters:
+- <a href="https://github.com/mermaid-js/mermaid-cli">Mermaid CLI</a>
+- <a href="https://www.npmjs.com/package/@mermaid-js/mermaid-cli">mmdc command-line tool</a></p>
 <hr/>
-<h2 id="need-help">💬 Need Help?<a class="headerlink" href="#need-help" title="Permanent link">¶</a></h2>
-<p><strong>Can't find the right playbook?</strong>
-- <strong>Startup (0-10 people):</strong> Start with <a href="by-stage/startup-ai-native/">🚀 Startup AI-Native</a>
-- <strong>SME (10-250 people):</strong> Start with <a href="by-stage/sme-transformation/">📈 SME Transformation</a>
-- <strong>Department-specific:</strong> Go to <a href="#by-sector--what-industry-are-you-in">By Sector</a> and find your function
-- <strong>Organizational patterns:</strong> Go to <a href="#organizational-patterns--how-do-you-structure-teams">Organizational Patterns</a></p>
-<p><strong>Questions or feedback?</strong>
-- Open a GitHub Issue
-- Join GitHub Discussions (coming soon)
-- Read <a href="../CONTRIBUTING.md">Contributing Guide</a></p>
-<hr/>
-<p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025 | <strong>Framework:</strong> SOLID.AI</p>
+<p><strong>Navigation:</strong> <a href="../diagrams/">← Diagrams</a> | <a href="../abstract/">Abstract →</a> | <a href="../">Index</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -2377,7 +2295,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
 </body>
 </html>
