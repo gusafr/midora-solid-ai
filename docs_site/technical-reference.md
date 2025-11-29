@@ -1,23 +1,60 @@
-# SOLID.AI Technical Reference
+<div style="text-align: center; padding: 3rem 0 2rem 0;">
+  <h1 style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 2.5rem; color: #0d9488; margin-bottom: 0.5rem; letter-spacing: -0.02em;">
+    SOLID.AI Technical Reference
+  </h1>
+  <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #64748b; font-weight: 400; margin-top: 0;">
+    Strategic Organization Leveraging Intelligent Design for Artificial Intelligence
+  </p>
+</div>
 
-**Strategic Organization Leveraging Intelligent Design for Artificial Intelligence**
+<div style="border-left: 4px solid #0d9488; padding-left: 1.5rem; margin: 2rem 0; background: linear-gradient(to right, #f0fdfa, transparent); padding: 1.5rem; border-radius: 0 8px 8px 0;">
 
----
-
-## Document Information
-
-| Attribute | Value |
-|-----------|-------|
+| 📋 Attribute | Value |
+|--------------|-------|
 | **Version** | 1.0.0 |
 | **Date** | November 2025 |
-| **Status** | Published |
+| **Status** | <span style="color: #0d9488; font-weight: 600;">✓ Published</span> |
 | **Authors** | Gustavo Freitas, Midora Education Labs |
 | **License** | MIT License |
 | **Framework** | SOLID.AI |
+| **DOI** | [Citation Below](#citation) |
+
+</div>
+
+<div style="background: linear-gradient(135deg, #fef3f2 0%, #f0fdfa 100%); border: 1px solid #99f6e4; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
+
+### 📝 Citation
+
+If you use SOLID.AI in your research or project, please cite:
+
+```bibtex
+@techreport{freitas2025solidai,
+  title        = {SOLID.AI Technical Reference: Strategic Organization Leveraging Intelligent Design for Artificial Intelligence},
+  author       = {Freitas, Gustavo},
+  year         = {2025},
+  month        = {November},
+  institution  = {Midora Education Labs},
+  type         = {Technical Reference},
+  version      = {1.0.0},
+  url          = {https://gusafr.github.io/midora-solid-ai/technical-reference/},
+  note         = {Framework for AI-native organizational design}
+}
+```
+
+**APA Style:**
+> Freitas, G. (2025). *SOLID.AI technical reference: Strategic organization leveraging intelligent design for artificial intelligence* (Version 1.0.0). Midora Education Labs. https://gusafr.github.io/midora-solid-ai/technical-reference/
+
+**Chicago Style:**
+> Freitas, Gustavo. 2025. "SOLID.AI Technical Reference: Strategic Organization Leveraging Intelligent Design for Artificial Intelligence." Version 1.0.0. Technical Reference. Midora Education Labs. https://gusafr.github.io/midora-solid-ai/technical-reference/.
+
+**IEEE Style:**
+> G. Freitas, "SOLID.AI Technical Reference: Strategic Organization Leveraging Intelligent Design for Artificial Intelligence," Midora Education Labs, Tech. Rep., Nov. 2025, ver. 1.0.0. [Online]. Available: https://gusafr.github.io/midora-solid-ai/technical-reference/
+
+</div>
 
 ---
 
-## Abstract
+## 📄 Abstract
 
 **SOLID.AI** is a comprehensive, open-source framework for designing intelligent, ethical, and adaptive organizations where humans and AI agents collaborate as peers. This technical reference provides a formal specification of the framework's architecture, principles, methodology, and governance structures.
 
@@ -33,9 +70,9 @@ The framework addresses the critical challenge facing modern organizations: the 
 
 **Target Audience:** Enterprise architects, CTOs, transformation leaders, researchers, and practitioners implementing AI-native organizational models across industries including technology, healthcare, finance, manufacturing, retail, professional services, logistics, and human resources.
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Vision
+## 🎯 Vision
 
 ### The Intelligent Hybrid Organization
 
@@ -82,9 +119,9 @@ Organizations that transform coherently across all functions achieve:
 
 This is not science fiction—it is the competitive imperative for organizations that will thrive in the next decade.
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Principles
+## 💎 Principles
 
 SOLID.AI principles encode the behaviors required to build responsible, adaptive, AI-native organizations. They apply across strategy, design, and operations.
 
@@ -162,9 +199,9 @@ SOLID.AI principles encode the behaviors required to build responsible, adaptive
 - Humans bring judgment, ethics, creativity; AI brings automation, consistency, scale
 - Together they create *collective intelligence*
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Architecture
+## 🏗️ Architecture
 
 The SOLID.AI architecture connects six interdependent layers. Each layer is modular yet synchronized through shared contracts, data flows, and governance policies.
 
@@ -299,9 +336,9 @@ Squads are **anchored to business services** (bounded contexts), not technical l
 
 **See:** [Governance & Ethics](governance-ethics.md)
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Layers
+## 📚 Layers
 
 ### Detailed Layer Specifications
 
@@ -511,9 +548,9 @@ agent:
 - PCI-DSS (payment cards)
 - Industry-specific regulations
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Methodology
+## 🔄 Methodology
 
 ### Implementation Approach
 
@@ -634,9 +671,9 @@ Impact:
 
 **See:** [AI-Native Agile](ai-native-agile.md), [AI-Native Kanban](ai-native-kanban.md)
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Governance
+## 🛡️ Governance
 
 ### Governance Framework
 
@@ -768,9 +805,9 @@ What becomes easier/harder? What are the tradeoffs?
 
 **See:** [Governance & Ethics](governance-ethics.md), [Governance Playbooks](playbooks/#governance)
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Use Cases
+## 💼 Use Cases
 
 ### Cross-Industry Examples
 
@@ -902,9 +939,9 @@ What becomes easier/harder? What are the tradeoffs?
 - **Service Industries:** [Professional Services](playbooks/by-sector/services/professional-services.md), [Logistics](playbooks/by-sector/services/logistics.md), [Human Resources](playbooks/by-sector/services/human-resources.md)
 - **By Company Stage:** [Startup (AI-Native)](playbooks/by-stage/startup-ai-native.md), [SME Transformation](playbooks/by-stage/sme-transformation.md)
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Glossary
+## 📖 Glossary
 
 Comprehensive terminology reference available at: [Glossary](glossary.md)
 
@@ -924,9 +961,9 @@ Comprehensive terminology reference available at: [Glossary](glossary.md)
 - **ADR:** Architecture Decision Record (decision documentation)
 - **OKR:** Objectives & Key Results (goal-setting framework)
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## References
+## 📚 References
 
 ### Core Documentation
 
@@ -1061,9 +1098,9 @@ Comprehensive terminology reference available at: [Glossary](glossary.md)
 - SAFe (Scaled Agile): https://scaledagileframework.com/
 - Kanban Guide: https://kanbanguides.org/
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Versioning & Updates
+## 🔖 Versioning & Updates
 
 This document follows semantic versioning (MAJOR.MINOR.PATCH):
 
@@ -1078,9 +1115,9 @@ This document follows semantic versioning (MAJOR.MINOR.PATCH):
 **Change Log:**
 - **v1.0.0 (2025-11-29):** Initial technical reference published
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Contributing
+## 🤝 Contributing
 
 We welcome contributions to SOLID.AI! Please see [CONTRIBUTING.md](../CONTRIBUTING.md) for:
 - RFC process (proposing architectural changes)
@@ -1088,28 +1125,55 @@ We welcome contributions to SOLID.AI! Please see [CONTRIBUTING.md](../CONTRIBUTI
 - Playbook contributions (sector-specific guides)
 - Code of Conduct
 
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
+
+## ⚖️ License
+
+<div style="background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%); border: 1px solid #99f6e4; border-radius: 8px; padding: 2rem; margin: 1.5rem 0;">
+
+### MIT License
+
+Copyright © 2025 Midora Education Labs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
+
 ---
 
-## License
+**What this means for you:**
 
-SOLID.AI is licensed under the MIT License. See [LICENSE](../LICENSE) for details.
+✅ **Commercial Use** - Use SOLID.AI in commercial projects  
+✅ **Modification** - Adapt and extend the framework for your needs  
+✅ **Distribution** - Share with teams, clients, or the community  
+✅ **Private Use** - Implement internally without disclosure  
+⚠️ **Attribution Required** - Include copyright notice and license  
+⚠️ **No Warranty** - Provided as-is without guarantees  
 
----
+**Full License:** See [LICENSE](../LICENSE) in the repository
 
-## Contact & Community
+</div>
+
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
+
+## 🌐 Contact & Community
 
 - **Repository:** https://github.com/gusafr/midora-solid-ai
 - **Documentation:** https://gusafr.github.io/midora-solid-ai/
 - **Discussions:** GitHub Discussions (coming soon)
 - **Author:** Gustavo Freitas ([@gusafr](https://github.com/gusafr))
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-**© 2025 Midora Education Labs. Licensed under the MIT License.**
+<div style="text-align: center; padding: 1.5rem; background: linear-gradient(to right, #f0fdfa, #fef3f2, #f0fdfa); border-radius: 8px; margin: 2rem 0;">
+  <p style="font-family: 'Inter', sans-serif; color: #475569; margin: 0;">© 2025 Midora Education Labs. Licensed under the MIT License.</p>
+</div>
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 SOLID.AI builds upon decades of research and practice in:
 - Domain-Driven Design (Eric Evans)
@@ -1121,6 +1185,12 @@ SOLID.AI builds upon decades of research and practice in:
 
 We are grateful to the open-source community and practitioners worldwide who continue to advance the state of the art in organizational design, AI governance, and human-machine collaboration.
 
----
+<div style="height: 2px; background: linear-gradient(to right, transparent, #0d9488, transparent); margin: 3rem 0;"></div>
 
-*This document is the formal technical specification of SOLID.AI. For practical implementation guides, see the [Quick Start Guide](quick-start.md) and [Adoption Pack](adoption/).*
+<div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%); border-radius: 12px; border: 1px solid #99f6e4;">
+  <p style="font-family: 'Inter', sans-serif; font-style: italic; color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+    <strong style="color: #0d9488;">📘 Technical Specification</strong><br/>
+    This document is the formal technical specification of SOLID.AI.<br/>
+    For practical implementation guides, see the <a href="quick-start.md" style="color: #0d9488; text-decoration: none; font-weight: 600;">Quick Start Guide</a> and <a href="adoption/" style="color: #0d9488; text-decoration: none; font-weight: 600;">Adoption Pack</a>.
+  </p>
+</div>

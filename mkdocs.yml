@@ -7,25 +7,33 @@ edit_uri: edit/main/
 docs_dir: docs_site
 nav:
   - Home: index.md
-  - 📘 Technical Reference: technical-reference.md
-  - 🆕 v1.0 Release Notes: v1-release-notes.md
-  - 🚀 Quick Start: quick-start.md
-  - 📚 Reading Paths: README.md
-  - Overview: overview.md
-  - Principles: principles.md
-  - Architecture: architecture.md
-  - Organizational Model: organizational-model.md
-  - Automation SIPOC: automation-sipoc.md
-  - AI Agents: ai-agents.md
-  - Governance & Ethics: governance-ethics.md
-  - Observability: observability.md
-  - Human-AI Collaboration: human-ai-collaboration.md
-  - Role Hierarchy (Human & AI): role-hierarchy-human-ai.md
+  - Whitepaper:
+    - Abstract: whitepaper/abstract.md
+    - Architecture: whitepaper/architecture.md
+    - Specification: whitepaper/specification.md
+    - Governance: whitepaper/governance.md
+    - 📊 Diagrams: whitepaper/diagrams.md
+  - Getting Started:
+    - 🚀 Quick Start: quick-start.md
+    - 📚 Reading Paths: README.md
+    - 📊 All Diagrams: diagrams.md
+  - Core Documentation:
+    - Overview: overview.md
+    - Principles: principles.md
+    - Architecture: architecture.md
+    - Organizational Model: organizational-model.md
+    - Automation SIPOC: automation-sipoc.md
+    - AI Agents: ai-agents.md
+    - Governance & Ethics: governance-ethics.md
+    - Observability: observability.md
+    - Human-AI Collaboration: human-ai-collaboration.md
+    - Role Hierarchy (Human & AI): role-hierarchy-human-ai.md
   - AI-Native Agile:
     - AI-Native Agile & SAFe (Scrum): ai-native-agile.md
     - AI-Native Kanban: ai-native-kanban.md
-  - Whole-Org Transformation: whole-organization-transformation.md
-  - Glossary: glossary.md
+  - Transformation:
+    - Whole-Org Transformation: whole-organization-transformation.md
+    - Glossary: glossary.md
   - 📊 Diagrams: diagrams.md
   - Adoption Pack:
     - Overview: adoption/index.md
@@ -177,6 +185,9 @@ theme:
   font:
     text: Inter
     code: Fira Code
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
