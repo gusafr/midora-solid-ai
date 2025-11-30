@@ -591,9 +591,10 @@ html {
 
 /* === Header === */
 .md-header {
-  background: linear-gradient(135deg, var(--solid-teal-dark), var(--solid-teal));
-  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--solid-border-teal);
 }
 
 .md-header__inner {
@@ -602,10 +603,25 @@ html {
 
 .md-header__button {
   margin: 0.25rem;
+  color: var(--solid-teal-dark) !important;
 }
 
 .md-header__title {
   padding: 0.25rem 0.5rem;
+  color: var(--solid-teal-dark) !important;
+}
+
+/* === Search Button Text === */
+.md-search__form {
+  background: transparent;
+}
+
+.md-search__input::placeholder {
+  color: var(--solid-gray) !important;
+}
+
+[data-md-component="search-button"] {
+  color: var(--solid-teal-dark) !important;
 }
 
 /* === Footer === */
