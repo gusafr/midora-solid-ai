@@ -593,6 +593,19 @@ html {
 .md-header {
   background: linear-gradient(135deg, var(--solid-teal-dark), var(--solid-teal));
   box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
+  padding: 0.5rem 1rem;
+}
+
+.md-header__inner {
+  padding: 0.25rem 0;
+}
+
+.md-header__button {
+  margin: 0.25rem;
+}
+
+.md-header__title {
+  padding: 0.25rem 0.5rem;
 }
 
 /* === Footer === */
