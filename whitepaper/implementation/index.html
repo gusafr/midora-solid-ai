@@ -6,12 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="The organizational nervous system for AI-Native companies." name="description"/>
-<link href="https://gusafr.github.io/solid.ai/adr/adr-0001-mermaid-choice/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../adr-0002-business-service-organization/" rel="next"/>
+<link href="https://gusafr.github.io/solid.ai/whitepaper/implementation/" rel="canonical"/>
+<link href="../specification/" rel="prev"/>
+<link href="../governance/" rel="next"/>
 <link href="../../assets/images/solid-ai-logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>ADR 0001 – Mermaid for Diagrams - solid.ai</title>
+<title>🔧 Implementation Guide - solid.ai</title>
 <link href="../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#adr-0001-adopt-mermaid-for-diagrams">
+<a class="md-skip" href="#implementation-guide">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ADR 0001 – Mermaid for Diagrams
+              🔧 Implementation Guide
             
           </span>
 </div>
@@ -145,8 +145,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
     Whitepaper
@@ -154,14 +154,14 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Whitepaper
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/abstract/">
+<a class="md-nav__link" href="../abstract/">
 <span class="md-ellipsis">
     📄 Abstract
     
@@ -169,7 +169,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/architecture/">
+<a class="md-nav__link" href="../architecture/">
 <span class="md-ellipsis">
     🏗️ Architecture
     
@@ -177,23 +177,224 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/specification/">
+<a class="md-nav__link" href="../specification/">
 <span class="md-ellipsis">
     📐 Specification
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/implementation/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    🔧 Implementation Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     🔧 Implementation Guide
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#component-status">
+<span class="md-ellipsis">
+      Component Status
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/governance/">
+<a class="md-nav__link" href="#data-spine-layer-2">
+<span class="md-ellipsis">
+      Data Spine (Layer 2)
+    </span>
+</a>
+<nav aria-label="Data Spine (Layer 2)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-principles">
+<span class="md-ellipsis">
+      Design Principles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-components">
+<span class="md-ellipsis">
+      Core Components
+    </span>
+</a>
+<nav aria-label="Core Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canonical-data-models">
+<span class="md-ellipsis">
+      Canonical Data Models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-contracts">
+<span class="md-ellipsis">
+      Data Contracts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#event-streaming-architecture">
+<span class="md-ellipsis">
+      Event Streaming Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-quality-framework">
+<span class="md-ellipsis">
+      Data Quality Framework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cognitive-layer-layer-3">
+<span class="md-ellipsis">
+      Cognitive Layer (Layer 3)
+    </span>
+</a>
+<nav aria-label="Cognitive Layer (Layer 3)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview_1">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-definition-schema">
+<span class="md-ellipsis">
+      Agent Definition Schema
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-lifecycle">
+<span class="md-ellipsis">
+      Agent Lifecycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reasoning-patterns">
+<span class="md-ellipsis">
+      Reasoning Patterns
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-mesh-layer-4">
+<span class="md-ellipsis">
+      Automation Mesh (Layer 4)
+    </span>
+</a>
+<nav aria-label="Automation Mesh (Layer 4)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview_2">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sipoc-integration">
+<span class="md-ellipsis">
+      SIPOC Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow-orchestration">
+<span class="md-ellipsis">
+      Workflow Orchestration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organizational-layer-layer-5">
+<span class="md-ellipsis">
+      Organizational Layer (Layer 5)
+    </span>
+</a>
+<nav aria-label="Organizational Layer (Layer 5)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-specification">
+<span class="md-ellipsis">
+      Squad Specification
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-layer-layer-6">
+<span class="md-ellipsis">
+      Governance Layer (Layer 6)
+    </span>
+</a>
+<nav aria-label="Governance Layer (Layer 6)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfc-process">
+<span class="md-ellipsis">
+      RFC Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adr-process">
+<span class="md-ellipsis">
+      ADR Process
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../governance/">
 <span class="md-ellipsis">
     ⚖️ Governance
     
@@ -201,7 +402,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/diagrams/">
+<a class="md-nav__link" href="../diagrams/">
 <span class="md-ellipsis">
     📊 Diagrams
     
@@ -209,7 +410,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../whitepaper/figures/">
+<a class="md-nav__link" href="../figures/">
 <span class="md-ellipsis">
     🎯 Architecture Overview
     
@@ -1211,8 +1412,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_12" type="checkbox"/>
 <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
 <span class="md-ellipsis">
     Reference
@@ -1220,7 +1421,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_12">
 <span class="md-nav__icon md-icon"></span>
             Reference
@@ -1302,8 +1503,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_12_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_12_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
 <span class="md-ellipsis">
     ADRs
@@ -1311,74 +1512,30 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_12_3">
 <span class="md-nav__icon md-icon"></span>
             ADRs
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../adr/">
 <span class="md-ellipsis">
     📋 ADR Overview
     
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    ADR 0001 – Mermaid for Diagrams
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../adr/adr-0001-mermaid-choice/">
 <span class="md-ellipsis">
     ADR 0001 – Mermaid for Diagrams
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#context">
-<span class="md-ellipsis">
-      Context
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#decision">
-<span class="md-ellipsis">
-      Decision
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#consequences">
-<span class="md-ellipsis">
-      Consequences
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alternatives-considered">
-<span class="md-ellipsis">
-      Alternatives Considered
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../adr-0002-business-service-organization/">
+<a class="md-nav__link" href="../../adr/adr-0002-business-service-organization/">
 <span class="md-ellipsis">
     ADR 0002 – Business Service Organization
     
@@ -1386,7 +1543,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr-0003-data-spine-automation-mesh-integration/">
+<a class="md-nav__link" href="../../adr/adr-0003-data-spine-automation-mesh-integration/">
 <span class="md-ellipsis">
     ADR 0003 – Data Spine &amp; Automation Mesh Integration
     
@@ -1394,7 +1551,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../adr-0004-reportlab-pdf-generation/">
+<a class="md-nav__link" href="../../adr/adr-0004-reportlab-pdf-generation/">
 <span class="md-ellipsis">
     ADR 0004 – ReportLab PDF Generation
     
@@ -1854,32 +2011,189 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#context">
+<a class="md-nav__link" href="#component-status">
 <span class="md-ellipsis">
-      Context
+      Component Status
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#decision">
+<a class="md-nav__link" href="#data-spine-layer-2">
 <span class="md-ellipsis">
-      Decision
+      Data Spine (Layer 2)
+    </span>
+</a>
+<nav aria-label="Data Spine (Layer 2)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#consequences">
+<a class="md-nav__link" href="#design-principles">
 <span class="md-ellipsis">
-      Consequences
+      Design Principles
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alternatives-considered">
+<a class="md-nav__link" href="#core-components">
 <span class="md-ellipsis">
-      Alternatives Considered
+      Core Components
     </span>
 </a>
+<nav aria-label="Core Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canonical-data-models">
+<span class="md-ellipsis">
+      Canonical Data Models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-contracts">
+<span class="md-ellipsis">
+      Data Contracts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#event-streaming-architecture">
+<span class="md-ellipsis">
+      Event Streaming Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-quality-framework">
+<span class="md-ellipsis">
+      Data Quality Framework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cognitive-layer-layer-3">
+<span class="md-ellipsis">
+      Cognitive Layer (Layer 3)
+    </span>
+</a>
+<nav aria-label="Cognitive Layer (Layer 3)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview_1">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-definition-schema">
+<span class="md-ellipsis">
+      Agent Definition Schema
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-lifecycle">
+<span class="md-ellipsis">
+      Agent Lifecycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reasoning-patterns">
+<span class="md-ellipsis">
+      Reasoning Patterns
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-mesh-layer-4">
+<span class="md-ellipsis">
+      Automation Mesh (Layer 4)
+    </span>
+</a>
+<nav aria-label="Automation Mesh (Layer 4)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview_2">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sipoc-integration">
+<span class="md-ellipsis">
+      SIPOC Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow-orchestration">
+<span class="md-ellipsis">
+      Workflow Orchestration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organizational-layer-layer-5">
+<span class="md-ellipsis">
+      Organizational Layer (Layer 5)
+    </span>
+</a>
+<nav aria-label="Organizational Layer (Layer 5)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#squad-specification">
+<span class="md-ellipsis">
+      Squad Specification
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#governance-layer-layer-6">
+<span class="md-ellipsis">
+      Governance Layer (Layer 6)
+    </span>
+</a>
+<nav aria-label="Governance Layer (Layer 6)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfc-process">
+<span class="md-ellipsis">
+      RFC Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adr-process">
+<span class="md-ellipsis">
+      ADR Process
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1888,31 +2202,411 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="adr-0001-adopt-mermaid-for-diagrams">ADR-0001: Adopt Mermaid for Diagrams<a class="headerlink" href="#adr-0001-adopt-mermaid-for-diagrams" title="Permanent link">¶</a></h1>
+<h1 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">¶</a></h1>
+<p><strong>Status:</strong> <img alt="Stable" src="https://img.shields.io/badge/Status-Stable-green"> <strong>Version:</strong> 1.0</img></p>
+<hr/>
+<h3 id="component-status">Component Status<a class="headerlink" href="#component-status" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Status:</strong> Accepted</li>
-<li><strong>Context:</strong> 2025-11-02</li>
-<li><strong>Deciders:</strong> Gustavo Freitas, Midora Education Labs</li>
-<li><strong>Consulted:</strong> solid.ai community (early contributors)</li>
-<li><strong>Related RFCs:</strong> RFC-0001, RFC-0002</li>
+<li><strong>Automation Mesh Spec</strong> — <img alt="Candidate" src="https://img.shields.io/badge/Status-Candidate-yellow"> v1.0</img></li>
+<li><strong>Data Spine Spec</strong> — <img alt="Stable" src="https://img.shields.io/badge/Status-Stable-green"/> v1.0</li>
+<li><strong>Cognitive Layer Spec</strong> — <img alt="Stable" src="https://img.shields.io/badge/Status-Stable-green"/> v1.0</li>
+<li><strong>Human-AI Loop Spec</strong> — <img alt="Stable" src="https://img.shields.io/badge/Status-Stable-green"/> v1.0</li>
 </ul>
-<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h2>
-<p>solid.ai documentation requires clear, version-controlled diagrams to represent architecture, organizational flows, and governance models. Contributors need a lightweight format that fits well with Markdown-first workflows and integrates with MkDocs.</p>
-<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">¶</a></h2>
-<p>Adopt Mermaid (<code>.mmd</code>) as the canonical diagramming language for the repository.</p>
-<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">¶</a></h2>
-<ul>
-<li>Diagrams live in version control and are easy to review via diffs.</li>
-<li>MkDocs Material can render Mermaid diagrams without additional tooling.</li>
-<li>Contributors can edit diagrams with any text editor or Mermaid-compatible UI tools.</li>
-<li>Future tooling can export Mermaid diagrams to SVG or PNG for presentations.</li>
-</ul>
-<h2 id="alternatives-considered">Alternatives Considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Draw.io / Excalidraw:</strong> Provide rich visual editing but harder to diff and automate.</li>
-<li><strong>PlantUML:</strong> Powerful but requires additional setup and Java runtime for previews.</li>
-<li><strong>Static Images:</strong> Simple but limit collaboration and increase maintenance overhead.</li>
-</ul>
+<hr/>
+<p>This section provides detailed technical specifications for each layer of the SOLID.AI architecture.</p>
+<hr/>
+<h2 id="data-spine-layer-2">Data Spine (Layer 2)<a class="headerlink" href="#data-spine-layer-2" title="Permanent link">¶</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h3>
+<p>As shown in Figure 3 (see <a href="../diagrams/#3-solidai-data-spine-topology">Diagrams</a>), the Data Spine serves as the organization's unified, real-time data infrastructure—a single source of truth accessible to all humans and AI agents.</p>
+<h3 id="design-principles">Design Principles<a class="headerlink" href="#design-principles" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Schema-First:</strong> All data models defined with strict contracts (JSON Schema, Avro, Protobuf)</li>
+<li><strong>Event-Driven:</strong> Changes propagated via immutable event logs</li>
+<li><strong>Real-Time:</strong> &lt;5 second latency for critical data updates</li>
+<li><strong>Bi-Directional Sync:</strong> Changes flow in all directions (no master/slave)</li>
+<li><strong>Audit Trail:</strong> Complete history of all data mutations</li>
+</ol>
+<h3 id="core-components">Core Components<a class="headerlink" href="#core-components" title="Permanent link">¶</a></h3>
+<h4 id="canonical-data-models">Canonical Data Models<a class="headerlink" href="#canonical-data-models" title="Permanent link">¶</a></h4>
+<p>Standard entity definitions across the organization:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Customer entity</span>
+<span class="nt">Customer</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UUID (immutable)</span>
+<span class="w">  </span><span class="nt">created_at</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISO8601 timestamp</span>
+<span class="w">  </span><span class="nt">updated_at</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISO8601 timestamp</span>
+<span class="w">  </span><span class="nt">attributes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string (required)</span>
+<span class="w">    </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email (unique, required)</span>
+<span class="w">    </span><span class="nt">company</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string (optional)</span>
+<span class="w">    </span><span class="nt">tier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum[free, pro, enterprise]</span>
+<span class="w">    </span><span class="nt">mrr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">decimal (monthly recurring revenue)</span>
+<span class="w">  </span><span class="nt">relationships</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contracts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasMany(Contract)</span>
+<span class="w">    </span><span class="nt">interactions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasMany(Interaction)</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">belongsTo(User, role="account_manager")</span>
+</code></pre></div>
+<h4 id="data-contracts">Data Contracts<a class="headerlink" href="#data-contracts" title="Permanent link">¶</a></h4>
+<p>Formal agreements between systems defining interfaces:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Contract: CRM → Data Spine</span>
+<span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">salesforce_crm</span>
+<span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_spine</span>
+<span class="nt">entity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Customer</span>
+<span class="nt">sync_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">real_time</span>
+<span class="nt">transformations</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">map</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AccountId → id</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">map</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name → name</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">map</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Email → email</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">map</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnnualRevenue / 12 → mrr</span>
+<span class="nt">validations</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">email</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email matches RFC5322</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mrr &gt;= 0</span>
+<span class="nt">sla</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;3 seconds</span>
+<span class="w">  </span><span class="nt">availability</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99.9%</span>
+</code></pre></div>
+<h4 id="event-streaming-architecture">Event Streaming Architecture<a class="headerlink" href="#event-streaming-architecture" title="Permanent link">¶</a></h4>
+<p><strong>Event Types:</strong>
+- <code>entity.created</code> – New record
+- <code>entity.updated</code> – Field changes
+- <code>entity.deleted</code> – Soft delete (immutable log)
+- <code>entity.merged</code> – Deduplication</p>
+<p><strong>Event Schema:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uuid"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer.updated"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-11-29T10:30:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crm_api"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"human"</span><span class="p">,</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_123"</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_456"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"tier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w"> </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"enterprise"</span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"mrr"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"contract_signed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"effective_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-12-01"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="data-quality-framework">Data Quality Framework<a class="headerlink" href="#data-quality-framework" title="Permanent link">¶</a></h4>
+<p><strong>Automated Validations:</strong>
+- Schema conformance (type checking)
+- Referential integrity (foreign keys)
+- Business rules (e.g., MRR ≥ 0)
+- Freshness checks (update recency)
+- Completeness scores (missing fields)</p>
+<p><strong>Quality Metrics:</strong>
+- <strong>Accuracy:</strong> % records passing validation
+- <strong>Completeness:</strong> % required fields populated
+- <strong>Consistency:</strong> % cross-system reconciliation matches
+- <strong>Timeliness:</strong> p95 latency for updates</p>
+<hr/>
+<h2 id="cognitive-layer-layer-3">Cognitive Layer (Layer 3)<a class="headerlink" href="#cognitive-layer-layer-3" title="Permanent link">¶</a></h2>
+<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">¶</a></h3>
+<p>As shown in Figure 4 (see <a href="../diagrams/#4-solidai-human-ai-collaboration-loop">Diagrams</a>), AI agents operate as organizational members with defined roles, capabilities, and accountability through a continuous collaboration loop with humans.</p>
+<blockquote>
+<p><strong>See:</strong> <a href="../diagrams/#4-solidai-human-ai-collaboration-loop">Human-AI Collaboration Loop Diagram</a> for complete interaction flow</p>
+</blockquote>
+<h3 id="agent-definition-schema">Agent Definition Schema<a class="headerlink" href="#agent-definition-schema" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sales_analyst_001</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sales Performance Analyzer</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">analytical</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.1.0</span>
+
+<span class="w">  </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">Analyze sales pipeline data, identify trends, and provide </span>
+<span class="w">    </span><span class="no">actionable recommendations to sales leadership.</span>
+
+<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pipeline_forecasting</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deal_risk_assessment</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">win_loss_analysis</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">competitor_intelligence</span>
+
+<span class="w">  </span><span class="nt">data_access</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">read</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">customers (all)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opportunities (all)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">contracts (all)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">interactions (type="sales_call")</span>
+<span class="w">    </span><span class="nt">write</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forecasts (own)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">recommendations (own)</span>
+
+<span class="w">  </span><span class="nt">interfaces</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">input</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">slack_channel</span><span class="p">:</span><span class="w"> </span><span class="s">"#sales-analytics"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">api_endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">"/agents/sales_analyst"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheduled_triggers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"daily</span><span class="nv"> </span><span class="s">8am"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"weekly</span><span class="nv"> </span><span class="s">monday"</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">output</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">slack_notifications</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dashboard_updates</span><span class="p">:</span><span class="w"> </span><span class="s">"sales_dashboard"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">email_reports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sales_leadership@company.com</span>
+
+<span class="w">  </span><span class="nt">constraints</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">execution_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;60 seconds</span>
+<span class="w">    </span><span class="nt">cost_per_run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;$0.50</span>
+<span class="w">    </span><span class="nt">accuracy_threshold</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span><span class="err">95%</span>
+
+<span class="w">  </span><span class="nt">human_oversight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">approval_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">audit_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weekly</span>
+<span class="w">    </span><span class="nt">escalation_conditions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forecast_deviation &gt;20%</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deal_risk_score &gt;8/10</span>
+
+<span class="w">  </span><span class="nt">ethical_boundaries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no_customer_discrimination</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transparent_scoring_methodology</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">human_review_for_contract_termination</span>
+</code></pre></div>
+<h3 id="agent-lifecycle">Agent Lifecycle<a class="headerlink" href="#agent-lifecycle" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Definition:</strong> RFC process for new agents</li>
+<li><strong>Development:</strong> Build and test in sandbox</li>
+<li><strong>Validation:</strong> Human review + test cases</li>
+<li><strong>Deployment:</strong> Gradual rollout with monitoring</li>
+<li><strong>Operation:</strong> Continuous execution + logging</li>
+<li><strong>Evolution:</strong> Feedback-driven improvements</li>
+<li><strong>Retirement:</strong> Deprecation with migration plan</li>
+</ol>
+<h3 id="reasoning-patterns">Reasoning Patterns<a class="headerlink" href="#reasoning-patterns" title="Permanent link">¶</a></h3>
+<p><strong>Chain-of-Thought:</strong>
+<div class="highlight"><pre><span></span><code>User Query: "Why is Q4 forecast down 15%?"
+
+Agent Reasoning:
+1. Retrieve Q4 pipeline data
+2. Compare to Q3 pipeline at same point
+3. Identify closed-lost deals (reasons)
+4. Analyze new deal velocity (slower)
+5. Assess stage progression rates (delayed)
+6. Synthesize findings into explanation
+
+Output: "Q4 forecast is down 15% due to: (1) 3 large 
+enterprise deals slipped to Q1 ($450K total), (2) new 
+pipeline generation 20% below target, and (3) slower 
+progression from Discovery → Proposal (avg 14 days vs. 
+9 days in Q3). Recommendation: Focus on accelerating 
+mid-stage deals and launching Q1 demand gen campaign."
+</code></pre></div></p>
+<p><strong>Human-AI Collaboration Model:</strong>
+- AI performs analysis (speed, scale)
+- Human validates conclusions (judgment)
+- AI implements decisions (execution)
+- Human monitors outcomes (oversight)</p>
+<hr/>
+<h2 id="automation-mesh-layer-4">Automation Mesh (Layer 4)<a class="headerlink" href="#automation-mesh-layer-4" title="Permanent link">¶</a></h2>
+<h3 id="overview_2">Overview<a class="headerlink" href="#overview_2" title="Permanent link">¶</a></h3>
+<p>Process execution layer translating decisions into coordinated actions across systems.</p>
+<h3 id="sipoc-integration">SIPOC Integration<a class="headerlink" href="#sipoc-integration" title="Permanent link">¶</a></h3>
+<p>Every process mapped using SIPOC (Supplier, Input, Process, Output, Customer):</p>
+<p><strong>Example: Invoice Processing</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supplier</strong></td>
+<td>Vendor submits invoice (email/portal)</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Invoice PDF, PO number, amount, due date</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>1. OCR extraction<br/>2. PO matching<br/>3. GL coding<br/>4. Approval routing<br/>5. Payment scheduling</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Approved payment, updated ledger, vendor notification</td>
+</tr>
+<tr>
+<td><strong>Customer</strong></td>
+<td>Finance team (reporting), Vendor (payment)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automation:</strong>
+- Steps 1-3: 100% AI-driven (seconds)
+- Step 4: Human approval if &gt;$5K (minutes)
+- Step 5: Automated payment execution (hours)</p>
+<p><strong>Metrics:</strong>
+- <strong>Cycle Time:</strong> 72 hours → 4 hours (95% reduction)
+- <strong>Error Rate:</strong> 8% → 0.5% (94% improvement)
+- <strong>Cost per Invoice:</strong> $15 → $2 (87% reduction)</p>
+<h3 id="workflow-orchestration">Workflow Orchestration<a class="headerlink" href="#workflow-orchestration" title="Permanent link">¶</a></h3>
+<p><strong>Temporal.io Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nd">@workflow</span><span class="o">.</span><span class="n">defn</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">InvoiceProcessingWorkflow</span><span class="p">:</span>
+    <span class="nd">@workflow</span><span class="o">.</span><span class="n">run</span>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">invoice_data</span><span class="p">:</span> <span class="n">InvoiceData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PaymentResult</span><span class="p">:</span>
+        <span class="c1"># Step 1: OCR extraction</span>
+        <span class="n">extracted</span> <span class="o">=</span> <span class="k">await</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute_activity</span><span class="p">(</span>
+            <span class="n">extract_invoice_data</span><span class="p">,</span>
+            <span class="n">invoice_data</span><span class="o">.</span><span class="n">pdf_url</span><span class="p">,</span>
+            <span class="n">start_to_close_timeout</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Step 2: PO matching</span>
+        <span class="n">po_match</span> <span class="o">=</span> <span class="k">await</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute_activity</span><span class="p">(</span>
+            <span class="n">match_purchase_order</span><span class="p">,</span>
+            <span class="n">extracted</span><span class="o">.</span><span class="n">po_number</span><span class="p">,</span>
+            <span class="n">start_to_close_timeout</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Step 3: Approval if needed</span>
+        <span class="k">if</span> <span class="n">extracted</span><span class="o">.</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">:</span>
+            <span class="n">approval</span> <span class="o">=</span> <span class="k">await</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute_activity</span><span class="p">(</span>
+                <span class="n">request_human_approval</span><span class="p">,</span>
+                <span class="n">extracted</span><span class="p">,</span>
+                <span class="n">start_to_close_timeout</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">approval</span><span class="o">.</span><span class="n">approved</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">PaymentResult</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">"rejected"</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="n">approval</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
+
+        <span class="c1"># Step 4: Schedule payment</span>
+        <span class="n">payment</span> <span class="o">=</span> <span class="k">await</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute_activity</span><span class="p">(</span>
+            <span class="n">schedule_payment</span><span class="p">,</span>
+            <span class="n">extracted</span><span class="p">,</span>
+            <span class="n">start_to_close_timeout</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">payment</span>
+</code></pre></div>
+<hr/>
+<h2 id="organizational-layer-layer-5">Organizational Layer (Layer 5)<a class="headerlink" href="#organizational-layer-layer-5" title="Permanent link">¶</a></h2>
+<h3 id="squad-specification">Squad Specification<a class="headerlink" href="#squad-specification" title="Permanent link">¶</a></h3>
+<p><strong>Charter Template:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">squad</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout Experience Squad</span>
+<span class="w">  </span><span class="nt">mission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Optimize conversion and revenue at checkout</span>
+
+<span class="w">  </span><span class="nt">business_service</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">E-Commerce Checkout</span>
+<span class="w">    </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">conversion_rate (current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">68%, target</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75%)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cart_abandonment (current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32%, target</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25%)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">revenue_per_session (current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$45, target</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$55)</span>
+
+<span class="w">  </span><span class="nt">team</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">product_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice_johnson</span>
+<span class="w">    </span><span class="nt">tech_lead</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob_chen</span>
+<span class="w">    </span><span class="nt">engineers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">carol_lopez</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dave_kumar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">eve_taylor</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">designer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frank_williams</span>
+<span class="w">    </span><span class="nt">data_analyst</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grace_martinez</span>
+
+<span class="w">  </span><span class="nt">ai_agents</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkout_optimizer (A/B test orchestration)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fraud_detector (transaction risk scoring)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">personalization_engine (offer recommendations)</span>
+
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">upstream</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Product Catalog Squad (inventory data)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricing Squad (promotional rules)</span>
+<span class="w">    </span><span class="nt">downstream</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Order Fulfillment Squad (order handoff)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Customer Support Squad (checkout issues)</span>
+
+<span class="w">  </span><span class="nt">ceremonies</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sprint_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2 weeks</span>
+<span class="w">    </span><span class="nt">planning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monday 9am</span>
+<span class="w">    </span><span class="nt">daily_standup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Daily 10am (15 min)</span>
+<span class="w">    </span><span class="nt">review</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Friday 2pm</span>
+<span class="w">    </span><span class="nt">retrospective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Friday 3pm</span>
+
+<span class="w">  </span><span class="nt">decision_authority</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">autonomous</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">UI changes</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">A/B tests</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bug fixes</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">requires_approval</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pricing strategy</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">payment provider</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">forbidden</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">PCI compliance changes without Security</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<hr/>
+<h2 id="governance-layer-layer-6">Governance Layer (Layer 6)<a class="headerlink" href="#governance-layer-layer-6" title="Permanent link">¶</a></h2>
+<h3 id="rfc-process">RFC Process<a class="headerlink" href="#rfc-process" title="Permanent link">¶</a></h3>
+<p><strong>Trigger Conditions:</strong>
+- New AI agent introduction
+- Architecture changes affecting &gt;1 squad
+- Data model schema changes
+- Policy/compliance modifications</p>
+<p><strong>RFC Template:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="gh"># RFC-XXXX: [Title]</span>
+
+<span class="gu">## Metadata</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Status:**</span> Draft | Review | Approved | Rejected
+<span class="k">-</span><span class="w"> </span><span class="gs">**Author:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Stakeholders:**</span> [List]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Date:**</span> YYYY-MM-DD
+
+<span class="gu">## Summary</span>
+[One paragraph explanation]
+
+<span class="gu">## Motivation</span>
+[Why is this change needed?]
+
+<span class="gu">## Proposal</span>
+[Detailed technical specification]
+
+<span class="gu">## Alternatives Considered</span>
+[Other approaches evaluated]
+
+<span class="gu">## Impact Analysis</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Technical:**</span> [Systems affected]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Organizational:**</span> [Teams impacted]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Risk:**</span> [Potential issues]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Cost:**</span> [Time/money investment]
+
+<span class="gu">## Implementation Plan</span>
+<span class="k">- [ ]</span> Phase 1: [Description]
+<span class="k">- [ ]</span> Phase 2: [Description]
+<span class="k">- [ ]</span> Phase 3: [Description]
+
+<span class="gu">## Success Metrics</span>
+[How will we measure success?]
+
+<span class="gu">## Ethical Review</span>
+[Fairness, bias, privacy considerations]
+</code></pre></div>
+<h3 id="adr-process">ADR Process<a class="headerlink" href="#adr-process" title="Permanent link">¶</a></h3>
+<p><strong>When to Create ADR:</strong>
+- Significant technical decision made
+- Trade-offs evaluated
+- Long-term implications</p>
+<p><strong>ADR Template:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="gh"># ADR-XXXX: [Title]</span>
+
+<span class="gu">## Status</span>
+Accepted | Superseded | Deprecated
+
+<span class="gu">## Context</span>
+[Situation and constraints]
+
+<span class="gu">## Decision</span>
+[What we decided to do]
+
+<span class="gu">## Consequences</span>
+<span class="gs">**Positive:**</span>
+<span class="k">-</span><span class="w"> </span>[Benefit 1]
+<span class="k">-</span><span class="w"> </span>[Benefit 2]
+
+<span class="gs">**Negative:**</span>
+<span class="k">-</span><span class="w"> </span>[Trade-off 1]
+<span class="k">-</span><span class="w"> </span>[Trade-off 2]
+
+<span class="gs">**Neutral:**</span>
+<span class="k">-</span><span class="w"> </span>[Consideration 1]
+</code></pre></div>
+<hr/>
+<p><strong>Navigation:</strong> <a href="../architecture/">← Architecture</a> | <a href="../governance/">Governance →</a> | <a href="../diagrams/">📊 Diagrams</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
