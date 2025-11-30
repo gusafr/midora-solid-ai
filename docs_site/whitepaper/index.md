@@ -80,9 +80,10 @@ This whitepaper is organized into five integrated sections:
 |----------|-------|
 | **Version** | 1.0.0 |
 | **Status** | Production-Ready |
+| **Author** | Gustavo Freitas |
+| **DOI** | [10.5281/zenodo.17765515](https://doi.org/10.5281/zenodo.17765515) |
 | **License** | MIT |
 | **Last Updated** | November 2025 |
-| **Authors** | SOLID.AI Framework Contributors |
 
 📥 **[Download as PDF](../downloads.md)** — Academic whitepaper (75 KB) or complete framework (1.4 MB)
 
@@ -126,20 +127,21 @@ If you reference this whitepaper in academic or professional work, please use on
 
 **BibTeX:**
 ```bibtex
-@techreport{solidai2025,
-  title={SOLID.AI Framework: A Biologically-Inspired Architecture for AI-Native Organizations},
-  author={SOLID.AI Framework Contributors},
-  year={2025},
-  institution={SOLID.AI Project},
-  url={https://gusafr.github.io/midora-solid-ai/whitepaper/}
+@dataset{solidai_zenodo_2025,
+  title        = {SOLID.AI Framework — Whitepaper v1.0},
+  author       = {Freitas, Gustavo},
+  year         = 2025,
+  month        = november,
+  publisher    = {Zenodo},
+  doi          = 10.5281/zenodo.17765515,
+  url          = https://zenodo.org/records/17765515
 }
 ```
 
 **APA:**
 ```
-SOLID.AI Framework Contributors. (2025). SOLID.AI Framework: A Biologically-Inspired 
-Architecture for AI-Native Organizations. SOLID.AI Project. 
-https://gusafr.github.io/midora-solid-ai/whitepaper/
+Freitas, G. (2025). SOLID.AI Framework — Whitepaper v1.0 [Dataset]. Zenodo. 
+https://doi.org/10.5281/zenodo.17765515
 ```
 
 ---

@@ -59,27 +59,28 @@ This whitepaper is organized into five sections:
 If you use SOLID.AI in your research or project, please cite:
 
 ```bibtex
-@techreport{freitas2025solidai,
-  title        = {SOLID.AI: Strategic Organization Leveraging Intelligent 
-                  Design for Artificial Intelligence},
+@dataset{solidai_zenodo_2025,
+  title        = {SOLID.AI Framework — Whitepaper v1.0},
   author       = {Freitas, Gustavo},
-  year         = {2025},
-  month        = {November},
-  institution  = {Midora Education Labs},
-  type         = {Technical Whitepaper},
-  version      = {1.0.0},
-  url          = {https://gusafr.github.io/midora-solid-ai/whitepaper/}
+  year         = 2025,
+  month        = november,
+  publisher    = {Zenodo},
+  doi          = 10.5281/zenodo.17765515,
+  url          = https://zenodo.org/records/17765515
 }
 ```
 
-**APA Style:**
-> Freitas, G. (2025). *SOLID.AI: Strategic organization leveraging intelligent design for artificial intelligence* (Version 1.0.0). Midora Education Labs. https://gusafr.github.io/midora-solid-ai/whitepaper/
+**APA:**
+```
+Freitas, G. (2025). SOLID.AI Framework — Whitepaper v1.0 [Dataset]. Zenodo. 
+https://doi.org/10.5281/zenodo.17765515
+```
 
-**Chicago Style:**
-> Freitas, Gustavo. 2025. "SOLID.AI: Strategic Organization Leveraging Intelligent Design for Artificial Intelligence." Version 1.0.0. Technical Whitepaper. Midora Education Labs.
-
-**IEEE Style:**
-> G. Freitas, "SOLID.AI: Strategic Organization Leveraging Intelligent Design for Artificial Intelligence," Midora Education Labs, Tech. Rep., Nov. 2025, ver. 1.0.0.
+**IEEE:**
+```
+G. Freitas, "SOLID.AI Framework — Whitepaper v1.0," Zenodo, Nov. 2025. 
+doi: 10.5281/zenodo.17765515
+```
 
 ---
 
@@ -90,7 +91,8 @@ If you use SOLID.AI in your research or project, please cite:
 | Version | 1.0.0 |
 | Date | November 2025 |
 | Status | Published |
-| Authors | Gustavo Freitas, Midora Education Labs |
+| Author | Gustavo Freitas |
+| DOI | [10.5281/zenodo.17765515](https://doi.org/10.5281/zenodo.17765515) |
 | License | [MIT License](https://opensource.org/licenses/MIT) |
 | Repository | [github.com/gusafr/midora-solid-ai](https://github.com/gusafr/midora-solid-ai) |
 

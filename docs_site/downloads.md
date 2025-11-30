@@ -1,5 +1,7 @@
 # Downloads
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17765515.svg)](https://doi.org/10.5281/zenodo.17765515)
+
 Access SOLID.AI Framework documentation in PDF format for offline reading, printing, and distribution.
 
 ---
