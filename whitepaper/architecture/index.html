@@ -2224,7 +2224,7 @@
 └─────────────────────────────────────────────────────┘
 </code></pre></div>
 <blockquote>
-<p><strong>See:</strong> <a href="../diagrams/#1-solidai-architecture-layer-model">Interactive Layer Model Diagram</a> for detailed visualization</p>
+<p><strong>See:</strong> <a href="../diagrams/#1-solidai-architecture-layer-model">Figure 1 — Six-Layer Architecture</a> for detailed visualization</p>
 </blockquote>
 <h3 id="layer-1-purpose-layer-dna">Layer 1: Purpose Layer (DNA)<a class="headerlink" href="#layer-1-purpose-layer-dna" title="Permanent link">¶</a></h3>
 <p><strong>Biological Analogy:</strong> DNA encoding the organism's fundamental blueprint</p>
@@ -2243,7 +2243,7 @@
 <h3 id="layer-2-data-spine-sensory-nerves">Layer 2: Data Spine (Sensory Nerves)<a class="headerlink" href="#layer-2-data-spine-sensory-nerves" title="Permanent link">¶</a></h3>
 <p><strong>Biological Analogy:</strong> Sensory nervous system transmitting information to the brain</p>
 <p><strong>Function:</strong> Unified, real-time data infrastructure serving as single source of truth</p>
-<p>As shown in Figure 3 (see <a href="../diagrams/#3-solidai-data-spine-topology">Diagrams</a>), the Data Spine is designed to provide &lt;5 second latency with 99.9% uptime SLA (target specification).</p>
+<p>As shown in Figure 3 (see <a href="../diagrams/#3-solidai-data-spine-topology">Diagrams</a>), the Data Spine is designed to meet stringent Service Level Objectives: P95 latency &lt; 5s, availability &gt;= 99.9%, data freshness &lt; 60s (target specification).</p>
 <p><strong>Components:</strong>
 - Canonical data models
 - Data contracts between systems
@@ -2252,14 +2252,12 @@
 - Analytics and metrics dashboards</p>
 <p><strong>Key Characteristics:</strong>
 - Schema-first design with strict contracts
-- Real-time propagation (&lt;5 second latency)
+- Real-time propagation (P95 latency &lt; 5s)
 - Immutable event logs (audit trail)
 - Bi-directional sync across all systems</p>
 <blockquote>
-<p><strong>Architectural Foundation:</strong> The Data Spine implements data mesh principles defined by Dehghani[^4]: data as a product, domain ownership, self-serve data platform, and federated computational governance. Systematic research[^5] validates distributed data backbones with federated governance as essential for modern organizational data infrastructure, functioning as SOLID.AI's "organizational nervous system."</p>
+<p><strong>Architectural Foundation:</strong> The Data Spine implements data mesh principles defined by Dehghani: data as a product, domain ownership, self-serve data platform, and federated computational governance. Systematic research validates distributed data backbones with federated governance as essential for modern organizational data infrastructure, functioning as SOLID.AI's "organizational nervous system."</p>
 </blockquote>
-<p>[^4]: Dehghani, Z. (2022). <em>Data Mesh Principles and Logical Architecture.</em> <a href="https://martinfowler.com/articles/data-mesh-principles.html">https://martinfowler.com/articles/data-mesh-principles.html</a></p>
-<p>[^5]: Goedegebuure, A., Burnay, C., &amp; van der Werf, J. M. (2023). <em>Data Mesh: A Systematic Gray Literature Review.</em> arXiv:2304.01062. <a href="https://arxiv.org/abs/2304.01062">https://arxiv.org/abs/2304.01062</a></p>
 <p><strong>See:</strong> <a href="../specification/#data-spine-layer-2">Specification → Data Spine</a> | <a href="../diagrams/#3-solidai-data-spine-topology">Data Spine Topology Diagram</a></p>
 <h3 id="layer-3-cognitive-layer-neural-network">Layer 3: Cognitive Layer (Neural Network)<a class="headerlink" href="#layer-3-cognitive-layer-neural-network" title="Permanent link">¶</a></h3>
 <p><strong>Biological Analogy:</strong> Brain processing information and generating insights</p>
@@ -2275,10 +2273,8 @@
 - <strong>Advisory Agents:</strong> Strategic recommendations, risk assessment
 - <strong>Collaborative Agents:</strong> Team coordination, meeting facilitation</p>
 <blockquote>
-<p><strong>Research Validation:</strong> MIT Sloan research demonstrates AI tends to complement rather than replace human work, with deployment strategy (augmentation vs. replacement) being a strategic leadership decision[^6]. Harvard Business Review identifies hybrid human-AI teams as generating greatest value when processes and roles are redesigned for collaboration, not replacement[^7]—the foundation of SOLID.AI's Human-AI Collaboration Loop (Figure 4).</p>
+<p><strong>Research Validation:</strong> MIT Sloan research demonstrates AI tends to complement rather than replace human work, with deployment strategy (augmentation vs. replacement) being a strategic leadership decision. Harvard Business Review identifies hybrid human-AI teams as generating greatest value when processes and roles are redesigned for collaboration, not replacement—the foundation of SOLID.AI's Human-AI Collaboration Loop (Figure 4).</p>
 </blockquote>
-<p>[^6]: MIT Sloan (2025). <em>New MIT Sloan Research Suggests AI is More Likely to Complement, Not Replace, Human Workers.</em> <a href="https://mitsloan.mit.edu/press/new-mit-sloan-research-suggests-ai-more-likely-to-complement-not-replace-human-workers">https://mitsloan.mit.edu/press/new-mit-sloan-research-suggests-ai-more-likely-to-complement-not-replace-human-workers</a></p>
-<p>[^7]: Wilson, H. J., &amp; Daugherty, P. R. (2018). <em>Collaborative Intelligence: Humans and AI Are Joining Forces.</em> Harvard Business Review. <a href="https://hbr.org/2018/07/collaborative-intelligence-humans-and-ai-are-joining-forces">https://hbr.org/2018/07/collaborative-intelligence-humans-and-ai-are-joining-forces</a></p>
 <p><strong>See:</strong> <a href="../specification/#cognitive-layer-layer-3">Specification → Cognitive Layer</a></p>
 <h3 id="layer-4-automation-mesh-motor-neurons">Layer 4: Automation Mesh (Motor Neurons)<a class="headerlink" href="#layer-4-automation-mesh-motor-neurons" title="Permanent link">¶</a></h3>
 <p><strong>Biological Analogy:</strong> Motor nervous system executing coordinated movements</p>
@@ -2295,9 +2291,8 @@
 - <strong>Event-Driven Workflows:</strong> Trigger → Validate → Execute → Verify
 - <strong>Human-in-the-Loop:</strong> Approval gates for critical decisions</p>
 <blockquote>
-<p><strong>Orchestration Pattern:</strong> SOLID.AI combines centralized orchestration with event-based choreography<a href="Camunda" title="2023). *Orchestration vs. Choreography: Which is Right For You?* [https://camunda.com/blog/2023/02/orchestration-vs-choreography/](https://camunda.com/blog/2023/02/orchestration-vs-choreography/">^8</a>, leveraging event-driven architecture for service decoupling, resilience, and scalability[^9]—enabling the Automation Mesh to coordinate AI agents, business services, and human workflows without brittle point-to-point integrations.</p>
+<p><strong>Orchestration Pattern:</strong> SOLID.AI combines centralized orchestration with event-based choreography, leveraging event-driven architecture for service decoupling, resilience, and scalability—enabling the Automation Mesh to coordinate AI agents, business services, and human workflows without brittle point-to-point integrations.</p>
 </blockquote>
-<p>[^9]: Hawkin, T. (2022). <em>Microservice Orchestration vs Choreography: How Event-Driven Architecture Helps Decouple Your App.</em> <a href="https://dev.to/thawkin3/microservice-orchestration-vs-choreography-how-event-driven-architecture-helps-decouple-your-app-4a6b">https://dev.to/thawkin3/microservice-orchestration-vs-choreography-how-event-driven-architecture-helps-decouple-your-app-4a6b</a></p>
 <p><strong>See:</strong> <a href="../specification/#automation-mesh-layer-4">Specification → Automation Mesh</a> | <a href="../diagrams/#2-solidai-automation-mesh">Automation Mesh Diagram</a></p>
 <h3 id="layer-5-organizational-layer-motor-cortex">Layer 5: Organizational Layer (Motor Cortex)<a class="headerlink" href="#layer-5-organizational-layer-motor-cortex" title="Permanent link">¶</a></h3>
 <p><strong>Biological Analogy:</strong> Motor cortex coordinating complex movements</p>
@@ -2345,7 +2340,7 @@
 - <strong>Feedback Loops:</strong> Retrospectives driving improvement</p>
 <blockquote>
 <p><strong>Governance Research Validation:</strong><br/>
-SOLID.AI's governance approach aligns with emerging AI governance frameworks. Eisenberg et al. (2023)[^10] demonstrate systematic approaches to AI oversight across industries. Deloitte research (2024)[^11] highlights the critical need for transparent, auditable AI systems with human oversight for high-stakes decisions. The Governance Institute (2024)[^12] emphasizes that effective AI governance requires both automated compliance monitoring and human judgment for ethical boundaries—exactly the hybrid model SOLID.AI implements through Layer 6.</p>
+SOLID.AI's governance approach aligns with emerging AI governance frameworks. Eisenberg et al. (2025) demonstrate systematic approaches to AI oversight across industries. Deloitte research (2024) highlights the critical need for transparent, auditable AI systems with human oversight for high-stakes decisions. The Governance Institute (2024) emphasizes that effective AI governance requires both automated compliance monitoring and human judgment for ethical boundaries—exactly the hybrid model SOLID.AI implements through Layer 6.</p>
 </blockquote>
 <p><strong>See:</strong> <a href="../governance/#implementation-methodology">Governance → Implementation</a></p>
 <hr/>
@@ -2455,10 +2450,8 @@ AI-Native Organization (Projected SOLID.AI Model):
 </table>
 <blockquote>
 <p><strong>Note:</strong> These projections represent the Midora business plan thesis targets. Actual metrics will be published as the implementation matures in production.</p>
-<p><strong>Research Evidence:</strong> McKinsey Global Institute projects $2.9 trillion in value creation through redesigning work around human-AI skill partnerships, not isolated task automation[^1]. EY research explicitly validates "decoupling growth from headcount" and "non-linear productivity" through systematic AI integration<a href="EY" title="2024). *AI: Ideation to Impact White Paper.* [https://www.ey.com/content/dam/ey-unified-site/ey-com/en-in/insights/ai/documents/ey-ai-deation-to-impact.pdf](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-in/insights/ai/documents/ey-ai-deation-to-impact.pdf">^2</a>—providing economic foundation for SOLID.AI's scalability model. McKinsey further estimates $4.4 trillion in productivity gains when work is redesigned around "superagency" (humans supported by AI agents and automation)[^3].</p>
+<p><strong>Research Evidence:</strong> McKinsey Global Institute projects $2.9 trillion in value creation through redesigning work around human-AI skill partnerships, not isolated task automation. EY research explicitly validates "decoupling growth from headcount" and "non-linear productivity" through systematic AI integration—providing economic foundation for SOLID.AI's scalability model. McKinsey further estimates $4.4 trillion in productivity gains when work is redesigned around "superagency" (humans supported by AI agents and automation).</p>
 </blockquote>
-<p>[^1]: McKinsey Global Institute (2025). <em>Agents, Robots, and Us: Skill Partnerships in the Age of AI.</em> <a href="https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai">https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai</a></p>
-<p>[^3]: McKinsey &amp; Company (2025). <em>Superagency in the Workplace.</em> <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work">https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work</a></p>
 <hr/>
 <h2 id="technology-stack">Technology Stack<a class="headerlink" href="#technology-stack" title="Permanent link">¶</a></h2>
 <p>While SOLID.AI is technology-agnostic, reference implementations use:</p>
@@ -2479,15 +2472,6 @@ AI-Native Organization (Projected SOLID.AI Model):
 - GitHub (RFC/ADR version control)
 - Backstage (developer portal)
 - Custom dashboards (observability)</p>
-<hr/>
-<p>[^4]: Dehghani, Z., &amp; Fowler, M. (2022). <em>Data Mesh: Delivering Data-Driven Value at Scale.</em> O'Reilly Media. <a href="https://www.oreilly.com/library/view/data-mesh/9781492092384/">https://www.oreilly.com/library/view/data-mesh/9781492092384/</a></p>
-<p>[^5]: Goedegebuure, A., Ubacht, J., &amp; van der Voort, H. (2023). <em>Data Mesh: A Systematic Gray Literature Review.</em> arXiv. <a href="https://arxiv.org/abs/2304.01062">https://arxiv.org/abs/2304.01062</a></p>
-<p>[^6]: MIT Sloan Management Review (2025). <em>How Generative AI Will Complement (Not Replace) Human Workers.</em> <a href="https://sloanreview.mit.edu/article/how-generative-ai-will-complement-not-replace-human-workers/">https://sloanreview.mit.edu/article/how-generative-ai-will-complement-not-replace-human-workers/</a></p>
-<p>[^7]: Wilson, H. J., &amp; Daugherty, P. R. (2018). <em>Collaborative Intelligence: Humans and AI Are Joining Forces.</em> Harvard Business Review. <a href="https://hbr.org/2018/07/collaborative-intelligence-humans-and-ai-are-joining-forces">https://hbr.org/2018/07/collaborative-intelligence-humans-and-ai-are-joining-forces</a></p>
-<p>[^9]: Hawkin, J. (2022). <em>Event-Driven Architecture: Explanation and Benefits.</em> DEV Community. <a href="https://dev.to/johnckealy/event-driven-architecture-explanation-and-benefits-o96">https://dev.to/johnckealy/event-driven-architecture-explanation-and-benefits-o96</a></p>
-<p>[^10]: Eisenberg, J. S., Pauwels, E., Guan, J., &amp; Li, B. (2023). <em>Evaluation &amp; Monitoring: A Research Blueprint for AI Risk Management in Practice.</em> arXiv. <a href="https://arxiv.org/abs/2308.08700">https://arxiv.org/abs/2308.08700</a></p>
-<p>[^11]: Deloitte &amp; Deeploy (2024). <em>Implementing AI Governance: A Practical Guide.</em> <a href="https://www2.deloitte.com/content/dam/Deloitte/nl/Documents/deloitte-analytics/deloitte-nl-ai-deeploy-report-ai-governance.pdf">https://www2.deloitte.com/content/dam/Deloitte/nl/Documents/deloitte-analytics/deloitte-nl-ai-deeploy-report-ai-governance.pdf</a></p>
-<p>[^12]: Governance Institute of Australia (2024). <em>AI Oversight: What Directors Need to Know.</em> <a href="https://www.governanceinstitute.com.au/resources/news/2024/ai-oversight-what-directors-need-to-know/">https://www.governanceinstitute.com.au/resources/news/2024/ai-oversight-what-directors-need-to-know/</a></p>
 <hr/>
 <p><strong>Navigation:</strong> <a href="../abstract/">← Abstract</a> | <a href="../specification/">Specification →</a> | <a href="../diagrams/">📊 Diagrams</a></p>
 </article>

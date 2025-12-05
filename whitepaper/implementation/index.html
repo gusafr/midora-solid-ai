@@ -2222,7 +2222,7 @@
 <ol>
 <li><strong>Schema-First:</strong> All data models defined with strict contracts (JSON Schema, Avro, Protobuf)</li>
 <li><strong>Event-Driven:</strong> Changes propagated via immutable event logs</li>
-<li><strong>Real-Time:</strong> &lt;5 second latency for critical data updates</li>
+<li><strong>Real-Time:</strong> P95 latency &lt; 5s for critical data updates</li>
 <li><strong>Bi-Directional Sync:</strong> Changes flow in all directions (no master/slave)</li>
 <li><strong>Audit Trail:</strong> Complete history of all data mutations</li>
 </ol>
@@ -2262,8 +2262,9 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email matches RFC5322</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mrr &gt;= 0</span>
 <span class="nt">sla</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;3 seconds</span>
+<span class="w">  </span><span class="nt">latency_p95</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;5s</span>
 <span class="w">  </span><span class="nt">availability</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99.9%</span>
+<span class="w">  </span><span class="nt">freshness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;60s</span>
 </code></pre></div>
 <h4 id="event-streaming-architecture">Event Streaming Architecture<a class="headerlink" href="#event-streaming-architecture" title="Permanent link">¶</a></h4>
 <p><strong>Event Types:</strong>
@@ -2303,13 +2304,13 @@
 - <strong>Accuracy:</strong> % records passing validation
 - <strong>Completeness:</strong> % required fields populated
 - <strong>Consistency:</strong> % cross-system reconciliation matches
-- <strong>Timeliness:</strong> p95 latency for updates</p>
+- <strong>Timeliness:</strong> P95 latency for updates</p>
 <hr/>
 <h2 id="cognitive-layer-layer-3">Cognitive Layer (Layer 3)<a class="headerlink" href="#cognitive-layer-layer-3" title="Permanent link">¶</a></h2>
 <h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">¶</a></h3>
 <p>As shown in Figure 4 (see <a href="../diagrams/#4-solidai-human-ai-collaboration-loop">Diagrams</a>), AI agents operate as organizational members with defined roles, capabilities, and accountability through a continuous collaboration loop with humans.</p>
 <blockquote>
-<p><strong>See:</strong> <a href="../diagrams/#4-solidai-human-ai-collaboration-loop">Human-AI Collaboration Loop Diagram</a> for complete interaction flow</p>
+<p><strong>See:</strong> <a href="../diagrams/#4-solidai-human-ai-collaboration-loop">Figure 4 — Human-AI Collaboration Loop</a> for complete interaction flow</p>
 </blockquote>
 <h3 id="agent-definition-schema">Agent Definition Schema<a class="headerlink" href="#agent-definition-schema" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>

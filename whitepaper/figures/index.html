@@ -2144,7 +2144,7 @@
     style Models fill:#ddd6fe,stroke:#7c3aed,stroke-width:2px</code></pre>
 <figure>
 <figcaption><strong>Figure 3 — Data Spine Domain Model</strong><br/>
-  The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability ≥ 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
+  The Data Spine ingests data from multiple sources (CRM, ERP, Support, Product, HR) via CDC/APIs/webhooks, streams events through Kafka, maps to canonical entity models, validates quality, stores in PostgreSQL (transactional) and Data Warehouse (analytics), and serves all consumers with &lt;5 second latency and 99.9% uptime SLA. <strong>Target SLO:</strong> P95 latency &lt; 5s, availability &gt;= 99.9%, data freshness &lt; 60s for real-time entities.</figcaption>
 </figure>
 <p><strong>Key Insight:</strong> The Data Spine eliminates data silos by providing a single, real-time, canonical view of organizational truth, accessible to both humans and AI agents through unified interfaces.</p>
 <hr/>
