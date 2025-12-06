@@ -1,0 +1,95 @@
+---
+title: "SOLID.AI Maturity Model: L0 → L5 Progression"
+description: "Journey from traditional organization to AI-native leadership"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/foundation/solid-ai-maturity-model.md"
+  - "ADOPTION/CHECKLISTS/ai-maturity-assessment.md"
+---
+
+graph TB
+    subgraph L0["<b>L0: TRADITIONAL</b><br/>No AI, Manual Processes"]
+        L0_Tech["🔧 Manual workflows<br/>Siloed systems<br/>No APIs"]
+        L0_Data["📊 Spreadsheets<br/>No central data<br/>Delayed reports"]
+        L0_Gov["⚖️ No AI policy<br/>Ad-hoc decisions"]
+        L0_Culture["👥 Individual heroics<br/>Knowledge in heads"]
+    end
+
+    subgraph L1["<b>L1: EXPERIMENTATION</b><br/>Pilots & Tools (3-6 months)"]
+        L1_Tech["🔧 ChatGPT/Claude pilots<br/>1-2 AI tools<br/>Individual use"]
+        L1_Data["📊 Some dashboards<br/>Data scattered<br/>Basic BI"]
+        L1_Gov["⚖️ Basic guidelines<br/>'Don't share secrets'<br/>Manager approval"]
+        L1_Culture["👥 Early adopters<br/>10-20% using AI<br/>Curiosity phase"]
+    end
+
+    subgraph L2["<b>L2: ADOPTION</b><br/>Scaling Usage (6-12 months)"]
+        L2_Tech["🔧 10-20 AI agents<br/>APIs emerging<br/>Some integration"]
+        L2_Data["📊 Data warehouse<br/>Event streaming starts<br/>Self-serve analytics"]
+        L2_Gov["⚖️ Formal AI policy<br/>Ethics board formed<br/>Risk framework"]
+        L2_Culture["👥 60%+ using AI daily<br/>Training programs<br/>AI literacy"]
+    end
+
+    subgraph L3["<b>L3: INTEGRATION</b><br/>AI-First Operations (12-18 months)"]
+        L3_Tech["🔧 50-80 AI agents<br/>API-first architecture<br/>Agent coordination"]
+        L3_Data["📊 Data spine operational<br/>Real-time events<br/>Predictive analytics"]
+        L3_Gov["⚖️ Automated governance<br/>Tiered reviews (1-5)<br/>Bias monitoring"]
+        L3_Culture["👥 AI-augmented roles<br/>T-shaped people<br/>Cross-functional"]
+    end
+
+    subgraph L4["<b>L4: OPTIMIZATION</b><br/>Autonomous Operations (18-24 months)"]
+        L4_Tech["🔧 100-150 AI agents<br/>Automation mesh<br/>Self-healing systems"]
+        L4_Data["📊 Learning loops active<br/>AI-to-AI data flow<br/>Prescriptive insights"]
+        L4_Gov["⚖️ Proactive governance<br/>AI explains decisions<br/>Continuous audits"]
+        L4_Culture["👥 AI co-workers<br/>Humans do strategy<br/>No manual work"]
+    end
+
+    subgraph L5["<b>L5: LEADERSHIP</b><br/>Industry Innovation (24+ months)"]
+        L5_Tech["🔧 150+ agents<br/>Multi-agent orchestration<br/>Novel AI capabilities"]
+        L5_Data["📊 AI discovers insights<br/>Autonomous learning<br/>Market intelligence"]
+        L5_Gov["⚖️ Industry-leading ethics<br/>Open governance<br/>Thought leadership"]
+        L5_Culture["👥 AI-native DNA<br/>Culture as code<br/>Innovation engine"]
+    end
+
+    L0 -->|"Pilot AI tools<br/>Train 10% of team<br/>Define use cases"| L1
+    L1 -->|"Deploy 10 agents<br/>Build data spine<br/>Create AI policy"| L2
+    L2 -->|"Scale to 50+ agents<br/>API-first refactor<br/>Ethics board active"| L3
+    L3 -->|"100+ agents<br/>Automation mesh<br/>Learning loops"| L4
+    L4 -->|"Industry leadership<br/>Novel AI R&D<br/>Open source contributions"| L5
+
+    %% Typical Timelines
+    Time0["⏱️ Starting Point"]
+    Time1["⏱️ 3-6 months"]
+    Time2["⏱️ 6-12 months"]
+    Time3["⏱️ 12-18 months"]
+    Time4["⏱️ 18-24 months"]
+    Time5["⏱️ 24+ months"]
+
+    Time0 -.-> L0
+    Time1 -.-> L1
+    Time2 -.-> L2
+    Time3 -.-> L3
+    Time4 -.-> L4
+    Time5 -.-> L5
+
+    %% Key Metrics
+    Metrics["<b>KEY METRICS BY LEVEL</b><br/><br/>L0: 0 agents, 0% automation, $X rev/employee<br/>L1: 1-5 agents, 5-10% automation, +10% rev/employee<br/>L2: 10-20 agents, 20-40% automation, +30% rev/employee<br/>L3: 50-80 agents, 40-60% automation, +50% rev/employee<br/>L4: 100-150 agents, 60-80% automation, +100% rev/employee<br/>L5: 150+ agents, 80%+ automation, +200% rev/employee"]
+
+    style L0 fill:#ffcccc,stroke:#cc0000,stroke-width:2px
+    style L1 fill:#ffe6cc,stroke:#cc6600,stroke-width:2px
+    style L2 fill:#ffffcc,stroke:#cccc00,stroke-width:2px
+    style L3 fill:#e6ffcc,stroke:#66cc00,stroke-width:2px
+    style L4 fill:#ccffcc,stroke:#00cc00,stroke-width:2px
+    style L5 fill:#ccffff,stroke:#00cccc,stroke-width:3px
+    style Metrics fill:#f0f0f0,stroke:#666666,stroke-width:2px
+
+    classDef techNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef dataNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef govNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef cultureNode fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+
+    class L0_Tech,L1_Tech,L2_Tech,L3_Tech,L4_Tech,L5_Tech techNode
+    class L0_Data,L1_Data,L2_Data,L3_Data,L4_Data,L5_Data dataNode
+    class L0_Gov,L1_Gov,L2_Gov,L3_Gov,L4_Gov,L5_Gov govNode
+    class L0_Culture,L1_Culture,L2_Culture,L3_Culture,L4_Culture,L5_Culture cultureNode

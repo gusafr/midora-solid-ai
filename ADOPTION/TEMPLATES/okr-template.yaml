@@ -1,0 +1,539 @@
+# OKR Template (YAML)
+
+# AI-Native OKRs for [FUNCTION NAME]
+# Framework: SOLID.AI
+# Reference: PLAYBOOKS/people-culture/ai-native-okrs-kpis.md
+# Last Updated: November 2025
+
+---
+okr:
+  quarter: ""  # e.g., "Q1 2025"
+  function: ""  # Sales, Engineering, Finance, Marketing, CS, HR, Executive
+  owner: ""  # DRI (usually Head of Function)
+  last_updated: ""  # YYYY-MM-DD
+
+---
+# OBJECTIVE
+
+objective:
+  statement: ""  # What you want to achieve (qualitative, inspirational)
+  # Examples:
+  #   Sales: "Increase sales productivity and win rates with AI-augmented reps"
+  #   Engineering: "Accelerate development velocity and improve code quality with AI"
+  #   Finance: "Automate routine tasks and improve forecast accuracy with AI"
+  
+  rationale: ""  # Why this objective matters (business context)
+  
+  alignment:
+    company_goal: ""  # Which company-level OKR does this support?
+    # e.g., "Company OKR: Achieve $10M ARR with same headcount (efficiency-driven growth)"
+
+---
+# KEY RESULT 1
+
+key_result_1:
+  statement: ""  # Specific, measurable outcome
+  # Examples:
+  #   "AI-augmented reps close 30% more deals than non-augmented"
+  #   "Invoice automation rate reaches 80%"
+  #   "Engineers ship 40% more features with AI co-pilots"
+  
+  metric: ""  # What you're measuring
+  baseline: 0  # Current state (beginning of quarter)
+  target: 0  # Desired state (end of quarter)
+  unit: ""  # %, $, count, etc.
+  
+  measurement:
+    data_source: ""  # Where does this data come from?
+    # e.g., "CRM (Salesforce)", "Invoice processing system", "Jira"
+    update_frequency: ""  # Daily | Weekly | Monthly
+    dashboard_link: ""  # Link to dashboard/report
+  
+  ai_component:
+    # How is AI enabling this key result?
+    ai_agent: ""  # Name of AI agent(s) involved
+    # e.g., "Lead Scoring Agent", "Invoice Processing Agent", "Code Review Agent"
+    automation_rate: 0  # % of tasks automated by AI (target)
+    human_ai_split: ""  # e.g., "AI handles 70%, humans validate 30%"
+  
+  augmentation_factor:
+    # How much does AI improve human performance?
+    # Formula: (Human+AI Output) / (Human-Only Output)
+    baseline_human_only: 0  # e.g., 10 deals/month without AI
+    target_human_plus_ai: 0  # e.g., 13 deals/month with AI = 1.3x augmentation
+    augmentation_target: 0.0  # e.g., 1.3x
+  
+  milestones:
+    # Monthly checkpoints (for quarterly OKR)
+    month_1: 0  # e.g., 10% progress toward target
+    month_2: 0  # e.g., 50% progress
+    month_3: 0  # e.g., 100% progress (or 70% = committed target)
+  
+  confidence: 0  # % confidence you'll hit this (1-10 scale, 7 = 70% confident)
+  status: ""  # On Track | At Risk | Off Track | Achieved
+
+---
+# KEY RESULT 2
+
+key_result_2:
+  statement: ""
+  metric: ""
+  baseline: 0
+  target: 0
+  unit: ""
+  
+  measurement:
+    data_source: ""
+    update_frequency: ""
+    dashboard_link: ""
+  
+  ai_component:
+    ai_agent: ""
+    automation_rate: 0
+    human_ai_split: ""
+  
+  augmentation_factor:
+    baseline_human_only: 0
+    target_human_plus_ai: 0
+    augmentation_target: 0.0
+  
+  milestones:
+    month_1: 0
+    month_2: 0
+    month_3: 0
+  
+  confidence: 0
+  status: ""
+
+---
+# KEY RESULT 3
+
+key_result_3:
+  statement: ""
+  metric: ""
+  baseline: 0
+  target: 0
+  unit: ""
+  
+  measurement:
+    data_source: ""
+    update_frequency: ""
+    dashboard_link: ""
+  
+  ai_component:
+    ai_agent: ""
+    automation_rate: 0
+    human_ai_split: ""
+  
+  augmentation_factor:
+    baseline_human_only: 0
+    target_human_plus_ai: 0
+    augmentation_target: 0.0
+  
+  milestones:
+    month_1: 0
+    month_2: 0
+    month_3: 0
+  
+  confidence: 0
+  status: ""
+
+---
+# (OPTIONAL) KEY RESULT 4
+
+# Add a 4th or 5th KR if needed, but 3 is ideal (focus)
+
+key_result_4:
+  statement: ""
+  metric: ""
+  baseline: 0
+  target: 0
+  unit: ""
+  
+  measurement:
+    data_source: ""
+    update_frequency: ""
+    dashboard_link: ""
+  
+  ai_component:
+    ai_agent: ""
+    automation_rate: 0
+    human_ai_split: ""
+  
+  augmentation_factor:
+    baseline_human_only: 0
+    target_human_plus_ai: 0
+    augmentation_target: 0.0
+  
+  milestones:
+    month_1: 0
+    month_2: 0
+    month_3: 0
+  
+  confidence: 0
+  status: ""
+
+---
+# AI AGENT KPIs (Universal Metrics for All Agents)
+
+# Track these 8 metrics for every AI agent involved in this OKR
+
+ai_agent_kpis:
+  agent_name: ""  # e.g., "Lead Scoring Agent"
+  
+  automation_rate:
+    metric: "Tasks Completed by AI / Total Tasks × 100"
+    current: 0  # %
+    target: 0  # % (typical: 60-80% for mature agents)
+  
+  accuracy:
+    metric: "Correct Outputs / Total Outputs × 100"
+    current: 0  # %
+    target: 0  # % (typical: 95%+ for production)
+  
+  human_intervention_rate:
+    metric: "Tasks Escalated to Humans / Total Tasks × 100"
+    current: 0  # %
+    target: 0  # % (typical: 5-10%)
+  
+  latency:
+    metric: "Response time (seconds/minutes)"
+    current: 0  # seconds
+    target: 0  # seconds (typical: <30 seconds)
+  
+  cost_per_task:
+    metric: "Total AI Costs / Tasks Completed"
+    current: 0.0  # $ (e.g., $0.10 per task)
+    target: 0.0  # $ (typical: $0.01-$1.00 per task)
+  
+  human_validation_rate:
+    metric: "Tasks Validated by Humans / Total Tasks × 100"
+    current: 0  # %
+    target: 0  # % (typical: 10-30% initially, decreasing over time)
+  
+  learning_velocity:
+    metric: "% accuracy improvement per month"
+    current: 0  # %/month
+    target: 0  # %/month (typical: +2-5%)
+  
+  user_satisfaction:
+    metric: "Thumbs up/down or 1-5 star rating"
+    current: 0.0  # /5
+    target: 0.0  # /5 (typical: 4.0+)
+
+---
+# RISKS & DEPENDENCIES
+
+risks:
+  # What could prevent you from hitting this OKR?
+  
+  risk_1:
+    description: ""  # e.g., "AI model accuracy not high enough"
+    likelihood: ""  # Low | Medium | High
+    impact: ""  # Low | Medium | High
+    mitigation: ""  # e.g., "Add human validation for low-confidence predictions"
+  
+  risk_2:
+    description: ""  # e.g., "Sales team resists using AI tools"
+    likelihood: ""
+    impact: ""
+    mitigation: ""  # e.g., "Run training + showcase early wins"
+
+dependencies:
+  # What do you need from other teams?
+  
+  dependency_1:
+    team: ""  # e.g., "Engineering"
+    what: ""  # e.g., "Build API integration with CRM"
+    due_date: ""  # YYYY-MM-DD
+    status: ""  # Blocked | In Progress | Complete
+  
+  dependency_2:
+    team: ""  # e.g., "Data Team"
+    what: ""  # e.g., "Provide historical lead data for model training"
+    due_date: ""
+    status: ""
+
+---
+# GOVERNANCE METRICS (if applicable)
+
+# For Tier 3+ AI agents or decisions affecting people
+
+governance:
+  bias_fairness:
+    demographic_parity:
+      metric: "P(positive outcome | Group A) ≈ P(positive outcome | Group B)"
+      target: "Within ±5%"
+      current: ""  # e.g., "Male: 70%, Female: 68% → 2% gap (PASS)"
+    
+    equal_opportunity:
+      metric: "P(predicted positive | true positive, Group A) ≈ P(predicted positive | true positive, Group B)"
+      target: "Within ±10%"
+      current: ""
+  
+  transparency:
+    explainability_coverage: 0  # % of decisions with explanations (target: 100% for high-stakes)
+    audit_trail_completeness: 0  # % of actions logged (target: 100%)
+  
+  human_accountability:
+    validation_rate_high_stakes: 0  # % of high-stakes decisions validated by humans (target: 100%)
+    escalation_sla_compliance: 0  # % of escalations resolved within SLA (target: >95%)
+
+---
+# WEEKLY CHECK-INS
+
+# Track progress weekly
+
+weekly_updates:
+  - week: ""  # e.g., "Week 1 (Nov 4-8)"
+    kr1_progress: 0  # % of target achieved
+    kr2_progress: 0
+    kr3_progress: 0
+    blockers: ""  # What's blocking progress?
+    next_steps: ""  # What's happening next week?
+  
+  - week: ""
+    kr1_progress: 0
+    kr2_progress: 0
+    kr3_progress: 0
+    blockers: ""
+    next_steps: ""
+  
+  # Continue for all 12-13 weeks of quarter
+
+---
+# END-OF-QUARTER REVIEW
+
+review:
+  final_scores:
+    kr1_achieved: 0  # % of target achieved (0-100+)
+    kr2_achieved: 0
+    kr3_achieved: 0
+    overall_okr_score: 0.0  # Average of all KRs (0.0-1.0, where 0.7 = 70% = good)
+  
+  grading:
+    # Google's OKR grading scale
+    # 0.0-0.3 = Red (Need major intervention)
+    # 0.4-0.6 = Yellow (Made progress, but short of goal)
+    # 0.7-1.0 = Green (Success!)
+    # >1.0 = Blue (Exceeded, maybe OKR was too easy?)
+    grade: ""  # Red | Yellow | Green | Blue
+  
+  what_worked:
+    - ""  # e.g., "AI agent exceeded accuracy target"
+    - ""
+  
+  what_didnt_work:
+    - ""  # e.g., "Sales team adoption slower than expected"
+    - ""
+  
+  learnings:
+    - ""  # e.g., "Need more hands-on training, not just documentation"
+    - ""
+  
+  next_quarter:
+    carry_over: ""  # What's carrying over to next quarter?
+    new_focus: ""  # What's changing next quarter?
+
+---
+# EXAMPLE 1: Sales OKR
+
+# okr:
+#   quarter: "Q1 2025"
+#   function: "Sales"
+#   owner: "Jane Doe (VP Sales)"
+#   last_updated: "2025-11-01"
+
+# objective:
+#   statement: "Increase sales productivity and win rates with AI-augmented reps"
+#   rationale: "Current sales cycle is 60 days, win rate is 20%. AI can help reps prioritize high-value leads, personalize outreach, and close faster."
+#   alignment:
+#     company_goal: "Achieve $10M ARR with current headcount (efficiency-driven growth)"
+
+# key_result_1:
+#   statement: "AI-augmented reps close 30% more deals than non-augmented"
+#   metric: "Deals closed per rep per month"
+#   baseline: 10  # deals/month without AI
+#   target: 13  # deals/month with AI (+30%)
+#   unit: "deals/month"
+#   
+#   measurement:
+#     data_source: "Salesforce CRM"
+#     update_frequency: "Weekly"
+#     dashboard_link: "https://salesforce.com/dashboard/sales-ai"
+#   
+#   ai_component:
+#     ai_agent: "Lead Scoring Agent + Outreach Automation Agent"
+#     automation_rate: 60  # AI scores 100% of leads, automates 60% of follow-ups
+#     human_ai_split: "AI scores leads (100%), reps focus on high-value calls (40% of time saved)"
+#   
+#   augmentation_factor:
+#     baseline_human_only: 10  # deals/month
+#     target_human_plus_ai: 13  # deals/month
+#     augmentation_target: 1.3  # 1.3x
+#   
+#   milestones:
+#     month_1: 10.5  # deals/month (+5%)
+#     month_2: 11.5  # deals/month (+15%)
+#     month_3: 13.0  # deals/month (+30%)
+#   
+#   confidence: 7  # 70% confident
+#   status: "On Track"
+
+# key_result_2:
+#   statement: "Lead scoring AI achieves 80% accuracy"
+#   metric: "Accuracy (% of high-scored leads that convert)"
+#   baseline: 65  # % (current model accuracy)
+#   target: 80  # %
+#   unit: "%"
+#   
+#   measurement:
+#     data_source: "CRM conversion data"
+#     update_frequency: "Weekly"
+#     dashboard_link: "https://salesforce.com/dashboard/lead-scoring"
+#   
+#   ai_component:
+#     ai_agent: "Lead Scoring Agent"
+#     automation_rate: 100  # Scores all inbound leads
+#     human_ai_split: "AI scores, reps validate top 20%"
+#   
+#   milestones:
+#     month_1: 70  # %
+#     month_2: 75  # %
+#     month_3: 80  # %
+#   
+#   confidence: 8
+#   status: "On Track"
+
+# key_result_3:
+#   statement: "Average deal size increases by 20% (AI-surfaced upsell opportunities)"
+#   metric: "Average Contract Value (ACV)"
+#   baseline: 50000  # $50K ACV
+#   target: 60000  # $60K ACV (+20%)
+#   unit: "$"
+#   
+#   measurement:
+#     data_source: "Salesforce CRM"
+#     update_frequency: "Weekly"
+#     dashboard_link: "https://salesforce.com/dashboard/acv"
+#   
+#   ai_component:
+#     ai_agent: "Upsell Recommendation Agent"
+#     automation_rate: 30  # AI suggests upsells, reps close them
+#     human_ai_split: "AI analyzes customer data + suggests upsells, reps pitch"
+#   
+#   milestones:
+#     month_1: 52000  # $52K (+4%)
+#     month_2: 56000  # $56K (+12%)
+#     month_3: 60000  # $60K (+20%)
+#   
+#   confidence: 6  # 60% confident (harder to influence deal size)
+#   status: "At Risk"
+
+# risks:
+#   risk_1:
+#     description: "Sales reps don't trust AI lead scores, ignore them"
+#     likelihood: "Medium"
+#     impact: "High"
+#     mitigation: "Weekly training + showcase wins (which leads converted, which didn't)"
+#   
+#   risk_2:
+#     description: "AI model not accurate enough (baseline 65% may not reach 80%)"
+#     likelihood: "Medium"
+#     impact: "Medium"
+#     mitigation: "Add more training data, fine-tune model monthly"
+
+---
+# EXAMPLE 2: Engineering OKR
+
+# okr:
+#   quarter: "Q1 2025"
+#   function: "Engineering"
+#   owner: "John Smith (CTO)"
+#   last_updated: "2025-11-01"
+
+# objective:
+#   statement: "Accelerate development velocity and improve code quality with AI"
+#   rationale: "Current velocity is 40 story points/sprint, bug density is 15 bugs/1000 LOC. AI co-pilots can help ship faster and cleaner."
+#   alignment:
+#     company_goal: "Ship 3 major features in Q1 (product roadmap acceleration)"
+
+# key_result_1:
+#   statement: "Engineers using AI co-pilots ship 40% more features"
+#   metric: "Story points per sprint"
+#   baseline: 40  # story points/sprint without AI
+#   target: 56  # story points/sprint with AI (+40%)
+#   unit: "story points"
+#   
+#   measurement:
+#     data_source: "Jira"
+#     update_frequency: "Weekly (end of sprint)"
+#     dashboard_link: "https://jira.com/dashboard/velocity"
+#   
+#   ai_component:
+#     ai_agent: "GitHub Copilot + Code Review Agent"
+#     automation_rate: 50  # AI writes 50% of boilerplate code
+#     human_ai_split: "AI handles boilerplate, humans handle complex logic + architecture"
+#   
+#   augmentation_factor:
+#     baseline_human_only: 40  # story points/sprint
+#     target_human_plus_ai: 56  # story points/sprint
+#     augmentation_target: 1.4  # 1.4x
+#   
+#   milestones:
+#     month_1: 44  # story points (+10%)
+#     month_2: 50  # story points (+25%)
+#     month_3: 56  # story points (+40%)
+#   
+#   confidence: 7
+#   status: "On Track"
+
+# key_result_2:
+#   statement: "Bug density decreases by 30%"
+#   metric: "Bugs per 1000 lines of code"
+#   baseline: 15  # bugs/1000 LOC
+#   target: 10.5  # bugs/1000 LOC (-30%)
+#   unit: "bugs/1000 LOC"
+#   
+#   measurement:
+#     data_source: "SonarQube + Jira"
+#     update_frequency: "Weekly"
+#     dashboard_link: "https://sonarqube.com/dashboard/bugs"
+#   
+#   ai_component:
+#     ai_agent: "Code Review Agent + AI-Assisted Testing Agent"
+#     automation_rate: 70  # AI reviews 100% of PRs, auto-generates 70% of tests
+#     human_ai_split: "AI catches common bugs, humans catch logic/design issues"
+#   
+#   milestones:
+#     month_1: 14  # bugs/1000 LOC (-7%)
+#     month_2: 12  # bugs/1000 LOC (-20%)
+#     month_3: 10.5  # bugs/1000 LOC (-30%)
+#   
+#   confidence: 8
+#   status: "On Track"
+
+# key_result_3:
+#   statement: "AI-assisted testing covers 80% of code"
+#   metric: "Code coverage %"
+#   baseline: 60  # %
+#   target: 80  # %
+#   unit: "%"
+#   
+#   measurement:
+#     data_source: "Jest/Pytest coverage reports"
+#     update_frequency: "Daily (CI/CD)"
+#     dashboard_link: "https://codecov.io/dashboard"
+#   
+#   ai_component:
+#     ai_agent: "AI-Assisted Testing Agent"
+#     automation_rate: 80  # AI generates 80% of unit tests
+#     human_ai_split: "AI generates unit tests, humans write integration/E2E tests"
+#   
+#   milestones:
+#     month_1: 65  # %
+#     month_2: 72  # %
+#     month_3: 80  # %
+#   
+#   confidence: 9
+#   status: "On Track"

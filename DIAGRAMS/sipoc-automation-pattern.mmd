@@ -1,0 +1,67 @@
+```mermaid
+flowchart TB
+    subgraph SIPOC["SIPOC Process Pattern"]
+        direction TB
+        S[Suppliers<br/>Data Sources, APIs, Events]
+        I[Inputs<br/>Raw Data, Requests, Triggers]
+        P[Process<br/>Validation → Transform → Execute]
+        O[Outputs<br/>Reports, Actions, Notifications]
+        C[Customers<br/>Stakeholders, Systems, Dashboards]
+    end
+
+    subgraph Automation["Automation Implementation"]
+        direction TB
+        Ingest[Automated Ingestion<br/>100% API Integration]
+        Validate[Validation Rules<br/>AI-Powered Checks]
+        Execute[Workflow Execution<br/>Event-Driven]
+        Generate[Output Generation<br/>Auto-Reports]
+        Deliver[Delivery Mechanism<br/>Self-Service Portals]
+    end
+
+    subgraph Observability["Observability & Control"]
+        direction TB
+        Metrics[Process Metrics<br/>SLA, Throughput, Quality]
+        Logs[Audit Logs<br/>Full Traceability]
+        Exceptions[Exception Queue<br/>Human Review]
+        Learning[Feedback Loop<br/>Continuous Improvement]
+    end
+
+    subgraph Human["Human Curatorship"]
+        direction TB
+        Monitor[Monitor Dashboards<br/>Real-Time Visibility]
+        Review[Review Exceptions<br/>Edge Cases Only]
+        Refine[Refine Policies<br/>Strategic Decisions]
+    end
+
+    %% SIPOC to Automation mapping
+    S --> Ingest
+    I --> Validate
+    P --> Execute
+    O --> Generate
+    C --> Deliver
+
+    %% Automation to Observability
+    Ingest --> Metrics
+    Validate --> Logs
+    Execute --> Metrics
+    Execute --> Exceptions
+    Generate --> Logs
+    Deliver --> Metrics
+
+    %% Observability to Human
+    Metrics --> Monitor
+    Exceptions --> Review
+    Logs --> Monitor
+
+    %% Human feedback
+    Review --> Refine
+    Refine -.->|Policy Updates| Validate
+    Refine -.->|Process Improvements| Execute
+    Monitor -.->|Insights| Learning
+    Learning -.->|Optimization| Execute
+
+    style SIPOC fill:#fff4e6,stroke:#ff9800,stroke-width:2px
+    style Automation fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Observability fill:#e1f5ff,stroke:#0066cc,stroke-width:2px
+    style Human fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+```

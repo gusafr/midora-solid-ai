@@ -1,0 +1,110 @@
+---
+title: "AI Learning & Development: 4-Level Certification Ladder"
+description: "Progression from AI Awareness (100%) to AI Specialist (5-10%) across all functions"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/people-culture/ai-learning-development.md"
+  - "ADOPTION/CHECKLISTS/learning-development-rollout.md"
+  - "ADOPTION/TEMPLATES/learning-path-template.yaml"
+---
+
+graph TB
+    subgraph L1["<b>LEVEL 1: AWARENESS</b><br/>4 hours | 100% of employees | Universal content"]
+        L1_Module1["Module 1: What is AI?<br/>(1 hour)<br/>• AI capabilities & limitations<br/>• How AI works (simple)<br/>• AI in your function"]
+        L1_Module2["Module 2: Prompting 101<br/>(1 hour)<br/>• Basic prompt structure<br/>• 5 essential patterns<br/>• Hands-on practice"]
+        L1_Module3["Module 3: Ethics & Responsibility<br/>(1 hour)<br/>• Human accountability<br/>• Bias & fairness<br/>• Privacy & data protection"]
+        L1_Module4["Module 4: Tools & Getting Started<br/>(1 hour)<br/>• ChatGPT/Claude/Copilot<br/>• Company-approved tools<br/>• First assignment"]
+        
+        L1_Module1 --> L1_Module2 --> L1_Module3 --> L1_Module4
+    end
+
+    subgraph L2["<b>LEVEL 2: PRACTITIONER</b><br/>20 hours | 60-80% of employees | Function-specific"]
+        L2_Sales["<b>Sales Track</b><br/>• Gong, Clari, Outreach<br/>• Lead scoring AI<br/>• Personalized outreach<br/>• Real project: +30% meetings"]
+        L2_Finance["<b>Finance Track</b><br/>• Invoice automation<br/>• Forecasting AI<br/>• Reconciliation bots<br/>• Real project: -50% close time"]
+        L2_Engineering["<b>Engineering Track</b><br/>• GitHub Copilot<br/>• Code review AI<br/>• Test generation<br/>• Real project: +40% velocity"]
+        L2_Marketing["<b>Marketing Track</b><br/>• Content generation<br/>• SEO optimization<br/>• Campaign analytics<br/>• Real project: 2x content output"]
+        L2_CS["<b>Customer Success Track</b><br/>• Chatbots<br/>• Health scoring<br/>• Churn prediction<br/>• Real project: -60% response time"]
+        L2_HR["<b>HR Track</b><br/>• Resume screening<br/>• Onboarding automation<br/>• Attrition prediction<br/>• Real project: -50% time-to-hire"]
+        L2_Exec["<b>Executive Track</b><br/>• AI strategy<br/>• Transformation planning<br/>• Governance frameworks<br/>• Real project: AI roadmap"]
+    end
+
+    subgraph L3["<b>LEVEL 3: POWER USER</b><br/>40 hours | 20-30% of employees | Advanced"]
+        L3_Strategy["AI Strategy for Function<br/>(8 hours)<br/>• Where AI adds value<br/>• Build vs buy<br/>• ROI calculation<br/>• 6-12 month roadmap"]
+        L3_Custom["Custom Agent Configuration<br/>(12 hours)<br/>• No-code/low-code builders<br/>• Define scope & triggers<br/>• Build 2 production agents<br/>• Integration patterns"]
+        L3_Integration["Integration & Automation<br/>(8 hours)<br/>• API basics<br/>• Event-driven workflows<br/>• Connect to CRM/ERP<br/>• End-to-end automation"]
+        L3_Training["Training Others<br/>(8 hours)<br/>• Adult learning principles<br/>• Create training materials<br/>• Mentor 3 Level 2 practitioners<br/>• Run 1-hour workshop"]
+        L3_Project["Advanced Project<br/>(4 hours)<br/>• Solve complex problem<br/>• Custom AI solution<br/>• Measure ROI (&gt;20% gain)<br/>• Present to leadership"]
+        
+        L3_Strategy --> L3_Custom --> L3_Integration --> L3_Training --> L3_Project
+    end
+
+    subgraph L4["<b>LEVEL 4: SPECIALIST</b><br/>100+ hours | 5-10% of employees | Expert"]
+        L4_MLOps["Building Production AI Systems<br/>(30 hours)<br/>• MLOps fundamentals<br/>• Model training & fine-tuning<br/>• A/B testing, canary releases<br/>• Monitoring & observability"]
+        L4_Advanced["Advanced AI Techniques<br/>(30 hours)<br/>• Prompt engineering at scale<br/>• RAG (Retrieval-Augmented Gen)<br/>• Fine-tuning LLMs<br/>• Multi-agent systems"]
+        L4_Governance["Governance & Ethics (Advanced)<br/>(20 hours)<br/>• Bias detection & mitigation<br/>• Privacy-preserving AI<br/>• Explainability (SHAP, LIME)<br/>• Regulatory compliance"]
+        L4_Research["Research & Innovation<br/>(20 hours)<br/>• Reading papers, conferences<br/>• Experimenting (20% time)<br/>• Publishing learnings<br/>• Leading AI Guild"]
+        
+        L4_MLOps --> L4_Advanced --> L4_Governance --> L4_Research
+    end
+
+    %% Progression Flow
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_Sales
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_Finance
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_Engineering
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_Marketing
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_CS
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_HR
+    L1_Module4 -->|"Pass quiz (80%+)<br/>Complete assignment"| L2_Exec
+
+    L2_Sales -->|"Complete real project<br/>Manager scored 4/5+<br/>30 days daily AI use"| L3_Strategy
+    L2_Finance -->|"Complete real project<br/>Manager scored 4/5+<br/>30 days daily AI use"| L3_Strategy
+    L2_Engineering -->|"Complete real project<br/>Manager scored 4/5+<br/>30 days daily AI use"| L3_Strategy
+
+    L3_Project -->|"2 agents in production<br/>ROI demonstrated<br/>Mentored 3 people"| L4_MLOps
+
+    %% Incentives
+    Incentives["<b>INCENTIVES & RECOGNITION</b><br/><br/>Level 2: +$2K salary + Certificate<br/>Level 3: +$5K salary + 'AI Power User' title + AI Guild membership<br/>Level 4: +$10K salary + 'AI Specialist' title + Conference budget + Strategy Committee seat"]
+
+    L3_Project -.-> Incentives
+    L4_Research -.-> Incentives
+
+    %% Target Percentages
+    Target["<b>TARGET COMPLETION RATES</b><br/><br/>Level 1: 100% of employees (mandatory)<br/>Level 2: 60-80% of employees (most roles)<br/>Level 3: 20-30% of employees (high performers)<br/>Level 4: 5-10% of employees (future AI leaders)"]
+
+    %% Continuous Learning
+    Continuous["<b>CONTINUOUS RESKILLING</b><br/><br/>📅 Learning Sprints (monthly new tools)<br/>💬 AI Guild (weekly sharing, monthly demos)<br/>🔄 Role Rotations (20% time, T-shaped skills)<br/>🏆 Certification Ladder (tied to compensation)"]
+
+    style L1 fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style L2 fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style L3 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    style L4 fill:#e8f5e9,stroke:#388e3c,stroke-width:3px
+
+    style L1_Module1 fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+    style L1_Module2 fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+    style L1_Module3 fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+    style L1_Module4 fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+
+    style L2_Sales fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_Finance fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_Engineering fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_Marketing fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_CS fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_HR fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+    style L2_Exec fill:#ffe0b2,stroke:#f57c00,stroke-width:1px
+
+    style L3_Strategy fill:#e1bee7,stroke:#7b1fa2,stroke-width:1px
+    style L3_Custom fill:#e1bee7,stroke:#7b1fa2,stroke-width:1px
+    style L3_Integration fill:#e1bee7,stroke:#7b1fa2,stroke-width:1px
+    style L3_Training fill:#e1bee7,stroke:#7b1fa2,stroke-width:1px
+    style L3_Project fill:#e1bee7,stroke:#7b1fa2,stroke-width:1px
+
+    style L4_MLOps fill:#c8e6c9,stroke:#388e3c,stroke-width:1px
+    style L4_Advanced fill:#c8e6c9,stroke:#388e3c,stroke-width:1px
+    style L4_Governance fill:#c8e6c9,stroke:#388e3c,stroke-width:1px
+    style L4_Research fill:#c8e6c9,stroke:#388e3c,stroke-width:1px
+
+    style Incentives fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Target fill:#f0f0f0,stroke:#666666,stroke-width:2px
+    style Continuous fill:#e0f2f1,stroke:#00897b,stroke-width:2px

@@ -1,0 +1,100 @@
+```mermaid
+graph TB
+    subgraph Legend["📖 SOLID.AI Role Hierarchy Framework"]
+        LegendText["4-Level Framework: Decision Authority • AI Delegation • Compensation • Career Paths"]
+    end
+
+    subgraph Executive["🎯 EXECUTIVE LEVEL"]
+        direction TB
+        ExecRole["<b>Strategic Leadership</b><br/>C-Suite, VPs, Directors<br/>Company-wide impact"]
+        ExecDecision["<b>Decision Authority</b><br/>• Budget >$1M<br/>• Strategic direction<br/>• Organizational design<br/>• Market positioning"]
+        ExecAI["<b>AI Delegation Pattern</b><br/>• AI provides: Market intelligence, scenario modeling, competitive analysis<br/>• Human decides: Vision, ethics, culture, partnerships<br/>• Collaboration: Human-Led with AI Support"]
+        ExecComp["<b>Compensation</b><br/>$200K - $500K+ total comp<br/>Equity: 0.5% - 5%<br/>Market: Top 5% for role"]
+        ExecCareer["<b>Career Path</b><br/>From: High Level (proven track record)<br/>To: Board, Advisor, Investor"]
+    end
+
+    subgraph High["🏆 HIGH LEVEL"]
+        direction TB
+        HighRole["<b>Expert Practitioners</b><br/>Senior Engineers, Architects, Senior POs<br/>Department/domain impact"]
+        HighDecision["<b>Decision Authority</b><br/>• Budget $100K-$1M<br/>• Technical architecture<br/>• Product roadmap<br/>• Team structure"]
+        HighAI["<b>AI Delegation Pattern</b><br/>• AI provides: Analysis, documentation, design options, research<br/>• Human decides: Architecture, product strategy, technical direction<br/>• Collaboration: Human-AI Partnership (50/50)"]
+        HighComp["<b>Compensation</b><br/>$120K - $200K total comp<br/>Equity: 0.1% - 0.5%<br/>Market: Top 15% for role"]
+        HighCareer["<b>Career Path</b><br/>From: Intermediate Level (5+ years mastery)<br/>To: Executive Level or deep specialist"]
+    end
+
+    subgraph Intermediate["⚙️ INTERMEDIATE LEVEL"]
+        direction TB
+        IntRole["<b>Experienced Contributors</b><br/>Mid-level Engineers, PMs, Analysts<br/>Project/squad impact"]
+        IntDecision["<b>Decision Authority</b><br/>• Budget $10K-$100K<br/>• Project execution approach<br/>• Sprint planning<br/>• Task prioritization"]
+        IntAI["<b>AI Delegation Pattern</b><br/>• AI provides: Code generation, test automation, task execution<br/>• Human decides: Design approach, quality standards, user stories<br/>• Collaboration: AI-Led with Human Oversight (60/40 AI)"]
+        IntComp["<b>Compensation</b><br/>$70K - $120K total comp<br/>Equity: 0% - 0.1%<br/>Market: 50th-70th percentile"]
+        IntCareer["<b>Career Path</b><br/>From: Low Level (2-3 years experience)<br/>To: High Level (technical) or Management"]
+    end
+
+    subgraph Low["🌱 LOW LEVEL"]
+        direction TB
+        LowRole["<b>Individual Contributors</b><br/>Junior Engineers, Coordinators, Associates<br/>Task/ticket impact"]
+        LowDecision["<b>Decision Authority</b><br/>• Budget <$10K<br/>• Task implementation details<br/>• Tool selection (within guardrails)<br/>• Time management"]
+        LowAI["<b>AI Delegation Pattern</b><br/>• AI provides: Heavy automation, code scaffolding, repetitive work<br/>• Human learns: Patterns, best practices, domain knowledge<br/>• Collaboration: AI-Autonomous with Human Learning (80/20 AI)"]
+        LowComp["<b>Compensation</b><br/>$40K - $70K base salary<br/>Equity: Rare (0%)<br/>Market: Entry-level market rate"]
+        LowCareer["<b>Career Path</b><br/>From: Entry (0-2 years)<br/>To: Intermediate Level (demonstrated competency)"]
+    end
+
+    subgraph Transitions["🔄 Level Transitions"]
+        direction LR
+        T1["<b>Low → Intermediate</b><br/>2-3 years<br/>Criteria: Independent project delivery,<br/>mentoring juniors,<br/>technical depth in 1-2 areas"]
+        T2["<b>Intermediate → High</b><br/>3-5 years<br/>Criteria: Domain expertise,<br/>architecture contributions,<br/>cross-team influence"]
+        T3["<b>High → Executive</b><br/>5+ years<br/>Criteria: Strategic thinking,<br/>P&L ownership,<br/>organizational impact"]
+    end
+
+    subgraph Examples["📋 Role Examples by Level"]
+        direction TB
+        E1["<b>Executive:</b> CTO, VP Engineering, VP Product, Chief Data Officer"]
+        E2["<b>High:</b> Principal Engineer, Solutions Architect, Senior Product Owner, Lead QA"]
+        E3["<b>Intermediate:</b> Software Engineer II/III, Project Manager, Business Analyst, DevOps Engineer"]
+        E4["<b>Low:</b> Junior Developer, QA Tester, Technical Writer, Data Analyst I"]
+    end
+
+    %% Hierarchy flow
+    Executive --> High
+    High --> Intermediate
+    Intermediate --> Low
+
+    %% Career progression
+    Low -.->|Promotion| Intermediate
+    Intermediate -.->|Promotion| High
+    High -.->|Promotion| Executive
+
+    %% Internal connections per level
+    ExecRole --- ExecDecision
+    ExecDecision --- ExecAI
+    ExecAI --- ExecComp
+    ExecComp --- ExecCareer
+
+    HighRole --- HighDecision
+    HighDecision --- HighAI
+    HighAI --- HighComp
+    HighComp --- HighCareer
+
+    IntRole --- IntDecision
+    IntDecision --- IntAI
+    IntAI --- IntComp
+    IntComp --- IntCareer
+
+    LowRole --- LowDecision
+    LowDecision --- LowAI
+    LowAI --- LowComp
+    LowComp --- LowCareer
+
+    %% Transition connections
+    T1 --- T2
+    T2 --- T3
+
+    style Legend fill:#f0f0f0,stroke:#666,stroke-width:2px
+    style Executive fill:#ffebee,stroke:#d32f2f,stroke-width:3px
+    style High fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Intermediate fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Low fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Transitions fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style Examples fill:#fff4e6,stroke:#ff9800,stroke-width:2px
+```

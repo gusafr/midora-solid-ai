@@ -1,0 +1,713 @@
+/* ============================================
+   SOLID.AI Academic Theme
+   MIT/Stanford-style documentation
+   ============================================ */
+
+/* === Color Palette (Academic Minimalist) === */
+:root {
+  --academic-primary: #1a1a1a;
+  --academic-secondary: #4a5568;
+  --academic-accent: #2563eb;
+  --academic-border: #e5e7eb;
+  --academic-bg: #ffffff;
+  --academic-bg-alt: #f9fafb;
+  --academic-code-bg: #f5f5f5;
+}
+
+/* === Typography (Serif for body, Sans for UI) === */
+.md-typeset {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--academic-primary);
+  letter-spacing: 0.01em;
+}
+
+/* Headings use sans-serif for clarity */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: var(--academic-primary);
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--academic-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.875rem;
+  border-bottom: 1px solid var(--academic-border);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.5rem;
+  color: var(--academic-secondary);
+}
+
+.md-typeset h4 {
+  font-size: 1.25rem;
+  color: var(--academic-secondary);
+}
+
+/* === Body Text === */
+.md-typeset p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* === Links === */
+.md-typeset a {
+  color: var(--academic-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--academic-accent);
+}
+
+/* === Code Blocks === */
+.md-typeset code {
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  background: var(--academic-code-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  color: var(--academic-primary);
+}
+
+.md-typeset pre {
+  background: var(--academic-code-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.md-typeset pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* === Tables === */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  border: 1px solid var(--academic-border);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--academic-bg-alt);
+  color: var(--academic-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--academic-border);
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--academic-border);
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: var(--academic-bg-alt);
+}
+
+/* === Blockquotes (Academic Citations) === */
+.md-typeset blockquote {
+  border-left: 3px solid var(--academic-border);
+  background: var(--academic-bg-alt);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--academic-secondary);
+  font-size: 0.95rem;
+}
+
+.md-typeset blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* === Lists === */
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset ul li::marker {
+  color: var(--academic-accent);
+}
+
+.md-typeset ol li::marker {
+  color: var(--academic-accent);
+  font-weight: 600;
+}
+
+/* === Horizontal Rules === */
+.md-typeset hr {
+  border: none;
+  border-top: 1px solid var(--academic-border);
+  margin: 3rem 0;
+}
+
+/* === Admonitions (Note boxes) === */
+.md-typeset .admonition {
+  border: 1px solid var(--academic-border);
+  border-left: 4px solid var(--academic-accent);
+  border-radius: 4px;
+  background: var(--academic-bg-alt);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.md-typeset .admonition-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--academic-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* === Navigation === */
+.md-nav__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+.md-nav__link--active {
+  color: var(--academic-accent) !important;
+  font-weight: 600;
+}
+
+.md-nav__link:hover {
+  color: var(--academic-accent) !important;
+}
+
+/* === Header (Minimal) === */
+.md-header {
+  background: var(--academic-bg);
+  color: var(--academic-primary);
+  border-bottom: 1px solid var(--academic-border);
+  box-shadow: none;
+}
+
+.md-header__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+/* === Footer (Minimal) === */
+.md-footer {
+  background: var(--academic-bg-alt);
+  color: var(--academic-secondary);
+  border-top: 1px solid var(--academic-border);
+}
+
+/* === Search === */
+.md-search__input {
+  background: var(--academic-bg-alt);
+  border: 1px solid var(--academic-border);
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+.md-search__input:focus {
+  border-color: var(--academic-accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* === Figure Captions === */
+.md-typeset figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.md-typeset figcaption {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--academic-secondary);
+  margin-top: 0.5rem;
+}
+
+/* === Citation Blocks === */
+.citation-block {
+  background: var(--academic-bg-alt);
+  border: 1px solid var(--academic-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+/* === Academic Metadata === */
+.document-metadata {
+  background: var(--academic-bg-alt);
+  border: 1px solid var(--academic-border);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.document-metadata table {
+  margin: 0;
+  border: none;
+}
+
+.document-metadata th,
+.document-metadata td {
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+/* === Print Styles === */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar,
+  .md-nav {
+    display: none;
+  }
+  
+  .md-content {
+    max-width: 100%;
+  }
+  
+  .md-typeset {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+  
+  .md-typeset a {
+    color: var(--academic-primary);
+    text-decoration: underline;
+  }
+  
+  .md-typeset code,
+  .md-typeset pre {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+}
+
+/* === Responsive Typography === */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset {
+    font-size: 0.95rem;
+  }
+  
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.5rem;
+  }
+  
+  .md-typeset h3 {
+    font-size: 1.25rem;
+  }
+  
+  .md-typeset p {
+    text-align: left;
+    hyphens: none;
+  }
+}
+
+/* === Smooth Scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Focus States (Accessibility) === */
+*:focus {
+  outline: 2px solid var(--academic-accent);
+  outline-offset: 2px;
+}
+
+/* === Mermaid Diagrams === */
+.mermaid {
+  background: var(--academic-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* === Button Styles === */
+.md-button {
+  font-family: 'Inter', sans-serif;
+  background: var(--academic-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.md-button:hover {
+  background: #1e40af;
+}
+
+/* === Task Lists === */
+.md-typeset .task-list-indicator::before {
+  background-color: var(--academic-accent);
+}
+
+/* === Definition Lists === */
+.md-typeset dl dt {
+  font-weight: 600;
+  color: var(--academic-primary);
+  margin-top: 1rem;
+}
+
+.md-typeset dl dd {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: var(--academic-secondary);
+}
+
+/* Enhanced Typography */
+.md-typeset {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: -0.011em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--solid-teal);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--solid-teal-dark);
+  border-bottom: 2px solid var(--solid-border-teal);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  color: var(--solid-gray);
+}
+
+/* === Premium Admonitions === */
+.md-typeset .admonition {
+  border-left: 4px solid var(--solid-teal);
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(to right, var(--solid-bg-teal), transparent);
+  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.1);
+}
+
+.md-typeset .admonition-title {
+  background: transparent;
+  font-weight: 600;
+  color: var(--solid-teal-dark);
+}
+
+/* === Code Blocks === */
+.md-typeset code {
+  background: var(--solid-bg-teal);
+  border: 1px solid var(--solid-border-teal);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--solid-teal-dark);
+}
+
+.md-typeset pre {
+  border-radius: 8px;
+  border: 1px solid var(--solid-border-teal);
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08);
+}
+
+.md-typeset pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* === Tables === */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--solid-border-teal);
+  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, var(--solid-teal), var(--solid-teal-light));
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--solid-border-teal);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: var(--solid-bg-teal);
+  transition: background 0.2s ease;
+}
+
+/* === Links === */
+.md-typeset a {
+  color: var(--solid-teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--solid-teal);
+}
+
+/* === Blockquotes === */
+.md-typeset blockquote {
+  border-left: 4px solid var(--solid-teal);
+  background: linear-gradient(to right, var(--solid-bg-teal), transparent);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  color: var(--solid-gray);
+  font-style: italic;
+}
+
+/* === Lists === */
+.md-typeset ul li::marker {
+  color: var(--solid-teal);
+}
+
+.md-typeset ol li::marker {
+  color: var(--solid-teal);
+  font-weight: 600;
+}
+
+/* === Navigation === */
+.md-nav__link--active {
+  color: var(--solid-teal) !important;
+  font-weight: 600;
+}
+
+.md-nav__link:hover {
+  color: var(--solid-teal-light) !important;
+}
+
+/* === Badges & Tags === */
+.md-typeset kbd {
+  background: linear-gradient(135deg, var(--solid-teal), var(--solid-teal-light));
+  color: white;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85em;
+  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.2);
+}
+
+/* === Section Dividers === */
+.md-typeset hr {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--solid-teal), transparent);
+  border: none;
+  margin: 3rem 0;
+}
+
+/* === Buttons (if using Material for MkDocs buttons) === */
+.md-button {
+  background: linear-gradient(135deg, var(--solid-teal), var(--solid-teal-light));
+  color: white;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.md-button--primary {
+  background: linear-gradient(135deg, var(--solid-teal), var(--solid-teal-light));
+}
+
+/* === Search === */
+.md-search__input {
+  border-radius: 8px;
+  border: 2px solid var(--solid-border-teal);
+}
+
+.md-search__input:focus {
+  border-color: var(--solid-teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+/* === Header === */
+.md-header {
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--solid-border-teal);
+}
+
+.md-header__inner {
+  padding: 0.25rem 0;
+}
+
+.md-header__button {
+  margin: 0.25rem;
+  color: var(--solid-teal-dark) !important;
+}
+
+.md-header__title {
+  padding: 0.25rem 0.5rem;
+  color: var(--solid-teal-dark) !important;
+}
+
+/* === Search Button Text === */
+.md-search__form {
+  background: transparent;
+}
+
+.md-search__input::placeholder {
+  color: var(--solid-gray) !important;
+}
+
+[data-md-component="search-button"] {
+  color: var(--solid-teal-dark) !important;
+}
+
+/* === Footer === */
+.md-footer {
+  background: linear-gradient(135deg, var(--solid-teal-dark), var(--solid-teal));
+}
+
+/* === Tabs (for Technical Reference sections) === */
+.md-typeset .tabbed-set {
+  border-radius: 8px;
+  border: 1px solid var(--solid-border-teal);
+  overflow: hidden;
+}
+
+.md-typeset .tabbed-set > input:checked + label {
+  background: var(--solid-teal);
+  color: white;
+  border-color: var(--solid-teal);
+}
+
+.md-typeset .tabbed-set > label:hover {
+  background: var(--solid-bg-teal);
+}
+
+/* === Task Lists === */
+.md-typeset .task-list-indicator::before {
+  background-color: var(--solid-teal);
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset h1 {
+    font-size: 1.8rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* === Smooth Scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Focus States for Accessibility === */
+*:focus {
+  outline: 2px solid var(--solid-teal);
+  outline-offset: 2px;
+}
+
+/* === Print Styles === */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar,
+  .md-nav {
+    display: none;
+  }
+  
+  .md-content {
+    max-width: 100%;
+  }
+}
+
+/* === Premium Content Boxes === */
+.premium-box {
+  background: linear-gradient(135deg, var(--solid-bg-teal) 0%, var(--solid-bg-coral) 100%);
+  border: 1px solid var(--solid-border-teal);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
+}
+
+.premium-box-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--solid-teal-dark);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--solid-border-teal);
+  padding-bottom: 0.5rem;
+}
+
+/* === Icon Styling === */
+.emoji {
+  font-style: normal;
+  vertical-align: middle;
+}

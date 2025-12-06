@@ -1,0 +1,88 @@
+---
+title: "AI Governance Risk Scoring Framework"
+description: "Impact × Likelihood × Autonomy → Risk Tier → Review Process"
+framework: "SOLID.AI"
+version: "1.0"
+date: "2025-11-05"
+related_docs:
+  - "PLAYBOOKS/governance/ai-governance-risk-assessment.md"
+  - "ADOPTION/CHECKLISTS/governance-ethics-review.md"
+  - "ADOPTION/TEMPLATES/risk-assessment-template.yaml"
+---
+
+graph TB
+    Start["<b>🤖 New AI Initiative</b><br/>Agent, Model, or AI-Powered Feature"]
+
+    %% Step 1: Score Impact
+    Start --> Impact["<b>STEP 1: Score IMPACT (1-5)</b><br/><br/>Max of:<br/>💰 Financial (1=&lt;$1K loss, 5=&gt;$1M)<br/>📢 Reputational (1=Internal, 5=Brand crisis)<br/>⚖️ Legal (1=None, 5=Existential)<br/>⚙️ Operational (1=Nice-to-have, 5=Failure)<br/>🏥 Human Safety (1=None, 5=Life-threatening)"]
+
+    %% Step 2: Score Likelihood
+    Impact --> Likelihood["<b>STEP 2: Score LIKELIHOOD (1-5)</b><br/><br/>Probability of risk materializing:<br/>1 = Rare (&lt;5%)<br/>2 = Unlikely (5-20%)<br/>3 = Possible (20-50%)<br/>4 = Likely (50-80%)<br/>5 = Almost Certain (&gt;80%)"]
+
+    %% Step 3: Score Autonomy
+    Likelihood --> Autonomy["<b>STEP 3: Score AUTONOMY (1-5)</b><br/><br/>Level of AI decision-making:<br/>1 = Human-in-loop (review every decision)<br/>2 = Recommend & Wait (AI suggests, human approves)<br/>3 = Act & Notify (AI acts, human can undo)<br/>4 = Semi-Autonomous (periodic audits)<br/>5 = Fully Autonomous (no oversight)"]
+
+    %% Calculate Risk Score
+    Autonomy --> Calculate["<b>CALCULATE RISK SCORE</b><br/><br/>Risk Score = Impact × Likelihood × Autonomy<br/><br/>Range: 1 to 125"]
+
+    %% Determine Risk Tier
+    Calculate --> Tier1{Risk Score<br/>1-7?}
+    Calculate --> Tier2{Risk Score<br/>8-19?}
+    Calculate --> Tier3{Risk Score<br/>20-39?}
+    Calculate --> Tier4{Risk Score<br/>40-79?}
+    Calculate --> Tier5{Risk Score<br/>80-125?}
+
+    %% Tier 1: Minimal
+    Tier1 -->|Yes| T1["<b>TIER 1: MINIMAL RISK</b><br/><br/>✅ DRI Self-Certifies<br/>⏱️ Same-day approval<br/>📝 Basic documentation<br/><br/>Examples:<br/>• Internal productivity tools<br/>• Low-stakes automation<br/>• No customer impact"]
+
+    %% Tier 2: Low
+    Tier2 -->|Yes| T2["<b>TIER 2: LOW RISK</b><br/><br/>👤 Manager Review Required<br/>⏱️ 1 business day SLA<br/>📝 Standard documentation<br/><br/>Examples:<br/>• Customer-facing chatbot<br/>• Email automation<br/>• Basic lead scoring"]
+
+    %% Tier 3: Medium
+    Tier3 -->|Yes| T3["<b>TIER 3: MEDIUM RISK</b><br/><br/>👥 Director + Compliance Review<br/>⏱️ 2 business days SLA<br/>📝 Full documentation + bias testing<br/><br/>Examples:<br/>• Automated pricing<br/>• Resume screening<br/>• Fraud detection"]
+
+    %% Tier 4: High
+    Tier4 -->|Yes| T4["<b>TIER 4: HIGH RISK</b><br/><br/>👔 VP + Legal + Compliance Review<br/>⏱️ 3 business days SLA<br/>📝 Comprehensive docs + audits<br/><br/>Examples:<br/>• Credit scoring<br/>• Hiring decisions<br/>• Medical triage"]
+
+    %% Tier 5: Extreme
+    Tier5 -->|Yes| T5["<b>TIER 5: EXTREME RISK</b><br/><br/>🏛️ Board + Ethics Board Review<br/>⏱️ 5 business days SLA<br/>📝 Full audit + external review<br/><br/>Examples:<br/>• Autonomous financial trading<br/>• Clinical diagnosis AI<br/>• Legal sentencing AI"]
+
+    %% Configure Alerts
+    T1 --> Alerts
+    T2 --> Alerts
+    T3 --> Alerts
+    T4 --> Alerts
+    T5 --> Alerts
+
+    Alerts["<b>CONFIGURE 5 ALERT TYPES</b><br/><br/>🎯 Alert 1: Low Confidence (&lt;80%)<br/>💰 Alert 2: High-Impact Decision (&gt;$X or &gt;Y people)<br/>⚠️ Alert 3: Edge Case (unexpected input)<br/>⚖️ Alert 4: Bias Detected (demographic parity &lt;95%)<br/>📉 Alert 5: Performance Degradation (accuracy &lt;90%)"]
+
+    Alerts --> Production["<b>✅ APPROVED FOR PRODUCTION</b><br/><br/>Monitor continuously:<br/>• 8 universal AI agent KPIs<br/>• Governance metrics (bias, fairness)<br/>• Monthly audits<br/>• Human accountability maintained"]
+
+    %% Examples
+    Example1["<b>EXAMPLE 1: Invoice Processing AI</b><br/>Impact: 3 (could lose $10K-$100K)<br/>Likelihood: 2 (85% accuracy = 15% error)<br/>Autonomy: 4 (auto-processes, human audits)<br/>Risk Score: 3×2×4 = 24<br/>➡️ TIER 3 (Medium)"]
+
+    Example2["<b>EXAMPLE 2: Lead Scoring AI</b><br/>Impact: 3 (missed revenue)<br/>Likelihood: 3 (75% accuracy)<br/>Autonomy: 4 (semi-autonomous)<br/>Risk Score: 3×3×4 = 36<br/>➡️ TIER 3 (Medium)"]
+
+    Example3["<b>EXAMPLE 3: Medical Diagnosis AI</b><br/>Impact: 5 (life-threatening)<br/>Likelihood: 3 (possible errors)<br/>Autonomy: 2 (doctor reviews all)<br/>Risk Score: 5×3×2 = 30<br/>➡️ TIER 3 (Medium)"]
+
+    Example4["<b>EXAMPLE 4: Autonomous Trading AI</b><br/>Impact: 5 (&gt;$1M at risk)<br/>Likelihood: 4 (market volatility)<br/>Autonomy: 5 (fully autonomous)<br/>Risk Score: 5×4×5 = 100<br/>➡️ TIER 5 (Extreme)"]
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Impact fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Likelihood fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Autonomy fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Calculate fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+
+    style T1 fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
+    style T2 fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style T3 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px
+    style T4 fill:#ffccbc,stroke:#e64a19,stroke-width:2px
+    style T5 fill:#ffcdd2,stroke:#c62828,stroke-width:3px
+
+    style Alerts fill:#e1bee7,stroke:#8e24aa,stroke-width:2px
+    style Production fill:#c8e6c9,stroke:#388e3c,stroke-width:3px
+
+    style Example1 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px
+    style Example2 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px
+    style Example3 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px
+    style Example4 fill:#e8f5e9,stroke:#66bb6a,stroke-width:1px

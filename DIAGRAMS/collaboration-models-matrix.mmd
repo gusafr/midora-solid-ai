@@ -1,0 +1,109 @@
+```mermaid
+graph TB
+    subgraph Legend["📖 Human-AI Collaboration Models"]
+        LegendText["5 Models: Reserved → Human-Led → Partnership → AI-Led → Autonomous"]
+    end
+
+    subgraph Model1["🧑 MODEL 1: RESERVED FOR HUMANS"]
+        M1Desc["<b>AI Role:</b> None or minimal<br/><b>Human Role:</b> 100% decision-making<br/><b>Confidence:</b> Humans-only territory"]
+        M1Tasks["<b>Task Examples:</b><br/>• Ethics & values decisions<br/>• Strategic vision & direction<br/>• Organizational culture<br/>• High-stakes partnerships<br/>• Creative strategy<br/>• Empathy & human relationships"]
+        M1Roles["<b>Roles Using This:</b><br/>• CEO (Vision)<br/>• CHRO (Culture)<br/>• Legal (Judgment)<br/>• Product Owner (Vision)<br/>• Ethics Committee"]
+        M1Why["<b>Why Reserved:</b><br/>Requires judgment, empathy,<br/>accountability, creativity,<br/>cultural context that AI<br/>cannot replicate"]
+    end
+
+    subgraph Model2["👤🤖 MODEL 2: HUMAN-LED WITH AI SUPPORT"]
+        M2Desc["<b>AI Role:</b> Provides analysis, options<br/><b>Human Role:</b> Makes final decision<br/><b>Confidence:</b> 70-85% AI accuracy"]
+        M2Tasks["<b>Task Examples:</b><br/>• Strategic planning<br/>• Architecture design<br/>• Product roadmapping<br/>• Budget allocation >$100K<br/>• Hiring decisions<br/>• Market positioning"]
+        M2Roles["<b>Roles Using This:</b><br/>• CTO (Architecture)<br/>• VP Product (Roadmap)<br/>• CFO (Budget)<br/>• Solutions Architect<br/>• Senior Product Owner"]
+        M2Why["<b>Why Human-Led:</b><br/>High complexity, multiple<br/>stakeholders, strategic<br/>implications, requires<br/>contextual judgment"]
+    end
+
+    subgraph Model3["👥 MODEL 3: HUMAN-AI PARTNERSHIP"]
+        M3Desc["<b>AI Role:</b> Co-creates with human<br/><b>Human Role:</b> Collaborates equally<br/><b>Confidence:</b> 85-92% AI accuracy"]
+        M3Tasks["<b>Task Examples:</b><br/>• Software development<br/>• Content creation<br/>• Data analysis<br/>• UX design<br/>• Test design<br/>• Documentation writing"]
+        M3Roles["<b>Roles Using This:</b><br/>• Software Engineer<br/>• Data Analyst<br/>• Content Marketer<br/>• UX Designer<br/>• Technical Writer<br/>• QA Engineer"]
+        M3Why["<b>Why Partnership:</b><br/>Balanced complexity,<br/>AI generates/suggests,<br/>human refines/validates,<br/>iterative co-creation"]
+    end
+
+    subgraph Model4["🤖👤 MODEL 4: AI-LED WITH HUMAN OVERSIGHT"]
+        M4Desc["<b>AI Role:</b> Executes autonomously<br/><b>Human Role:</b> Reviews exceptions<br/><b>Confidence:</b> 92-97% AI accuracy"]
+        M4Tasks["<b>Task Examples:</b><br/>• Automated testing<br/>• Code reviews (standard)<br/>• Invoice processing<br/>• Customer support (L1)<br/>• Report generation<br/>• System monitoring"]
+        M4Roles["<b>Roles Using This:</b><br/>• QA Engineer (oversight)<br/>• DevOps Engineer<br/>• Accountant (review)<br/>• Support Manager<br/>• Business Analyst<br/>• Project Manager"]
+        M4Why["<b>Why AI-Led:</b><br/>Routine, rule-based,<br/>high-volume, low-risk,<br/>AI handles 90%+,<br/>humans handle edge cases"]
+    end
+
+    subgraph Model5["🤖🔍 MODEL 5: AI-AUTONOMOUS WITH HUMAN CURATION"]
+        M5Desc["<b>AI Role:</b> Fully autonomous<br/><b>Human Role:</b> Strategic curation<br/><b>Confidence:</b> 97%+ AI accuracy"]
+        M5Tasks["<b>Task Examples:</b><br/>• CI/CD deployment<br/>• Email routing/filtering<br/>• Data entry/migration<br/>• Calendar scheduling<br/>• Backup automation<br/>• Security patching<br/>• Log aggregation"]
+        M5Roles["<b>Roles Using This:</b><br/>• Platform Engineer (curation)<br/>• IT Operations<br/>• Data Engineer<br/>• Admin/Coordinator<br/>• Compliance (audit)<br/>• Security (monitoring)"]
+        M5Why["<b>Why Autonomous:</b><br/>Repetitive, deterministic,<br/>high-volume, low-risk,<br/>AI handles 95%+,<br/>humans curate policies"]
+    end
+
+    subgraph DecisionTree["🔀 When to Use Which Model"]
+        D1{"Is this an<br/>ethics/culture/vision<br/>decision?"}
+        D2{"Does it require<br/>strategic judgment<br/>or >$100K impact?"}
+        D3{"Is it creative or<br/>requires iteration<br/>with AI?"}
+        D4{"Is it routine with<br/>>90% accuracy<br/>pattern?"}
+        D5{"Is it fully<br/>deterministic with<br/>>95% accuracy?"}
+        
+        D1 -->|Yes| Model1
+        D1 -->|No| D2
+        D2 -->|Yes| Model2
+        D2 -->|No| D3
+        D3 -->|Yes| Model3
+        D3 -->|No| D4
+        D4 -->|Yes| Model4
+        D4 -->|No| D5
+        D5 -->|Yes| Model5
+        D5 -->|No| Model3
+    end
+
+    subgraph Evolution["📈 Evolution Over Time"]
+        E1["<b>2025:</b> Most work in Models 1-3<br/>(Human-heavy)"]
+        E2["<b>2026:</b> Shift to Models 3-4<br/>(Balanced)"]
+        E3["<b>2027+:</b> Shift to Models 4-5<br/>(AI-heavy)"]
+        E1 --> E2
+        E2 --> E3
+    end
+
+    %% Flow connections
+    Legend --> Model1
+    Model1 --> Model2
+    Model2 --> Model3
+    Model3 --> Model4
+    Model4 --> Model5
+
+    Model1 --> M1Desc
+    M1Desc --- M1Tasks
+    M1Tasks --- M1Roles
+    M1Roles --- M1Why
+
+    Model2 --> M2Desc
+    M2Desc --- M2Tasks
+    M2Tasks --- M2Roles
+    M2Roles --- M2Why
+
+    Model3 --> M3Desc
+    M3Desc --- M3Tasks
+    M3Tasks --- M3Roles
+    M3Roles --- M3Why
+
+    Model4 --> M4Desc
+    M4Desc --- M4Tasks
+    M4Tasks --- M4Roles
+    M4Roles --- M4Why
+
+    Model5 --> M5Desc
+    M5Desc --- M5Tasks
+    M5Tasks --- M5Roles
+    M5Roles --- M5Why
+
+    style Legend fill:#f0f0f0,stroke:#666,stroke-width:2px
+    style Model1 fill:#ffebee,stroke:#d32f2f,stroke-width:3px
+    style Model2 fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Model3 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Model4 fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Model5 fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style DecisionTree fill:#fff4e6,stroke:#ff9800,stroke-width:2px
+    style Evolution fill:#e1f5ff,stroke:#0066cc,stroke-width:2px
+```

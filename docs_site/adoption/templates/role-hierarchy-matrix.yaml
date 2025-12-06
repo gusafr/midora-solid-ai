@@ -1,0 +1,543 @@
+# Role Hierarchy Matrix Template
+
+# 4-Level SOLID.AI Role Hierarchy Framework
+# Map all roles (human + AI agents) to create clarity on:
+# - Career paths (how do I get promoted?)
+# - Decision authority (what can I decide vs. escalate?)
+# - Compensation (fair pay for level of responsibility)
+# - Human-AI collaboration (where do AI agents fit?)
+
+organization:
+  name: "YourCompany"
+  industry: "Technology / Manufacturing / Services / Other"
+  employee_count: 120
+  ai_agents_deployed: 15
+  assessment_date: "2025-11-15"
+
+# ============================================
+# LEVEL 1: LOW-LEVEL (Assistants / Analysts)
+# ============================================
+# Tasks: Structured, repetitive, rule-based
+# Autonomy: Minimal (follow scripts, checklists, SOPs)
+# Decision Authority: Execute pre-defined rules, escalate edge cases
+# Compensation (Human): $40K-$60K/year
+# Compensation (AI): $200-$500/month
+
+low_level:
+  human_roles:
+    - role_name: "Junior Accountant"
+      function: "Finance"
+      count: 2
+      tasks:
+        - "Data entry (AP/AR invoices, expense reports)"
+        - "Reconcile bank statements"
+        - "Process expense reimbursements"
+        - "Monthly journal entries (routine)"
+      autonomy: "Follow accounting SOPs, escalate discrepancies >$500"
+      decision_authority:
+        can_decide:
+          - "Categorize expenses <$500"
+          - "Approve routine expense reimbursements"
+        cannot_decide:
+          - "Change budget allocations"
+          - "Approve vendor contracts"
+      escalates_to: "Senior Accountant (Intermediate) or Finance Manager (High)"
+      compensation:
+        salary_range: "$45K-$55K/year"
+        current_avg: "$50K"
+      career_path:
+        next_level: "Senior Accountant (Intermediate)"
+        requirements:
+          - "2 years experience in AP/AR"
+          - "Learn budgeting & forecasting"
+          - "Take on cross-functional projects (coordinate with Sales/HR)"
+        timeline: "2-3 years"
+
+    - role_name: "Sales Development Rep (SDR)"
+      function: "Sales"
+      count: 3
+      tasks:
+        - "Respond to inbound leads <5 minutes"
+        - "Qualify leads using BANT (Budget, Authority, Need, Timeline)"
+        - "Book demos for Account Executives"
+        - "Send nurture email sequences"
+      autonomy: "Follow lead qualification script, escalate custom pricing requests"
+      decision_authority:
+        can_decide:
+          - "Qualify leads (hot/warm/cold)"
+          - "Book demos on AE calendar"
+        cannot_decide:
+          - "Offer discounts or custom pricing"
+          - "Close deals"
+      escalates_to: "Account Executive (Intermediate) or VP Sales (High)"
+      compensation:
+        salary_range: "$50K-$60K/year + commission"
+        current_avg: "$55K + $10K commission"
+      career_path:
+        next_level: "Account Executive (Intermediate)"
+        requirements:
+          - "1-2 years qualifying leads"
+          - "Hit quota (100 qualified demos/quarter)"
+          - "Learn product demo skills"
+        timeline: "1-2 years"
+
+  ai_agent_roles:
+    - role_name: "ExpenseCategorizer-Agent"
+      function: "Finance"
+      tasks:
+        - "Auto-categorize expenses (T&E, IT, office supplies, etc.)"
+        - "Flag expenses missing required fields (receipt, business purpose)"
+        - "Route for approval (>$1K requires manager approval)"
+      autonomy: "Categorize 95% of expenses autonomously, escalate anomalies"
+      decision_authority:
+        can_decide:
+          - "Categorize expenses based on historical patterns"
+          - "Approve routine expenses <$1K"
+        cannot_decide:
+          - "Change expense categories (requires Finance Manager)"
+          - "Approve expenses >$1K (requires human manager)"
+      escalates_to: "Senior Accountant (Intermediate) or Finance Manager (High)"
+      compensation:
+        monthly_cost: "$300"
+        tools: "QuickBooks AI, Xero, or Expensify"
+        roi: "13x vs. human junior accountant ($4K/month salary)"
+      upgrade_path:
+        next_level: "BudgetForecaster-Agent (Intermediate)"
+        requirements:
+          - "Handle >80% of expenses autonomously for 3+ months"
+          - "Categorization accuracy >95%"
+          - "Team ready for forecast automation (not just categorization)"
+        timeline: "6-12 months"
+
+    - role_name: "LeadQualifier-Agent"
+      function: "Sales"
+      tasks:
+        - "Respond to inbound leads <5 minutes (24/7)"
+        - "Score leads 1-100 using BANT criteria"
+        - "Book qualified demos (score >70) on AE calendar"
+        - "Send nurture sequences to unqualified leads"
+      autonomy: "Handle 90% of inbound leads autonomously, escalate custom requests"
+      decision_authority:
+        can_decide:
+          - "Qualify leads using scoring criteria"
+          - "Book demos for qualified leads"
+        cannot_decide:
+          - "Offer custom pricing or discounts"
+          - "Handle enterprise deals (>1,000 employees)"
+      escalates_to: "Account Executive (Intermediate) or VP Sales (High)"
+      compensation:
+        monthly_cost: "$300"
+        tools: "Zapier, ChatGPT API, HubSpot/Salesforce"
+        roi: "13x vs. human SDR ($4K/month salary)"
+      upgrade_path:
+        next_level: "LeadStrategist-Agent (Intermediate)"
+        requirements:
+          - "Handle >80% of leads autonomously for 3+ months"
+          - "Qualification accuracy >90%"
+          - "Team wants strategic insights (not just qualification)"
+        timeline: "6-12 months"
+
+# ============================================
+# LEVEL 2: INTERMEDIATE-LEVEL (Consultants / Coordinators)
+# ============================================
+# Tasks: Semi-structured, require judgment/context
+# Autonomy: Moderate (interpret requirements, make recommendations)
+# Decision Authority: Tactical decisions within defined scope
+# Compensation (Human): $70K-$120K/year
+# Compensation (AI): $1K-$3K/month
+
+intermediate_level:
+  human_roles:
+    - role_name: "Senior Accountant / Financial Analyst"
+      function: "Finance"
+      count: 1
+      tasks:
+        - "Analyze monthly budget variance (actual vs. plan)"
+        - "Create rolling 12-month revenue/expense forecast"
+        - "Build financial models for new products/initiatives"
+        - "Present insights to CFO + executive team"
+        - "Coordinate budget planning with department heads"
+      autonomy: "Build models independently, review with CFO before sharing with leadership"
+      decision_authority:
+        can_decide:
+          - "Recommend forecast adjustments (CFO approves)"
+          - "Approve expense categorization changes <$5K"
+          - "Flag budget variances, propose solutions"
+        cannot_decide:
+          - "Change budget without CFO approval"
+          - "Hire/fire team members"
+          - "Set financial strategy"
+      escalates_to: "Finance Manager (High) or CFO (High)"
+      compensation:
+        salary_range: "$75K-$100K/year"
+        current_avg: "$85K"
+      career_path:
+        next_level: "Finance Manager / Director of FP&A (High)"
+        requirements:
+          - "3-5 years financial analysis experience"
+          - "Manage 1-2 junior analysts"
+          - "Lead cross-functional initiatives (Sales + Marketing budget alignment)"
+          - "Demonstrate strategic thinking (not just execution)"
+        timeline: "2-4 years"
+
+    - role_name: "Account Executive (AE)"
+      function: "Sales"
+      count: 5
+      tasks:
+        - "Demo product to qualified leads"
+        - "Negotiate pricing & terms"
+        - "Close deals ($10K-$100K/year contract value)"
+        - "Manage customer relationships (upsell, renewals)"
+        - "Coordinate with Customer Success for onboarding"
+      autonomy: "Run sales process independently, escalate enterprise deals"
+      decision_authority:
+        can_decide:
+          - "Offer discounts up to 15%"
+          - "Negotiate payment terms (monthly vs. annual)"
+          - "Approve contract amendments <$10K"
+        cannot_decide:
+          - "Discount >15% (requires Sales Manager)"
+          - "Enterprise deals >$100K (requires VP Sales)"
+          - "Change product roadmap based on customer requests"
+      escalates_to: "Sales Manager (High) or VP Sales (High)"
+      compensation:
+        salary_range: "$80K-$100K base + $40K-$60K commission"
+        current_avg: "$90K base + $50K commission = $140K OTE"
+      career_path:
+        next_level: "Sales Manager (High)"
+        requirements:
+          - "3-5 years closing SMB/mid-market deals"
+          - "Hit quota 4/4 quarters"
+          - "Mentor 2-3 SDRs or junior AEs"
+          - "Demonstrate ability to manage team, not just sell"
+        timeline: "3-5 years"
+
+  ai_agent_roles:
+    - role_name: "BudgetForecaster-Agent"
+      function: "Finance"
+      tasks:
+        - "Update rolling 12-month forecast weekly (based on actuals)"
+        - "Flag budget variances >10% (trigger for CFO review)"
+        - "Run scenario analysis (best case, worst case, most likely)"
+        - "Generate monthly financial reports (P&L, balance sheet, cash flow)"
+      autonomy: "Update forecasts autonomously, flag variances for CFO review"
+      decision_authority:
+        can_decide:
+          - "Adjust forecast based on actuals (mechanical updates)"
+          - "Flag variances and recommend actions"
+        cannot_decide:
+          - "Change budget assumptions (revenue growth, COGS, headcount) without CFO"
+          - "Approve budget reallocations"
+      escalates_to: "CFO (High) or Finance Manager (High)"
+      compensation:
+        monthly_cost: "$1,500"
+        tools: "Cube, Pigment, Mosaic, or custom (BI + AI)"
+        roi: "5x vs. human senior analyst ($8K/month salary)"
+      upgrade_path:
+        next_level: "StrategicFinance-Agent (High-Level, not yet widely available in 2025)"
+        requirements:
+          - "Forecast accuracy >90% for 6+ months"
+          - "Team wants strategic recommendations (not just forecasts)"
+        timeline: "Not yet available (2025), likely 2028-2030"
+
+    - role_name: "ProposalGenerator-Agent"
+      function: "Sales"
+      tasks:
+        - "Generate custom proposals based on discovery call notes"
+        - "Calculate pricing based on product configuration + discount rules"
+        - "Create ROI calculator (customer-specific business case)"
+        - "Draft contract terms (standard + custom amendments)"
+      autonomy: "Generate proposals autonomously, AE reviews before sending"
+      decision_authority:
+        can_decide:
+          - "Calculate pricing within approved discount range (0-15%)"
+          - "Generate standard contract terms"
+        cannot_decide:
+          - "Approve discounts >15% (requires Sales Manager)"
+          - "Change product features/pricing model"
+      escalates_to: "Account Executive (Intermediate) or VP Sales (High)"
+      compensation:
+        monthly_cost: "$2,000"
+        tools: "ChatGPT/Claude API, PandaDoc, Salesforce CPQ"
+        roi: "4x vs. human AE time on proposal writing (50% time reduction)"
+      upgrade_path:
+        next_level: "DealStrategist-Agent (High-Level, not yet available)"
+        requirements:
+          - "Proposal close rate >25% for 6+ months"
+          - "Team wants deal strategy recommendations (not just proposal generation)"
+        timeline: "Not yet available (2025)"
+
+# ============================================
+# LEVEL 3: HIGH-LEVEL (Strategists / Experts)
+# ============================================
+# Tasks: Unstructured, strategic, require deep expertise
+# Autonomy: High (set priorities, make strategic decisions)
+# Decision Authority: Strategic decisions within function
+# Compensation (Human): $150K-$250K/year
+# Compensation (AI): Rare (not yet widely available in 2025)
+
+high_level:
+  human_roles:
+    - role_name: "CFO (Chief Financial Officer)"
+      function: "Finance"
+      count: 1
+      tasks:
+        - "Set financial strategy (capital allocation, M&A, fundraising)"
+        - "Manage investor relations (board, VCs, lenders)"
+        - "Own P&L (responsible for revenue, costs, cash flow)"
+        - "Hire/manage finance team (5-10 people)"
+        - "Present to board quarterly (financials, forecast, risks)"
+      autonomy: "Full autonomy within finance function, reports to CEO"
+      decision_authority:
+        can_decide:
+          - "Budget allocations across departments"
+          - "Hire/fire finance team members"
+          - "Approve contracts <$100K"
+          - "Set financial policies (expense approval thresholds, procurement rules)"
+        cannot_decide:
+          - "Company-wide strategy (CEO decides)"
+          - "Capital raises >$1M (board approval)"
+          - "M&A >$5M (board approval)"
+      escalates_to: "CEO (Executive) or Board of Directors (Executive)"
+      compensation:
+        salary_range: "$180K-$250K + equity + bonuses"
+        current_avg: "$220K + 1-2% equity"
+      career_path:
+        next_level: "CFO at larger company or CEO"
+        requirements:
+          - "10+ years finance experience"
+          - "Manage $10M+ budget"
+          - "Board/investor relations experience"
+        timeline: "Already at senior level"
+
+    - role_name: "VP Sales"
+      function: "Sales"
+      count: 1
+      tasks:
+        - "Set sales strategy (target markets, pricing, GTM motion)"
+        - "Hire/manage sales team (10-20 people: SDRs, AEs, Managers)"
+        - "Own revenue targets ($5M-$25M ARR)"
+        - "Build sales playbooks, comp plans, territories"
+        - "Present pipeline to CEO + board"
+      autonomy: "Full autonomy within sales function, reports to CEO"
+      decision_authority:
+        can_decide:
+          - "Hire/fire sales team members"
+          - "Set sales comp plans (base + commission structure)"
+          - "Approve deals <$500K"
+          - "Define target customer segments"
+        cannot_decide:
+          - "Product roadmap (Product team decides)"
+          - "Pricing model (CEO + board approve)"
+          - "Enter new markets requiring >$1M investment (CEO decides)"
+      escalates_to: "CEO (Executive)"
+      compensation:
+        salary_range: "$180K-$250K + commission + equity"
+        current_avg: "$200K + 20% commission on team quota = $240K OTE + equity"
+      career_path:
+        next_level: "Chief Revenue Officer (CRO) or CEO"
+        requirements:
+          - "10+ years sales leadership"
+          - "Scale team from 5→50 people"
+          - "Proven ability to hit $10M+ ARR"
+        timeline: "Already at senior level"
+
+  ai_agent_roles:
+    # Note: High-Level AI agents rare as of 2025
+    # Most strategic work still requires human judgment, relationships, creativity
+    - role_name: "StrategicAdvisor-Agent (Emerging)"
+      function: "Strategy / Finance"
+      tasks:
+        - "Analyze market trends, competitor moves, economic indicators"
+        - "Recommend strategic initiatives (new markets, M&A targets, product pivots)"
+        - "Run Monte Carlo simulations for capital allocation"
+        - "Draft strategic memos for CEO/board"
+      autonomy: "Generate recommendations, human executives decide"
+      decision_authority:
+        can_decide: []  # AI cannot make strategic decisions yet
+        cannot_decide:
+          - "All strategic decisions (CEO decides)"
+      escalates_to: "CEO (Executive)"
+      compensation:
+        monthly_cost: "$5K-$10K (estimated, rare as of 2025)"
+        tools: "Advanced AI models (GPT-5, Claude Opus), custom training"
+        roi: "TBD (not yet widely deployed)"
+      note: "High-Level AI agents are experimental in 2025. Most orgs not ready."
+
+# ============================================
+# LEVEL 4: EXECUTIVE
+# ============================================
+# Tasks: Set vision, allocate capital, manage board/investors
+# Autonomy: Full (define company direction)
+# Decision Authority: All strategic decisions (company-wide)
+# Compensation (Human): $200K+ (+ equity, bonuses, board compensation)
+# Compensation (AI): N/A (AI cannot replace CEO fiduciary duty)
+
+executive_level:
+  human_roles:
+    - role_name: "CEO (Chief Executive Officer)"
+      function: "Executive"
+      count: 1
+      tasks:
+        - "Set company vision & strategy"
+        - "Allocate capital (fundraising, M&A, budgets)"
+        - "Hire/manage executive team (CFO, CTO, VP Sales, etc.)"
+        - "Manage board of directors & investors"
+        - "Ultimate accountability for company performance"
+      autonomy: "Full autonomy (reports to board of directors)"
+      decision_authority:
+        can_decide:
+          - "Company strategy, vision, mission"
+          - "Hire/fire executives"
+          - "M&A, fundraising, major capital allocation"
+          - "Enter/exit markets"
+        cannot_decide:
+          - "Board composition (board elects CEO)"
+      escalates_to: "Board of Directors"
+      compensation:
+        salary_range: "$200K-$500K + equity (2-10%) + bonuses"
+        current_avg: "$250K + 5% equity"
+      career_path:
+        next_level: "CEO at larger company, board member, investor"
+
+    - role_name: "CTO (Chief Technology Officer)"
+      function: "Executive"
+      count: 1
+      tasks:
+        - "Set technology strategy & architecture"
+        - "Hire/manage engineering team (20-50 people)"
+        - "Own product roadmap (with Product team)"
+        - "Present technical vision to board"
+        - "Make build vs. buy decisions"
+      autonomy: "Full autonomy within technology function, reports to CEO"
+      decision_authority:
+        can_decide:
+          - "Technology stack, architecture decisions"
+          - "Hire/fire engineers"
+          - "Product roadmap (with Product team input)"
+        cannot_decide:
+          - "Company strategy (CEO decides)"
+      escalates_to: "CEO"
+      compensation:
+        salary_range: "$200K-$400K + equity (1-5%)"
+        current_avg: "$280K + 3% equity"
+
+  ai_agent_roles:
+    # AI cannot hold executive roles (as of 2025)
+    # Reasons:
+    # 1. Fiduciary duty requires human accountability
+    # 2. Board/investor relationships require trust, empathy, human judgment
+    # 3. Vision-setting is creative, not algorithmic
+    # 4. Legal/regulatory framework not ready for AI CEOs
+    - note: "AI agents cannot hold Executive roles (CEO, CFO, CTO, etc.) as of 2025."
+    - note: "AI can advise executives (e.g., StrategicAdvisor-Agent), but cannot replace them."
+
+# ============================================
+# DECISION AUTHORITY MATRIX (Example: Finance)
+# ============================================
+# Define what each level can decide vs. must escalate
+
+decision_authority_matrix_finance:
+  expense_approval:
+    low_level: "<$100 (auto-approve)"
+    intermediate_level: "$100-$5K (review, approve)"
+    high_level: "$5K-$50K (strategic judgment)"
+    executive: ">$50K (final authority)"
+  
+  budget_allocation:
+    low_level: "No authority"
+    intermediate_level: "Recommend (cross-department coordination)"
+    high_level: "Allocate within function"
+    executive: "Allocate company-wide"
+  
+  hiring_decisions:
+    low_level: "No authority"
+    intermediate_level: "Screen candidates, recommend"
+    high_level: "Hire for team (up to 10 people)"
+    executive: "Hire executives"
+  
+  vendor_contracts:
+    low_level: "No authority"
+    intermediate_level: "$0-$10K/year (negotiate, approve)"
+    high_level: "$10K-$100K/year (strategic vendor relationships)"
+    executive: ">$100K/year (final authority)"
+  
+  financial_strategy:
+    low_level: "No authority"
+    intermediate_level: "No authority"
+    high_level: "Recommend (CFO decides)"
+    executive: "Set strategy"
+
+# ============================================
+# ESCALATION RULES (Cross-Level)
+# ============================================
+
+escalation_rules:
+  - from_level: "Low-Level"
+    to_level: "Intermediate-Level"
+    conditions:
+      - "Task falls outside script/rules"
+      - "Decision requires judgment (e.g., 'Is this expense T&E or Office Supplies?')"
+      - "Customer/vendor escalation (upset, custom request)"
+    timeframe: "Escalate within 1 hour"
+    example: "LeadQualifier-Agent encounters prospect asking for custom pricing → escalate to Account Executive (Intermediate)"
+
+  - from_level: "Intermediate-Level"
+    to_level: "High-Level"
+    conditions:
+      - "Decision has >$10K impact or >3-month horizon"
+      - "Cross-functional conflict (e.g., Sales disputes Finance forecast)"
+      - "Strategic decision required (e.g., 'Should we enter new market?')"
+    timeframe: "Escalate within 1 business day"
+    example: "BudgetForecaster-Agent sees 20% revenue variance → escalate to CFO (High-Level)"
+
+  - from_level: "High-Level"
+    to_level: "Executive"
+    conditions:
+      - "Decision impacts company vision, capital allocation, or fiduciary duty"
+      - "Board/investor involvement required"
+      - "M&A, fundraising, major strategic pivot"
+    timeframe: "Escalate within 1 week (or immediately if urgent)"
+    example: "VP Sales recommends entering new market ($500K investment) → CEO decides"
+
+# ============================================
+# NOTES & USAGE INSTRUCTIONS
+# ============================================
+
+usage_instructions: |
+  1. **Customize for Your Organization:**
+     - Replace placeholder data (company name, employee count, AI agents)
+     - Add/remove roles based on your structure
+     - Adjust compensation ranges based on geography, industry
+
+  2. **Map All Roles (Humans + AI):**
+     - For each role, define: tasks, autonomy, decision authority, escalation rules, compensation
+     - Use this template to create clarity on "who decides what"
+
+  3. **Define Career Paths:**
+     - For humans: What does it take to get promoted to next level?
+     - For AI agents: When to upgrade to next level (e.g., Low → Intermediate)?
+
+  4. **Align Compensation:**
+     - Ensure salary ranges match level (Low: $40K-$60K, Intermediate: $70K-$120K, High: $150K-$250K, Executive: $200K+)
+     - Ensure AI agent costs reasonable (Low: $200-$500/mo, Intermediate: $1K-$3K/mo)
+
+  5. **Communicate to Team:**
+     - Share this matrix with all employees
+     - Use in 1:1s: "Here's your current level, here's how to get to next level"
+     - Use in AI agent deployment: "This AI agent is Low-Level, it escalates to Intermediate humans"
+
+  6. **Review Quarterly:**
+     - Update roles as organization evolves
+     - Promote employees who've met next-level requirements
+     - Upgrade AI agents that are ready for next level
+
+resources:
+  - documentation: "DOCS/10-role-hierarchy.md"
+  - checklist: "ADOPTION/CHECKLISTS/role-hierarchy-implementation.md"
+  - prompt: "ADOPTION/PROMPT-TEMPLATES/role-level-definition.md"
+  - playbook: "PLAYBOOKS/by-sector/business-functions/hr.md"
+
+version: "1.0"
+last_updated: "2025-11-15"
+framework: "SOLID.AI"

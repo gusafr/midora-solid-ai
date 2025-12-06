@@ -1,0 +1,89 @@
+```mermaid
+graph TB
+    subgraph Portfolio["📊 Portfolio Management"]
+        Outcomes[Strategic Outcomes]
+        Priorities[Prioritization]
+    end
+
+    subgraph Squad["🎯 Product Triad Squad"]
+        PO[Product Owner<br/>Purpose & Value<br/><i>Level: High</i>]
+        SA[System Architect<br/>Technical Design<br/><i>Level: High</i>]
+        PM[Project Manager<br/>Execution Flow<br/><i>Level: Intermediate</i>]
+    end
+
+    subgraph Pools["🏊 Capability Pools"]
+        DevPool[Multidisciplinary<br/>Developers<br/><i>Levels: Low → Intermediate</i>]
+        QAPool[Quality<br/>Assurance<br/><i>Levels: Low → Intermediate</i>]
+        ArchPool[Solutions<br/>Architecture<br/><i>Levels: High → Executive</i>]
+        PMOPool[PMO<br/><i>Levels: Intermediate → High</i>]
+        CoachPool[Agile<br/>Coaching<br/><i>Levels: High</i>]
+        PortPool[Portfolio<br/>Strategy<br/><i>Levels: Executive</i>]
+    end
+
+    subgraph Cognitive["🤖 AI Agent Layer"]
+        PMAgent[Project Manager<br/>AI Agent]
+        QAAgent[QA Automation<br/>Agents]
+        OpsAgent[Operational<br/>Agents]
+    end
+
+    subgraph Governance["🛡️ Governance Circle"]
+        Ethics[Ethics Review]
+        Compliance[Compliance Audit]
+        CircleLead[Circle Leadership]
+    end
+
+    subgraph DataSpine["🧬 Data Spine"]
+        Metrics[Observability<br/>Metrics]
+        Contracts[API Contracts]
+        Catalog[Asset Catalog]
+    end
+
+    %% Portfolio to Squad
+    Outcomes --> Priorities
+    Priorities --> PO
+    PortPool -.->|Strategic Input| PO
+
+    %% Squad Internal
+    PO <--> SA
+    SA <--> PM
+    PM <--> PO
+
+    %% Squad to Pools (engagement)
+    SA -->|Technical Request| ArchPool
+    PM -->|Capacity Request| PMOPool
+    PO -->|Market Research| PortPool
+    Squad -->|Skill Request| DevPool
+    Squad -->|Testing Request| QAPool
+    Squad -->|Process Audit| CoachPool
+
+    %% Pools to AI Agents
+    PMOPool -.->|Automate| PMAgent
+    QAPool -.->|Automate| QAAgent
+    DevPool -.->|Automate| OpsAgent
+
+    %% AI Agents support Squad
+    PMAgent -.->|Status & Reports| PM
+    QAAgent -.->|Test Results| QAPool
+    OpsAgent -.->|Automation| Squad
+
+    %% Data Spine connections
+    Squad --> Metrics
+    Pools --> Catalog
+    Cognitive --> Contracts
+    Metrics --> Governance
+
+    %% Governance oversight
+    Ethics -.->|Guardrails| Cognitive
+    Compliance -.->|Audit| Squad
+    CircleLead -.->|Policy| Pools
+
+    %% Feedback loops
+    Metrics -.->|Learning| Cognitive
+    Governance -.->|Recommendations| Portfolio
+
+    style Squad fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Pools fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Cognitive fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style Governance fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+    style DataSpine fill:#e1f5ff,stroke:#0066cc,stroke-width:3px
+```

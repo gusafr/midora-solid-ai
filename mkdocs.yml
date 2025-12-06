@@ -1,0 +1,231 @@
+site_name: solid.ai
+site_description: "The organizational nervous system for AI-Native companies."
+site_url: https://gusafr.github.io/solid.ai/
+repo_name: gusafr/solid.ai
+repo_url: https://github.com/gusafr/solid.ai
+edit_uri: edit/main/
+docs_dir: docs_site
+nav:
+  - Home: index.md
+  - 📥 Downloads: downloads.md
+  - Whitepaper:
+    - 📄 Abstract: whitepaper/abstract.md
+    - 🏗️ Architecture: whitepaper/architecture.md
+    - 📐 Specification: whitepaper/specification.md
+    - 🔧 Implementation Guide: whitepaper/implementation.md
+    - ⚖️ Governance: whitepaper/governance.md
+    - 📊 Diagrams: whitepaper/diagrams.md
+    - 🎯 Architecture Overview: whitepaper/figures.md
+  - Getting Started:
+    - 🚀 Quick Start: quick-start.md
+    - 📚 Reading Paths: README.md
+    - 📊 All Diagrams: diagrams.md
+  - Core Documentation:
+    - Overview: overview.md
+    - Principles: principles.md
+    - Architecture: architecture.md
+    - Organizational Model: organizational-model.md
+    - Automation SIPOC: automation-sipoc.md
+    - AI Agents: ai-agents.md
+    - Governance & Ethics: governance-ethics.md
+    - Observability: observability.md
+    - Human-AI Collaboration: human-ai-collaboration.md
+    - Role Hierarchy (Human & AI): role-hierarchy-human-ai.md
+  - AI-Native Agile:
+    - AI-Native Agile & SAFe (Scrum): ai-native-agile.md
+    - AI-Native Kanban: ai-native-kanban.md
+  - Transformation:
+    - Whole-Org Transformation: whole-organization-transformation.md
+    - Glossary: glossary.md
+  - 📊 Diagrams: diagrams.md
+  - Adoption Pack:
+    - Overview: adoption/index.md
+    - Reference Cards:
+      - Organizational Patterns:
+        - Squad Organization: adoption/reference-cards/squad-organization-quick-ref.md
+      - Software Development:
+        - Developer: adoption/reference-cards/developer.md
+        - Product Manager: adoption/reference-cards/product-manager.md
+        - Operations: adoption/reference-cards/operations.md
+        - Leadership: adoption/reference-cards/leadership.md
+      - Business Functions:
+        - Sales: adoption/reference-cards/sales.md
+        - Administration: adoption/reference-cards/administration.md
+        - Marketing: adoption/reference-cards/marketing.md
+      - Production & Commerce:
+        - Commerce & Retail: adoption/reference-cards/commerce.md
+        - Manufacturing: adoption/reference-cards/manufacturing.md
+      - Highly Regulated:
+        - Healthcare: adoption/reference-cards/healthcare.md
+        - Financial Services: adoption/reference-cards/financial-services.md
+      - Service Sectors:
+        - Professional Services: adoption/reference-cards/professional-services.md
+        - Logistics: adoption/reference-cards/logistics.md
+        - Human Resources: adoption/reference-cards/human-resources.md
+    - Prompt Templates:
+      - Purpose-Driven Feature: adoption/prompt-templates/purpose-driven-feature.md
+      - AI Agent Definition: adoption/prompt-templates/ai-agent-definition.md
+      - Data Contract Design: adoption/prompt-templates/data-contract-design.md
+      - Retrospective Facilitation: adoption/prompt-templates/retrospective-facilitation.md
+      - Ethical Decision-Making: adoption/prompt-templates/ethical-decision-making.md
+      - AI-Native Sprint Planning: adoption/prompt-templates/ai-native-sprint-planning.md
+    - Checklists:
+      - By Assessment & Planning:
+        - AI Maturity Assessment: adoption/checklists/ai-maturity-assessment.md
+        - Organizational Scalability Assessment: adoption/checklists/organizational-scalability-assessment.md
+        - Learning & Development Rollout: adoption/checklists/learning-development-rollout.md
+        - OKR & KPI Setup: adoption/checklists/okr-kpi-setup.md
+      - By Implementation:
+        - AI Agent Integration: adoption/checklists/ai-agent-integration.md
+        - Squad Formation: adoption/checklists/squad-formation.md
+        - Data Spine Implementation: adoption/checklists/data-spine-implementation.md
+        - Governance & Ethics Review: adoption/checklists/governance-ethics-review.md
+      - By Journey:
+        - SME Transformation Roadmap: adoption/checklists/sme-transformation-roadmap.md
+        - Startup Launch: adoption/checklists/startup-launch.md
+        - AI-Native Sprint: adoption/checklists/ai-native-sprint.md
+        - Kanban Setup: adoption/checklists/kanban-setup.md
+        - Role Hierarchy Implementation: adoption/checklists/role-hierarchy-implementation.md
+    - Templates:
+      - Organizational:
+        - Agent Definition: adoption/templates/agent-definition.md
+        - Squad Charter: adoption/templates/squad-charter.md
+        - Data Contract: adoption/templates/data-contract.md
+      - Planning & Metrics:
+        - Risk Assessment Template: adoption/templates/risk-assessment-template.md
+        - Learning Path Template: adoption/templates/learning-path-template.md
+        - OKR Template: adoption/templates/okr-template.md
+        - 90-Day Transformation Plan: adoption/templates/90-day-transformation-plan.md
+        - Role Hierarchy Matrix: adoption/templates/role-hierarchy-matrix.md
+      - Governance:
+        - RFC Template: adoption/templates/rfc-template.md
+        - ADR Template: adoption/templates/adr-template.md
+        - Impact Analysis Template: adoption/templates/impact-analysis-template.md
+      - Sprint Planning:
+        - AI-Native Sprint Template: adoption/templates/ai-native-sprint-template.md
+        - Kanban Board Template: adoption/templates/kanban-board-template.md
+  - Guides:
+    - Docker Setup: docker.md
+    - Cleanup & Optimization: cleanup.md
+    - Backstage Integration: backstage.md
+  - Manifesto:
+    - solid.ai Manifesto v1.0: manifesto/solid-ai-manifesto-v1.md
+  - Reference:
+    - Diagrams:
+      - 📊 Diagram Gallery: diagrams/README.md
+      - 🖼️ Generated Images: diagrams/images/README.md
+    - RFCs:
+      - RFC 0001 – Foundations: rfc/rfc-0001-foundations.md
+      - RFC 0002 – Data Spine: rfc/rfc-0002-data-layer.md
+      - RFC 0003 – Midora Topology: rfc/rfc-0003-midora-organizational-topology.md
+    - ADRs:
+      - 📋 ADR Overview: adr/README.md
+      - ADR 0001 – Mermaid for Diagrams: adr/adr-0001-mermaid-choice.md
+      - ADR 0002 – Business Service Organization: adr/adr-0002-business-service-organization.md
+      - ADR 0003 – Data Spine & Automation Mesh Integration: adr/adr-0003-data-spine-automation-mesh-integration.md
+      - ADR 0004 – ReportLab PDF Generation: adr/adr-0004-reportlab-pdf-generation.md
+    - Playbooks:
+      - 📖 Overview: playbooks/README.md
+      - Foundation:
+        - 🎯 SOLID.AI Maturity Model: playbooks/foundation/solid-ai-maturity-model.md
+      - Governance:
+        - 🛡️ AI Governance & Risk Assessment: playbooks/governance/ai-governance-risk-assessment.md
+        - 📊 Impact Analysis: playbooks/governance/impact-analysis.md
+      - Implementation:
+        - 🔄 Process Mapping & SIPOC Integration: playbooks/implementation/process-mapping-sipoc-integration.md
+        - 📊 Data Spine Analytics & Insights: playbooks/implementation/data-spine-analytics-insights.md
+        - 📋 AI-Native Kanban: playbooks/implementation/ai-native-kanban.md
+      - People & Culture:
+        - 📈 Organizational Scalability: playbooks/people-culture/organizational-scalability.md
+        - 🎓 AI Learning & Development: playbooks/people-culture/ai-learning-development.md
+        - 🎯 AI-Native OKRs & KPIs: playbooks/people-culture/ai-native-okrs-kpis.md
+      - By Company Stage:
+        - 🚀 Startup (AI-Native): playbooks/by-stage/startup-ai-native.md
+        - 📈 SME Transformation: playbooks/by-stage/sme-transformation.md
+      - By Sector:
+        - Business Functions:
+          - Sales: playbooks/by-sector/business-functions/sales.md
+          - Administration & Finance: playbooks/by-sector/business-functions/administration.md
+          - Marketing: playbooks/by-sector/business-functions/marketing.md
+        - Production & Commerce:
+          - Commerce & Retail: playbooks/by-sector/production-commerce/commerce.md
+          - Manufacturing: playbooks/by-sector/production-commerce/manufacturing.md
+        - Regulated Industries:
+          - Healthcare: playbooks/by-sector/regulated/healthcare.md
+          - Financial Services: playbooks/by-sector/regulated/financial-services.md
+        - Service Industries:
+          - Professional Services: playbooks/by-sector/services/professional-services.md
+          - Logistics: playbooks/by-sector/services/logistics.md
+          - Human Resources: playbooks/by-sector/services/human-resources.md
+      - Organizational Patterns:
+        - Squads: playbooks/organizational/squads.md
+        - Pools: playbooks/organizational/pools.md
+        - Operations: playbooks/organizational/operations.md
+        - AI Integration: playbooks/organizational/ai-integration.md
+        - MIDORA Implementation: playbooks/organizational/midora-implementation.md
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/solid-ai-logo.png
+  favicon: assets/images/solid-ai-logo.png
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tracking
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: teal
+    - scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: Fira Code
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
+  - pymdownx.snippets:
+      check_paths: true
+      base_path:
+        - docs_site
+        - docs_site/..
+
+plugins:
+  - search
+  - mermaid2
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gusafr
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gusafr

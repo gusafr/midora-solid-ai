@@ -1,0 +1,105 @@
+%% Midora Technology Stack — SOLID.AI Implementation
+%% Author: Gustavo Freitas / Midora Education Labs & SOLID.AI Initiative
+%% Last Updated: 2025-11-08
+%% 
+%% This diagram shows Midora's complete technology stack mapped to the 9 SOLID.AI framework layers.
+%% Strategy: Self-hosted infrastructure (cost-optimized) + Paid collaboration tools (productivity-optimized)
+%% Cost: ~$1,115/month ($13,380/year) vs $1,830/month traditional managed SaaS
+%% 
+%% Self-Hosted: Temporal, Kafka, OpenMetadata, Backstage, Grafana, Prometheus, LangGraph
+%% Paid SaaS: Slack, Google Workspace, Trello Premium, GitHub Team, ChatGPT Teams (team productivity non-negotiable)
+%% Usage-Based: OpenAI API, Google Gemini API
+%% Free Tier: Vercel, Supabase (sufficient for 0-1000 users)
+
+flowchart TB
+    %% PURPOSE & ALIGNMENT LAYER
+    subgraph L1[Purpose & Alignment Layer]
+        T1[Trello Premium<br/>OKR & Goal Management<br/>Butler Automation]
+        G1[Grafana<br/>Impact & Efficiency Dashboards<br/>Self-Hosted]
+    end
+
+    %% GOVERNANCE & ETHICS LAYER
+    subgraph L2[Governance & Ethics Layer]
+        OPA[Open Policy Agent<br/>Policy Validation - Planned]
+        GA[GitHub Team<br/>Governance Pipelines<br/>3000 Actions min/month]
+        GO[GitOps / ArgoCD<br/>Secure Deployment - Future]
+        LG[LangGraph Logs + OpenMetadata<br/>Cognitive Audit Trail]
+    end
+
+    %% KNOWLEDGE & DATA SPINE LAYER
+    subgraph L3[Knowledge & Data Spine Layer]
+        OM[OpenMetadata<br/>Data, API & Event Catalog<br/>Self-Hosted]
+        BS[Backstage<br/>Developer Portal & Docs<br/>Self-Hosted]
+        AP[Apicurio Registry<br/>OpenAPI/AsyncAPI Contracts<br/>Self-Hosted]
+        GD[Google Drive<br/>Business Documents<br/>External Collaboration]
+    end
+
+    %% AUTOMATION MESH LAYER
+    subgraph L4[Automation Mesh Layer]
+        TMP[Temporal.io<br/>Workflow Orchestration<br/>Self-Hosted Docker]
+        KFK[Apache Kafka<br/>Async Event Bus<br/>Self-Hosted Docker]
+        API2[Apicurio Registry<br/>Contract Validation<br/>Self-Hosted]
+        GM[Gmail API<br/>Email Automation<br/>Invoice Processing]
+    end
+
+    %% COGNITIVE & AI LAYER
+    subgraph L5[Cognitive & AI Layer]
+        LG2[LangGraph<br/>Agent Coordination<br/>Self-Hosted on AWS]
+        FB[LangGraph Feedback Loop<br/>Adaptive Learning]
+        OAI[OpenAI API<br/>GPT-4 - Primary LLM]
+        GEM[Google Gemini API<br/>Fallback LLM]
+    end
+
+    %% OBSERVABILITY LAYER
+    subgraph L6[Observability Layer]
+        OT[OpenTelemetry<br/>Metrics & Traces<br/>Self-Hosted]
+        PR[Prometheus<br/>Metrics Storage<br/>Self-Hosted]
+        GF[Grafana<br/>Technical Dashboards<br/>Self-Hosted]
+        GS[Google Sheets<br/>Business Dashboards<br/>Investor Reports]
+    end
+
+    %% HUMAN–AI COLLABORATION LAYER
+    subgraph L7[Human–AI Collaboration Layer]
+        SL[Slack Standard<br/>Internal Team Communication<br/>AI Agent Notifications]
+        SLAPP[Slack App + Temporal Signals<br/>Human-in-the-Loop Approvals]
+        ALRT[Grafana Alerting → Slack<br/>Real-time Alerts]
+        GW[Google Workspace<br/>Gmail - External Communication<br/>Meet - Investor/Board Calls<br/>Sheets - Approval Interface]
+    end
+
+    %% ADAPTATION & LEARNING LAYER
+    subgraph L8[Adaptation & Learning Layer]
+        PM[Prometheus + Grafana<br/>Automation KPIs<br/>Self-Hosted]
+        FBH[Slack + Google Forms<br/>Human & AI Feedback]
+        UNL[Unleash / OpenFeature<br/>Feature Flags - Future]
+        GSH[Google Sheets<br/>A/B Test Results<br/>Feedback Analysis]
+    end
+
+    %% ETHICAL & COMPLIANCE OVERSIGHT
+    subgraph L9[Ethical & Compliance Oversight - Future]
+        EV[EvidentlyAI / WhyLabs<br/>AI Ethics Monitoring]
+        REV[Slack + OPA Policies<br/>Human Ethical Review]
+    end
+
+    %% INTER-LAYER CONNECTIONS
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> L5
+    L5 --> L6
+    L6 --> L7
+    L7 --> L8
+    L8 --> L9
+
+    %% CROSS-LAYER FEEDBACK LOOPS
+    L5 -.->|AI learns from data| L3
+    L6 -.->|Metrics inform policy| L2
+    L8 -.->|KPIs update strategy| L1
+
+    %% LEGEND
+    classDef implemented fill:#bbf0c0,stroke:#333,stroke-width:2px;
+    classDef partial fill:#fff3b0,stroke:#333,stroke-width:2px;
+    classDef planned fill:#f2c2c2,stroke:#333,stroke-width:2px;
+
+    class L1,L3,L4,L5,L6,L7,L8 implemented;
+    class L2 partial;
+    class L9 planned;

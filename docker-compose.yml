@@ -1,0 +1,40 @@
+services:
+  # Development service with live reload
+  mkdocs-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: solid-ai-dev
+    working_dir: /docs
+    volumes:
+      - .:/docs
+    ports:
+      - "8000:8000"
+    command: mkdocs serve --dev-addr=0.0.0.0:8000
+    profiles:
+      - dev
+
+  # Production service with nginx
+  solid-ai-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: solid-ai-prod
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    profiles:
+      - prod
+
+  # Nginx with pre-built site (for testing production build)
+  nginx:
+    image: nginx:alpine
+    container_name: solid-ai-nginx
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    profiles:
+      - local-prod

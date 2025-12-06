@@ -1,0 +1,1 @@
+--8<-- "DOCS/05-ai-agents.md"

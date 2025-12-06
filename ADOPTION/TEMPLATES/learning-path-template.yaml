@@ -1,0 +1,422 @@
+# Learning Path Template (YAML)
+
+# AI Learning Path for [FUNCTION NAME]
+# Framework: SOLID.AI
+# Reference: PLAYBOOKS/people-culture/ai-learning-development.md
+# Last Updated: November 2025
+
+---
+function:
+  name: ""  # e.g., "Sales", "Engineering", "Finance", "Marketing", "CS", "HR", "Executive"
+  description: ""  # Brief description of the function
+  owner: ""  # DRI for this learning path (usually Head of Function + L&D)
+  target_audience: ""  # e.g., "All sales reps (50 people)"
+  last_updated: ""  # YYYY-MM-DD
+
+---
+# LEVEL 1: AWARENESS (4 hours, 100% of function)
+
+level_1_awareness:
+  goal: "Basic AI literacy and understanding how AI applies to [function]"
+  duration_hours: 4
+  target_completion: "100%"  # All employees in function
+  
+  modules:
+    - module: "What is AI?"
+      duration_hours: 1
+      content:
+        - "AI capabilities and limitations"
+        - "How AI works (simple explanation, no math)"
+        - "AI in [function]: 5 real examples"
+      delivery: "Self-paced video + interactive quiz"
+      
+    - module: "Prompting 101"
+      duration_hours: 1
+      content:
+        - "Basic prompt structure (role, task, context, constraints)"
+        - "5 prompt patterns everyone should know"
+        - "Hands-on: Write 3 prompts for your role"
+      delivery: "Self-paced tutorial + practice exercises"
+      
+    - module: "Ethics & Responsibility"
+      duration_hours: 1
+      content:
+        - "Humans are always accountable (not AI)"
+        - "Bias and fairness"
+        - "Privacy and data protection"
+        - "When to escalate to humans"
+      delivery: "Self-paced reading + case studies"
+      
+    - module: "Tools & Getting Started"
+      duration_hours: 1
+      content:
+        - "ChatGPT, Claude, Copilot overview"
+        - "Accessing company-approved AI tools"
+        - "First assignment: Solve real work problem with AI"
+      delivery: "Self-paced tool demos + first assignment"
+  
+  assessment:
+    type: "Quiz"
+    passing_score: 80  # % correct
+    questions:
+      - "What are the 3 main capabilities of AI?"
+      - "What's one limitation of AI in [function]?"
+      - "Write a prompt to [function-specific task]"
+      - "In what situation should you NOT trust AI output?"
+  
+  completion_criteria:
+    - "Complete all 4 modules"
+    - "Pass quiz with 80%+"
+    - "Submit first assignment (AI-assisted work problem)"
+  
+  resources:
+    - link: ""  # e.g., "Link to company AI tools guide"
+    - link: ""  # e.g., "Link to prompt library"
+
+---
+# LEVEL 2: PRACTITIONER (20 hours, 60-80% of function)
+
+level_2_practitioner:
+  goal: "Apply AI tools to daily work in [function], integrate AI into workflows"
+  duration_hours: 20
+  target_completion: "60-80%"  # Most employees in function
+  
+  modules:
+    - module: "AI Tools for [Function]"
+      duration_hours: 4
+      content:
+        - "Tool 1: [Name] - [Use Case]"  # e.g., "Gong for conversation intelligence"
+        - "Tool 2: [Name] - [Use Case]"  # e.g., "Clari for forecasting"
+        - "Tool 3: [Name] - [Use Case]"  # e.g., "Outreach for sequencing"
+        - "Hands-on: Use each tool on real work task"
+      delivery: "Live workshop (2h) + self-paced practice (2h)"
+      
+    - module: "Advanced Prompting"
+      duration_hours: 4
+      content:
+        - "Chain-of-thought prompting"
+        - "Few-shot prompting"
+        - "Role-based prompting"
+        - "[Function]-specific prompt library (20+ templates)"
+      delivery: "Self-paced tutorial + hands-on practice"
+      
+    - module: "Quality & Validation"
+      duration_hours: 4
+      content:
+        - "How to catch AI errors (validation techniques)"
+        - "Testing AI outputs (sample checking)"
+        - "When to trust vs. verify AI"
+        - "Escalation protocols"
+      delivery: "Live workshop (2h) + case studies (2h)"
+      
+    - module: "Automation & Efficiency"
+      duration_hours: 4
+      content:
+        - "Zapier/n8n basics for [function]"
+        - "Building simple workflows (3 examples)"
+        - "Integrating AI into [CRM/ERP/other tool]"
+        - "Time-saving tips (10 AI hacks for [function])"
+      delivery: "Live workshop (2h) + hands-on lab (2h)"
+      
+    - module: "Real-World Project"
+      duration_hours: 4
+      content:
+        - "Choose a real work problem"
+        - "Solve it using AI tools + workflows"
+        - "Present to team (10 min presentation)"
+      delivery: "Self-paced project + peer review session"
+  
+  assessment:
+    type: "Project"
+    passing_criteria:
+      - "Complete real-world project using AI"
+      - "Demonstrate measurable impact (time saved, quality improved, etc.)"
+      - "Present to peers (scored 4/5+ by manager)"
+  
+  completion_criteria:
+    - "Complete all 5 modules"
+    - "Pass real-world project assessment"
+    - "Use AI tools in daily work for 30 consecutive days"
+  
+  resources:
+    - link: ""  # e.g., "Link to [function] prompt library"
+    - link: ""  # e.g., "Link to workflow templates"
+
+---
+# LEVEL 3: POWER USER (40 hours, 20-30% of function)
+
+level_3_power_user:
+  goal: "Optimize AI for team/function, configure custom agents, train others"
+  duration_hours: 40
+  target_completion: "20-30%"  # Top performers and future leaders
+  
+  modules:
+    - module: "AI Strategy for [Function]"
+      duration_hours: 8
+      content:
+        - "Where AI adds most value in [function]"
+        - "Build vs. buy decisions"
+        - "ROI calculation for AI investments"
+        - "AI roadmap for [function] (6-12 month plan)"
+      delivery: "Live workshop (4h) + strategic planning exercise (4h)"
+      
+    - module: "Custom Agent Configuration"
+      duration_hours: 12
+      content:
+        - "When to build a custom agent vs. use off-the-shelf tools"
+        - "No-code/low-code agent builders (e.g., Zapier Central, Relay)"
+        - "Defining agent scope, triggers, and actions"
+        - "Hands-on: Build 2 custom agents for [function]"
+      delivery: "Live workshop (4h) + hands-on lab (8h)"
+      
+    - module: "Integration & Automation"
+      duration_hours: 8
+      content:
+        - "API basics (reading API docs, using Postman)"
+        - "Connecting AI agents to [CRM/ERP/data warehouse]"
+        - "Event-driven workflows (when X happens, do Y)"
+        - "Hands-on: Build end-to-end automated workflow"
+      delivery: "Self-paced tutorial (4h) + hands-on lab (4h)"
+      
+    - module: "Training Others"
+      duration_hours: 8
+      content:
+        - "How to teach AI skills (adult learning principles)"
+        - "Creating [function]-specific training materials"
+        - "Mentoring Level 2 practitioners (peer coaching)"
+        - "Hands-on: Run 1-hour training session for peers"
+      delivery: "Live workshop (4h) + teach-back session (4h)"
+      
+    - module: "Advanced Project"
+      duration_hours: 4
+      content:
+        - "Solve complex [function] problem with custom AI solution"
+        - "Measure ROI (time saved, revenue gained, costs reduced)"
+        - "Present to leadership (20 min presentation)"
+      delivery: "Self-paced project + leadership review"
+  
+  assessment:
+    type: "Certification Project"
+    passing_criteria:
+      - "Build 2 custom agents deployed in production"
+      - "Demonstrate measurable ROI (>20% efficiency gain or revenue impact)"
+      - "Mentor 3 Level 2 practitioners"
+      - "Present advanced project to leadership (scored 4/5+ by VP)"
+  
+  completion_criteria:
+    - "Complete all 5 modules"
+    - "Pass certification project"
+    - "Mentor 3 people to Level 2"
+  
+  incentives:
+    title: "AI Power User - [Function]"
+    salary_bump: "+$5K"  # Or whatever your company offers
+    recognition: "Featured in company all-hands, added to AI Guild leadership"
+  
+  resources:
+    - link: ""  # e.g., "Link to agent builder tools"
+    - link: ""  # e.g., "Link to API documentation"
+
+---
+# LEVEL 4: SPECIALIST (100+ hours, 5-10% of function)
+
+level_4_specialist:
+  goal: "Build and deploy production AI systems, research and innovate"
+  duration_hours: 100  # Ongoing, not a fixed course
+  target_completion: "5-10%"  # Future AI leaders
+  
+  prerequisites:
+    - "Level 3 Power User certification"
+    - "Manager approval (limited slots)"
+    - "Commitment to AI as career path"
+  
+  modules:
+    - module: "Building Production AI Systems"
+      duration_hours: 30
+      content:
+        - "MLOps fundamentals (CI/CD for AI)"
+        - "Model training, fine-tuning, evaluation"
+        - "Deployment strategies (A/B testing, canary releases)"
+        - "Monitoring and observability (dashboards, alerts)"
+      delivery: "External course (Coursera, Udacity) + internal mentorship"
+      
+    - module: "Advanced AI Techniques"
+      duration_hours: 30
+      content:
+        - "Prompt engineering at scale (few-shot, chain-of-thought, agents)"
+        - "RAG (Retrieval-Augmented Generation) for [function]"
+        - "Fine-tuning LLMs for [function]-specific tasks"
+        - "Multi-agent systems (coordination, orchestration)"
+      delivery: "External course + internal research projects"
+      
+    - module: "Governance & Ethics (Advanced)"
+      duration_hours: 20
+      content:
+        - "Bias detection and mitigation"
+        - "Privacy-preserving AI (differential privacy, federated learning)"
+        - "Explainability techniques (SHAP, LIME)"
+        - "Regulatory compliance (GDPR, AI Act, industry-specific)"
+      delivery: "External course + internal governance committee participation"
+      
+    - module: "Research & Innovation"
+      duration_hours: 20
+      content:
+        - "Staying current (reading papers, attending conferences)"
+        - "Experimenting with cutting-edge tools (20% time)"
+        - "Publishing learnings (internal blog, external talks)"
+        - "Leading AI Guild for [function]"
+      delivery: "Self-directed learning + mentorship"
+  
+  assessment:
+    type: "Portfolio"
+    passing_criteria:
+      - "Build and deploy 3 production AI systems with measurable business impact"
+      - "Publish 3 internal blog posts or 1 external talk"
+      - "Lead AI Guild for [function] (10+ active members)"
+      - "Contribute to company AI strategy"
+  
+  completion_criteria:
+    - "Ongoing (no fixed endpoint)"
+    - "Annual review by VP + AI Leadership"
+  
+  incentives:
+    title: "AI Specialist - [Function]"
+    salary_bump: "+$10K"  # Or whatever your company offers
+    recognition: "Seat on AI Strategy Committee, conference speaking budget"
+  
+  resources:
+    - link: ""  # e.g., "Link to Coursera/Udacity courses"
+    - link: ""  # e.g., "Link to research papers library"
+
+---
+# ROLLOUT PLAN
+
+rollout:
+  phase_1_pilot:
+    duration_weeks: 4
+    participants: "10-20 volunteers from [function]"
+    goals:
+      - "Test Level 1 content with pilot group"
+      - "Gather feedback and iterate"
+      - "Identify 3-5 top performers for Level 2 pilot"
+    success_criteria:
+      - "90%+ completion rate"
+      - "4.0/5 satisfaction score"
+      - "80%+ pass quiz"
+  
+  phase_2_level_1_all:
+    duration_weeks: 8
+    participants: "All [function] employees (100%)"
+    goals:
+      - "Roll out Level 1 to entire function"
+      - "Track completion weekly"
+      - "Manager accountability for team completion"
+    success_criteria:
+      - "95%+ completion within 8 weeks"
+      - "4.0/5 satisfaction score"
+  
+  phase_3_level_2_cohorts:
+    duration_weeks: 12
+    participants: "Target 60-80% of [function]"
+    goals:
+      - "Run 3 cohorts of Level 2 (4 weeks each)"
+      - "Each cohort: 20-30 people"
+      - "Identify top 10-20% for Level 3"
+    success_criteria:
+      - "70%+ of function completes Level 2"
+      - "80%+ complete real-world project"
+      - "Measurable productivity gains (self-reported)"
+  
+  phase_4_level_3_ongoing:
+    duration_weeks: "Ongoing"
+    participants: "Top 20-30% of [function]"
+    goals:
+      - "Run quarterly Level 3 cohorts"
+      - "Identify future AI leaders"
+      - "Build AI Guild for [function]"
+    success_criteria:
+      - "20%+ of function certified as Power Users within 12 months"
+      - "AI Guild active with monthly meetings"
+
+---
+# METRICS TO TRACK
+
+metrics:
+  adoption:
+    level_1_completion_rate: 0  # % of function completed (target: 100%)
+    level_2_completion_rate: 0  # % of function completed (target: 60-80%)
+    level_3_completion_rate: 0  # % of function completed (target: 20-30%)
+    level_4_count: 0  # Number of specialists (target: 5-10% of function)
+  
+  effectiveness:
+    time_saved_per_week: 0  # Hours saved per person (target: 5-10 hours)
+    productivity_gain: 0  # % improvement (target: 20-50%)
+    tool_adoption: 0  # % using AI tools daily (target: 80%+)
+  
+  quality:
+    course_satisfaction: 0.0  # /5 (target: >4.0)
+    knowledge_retention: 0  # % (quiz scores 30 days post-training, target: 80%+)
+    application_rate: 0  # % using skills in daily work (target: 90%+)
+  
+  business_impact:
+    revenue_per_employee: 0  # $ (target: +20-50% year 1)
+    function_efficiency: 0  # % (target: +30% year 1)
+    employee_satisfaction: 0.0  # /5 (target: maintain or improve)
+
+---
+# EXAMPLE: Sales Function Learning Path
+
+# function:
+#   name: "Sales"
+#   description: "AI learning path for sales reps, managers, and sales ops"
+#   owner: "Jane Doe (VP Sales) + John Smith (L&D)"
+#   target_audience: "50 sales reps + 5 managers + 3 sales ops"
+#   last_updated: "2025-11-01"
+
+# level_1_awareness:
+#   modules:
+#     - module: "What is AI?"
+#       content:
+#         - "AI in Sales: Lead scoring, conversation intelligence, forecasting, outreach automation"
+#     - module: "Prompting 101"
+#       content:
+#         - "Write a cold email with ChatGPT"
+#         - "Research a prospect with Claude"
+#     - module: "Tools & Getting Started"
+#       content:
+#         - "Gong (conversation intelligence)"
+#         - "Clari (forecasting)"
+#         - "Outreach (sequencing)"
+
+# level_2_practitioner:
+#   modules:
+#     - module: "AI Tools for Sales"
+#       content:
+#         - "Gong: Analyze your calls, get coaching tips"
+#         - "Clari: Forecast accuracy, pipeline insights"
+#         - "Outreach: AI-powered sequences"
+#     - module: "Real-World Project"
+#       content:
+#         - "Example: Use AI to research 20 prospects, write personalized outreach, book 5 meetings"
+
+# level_3_power_user:
+#   modules:
+#     - module: "Custom Agent Configuration"
+#       content:
+#         - "Build 'Lead Enrichment Agent': Auto-researches prospects from LinkedIn → updates CRM"
+#         - "Build 'Follow-Up Agent': Sends personalized follow-ups 2 days after demo"
+#   assessment:
+#     passing_criteria:
+#       - "Deploy 2 agents in production"
+#       - "Measure: +30% meeting booking rate, -5 hours/week manual research"
+
+# metrics:
+#   adoption:
+#     level_1_completion_rate: 98  # 57/58 people completed
+#     level_2_completion_rate: 72  # 42/58 people completed
+#     level_3_completion_rate: 24  # 14/58 people certified as Power Users
+#   effectiveness:
+#     time_saved_per_week: 8  # Hours saved per rep
+#     productivity_gain: 35  # +35% meetings booked per rep
+#   business_impact:
+#     revenue_per_employee: 450000  # Up from $350K (+29%)

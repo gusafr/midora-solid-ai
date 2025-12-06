@@ -1,0 +1,1 @@
+--8<-- "DOCS/03-organizational-model.md"

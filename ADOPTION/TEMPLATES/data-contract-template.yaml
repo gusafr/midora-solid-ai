@@ -1,0 +1,150 @@
+# Data Contract Template
+
+This template helps you define data contracts for the SOLID.AI Data Spine. Copy and customize for your use case.
+
+---
+
+```yaml
+contract:
+  # ============================================================================
+  # CONTRACT IDENTITY
+  # ============================================================================
+  identity:
+    name: ""  # e.g., "user-enrollment-event", "customer-profile-entity"
+    version: ""  # Semantic versioning: "1.0.0", "2.1.0", etc.
+    type: ""  # entity | event | api | stream
+  
+  # ============================================================================
+  # SEMANTIC DEFINITION
+  # ============================================================================
+  semantic_definition:
+    description: ""  # What does this data represent in business terms?
+    business_concepts: []  # List key concepts: ["student", "course", "enrollment"]
+    related_contracts:
+      - ""  # Other contracts this relates to
+  
+  # ============================================================================
+  # SCHEMA
+  # ============================================================================
+  schema:
+    format: ""  # e.g., "JSON Schema v2020-12", "Avro", "Protobuf"
+    fields:
+      - name: ""
+        type: ""  # e.g., "string", "number", "boolean", "object"
+        required: true  # true | false
+        description: ""
+        pii: false  # true if this field contains personally identifiable information
+        constraint: ""  # e.g., ">= 0", "max length 255", etc. (optional)
+        values: []  # Valid enum values (optional)
+      
+      # Add more fields as needed
+  
+  # ============================================================================
+  # OWNERSHIP & LIFECYCLE
+  # ============================================================================
+  ownership:
+    owner_team: ""  # Team responsible for this contract
+    maintainer: ""  # Contact email or Slack channel
+    lifecycle:
+      created: ""  # When/how this data is created
+      updated: ""  # When/how updates happen (or "immutable")
+      retention: ""  # How long data is kept
+    
+    sla:
+      availability: ""  # e.g., "99.9%"
+      freshness: ""  # e.g., "Data updated within 5 seconds"
+      latency: ""  # e.g., "p95 query latency < 100ms"
+  
+  # ============================================================================
+  # QUALITY EXPECTATIONS
+  # ============================================================================
+  quality_expectations:
+    completeness: ""  # What fields must always be present?
+    accuracy: ""  # What validation rules ensure correctness?
+    freshness: ""  # How recent must data be?
+    consistency: ""  # What invariants must hold?
+  
+  # ============================================================================
+  # PRIVACY & SECURITY
+  # ============================================================================
+  privacy_security:
+    sensitivity: ""  # public | internal | confidential | restricted
+    pii_fields: []  # List fields containing PII: ["user_id", "email", "name"]
+    access_controls:
+      read: []  # Teams/systems that can read: ["analytics-team", "email-service"]
+      write: []  # Teams/systems that can write: ["enrollment-service"]
+    encryption:
+      at_rest: ""  # e.g., "AES-256"
+      in_transit: ""  # e.g., "TLS 1.3"
+    retention: ""  # e.g., "7 years, then anonymized"
+  
+  # ============================================================================
+  # CONSUMING SYSTEMS
+  # ============================================================================
+  consumers:
+    - name: ""
+      use_case: ""  # What they do with this data
+      criticality: ""  # high | medium | low
+    
+    # Add more consumers as needed
+  
+  # ============================================================================
+  # OBSERVABILITY
+  # ============================================================================
+  observability:
+    monitoring:
+      - ""  # Metrics to track: "Event publish rate", "Schema validation failures"
+    
+    alerts:
+      - condition: ""  # e.g., "Schema validation failures > 1%"
+        severity: ""  # critical | high | medium | low
+    
+    lineage:
+      source: ""  # Where this data comes from
+      transformations: ""  # How it's transformed (if any)
+      destinations: []  # Where it flows to: ["analytics-datalake", "recommendation-cache"]
+  
+  # ============================================================================
+  # EVOLUTION STRATEGY
+  # ============================================================================
+  evolution:
+    versioning: ""  # e.g., "Semantic versioning; breaking changes = new major version"
+    deprecation_policy: ""  # e.g., "90-day notice; 6-month support for old versions"
+    migration_support: ""  # e.g., "Dual-publish during transition; migration guides provided"
+  
+  # ============================================================================
+  # EXAMPLES & DOCUMENTATION
+  # ============================================================================
+  examples:
+    valid_example:
+      # Provide a complete valid example here
+      # Use realistic data that shows all required fields
+    
+    edge_case_example:
+      # Optional: Show edge cases or special scenarios
+  
+  documentation:
+    integration_guide: ""  # URL to integration docs
+    changelog: ""  # URL to version history
+```
+
+---
+
+## Usage Instructions
+
+1. **Copy this template** to your repository or data catalog
+2. **Fill in each section** - use the prompt in [PROMPT-TEMPLATES/data-contract-design.md](../PROMPT-TEMPLATES/data-contract-design.md) to help
+3. **Review with stakeholders** - get input from producers, consumers, data team, privacy/legal
+4. **Publish to data catalog** - make contract discoverable
+5. **Implement validation** - enforce schema and quality expectations in code
+6. **Update as contract evolves** - version and document changes
+
+## Related Resources
+
+- **Data Contract Prompt:** [PROMPT-TEMPLATES/data-contract-design.md](../PROMPT-TEMPLATES/data-contract-design.md)
+- **Data Spine Checklist:** [CHECKLISTS/data-spine-implementation.md](../CHECKLISTS/data-spine-implementation.md)
+- **Data Spine RFC:** [RFC/rfc-0002-data-layer.md](../../RFC/rfc-0002-data-layer.md)
+
+---
+
+**Version:** 1.0 | **Framework:** SOLID.AI
